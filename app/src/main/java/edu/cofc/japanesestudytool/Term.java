@@ -2,15 +2,14 @@ package edu.cofc.japanesestudytool;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Term
 {
-    @PrimaryKey(autoGenerate = true)
-    private int id;
+    @PrimaryKey @NonNull
+    private String id;
     private String jpns;
     private String eng;
     private String kanji;
@@ -21,11 +20,22 @@ public class Term
     private String lessons;
     private boolean reqKanji;
 
-    public int getId() {
+    public Term()
+    {
+        id = "アイディNULL";
+        jpns ="a";
+        eng= "ア";
+        kanji = "a";
+        type = "a";
+        lessons = "234;";
+        reqKanji=false;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -38,6 +48,7 @@ public class Term
     public void setJpns(String jpns)
     {
         this.jpns = jpns;
+        renewId();
     }
 
 
@@ -49,6 +60,7 @@ public class Term
     public void setKanji(String kanji)
     {
         this.kanji = kanji;
+        renewId();
     }
 
 
@@ -94,6 +106,25 @@ public class Term
         {
             reqKanji = false;
         }
+    }
+
+    public boolean equals(Object term)
+    {
+        boolean rtnval = false;
+        Term otherTerm = (Term)term;
+        if(this.getJpns().equalsIgnoreCase(otherTerm.getJpns())&&
+                this.getEng().equals(otherTerm.getEng())&&
+                this.getKanji().equals(otherTerm.getKanji()))
+        {
+            rtnval = true;
+        }
+
+        return rtnval;
+
+    }
+    private void renewId()
+    {
+        id = getJpns() + getKanji();
     }
 
 
