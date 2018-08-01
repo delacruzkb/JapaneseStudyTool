@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JapaneseStudyTool</string>
+    <string name="storyButtonLabel">Create a story / 話を作りましょう</string>
+    <string name="flashCardLabel">Flash Cards</string>
+    <string name="addTermsLabel">Add New Terms</string>
+    <string name="editTermsLabel">Edit Terms</string>
+    <string name="loadDataLabel">Load initial Data</string>
 </resources>
