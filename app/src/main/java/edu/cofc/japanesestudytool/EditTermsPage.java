@@ -1,13 +1,14 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool;
 
+import edu.cofc.japanesestudytool.R;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class AddTermsPage extends AppCompatActivity {
+public class EditTermsPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_terms_page);
+        setContentView(R.layout.activity_edit_terms_page);
     }
 }

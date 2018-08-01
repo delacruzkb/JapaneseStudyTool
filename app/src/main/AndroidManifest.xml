@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pages.HomePage">
+        <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pages.StoryPage" />
-        <activity android:name=".Pages.AddTermsPage" />
-        <activity android:name=".Pages.EditTermsPage" />
-        <activity android:name=".Pages.FlashCardPage"></activity>
+        <activity android:name=".StoryPage" />
+        <activity android:name=".AddTermsPage" />
+        <activity android:name=".EditTermsPage" />
+        <activity android:name=".FlashCardPage"></activity>
     </application>
 
 </manifest>
