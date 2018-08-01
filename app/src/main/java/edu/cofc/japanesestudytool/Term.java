@@ -3,6 +3,9 @@ package edu.cofc.japanesestudytool;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Term
 {
@@ -12,7 +15,10 @@ public class Term
     private String eng;
     private String kanji;
     private String type;
-    private int[] chapters;
+    /**Format for Lessons
+     * ex. Lessons 1,3,5,7 = 1;3;5;7;
+     * */
+    private String lessons;
     private boolean reqKanji;
 
     public int getId() {
@@ -65,21 +71,14 @@ public class Term
         this.type = type.toLowerCase();
     }
 
-
-    public int[] getChapters() {
-        return chapters;
-    }
-
-    public void setChapters(String input)
+    public String getLessons()
     {
-        String[] inputs = input.split(";");
-        chapters = new int[inputs.length];
-        for( int i =0; i< chapters.length ; i++)
-        {
-            chapters[i] = Integer.parseInt(inputs[i]);
-        }
+        return lessons;
     }
 
+    public void setLessons(String lessons) {
+        this.lessons = lessons;
+    }
 
     public boolean isReqKanji() {
         return reqKanji;
