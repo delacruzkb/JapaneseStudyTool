@@ -1,0 +1,18 @@
+package edu.cofc.japanesestudytool;
+
+import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.Query;
+
+import java.util.List;
+
+
+@Dao
+public interface TermDAO
+{
+    @Insert
+    void insertTerm(Term term);
+
+    @Query("SELECT * FROM Term")
+    List<Term> getAllTerms();
+}

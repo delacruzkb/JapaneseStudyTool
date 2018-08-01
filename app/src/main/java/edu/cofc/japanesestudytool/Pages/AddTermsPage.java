@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Pages;
 
 import edu.cofc.japanesestudytool.R;
 import android.support.v7.app.AppCompatActivity;

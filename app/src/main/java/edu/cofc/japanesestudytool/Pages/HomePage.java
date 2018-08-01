@@ -1,10 +1,12 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Pages;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import edu.cofc.japanesestudytool.R;
 
 public class HomePage extends AppCompatActivity
 {
@@ -75,6 +77,9 @@ public class HomePage extends AppCompatActivity
          * A button that will clear the database and re-load all of the initial data it had before.
          *  + Will prompt user for confirmation
          * */
+        /**TODO: Parsing csv code
+         *
+         */
         loadDataButton = findViewById(R.id.loadDataButton);
         loadDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
