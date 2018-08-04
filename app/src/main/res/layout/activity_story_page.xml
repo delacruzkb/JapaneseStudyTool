@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
     tools:context=".Pages.StoryPage">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        tools:text="@string/japaneseTextBoxLabel" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="@dimen/translateTextBoxWidth"
+            android:layout_height="@dimen/translateTextBoxHeight"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize"
+            tools:layout_editor_absoluteX="110dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <Button
+            android:id="@+id/toENG"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/toEnglishText"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+    </TableRow>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/englishTextBoxLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="@dimen/translateTextBoxWidth"
+            android:layout_height="@dimen/translateTextBoxHeight"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/toJPNS"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/toJapaneseText"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+    </TableRow>
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+    </TableRow>
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+</LinearLayout>

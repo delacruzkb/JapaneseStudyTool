@@ -7,6 +7,8 @@
     <color name="dividerColor">#3e2929</color>
     <color name="textColor">#6f6f6f</color>
     <color name="buttonColor">#b4b4b4</color>
+    <color name="buttonTextColor">#0f0f0f</color>
     <color name="switchOffColor">#6f6f6f</color>
     <color name="switchOnColor">#148E13</color>
+    <color name="checkBoxColor">#123456</color>
 </resources>

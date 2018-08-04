@@ -33,7 +33,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="-"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
             <TextView
@@ -51,7 +51,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="+"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
         </TableRow>
@@ -75,7 +75,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="-"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
             <TextView
@@ -93,7 +93,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="+"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
         </TableRow>
@@ -117,7 +117,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="-"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
             <TextView
@@ -135,7 +135,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="+"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
         </TableRow>
@@ -159,7 +159,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="-"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
             <TextView
@@ -177,7 +177,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="+"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
         </TableRow>
@@ -201,7 +201,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="-"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
             <TextView
@@ -219,7 +219,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/buttonColor"
                 android:text="+"
-                android:textColor="@color/textColor"
+                android:textColor="@color/buttonTextColor"
                 android:textSize="@dimen/textSize" />
 
         </TableRow>
@@ -278,7 +278,7 @@
                 android:id="@+id/lessonCheckBox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="1"
@@ -289,7 +289,7 @@
                 android:id="@+id/lessonCheckBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="2"
@@ -300,7 +300,7 @@
                 android:id="@+id/lessonCheckBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="3"
@@ -311,7 +311,7 @@
                 android:id="@+id/lessonCheckBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="4"
@@ -322,7 +322,7 @@
                 android:id="@+id/lessonCheckBox5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="5"
@@ -333,7 +333,7 @@
                 android:id="@+id/lessonCheckBox6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="6"
@@ -344,7 +344,7 @@
                 android:id="@+id/lessonCheckBox7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="7"
@@ -362,7 +362,7 @@
                 android:id="@+id/lessonCheckBox8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="8"
@@ -373,7 +373,7 @@
                 android:id="@+id/lessonCheckBox9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="9"
@@ -384,7 +384,7 @@
                 android:id="@+id/lessonCheckBox10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="10"
@@ -395,7 +395,7 @@
                 android:id="@+id/lessonCheckBox11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="11"
@@ -406,7 +406,7 @@
                 android:id="@+id/lessonCheckBox12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="12"
@@ -417,7 +417,7 @@
                 android:id="@+id/lessonCheckBox13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="13"
@@ -428,7 +428,7 @@
                 android:id="@+id/lessonCheckBox14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="14"
@@ -446,7 +446,7 @@
                 android:id="@+id/lessonCheckBox15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="15"
@@ -457,7 +457,7 @@
                 android:id="@+id/lessonCheckBox16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="16"
@@ -468,7 +468,7 @@
                 android:id="@+id/lessonCheckBox17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="17"
@@ -479,7 +479,7 @@
                 android:id="@+id/lessonCheckBox18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="18"
@@ -490,7 +490,7 @@
                 android:id="@+id/lessonCheckBox19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="19"
@@ -501,7 +501,7 @@
                 android:id="@+id/lessonCheckBox20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="20"
@@ -512,7 +512,7 @@
                 android:id="@+id/lessonCheckBox21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="21"
@@ -529,7 +529,7 @@
                 android:id="@+id/lessonCheckBox22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="22"
@@ -540,7 +540,7 @@
                 android:id="@+id/lessonCheckBox23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="23"
@@ -551,7 +551,7 @@
                 android:id="@+id/allLessonsCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@android:color/background_light"
+                android:buttonTint="@color/checkBoxColor"
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="All"
@@ -574,7 +574,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/submitButtonText"
-        android:textColor="@color/textColor" />
+        android:textColor="@color/buttonTextColor" />
 
 
 </LinearLayout>

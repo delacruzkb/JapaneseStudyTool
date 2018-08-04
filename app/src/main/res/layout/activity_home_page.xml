@@ -14,7 +14,7 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/storyButtonLabel"
-        android:textColor="@color/textColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -25,7 +25,7 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/flashCardLabel"
-        android:textColor="@color/textColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -36,7 +36,7 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/addTermsLabel"
-        android:textColor="@color/textColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/editTermsLabel"
-        android:textColor="@color/textColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -58,6 +58,6 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/loadDataLabel"
-        android:textColor="@color/textColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="10sp" />
 </LinearLayout>
