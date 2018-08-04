@@ -248,8 +248,7 @@
         android:text="@string/lessonKanjiOnlyToggleText"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize"
-        android:theme="@style/SwitchTheme"
-        tools:checked="false" />
+        android:theme="@style/SwitchTheme" />
 
     <View
         android:id="@+id/divider2"
@@ -545,6 +544,17 @@
                 android:checked="false"
                 android:duplicateParentState="false"
                 android:text="23"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <CheckBox
+                android:id="@+id/allLessonsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/background_light"
+                android:checked="false"
+                android:duplicateParentState="false"
+                android:text="All"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 

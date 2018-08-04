@@ -17,8 +17,8 @@ public interface TermDAO
     @Query("SELECT * FROM Term")
     List<Term> getAllTerms();
 
-    @Query("SELECT * FROM Term WHERE lessons LIKE :lesson")
-    List<Term> getFromLessons(String lesson);
+    @Query("SELECT * FROM Term WHERE lesson = :lesson")
+    List<Term> getFromLessons(int lesson);
 
     @Query("SELECT * FROM Term WHERE reqKanji=:bool")
     List<Term> getRequiredKanji(boolean bool);
