@@ -2,10 +2,13 @@ package edu.cofc.japanesestudytool.Pages;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.R;
 
@@ -35,19 +38,21 @@ public class StoryMenuPage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_menu_page);
 
+        // segregated into private methods to ease debugging
         instantiateViews();
-
+        setCountButtonOnClickListeners();
+        setConfirmButtonOnClickListener();
 
     }
 
     private void instantiateViews()
     {
         //Instantiate Counters
-        nounCountText = findViewById(R.id.nounCountLabel);
-        adjectiveCountText = findViewById(R.id.adjectiveCountLabel);
-        verbCountText = findViewById(R.id.verbCountLabel);
-        grammarCountText = findViewById(R.id.grammarCountLabel);
-        otherCountText = findViewById(R.id.otherCountLabel);
+        nounCountText = findViewById(R.id.nounCountInput);
+        adjectiveCountText = findViewById(R.id.adjectiveCountInput);
+        verbCountText = findViewById(R.id.verbCountInput);
+        grammarCountText = findViewById(R.id.grammarCountInput);
+        otherCountText = findViewById(R.id.otherCountInput);
 
         //Instantiate buttons
         nounCountDecreaseButton = findViewById(R.id.nounCountDecreaseButton);
@@ -92,4 +97,135 @@ public class StoryMenuPage extends AppCompatActivity
         lesson23 = findViewById(R.id.lessonCheckBox23);
 
     }
+
+    private void setCountButtonOnClickListeners()
+    {
+        nounCountDecreaseButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                int count = Integer.parseInt(nounCountText.getText().toString());
+                if(count > 0)
+                {
+                    nounCountText.setText((count-1) + "");
+                }
+            }
+        });
+
+        nounCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                int count = Integer.parseInt(nounCountText.getText().toString());
+                if(count < 15)
+                {
+                    nounCountText.setText((count+1) + "");
+                }
+            }
+        });
+
+        adjectiveCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(adjectiveCountText.getText().toString());
+                if(count > 0)
+                {
+                    adjectiveCountText.setText((count-1) + "");
+                }
+            }
+        });
+
+        adjectiveCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(adjectiveCountText.getText().toString());
+                if(count < 15)
+                {
+                    adjectiveCountText.setText((count+1) + "");
+                }
+            }
+        });
+
+        verbCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(verbCountText.getText().toString());
+                if(count > 0)
+                {
+                    verbCountText.setText((count-1) + "");
+                }
+            }
+        });
+
+        verbCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(verbCountText.getText().toString());
+                if(count < 15)
+                {
+                    verbCountText.setText((count+1) + "");
+                }
+            }
+        });
+
+        grammarCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(grammarCountText.getText().toString());
+                if(count > 0)
+                {
+                    grammarCountText.setText((count-1) + "");
+                }
+            }
+        });
+
+        grammarCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(grammarCountText.getText().toString());
+                if(count < 15)
+                {
+                    grammarCountText.setText((count+1) + "");
+                }
+            }
+        });
+
+        otherCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(otherCountText.getText().toString());
+                if(count > 0)
+                {
+                    otherCountText.setText((count-1) + "");
+                }
+            }
+        });
+
+        otherCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = Integer.parseInt(otherCountText.getText().toString());
+                if(count <15 )
+                {
+                    otherCountText.setText((count+1) + "");
+                }
+            }
+        });
+    }
+
+    private void setConfirmButtonOnClickListener()
+    {
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**TODO: configure confirmButton
+                 * 1) gather information from all views
+                 * 2) store information in Intent
+                 * 3) start StoryPage activity
+                 * */
+            }
+        });
+    }
+
 }
