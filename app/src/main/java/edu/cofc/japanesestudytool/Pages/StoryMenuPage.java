@@ -251,6 +251,9 @@ public class StoryMenuPage extends AppCompatActivity
                  * 2) store information in Intent
                  * 3) start StoryPage activity
                  * */
+
+                Intent intent = new Intent(confirmButton.getContext(), StoryPage.class);
+
                 int nounCount = Integer.parseInt(nounCountText.getText().toString());
                 int adjectiveCount = Integer.parseInt(adjectiveCountText.getText().toString());
                 int verbCount = Integer.parseInt(verbCountText.getText().toString());
@@ -258,32 +261,6 @@ public class StoryMenuPage extends AppCompatActivity
                 int otherCount = Integer.parseInt(otherCountText.getText().toString());
                 boolean kanji = kanjiToggle.isChecked();
                 boolean lessonKanji = lessonKanjiToggle.isChecked();
-
-                boolean l1= lesson1.isChecked();
-                boolean l2= lesson2.isChecked();
-                boolean l3= lesson3.isChecked();
-                boolean l4= lesson4.isChecked();
-                boolean l5= lesson5.isChecked();
-                boolean l6= lesson6.isChecked();
-                boolean l7= lesson7.isChecked();
-                boolean l8= lesson8.isChecked();
-                boolean l9= lesson9.isChecked();
-                boolean l10= lesson10.isChecked();
-                boolean l11= lesson11.isChecked();
-                boolean l12= lesson12.isChecked();
-                boolean l13= lesson13.isChecked();
-                boolean l14= lesson14.isChecked();
-                boolean l15= lesson15.isChecked();
-                boolean l16= lesson16.isChecked();
-                boolean l17= lesson17.isChecked();
-                boolean l18= lesson18.isChecked();
-                boolean l19= lesson19.isChecked();
-                boolean l20= lesson20.isChecked();
-                boolean l21= lesson21.isChecked();
-                boolean l22= lesson22.isChecked();
-                boolean l23= lesson23.isChecked();
-
-                Intent intent = new Intent(confirmButton.getContext(), StoryPage.class);
                 intent.putExtra("nounCount",nounCount);
                 intent.putExtra("adjectiveCount",adjectiveCount);
                 intent.putExtra("verbCount",verbCount);
@@ -291,30 +268,61 @@ public class StoryMenuPage extends AppCompatActivity
                 intent.putExtra("otherCount",otherCount);
                 intent.putExtra("kanji",kanji);
                 intent.putExtra("lessonKanji",lessonKanji);
-                intent.putExtra("l1",l1);
-                intent.putExtra("l2",l2);
-                intent.putExtra("l3",l3);
-                intent.putExtra("l4",l4);
-                intent.putExtra("l5",l5);
-                intent.putExtra("l6",l6);
-                intent.putExtra("l7",l7);
-                intent.putExtra("l8",l8);
-                intent.putExtra("l9",l9);
-                intent.putExtra("l10",l10);
-                intent.putExtra("l11",l11);
-                intent.putExtra("l12",l12);
-                intent.putExtra("l13",l13);
-                intent.putExtra("l14",l14);
-                intent.putExtra("l15",l15);
-                intent.putExtra("l16",l16);
-                intent.putExtra("l17",l17);
-                intent.putExtra("l18",l18);
-                intent.putExtra("l19",l19);
-                intent.putExtra("l20",l20);
-                intent.putExtra("l21",l21);
-                intent.putExtra("l22",l22);
-                intent.putExtra("l23",l23);
 
+                if(allLessons.isChecked())
+                {
+                    boolean all = true;
+                    intent.putExtra("all",all);
+                }
+                else
+                {
+                    boolean l1 = lesson1.isChecked();
+                    boolean l2 = lesson2.isChecked();
+                    boolean l3 = lesson3.isChecked();
+                    boolean l4 = lesson4.isChecked();
+                    boolean l5 = lesson5.isChecked();
+                    boolean l6 = lesson6.isChecked();
+                    boolean l7 = lesson7.isChecked();
+                    boolean l8 = lesson8.isChecked();
+                    boolean l9 = lesson9.isChecked();
+                    boolean l10 = lesson10.isChecked();
+                    boolean l11 = lesson11.isChecked();
+                    boolean l12 = lesson12.isChecked();
+                    boolean l13 = lesson13.isChecked();
+                    boolean l14 = lesson14.isChecked();
+                    boolean l15 = lesson15.isChecked();
+                    boolean l16 = lesson16.isChecked();
+                    boolean l17 = lesson17.isChecked();
+                    boolean l18 = lesson18.isChecked();
+                    boolean l19 = lesson19.isChecked();
+                    boolean l20 = lesson20.isChecked();
+                    boolean l21 = lesson21.isChecked();
+                    boolean l22 = lesson22.isChecked();
+                    boolean l23 = lesson23.isChecked();
+                    intent.putExtra("l1",l1);
+                    intent.putExtra("l2",l2);
+                    intent.putExtra("l3",l3);
+                    intent.putExtra("l4",l4);
+                    intent.putExtra("l5",l5);
+                    intent.putExtra("l6",l6);
+                    intent.putExtra("l7",l7);
+                    intent.putExtra("l8",l8);
+                    intent.putExtra("l9",l9);
+                    intent.putExtra("l10",l10);
+                    intent.putExtra("l11",l11);
+                    intent.putExtra("l12",l12);
+                    intent.putExtra("l13",l13);
+                    intent.putExtra("l14",l14);
+                    intent.putExtra("l15",l15);
+                    intent.putExtra("l16",l16);
+                    intent.putExtra("l17",l17);
+                    intent.putExtra("l18",l18);
+                    intent.putExtra("l19",l19);
+                    intent.putExtra("l20",l20);
+                    intent.putExtra("l21",l21);
+                    intent.putExtra("l22",l22);
+                    intent.putExtra("l23",l23);
+                }
                 startActivity(intent);
             }
         });
