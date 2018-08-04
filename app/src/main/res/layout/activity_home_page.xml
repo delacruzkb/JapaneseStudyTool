@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:orientation="vertical"
     tools:context=".Pages.HomePage">
 
@@ -12,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonColor"
         android:text="@string/storyButtonLabel"
+        android:textColor="@color/textColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -21,7 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonColor"
         android:text="@string/flashCardLabel"
+        android:textColor="@color/textColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -30,7 +34,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonColor"
         android:text="@string/addTermsLabel"
+        android:textColor="@color/textColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -39,7 +45,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonColor"
         android:text="@string/editTermsLabel"
+        android:textColor="@color/textColor"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -48,7 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonColor"
         android:text="@string/loadDataLabel"
-        android:textSize="10sp"
-        android:textStyle="bold" />
+        android:textColor="@color/textColor"
+        android:textSize="10sp" />
 </LinearLayout>

@@ -92,12 +92,16 @@ public class Term
         this.lessons = lessons;
     }
 
-    public boolean isReqKanji() {
+    public boolean getReqKanji() {
         return reqKanji;
     }
 
-    public void setReqKanji(String flag)
+    public void setReqKanji(boolean flag)
     {
+        reqKanji = flag;
+    }
+    public void setReqKanji(String flag)
+        {
         if( flag.equalsIgnoreCase("kanji"))
         {
             reqKanji = true;

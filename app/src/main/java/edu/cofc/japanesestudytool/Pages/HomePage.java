@@ -32,7 +32,7 @@ public class HomePage extends AppCompatActivity
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(storyButton.getContext(),StoryPage.class);
+                Intent intent = new Intent(storyButton.getContext(),StoryMenuPage.class);
                 startActivity(intent);
             }
         });
