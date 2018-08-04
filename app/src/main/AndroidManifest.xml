@@ -8,8 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity android:name=".Pages.HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +20,8 @@
         <activity android:name=".Pages.AddTermsPage" />
         <activity android:name=".Pages.EditTermsPage" />
         <activity android:name=".Pages.FlashCardPage" />
-        <activity android:name=".Pages.StoryPage"></activity>
+        <activity android:name=".Pages.StoryPage" />
+        <activity android:name=".Pages.FlashMenuPage"></activity>
     </application>
 
 </manifest>

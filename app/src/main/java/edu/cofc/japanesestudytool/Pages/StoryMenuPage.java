@@ -8,8 +8,6 @@ import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import edu.cofc.japanesestudytool.R;
 
 

@@ -14,20 +14,17 @@ public class Term
     private String eng;
     private String kanji;
     private String type;
-    /**Format for Lessons
-     * ex. Lessons 1,3,5,7 = 1;3;5;7;
-     * */
-    private String lessons;
+    private int lesson;
     private boolean reqKanji;
 
     public Term()
     {
-        id = "アイディNULL";
+        id = "アイディIDNULL0";
         jpns ="a";
         eng= "ア";
         kanji = "a";
         type = "a";
-        lessons = "234;";
+        lesson = 0;
         reqKanji=false;
     }
 
@@ -83,13 +80,19 @@ public class Term
         this.type = type.toLowerCase();
     }
 
-    public String getLessons()
+    public int getLesson()
     {
-        return lessons;
+        return lesson;
     }
 
-    public void setLessons(String lessons) {
-        this.lessons = lessons;
+    public void setLesson(int lesson)
+    {
+        this.lesson = lesson;
+    }
+
+    public void setLesson(String lesson)
+    {
+        this.lesson = Integer.parseInt(lesson);
     }
 
     public boolean getReqKanji() {
@@ -118,7 +121,8 @@ public class Term
         Term otherTerm = (Term)term;
         if(this.getJpns().equalsIgnoreCase(otherTerm.getJpns())&&
                 this.getEng().equals(otherTerm.getEng())&&
-                this.getKanji().equals(otherTerm.getKanji()))
+                this.getKanji().equals(otherTerm.getKanji()) &&
+                ( this.getLesson() == otherTerm.getLesson() ))
         {
             rtnval = true;
         }
@@ -128,7 +132,7 @@ public class Term
     }
     private void renewId()
     {
-        id = getJpns() + getKanji();
+        id = getJpns() + getEng()+ getKanji() + getLesson();
     }
 
 
