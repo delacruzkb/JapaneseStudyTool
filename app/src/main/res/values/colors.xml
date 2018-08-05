@@ -11,4 +11,5 @@
     <color name="switchOffColor">#6f6f6f</color>
     <color name="switchOnColor">#148E13</color>
     <color name="checkBoxColor">#123456</color>
+    <color name="translateTextBoxColor">#0E0E0E</color>
 </resources>
