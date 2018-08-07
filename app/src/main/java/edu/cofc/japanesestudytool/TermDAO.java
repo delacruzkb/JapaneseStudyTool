@@ -18,7 +18,7 @@ public interface TermDAO
     List<Term> getAllTerms();
 
     @Query("SELECT * FROM Term WHERE lesson = :lesson")
-    List<Term> getFromLessons(int lesson);
+    List<Term> getFromLesson(int lesson);
 
     @Query("SELECT * FROM Term WHERE reqKanji=:bool")
     List<Term> getRequiredKanji(boolean bool);
@@ -27,10 +27,13 @@ public interface TermDAO
     List<Term> getTermType(String type);
 
     @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson")
-    List<Term> getTerms(String type, int lesson);
+    List<Term> getTermTypeFromLesson(String type, int lesson);
 
     @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson and reqKanji = :reqKanji")
-    List<Term> getTerms(String type, int lesson, boolean reqKanji);
+    List<Term> getAllRequiredKanjiType(String type, boolean reqKanji);
+
+    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson and reqKanji = :reqKanji")
+    List<Term> getSpecificTerms(String type, int lesson, boolean reqKanji);
 
     @Delete
     void deleteTerm( Term term);
