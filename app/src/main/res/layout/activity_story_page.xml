@@ -8,226 +8,73 @@
     android:orientation="vertical"
     tools:context=".Pages.StoryPage">
 
-    <TextView
-        android:id="@+id/japaneseLabel"
+    <WebView
+        android:id="@+id/googleTranslate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/japaneseTextBoxLabel"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
+        android:layout_height="@dimen/translateWebViewHeight">
+
+    </WebView>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical">
-
-        <EditText
-            android:id="@+id/japaneseTextBox"
-            android:layout_width="@dimen/translateTextBoxWidth"
-            android:layout_height="@dimen/translateTextBoxHeight"
-            android:background="@color/translateTextBoxColor"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="日本"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/translateTextSize"
-            tools:layout_editor_absoluteX="110dp"
-            tools:layout_editor_absoluteY="25dp" />
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/toENG"
+            android:id="@+id/nounListButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/buttonColor"
-            android:text="@string/toEnglishText"
+            android:text="@string/nounListingLabel"
             android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/translateTextSize" />
-    </TableRow>
+            android:textSize="@dimen/textSize" />
 
-    <TextView
-        android:id="@+id/englishLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/englishTextBoxLabel"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
+        <Button
+            android:id="@+id/verbListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/verbListingLabel"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/adjectiveListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/adjectiveListingLabel"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+
+    </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical">
-
-        <EditText
-            android:id="@+id/englishTextBox"
-            android:layout_width="@dimen/translateTextBoxWidth"
-            android:layout_height="@dimen/translateTextBoxHeight"
-            android:background="@color/translateTextBoxColor"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="Japan"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/translateTextSize" />
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/toJPNS"
+            android:id="@+id/grammarlistButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/buttonColor"
-            android:text="@string/toJapaneseText"
+            android:text="@string/grammarListingLabel"
             android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/translateTextSize" />
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/otherListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/otherListingLabel"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
     </TableRow>
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal" >
-
-            <TextView
-                android:id="@+id/nounListLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nounListingLabel"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
-
-            <View
-                android:id="@+id/divider14"
-                android:layout_width="@dimen/dividerHeight"
-                android:layout_height="match_parent"
-                android:background="@color/dividerColor" />
-
-            <TextView
-                android:id="@+id/adjectiveListLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/adjectiveListingLabel"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/listViewHeight"
-            android:gravity="center_horizontal">
-
-            <ListView
-                android:id="@+id/nounListView"
-                android:layout_width="@dimen/listViewWidth"
-                android:layout_height="@dimen/listViewHeight" />
-
-            <View
-                android:id="@+id/divider12"
-                android:layout_width="@dimen/dividerHeight"
-                android:layout_height="match_parent"
-                android:background="@color/dividerColor" />
-
-            <ListView
-                android:id="@+id/adjectiveListView"
-                android:layout_width="@dimen/listViewWidth"
-                android:layout_height="@dimen/listViewHeight" />
-
-        </TableRow>
-
-    </TableLayout>
-
-    <View
-        android:id="@+id/divider10"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:id="@+id/verbListLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/verbListingLabel"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
-
-            <View
-                android:id="@+id/divider14"
-                android:layout_width="@dimen/dividerHeight"
-                android:layout_height="match_parent"
-                android:background="@color/dividerColor" />
-
-            <TextView
-                android:id="@+id/otherListLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/otherListingLabel"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/listViewHeight"
-            android:gravity="center_horizontal">
-
-            <ListView
-                android:id="@+id/verbListView"
-                android:layout_width="@dimen/listViewWidth"
-                android:layout_height="@dimen/listViewHeight" />
-
-            <View
-                android:id="@+id/divider12"
-                android:layout_width="@dimen/dividerHeight"
-                android:layout_height="match_parent"
-                android:background="@color/dividerColor" />
-
-            <ListView
-                android:id="@+id/otherListView"
-                android:layout_width="@dimen/listViewWidth"
-                android:layout_height="@dimen/listViewHeight" />
-
-        </TableRow>
-
-    </TableLayout>
-
-    <View
-        android:id="@+id/divider6"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
-    <TextView
-        android:id="@+id/grammarListLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/grammarListingLabel"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
 
     <ListView
-        android:id="@+id/grammarListView"
+        android:id="@+id/termListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="fill_parent"/>
+
 
 </LinearLayout>

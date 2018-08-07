@@ -21,7 +21,8 @@
         <activity android:name=".Pages.EditTermsPage" />
         <activity android:name=".Pages.FlashCardPage" />
         <activity android:name=".Pages.StoryPage" />
-        <activity android:name=".Pages.FlashMenuPage"></activity>
+        <activity android:name=".Pages.FlashMenuPage">
+        </activity>
     </application>
 
 </manifest>

@@ -26,6 +26,12 @@ public interface TermDAO
     @Query("SELECT * FROM Term WHERE type LIKE :type")
     List<Term> getTermType(String type);
 
+    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson")
+    List<Term> getTerms(String type, int lesson);
+
+    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson and reqKanji = :reqKanji")
+    List<Term> getTerms(String type, int lesson, boolean reqKanji);
+
     @Delete
     void deleteTerm( Term term);
 }

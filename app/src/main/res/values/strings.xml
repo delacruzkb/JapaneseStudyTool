@@ -20,8 +20,6 @@
     <string name="submitButtonText">Confirm</string>
 
     //StoryPage
-    <string name="englishTextBoxLabel">English:</string>
-    <string name="japaneseTextBoxLabel">Japanese:</string>
     <string name="nounListingLabel">Noun(s):</string>
     <string name="verbListingLabel">Verb(s):</string>
     <string name="adjectiveListingLabel">Adjective(s):</string>
@@ -29,5 +27,8 @@
     <string name="otherListingLabel">Other(s):</string>
     <string name="toEnglishText">ENG</string>
     <string name="toJapaneseText">JPNS</string>
+    <string name="termMenuText">Terms</string>
+    <string name="menuButtonText">Main Menu</string>
+    <string name="backButtonText">Back</string>
 
 </resources>
