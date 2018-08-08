@@ -8,6 +8,9 @@ import android.support.annotation.NonNull;
 @Entity
 public class Term
 {
+    /**TODO: Revisit how ID should be determined
+    *
+    * */
     @PrimaryKey @NonNull
     private String id;
     private String jpns;
