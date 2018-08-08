@@ -15,8 +15,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
-
 public class StoryPage extends AppCompatActivity
 {
     Button nounListButton,verbListButton, adjectiveListButton, grammarListButton, otherListButton;

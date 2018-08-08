@@ -39,7 +39,7 @@ public class StoryMenuPage extends AppCompatActivity
         setContentView(R.layout.activity_story_menu_page);
 
         // segregated into private methods to ease debugging
-        instantiateViews();
+        initializeViews();
         setCountButtonOnClickListeners();
         setConfirmButtonOnClickListener();
 
@@ -72,7 +72,7 @@ public class StoryMenuPage extends AppCompatActivity
 
     }
 
-    private void instantiateViews()
+    private void initializeViews()
     {
         //Instantiate Counters
         nounCountText = findViewById(R.id.nounCountInput);
@@ -246,11 +246,6 @@ public class StoryMenuPage extends AppCompatActivity
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**TODO: configure confirmButton
-                 * 1) gather information from all views
-                 * 2) store information in Intent
-                 * 3) start StoryPage activity
-                 * */
 
                 Intent intent = new Intent(confirmButton.getContext(), StoryPage.class);
 
