@@ -11,6 +11,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,7 @@ public class StoryPage extends AppCompatActivity
 {
     Button nounListButton,verbListButton, adjectiveListButton, grammarListButton, otherListButton;
     WebView browser;
-
+    ListView termListView;
     ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
 
     @Override
@@ -83,6 +84,8 @@ public class StoryPage extends AppCompatActivity
                 rePopulateListView(otherList);
             }
         });
+
+        termListView = findViewById(R.id.termListView);
 
         browser = (WebView) findViewById(R.id.googleTranslate);
         browser.setWebViewClient(new WebViewClient());
@@ -151,18 +154,12 @@ public class StoryPage extends AppCompatActivity
         {
             if(useKanji)
             {
-                if(useLessonKanjiOnly)
-                {
-                    //getAllRequiredKanjiTypes
-                }
-                else
-                {
-                    //getAllTerms
-                }
+
+                //GetAllKanjiFromLessons
             }
             else
             {
-                //getAllHiraganaTypes
+                //getAllHiraganaTypesFromLEssons
             }
         }
     }

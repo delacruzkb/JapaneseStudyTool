@@ -16,19 +16,19 @@ public interface TermDAO
 
     //if allLessons picked
         //if kanji option selected
-    @Query("SELECT * FROM Term WHERE type LIKE :type")
-    List<Term> getAllTypes(String type);
+    @Query("SELECT * FROM Term WHERE type LIKE :type ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTypes(String type, int limit);
         //if kanji option is deselected
-    @Query("SELECT * FROM Term WHERE type LIKE :type and kanji = NULL")
-    List<Term> getHiraganaType(String type);
+    @Query("SELECT * FROM Term WHERE type LIKE :type and kanji = NULL ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getHiraganaType(String type, int limit);
 
     //if not all Lessons picked
         //if kanji option selected
-    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson")
-    List<Term> getAllTypeFromLesson(String type, int lesson);
+    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTypeFromLesson(String type, int lesson, int limit);
         //if kanji option is deselected
-    @Query("SELECT * FROM Term WHERE type LIKE :type and kanji = NULL and lesson = :lesson")
-    List<Term> getHiraganaTypeFromLesson(String type, int lesson);
+    @Query("SELECT * FROM Term WHERE type LIKE :type and kanji = NULL and lesson = :lesson ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getHiraganaTypeFromLesson(String type, int lesson, int limit);
 
     @Delete
     void deleteTerm( Term term);
