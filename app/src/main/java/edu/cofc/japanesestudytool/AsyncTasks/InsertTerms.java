@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermDatabase;
 
-public class InsertTerm extends AsyncTask<ArrayList<Term>,Void,Void>
+public class InsertTerms extends AsyncTask<ArrayList<Term>,Void,Void>
 {
     TermDatabase termDatabase;
 
-    public InsertTerm(TermDatabase termDatabase)
+    public InsertTerms(TermDatabase termDatabase)
     {
         this.termDatabase = termDatabase;
     }
