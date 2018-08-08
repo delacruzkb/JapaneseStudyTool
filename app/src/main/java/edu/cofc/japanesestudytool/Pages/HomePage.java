@@ -21,7 +21,7 @@ public class HomePage extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        /**Create storyButton
+        /*Create storyButton
          * A button that will take you to a page with the following:
          * 1) A menu with options that will help generate subjects for the story
          * 2) a button that will take you to a separate page listing the subjects
@@ -37,7 +37,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /**Create flashCardButton
+        /*Create flashCardButton
          * A button that will take you to the page for 1 by 1 term viewing via flash cards
          * */
         flashCardButton = findViewById(R.id.flashCardButton);
@@ -49,7 +49,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /**Create addTermsButton
+        /*Create addTermsButton
          * A button that will take you to the page for adding new entries
          * */
         addTermsButton = findViewById(R.id.addTermsButton);
@@ -61,7 +61,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /**Create edit termsButton
+        /*Create edit termsButton
          * A button that will take you to the page for editing any information within the database
          * */
         editTermsButton = findViewById(R.id.editTermsButton);
@@ -73,7 +73,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /**Create loadDataButton
+        /*Create loadDataButton
          * A button that will clear the database and re-load all of the initial data it had before.
          *  + Will prompt user for confirmation
          * */
