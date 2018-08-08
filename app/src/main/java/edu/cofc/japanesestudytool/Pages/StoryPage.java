@@ -135,5 +135,35 @@ public class StoryPage extends AppCompatActivity
         }
         /**TODO: Pull from database using the proper parameters and store into each respective arrayList
          * */
+
+        if(allLessons)
+        {
+            if(useKanji)
+            {
+                //getAllTerms
+            }
+            else
+            {
+                //getAllHiraganaTypes
+            }
+        }
+        else
+        {
+            if(useKanji)
+            {
+                if(useLessonKanjiOnly)
+                {
+                    //getAllRequiredKanjiTypes
+                }
+                else
+                {
+                    //getAllTerms
+                }
+            }
+            else
+            {
+                //getAllHiraganaTypes
+            }
+        }
     }
 }

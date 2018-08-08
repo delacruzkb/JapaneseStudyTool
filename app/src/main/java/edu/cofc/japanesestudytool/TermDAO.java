@@ -14,26 +14,21 @@ public interface TermDAO
     @Insert
     void insertTerm(Term term);
 
-    @Query("SELECT * FROM Term")
-    List<Term> getAllTerms();
-
-    @Query("SELECT * FROM Term WHERE lesson = :lesson")
-    List<Term> getFromLesson(int lesson);
-
-    @Query("SELECT * FROM Term WHERE reqKanji=:bool")
-    List<Term> getRequiredKanji(boolean bool);
-
+    //if allLessons picked
+        //if kanji option selected
     @Query("SELECT * FROM Term WHERE type LIKE :type")
-    List<Term> getTermType(String type);
+    List<Term> getAllTypes(String type);
+        //if kanji option is deselected
+    @Query("SELECT * FROM Term WHERE type LIKE :type and kanji = NULL")
+    List<Term> getHiraganaType(String type);
 
+    //if not all Lessons picked
+        //if kanji option selected
     @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson")
-    List<Term> getTermTypeFromLesson(String type, int lesson);
-
-    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson and reqKanji = :reqKanji")
-    List<Term> getAllRequiredKanjiType(String type, boolean reqKanji);
-
-    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson and reqKanji = :reqKanji")
-    List<Term> getSpecificTerms(String type, int lesson, boolean reqKanji);
+    List<Term> getAllTypeFromLesson(String type, int lesson);
+        //if kanji option is deselected
+    @Query("SELECT * FROM Term WHERE type LIKE :type and kanji = NULL and lesson = :lesson")
+    List<Term> getHiraganaTypeFromLesson(String type, int lesson);
 
     @Delete
     void deleteTerm( Term term);
