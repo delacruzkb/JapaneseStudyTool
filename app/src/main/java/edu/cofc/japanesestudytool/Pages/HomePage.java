@@ -1,12 +1,19 @@
 package edu.cofc.japanesestudytool.Pages;
 
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
+import edu.cofc.japanesestudytool.AsyncTasks.DeleteAllTerms;
+import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
 import edu.cofc.japanesestudytool.R;
+import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.TermDatabase;
 
 public class HomePage extends AppCompatActivity
 {
@@ -15,19 +22,15 @@ public class HomePage extends AppCompatActivity
     private Button addTermsButton;
     private Button editTermsButton;
     private Button loadDataButton;
-
+    TermDatabase termDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        /*Create storyButton
-         * A button that will take you to a page with the following:
-         * 1) A menu with options that will help generate subjects for the story
-         * 2) a button that will take you to a separate page listing the subjects
-         *      and an area with google translate for error checking
-         *
-         * */
+
+        termDatabase = Room.databaseBuilder(this,TermDatabase.class,"terms").build();
+
         storyButton = findViewById(R.id.storyButton);
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,9 +40,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /*Create flashCardButton
-         * A button that will take you to the page for 1 by 1 term viewing via flash cards
-         * */
+
         flashCardButton = findViewById(R.id.flashCardButton);
         flashCardButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,9 +50,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /*Create addTermsButton
-         * A button that will take you to the page for adding new entries
-         * */
+
         addTermsButton = findViewById(R.id.addTermsButton);
         addTermsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,9 +60,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /*Create edit termsButton
-         * A button that will take you to the page for editing any information within the database
-         * */
+
         editTermsButton = findViewById(R.id.editTermsButton);
         editTermsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,20 +70,26 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        /*Create loadDataButton
-         * A button that will clear the database and re-load all of the initial data it had before.
-         *  + Will prompt user for confirmation
-         * */
-        /**TODO: Parsing csv code
-         *
-         */
+        //
         loadDataButton = findViewById(R.id.loadDataButton);
         loadDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onClick(View v)
+            {
+                DeleteAllTerms clearDatabase = new DeleteAllTerms((termDatabase));
+                clearDatabase.execute();
+                InsertTerms loadInitialData = new InsertTerms(termDatabase);
+                loadInitialData.execute(getInitialData());
             }
         });
 
+    }
+
+    /**TODO: Parsing csv code*/
+    private ArrayList<Term> getInitialData()
+    {
+        ArrayList<Term> returnValue = new ArrayList();
+
+        return returnValue;
     }
 }

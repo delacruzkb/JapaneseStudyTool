@@ -30,6 +30,13 @@ public interface TermDAO
     @Query("SELECT * FROM Term WHERE type LIKE :type and kanji = NULL and lesson = :lesson ORDER BY RANDOM() LIMIT :limit")
     List<Term> getHiraganaTypeFromLesson(String type, int lesson, int limit);
 
+    //Delete everything
+    @Query("DELETE FROM Term")
+    public void deleteAllTerms();
+
+
     @Delete
     void deleteTerm( Term term);
+
+
 }
