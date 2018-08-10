@@ -10,4 +10,6 @@
     <dimen name="listViewHeight">80dp</dimen>
     <dimen name="listViewWidth">190dp</dimen>
     <dimen name="translateButtonWidth">50dp</dimen>
+    <dimen name="listViewButtonWidth">35dp</dimen>
+    <dimen name="listViewButtonHeight">150dp</dimen>
 </resources>

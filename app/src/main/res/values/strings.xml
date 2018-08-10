@@ -26,9 +26,11 @@
     <string name="grammarListingLabel">Grammar point(s):</string>
     <string name="otherListingLabel">Other(s):</string>
     <string name="toEnglishText">ENG</string>
-    <string name="toJapaneseText">JPNS</string>
+    <string name="toJapaneseText">ひらがな</string>
+    <string name="toKanjiText">漢字</string>
     <string name="termMenuText">Terms</string>
     <string name="menuButtonText">Main Menu</string>
     <string name="backButtonText">Back</string>
+
 
 </resources>

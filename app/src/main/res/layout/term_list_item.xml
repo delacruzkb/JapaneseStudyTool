@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listViewButtonHeight"
+    android:background="@color/backgroundColor"
+    android:padding="10dp">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="@dimen/listViewButtonWidth"
+        android:layout_height="match_parent"
+        android:buttonTint="@color/checkBoxColor"
+        android:checked="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/toKanjiButton"
+        android:layout_width="@dimen/listViewButtonWidth"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/toKanjiText"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/textSize" />
+
+    <Button
+        android:id="@+id/toJapaneseButton"
+        android:layout_width="@dimen/listViewButtonWidth"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/toJapaneseText"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/textSize" />
+
+    <Button
+        android:id="@+id/toEnglishButton"
+        android:layout_width="@dimen/listViewButtonWidth"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/toEnglishText"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/textSize" />
+
+    <EditText
+        android:id="@+id/termText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translateTextBoxColor"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+</TableRow>
