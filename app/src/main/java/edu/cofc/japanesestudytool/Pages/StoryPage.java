@@ -4,6 +4,7 @@ package edu.cofc.japanesestudytool.Pages;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.TermListAdapter;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,8 @@ public class StoryPage extends AppCompatActivity
     WebView browser;
     ListView termListView;
     ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
+    boolean useKanji;
+    boolean useLessonKanjiOnly;
     int[] lessons;
 
     @Override
@@ -95,8 +98,8 @@ public class StoryPage extends AppCompatActivity
 
     private void rePopulateListView(ArrayList<Term> terms)
     {
-        /**TODO: update listview with appropriate arraylist
-         * */
+        TermListAdapter listAdapter = new TermListAdapter(this,terms,useKanji,useLessonKanjiOnly);
+        termListView.setAdapter(listAdapter);
     }
 
     private void gatherInformation(Intent intent)
@@ -107,8 +110,8 @@ public class StoryPage extends AppCompatActivity
         int grammarCount = intent.getIntExtra("grammarCount",0);
         int otherCount = intent.getIntExtra("otherCount",0);
 
-        boolean useKanji = intent.getBooleanExtra("kanji",false);
-        boolean useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
+        useKanji = intent.getBooleanExtra("kanji",false);
+        useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
         boolean allLessons = intent.getBooleanExtra("all",false);
 
         //Collect all lessons

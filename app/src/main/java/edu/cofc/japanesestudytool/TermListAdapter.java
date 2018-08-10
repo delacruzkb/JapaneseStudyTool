@@ -11,14 +11,14 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
-public class termListAdapter extends BaseAdapter
+public class TermListAdapter extends BaseAdapter
 {
     private Context context;
     private LayoutInflater mLayoutInflater;
     private ArrayList<Term> data;
     private boolean useKanji;
     private boolean lessonKanjiOnly;
-    public termListAdapter(Context context, ArrayList<Term> data, boolean useKanji, boolean lessonKanjiOnly)
+    public TermListAdapter(Context context, ArrayList<Term> data, boolean useKanji, boolean lessonKanjiOnly)
     {
         this.context = context;
         this.data = data;
