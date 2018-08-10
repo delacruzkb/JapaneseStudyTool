@@ -1,6 +1,7 @@
 package edu.cofc.japanesestudytool.Pages;
 
 
+import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 
@@ -21,6 +22,7 @@ public class StoryPage extends AppCompatActivity
     WebView browser;
     ListView termListView;
     ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
+    int[] lessons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -108,57 +110,58 @@ public class StoryPage extends AppCompatActivity
         boolean useKanji = intent.getBooleanExtra("kanji",false);
         boolean useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
         boolean allLessons = intent.getBooleanExtra("all",false);
+
+        //Collect all lessons
         if(!allLessons)
         {
-            boolean l1 = intent.getBooleanExtra("l1",false);
-            boolean l2 = intent.getBooleanExtra("l2",false);
-            boolean l3 = intent.getBooleanExtra("l3",false);
-            boolean l4 = intent.getBooleanExtra("l4",false);
-            boolean l5 = intent.getBooleanExtra("l5",false);
-            boolean l6 = intent.getBooleanExtra("l6",false);
-            boolean l7 = intent.getBooleanExtra("l7",false);
-            boolean l8 = intent.getBooleanExtra("l8",false);
-            boolean l9 = intent.getBooleanExtra("l9",false);
-            boolean l10 = intent.getBooleanExtra("l10",false);
-            boolean l11 = intent.getBooleanExtra("l11",false);
-            boolean l12 = intent.getBooleanExtra("l12",false);
-            boolean l13 = intent.getBooleanExtra("l13",false);
-            boolean l14 = intent.getBooleanExtra("l14",false);
-            boolean l15 = intent.getBooleanExtra("l15",false);
-            boolean l16 = intent.getBooleanExtra("l16",false);
-            boolean l17 = intent.getBooleanExtra("l17",false);
-            boolean l18 = intent.getBooleanExtra("l18",false);
-            boolean l19 = intent.getBooleanExtra("l19",false);
-            boolean l20 = intent.getBooleanExtra("l20",false);
-            boolean l21 = intent.getBooleanExtra("l21",false);
-            boolean l22 = intent.getBooleanExtra("l22",false);
-            boolean l23 = intent.getBooleanExtra("l23",false);
+            boolean[] temp = new boolean[23];
+            int lessonCounter =0;
+            for(int i = 1; i<=temp.length; i++)
+            {
+                if(intent.getBooleanExtra("l"+i,false))
+                {
+                    lessonCounter++;
+                }
+            }
+            lessons = new int[lessonCounter];
+            int placeCounter =0;
+            for(int i = 1; i<=temp.length; i++)
+            {
+                if(temp[i])
+                {
+                    lessons[placeCounter] = i;
+                    placeCounter++;
+                }
+            }
         }
-        /**TODO: Pull from database using the proper parameters and store into each respective arrayList
-         * */
 
         if(allLessons)
         {
-            if(useKanji)
-            {
-                //getAllTerms
-            }
-            else
-            {
-                //getAllHiraganaTypes
-            }
+            //getAllTerms
+            QueryTerms getAllNouns = new QueryTerms(nounList,"noun",useKanji,nounCount);
+            QueryTerms getAllVerbs = new QueryTerms(verbList, "verb", useKanji,verbCount);
+            QueryTerms getAllAdjectives = new QueryTerms( adjectiveList, "adjectives",useKanji,adjectiveCount);
+            QueryTerms getAllOthers = new QueryTerms(otherList,"other",useKanji,otherCount);
+            QueryTerms getAllGrammar = new QueryTerms(grammarList, "grammar", useKanji,grammarCount);
+            getAllNouns.execute();
+            getAllVerbs.execute();
+            getAllAdjectives.execute();
+            getAllOthers.execute();
+            getAllGrammar.execute();
         }
         else
         {
-            if(useKanji)
-            {
-
-                //GetAllKanjiFromLessons
-            }
-            else
-            {
-                //getAllHiraganaTypesFromLEssons
-            }
+            //getAllLessonTerms
+            QueryTerms getAllNouns = new QueryTerms(nounList,"noun",useKanji,lessons,nounCount);
+            QueryTerms getAllVerbs = new QueryTerms(verbList, "verb", useKanji,lessons,verbCount);
+            QueryTerms getAllAdjectives = new QueryTerms( adjectiveList, "adjectives",useKanji,lessons,adjectiveCount);
+            QueryTerms getAllOthers = new QueryTerms(otherList,"other",useKanji,lessons,otherCount);
+            QueryTerms getAllGrammar = new QueryTerms(grammarList, "grammar", useKanji,lessons,grammarCount);
+            getAllNouns.execute();
+            getAllVerbs.execute();
+            getAllAdjectives.execute();
+            getAllOthers.execute();
+            getAllGrammar.execute();
         }
     }
 }

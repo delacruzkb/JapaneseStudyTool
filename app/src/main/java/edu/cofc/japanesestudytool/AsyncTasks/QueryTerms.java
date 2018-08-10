@@ -13,8 +13,17 @@ public class QueryTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     ArrayList<Term> terms;
     String type;
     boolean useKanji;
+    boolean allTerms;
     int[] lessons;
     int limit;
+
+    public QueryTerms(ArrayList<Term> terms, String type, boolean useKanji, int limit)
+    {
+        this.type = type;
+        this.limit = limit;
+        allTerms = true;
+    }
+
     public QueryTerms(ArrayList<Term> terms, String type, boolean useKanji,int[] lessons, int limit)
     {
         this.terms = terms;
@@ -22,6 +31,7 @@ public class QueryTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         this.useKanji = useKanji;
         this.lessons = lessons;
         this.limit = limit;
+        this.allTerms = false;
     }
 
     @Override
@@ -35,7 +45,7 @@ public class QueryTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     {
         ArrayList<Term> returnValue = new ArrayList<>();
 
-        if(lessons.length == 1)
+        if(allTerms)
         {
             if(useKanji)
             {
