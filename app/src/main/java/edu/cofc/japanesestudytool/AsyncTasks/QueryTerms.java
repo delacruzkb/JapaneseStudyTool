@@ -17,14 +17,16 @@ public class QueryTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     int[] lessons;
     int limit;
 
-    public QueryTerms(ArrayList<Term> terms, String type, boolean useKanji, int limit)
+    public QueryTerms(TermDatabase termDatabase,ArrayList<Term> terms, String type, boolean useKanji, int limit)
     {
         this.type = type;
         this.limit = limit;
         allTerms = true;
+        this.terms = terms;
+        this.termDatabase = termDatabase;
     }
 
-    public QueryTerms(ArrayList<Term> terms, String type, boolean useKanji,int[] lessons, int limit)
+    public QueryTerms(TermDatabase termDatabase,ArrayList<Term> terms, String type, boolean useKanji,int[] lessons, int limit)
     {
         this.terms = terms;
         this.type = type;
@@ -32,12 +34,15 @@ public class QueryTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         this.lessons = lessons;
         this.limit = limit;
         this.allTerms = false;
+        this.termDatabase = termDatabase;
     }
 
     @Override
     protected void onPostExecute(ArrayList<Term> terms)
     {
-        this.terms.addAll(terms);
+        if(terms != null) {
+            this.terms.addAll(terms);
+        }
     }
 
     @Override
@@ -62,14 +67,22 @@ public class QueryTerms extends AsyncTask<Void,Void,ArrayList<Term>>
             {
                 for( int i =0; i<lessons.length; i++)
                 {
-                    returnValue.addAll((ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLesson(type,limit,lessons[i]));
+                    ArrayList<Term> temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLesson(type,limit,lessons[i]);
+                    if(temp != null)
+                    {
+                        returnValue.addAll(temp);
+                    }
                 }
             }
             else
             {
                 for( int i =0; i<lessons.length; i++)
                 {
-                    returnValue.addAll((ArrayList<Term>) termDatabase.termDAO().getHiraganaTypeFromLesson(type,limit,lessons[i]));
+                    ArrayList<Term> temp =(ArrayList<Term>) termDatabase.termDAO().getHiraganaTypeFromLesson(type,limit,lessons[i]);
+                    if(temp != null)
+                    {
+                        returnValue.addAll(temp);
+                    }
                 }
             }
         }

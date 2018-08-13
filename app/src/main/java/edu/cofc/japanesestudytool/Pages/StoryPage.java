@@ -4,8 +4,10 @@ package edu.cofc.japanesestudytool.Pages;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.TermDatabase;
 import edu.cofc.japanesestudytool.TermListAdapter;
 
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 
 public class StoryPage extends AppCompatActivity
 {
+    TermDatabase termDatabase;
     Button nounListButton,verbListButton, adjectiveListButton, grammarListButton, otherListButton;
     WebView browser;
     ListView termListView;
@@ -32,7 +35,7 @@ public class StoryPage extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_page);
-
+        termDatabase = Room.databaseBuilder(this,TermDatabase.class,"terms").build();
         //Initializing Views
         initializeViews();
 
@@ -119,20 +122,21 @@ public class StoryPage extends AppCompatActivity
         {
             boolean[] temp = new boolean[23];
             int lessonCounter =0;
-            for(int i = 1; i<=temp.length; i++)
+            for(int i = 0; i<temp.length; i++)
             {
-                if(intent.getBooleanExtra("l"+i,false))
+                temp[i]=intent.getBooleanExtra("l"+i,false);
+                if(temp[i])
                 {
                     lessonCounter++;
                 }
             }
             lessons = new int[lessonCounter];
             int placeCounter =0;
-            for(int i = 1; i<=temp.length; i++)
+            for(int i = 0; i<temp.length; i++)
             {
                 if(temp[i])
                 {
-                    lessons[placeCounter] = i;
+                    lessons[placeCounter] = i+1;
                     placeCounter++;
                 }
             }
@@ -141,11 +145,11 @@ public class StoryPage extends AppCompatActivity
         if(allLessons)
         {
             //getAllTerms
-            QueryTerms getAllNouns = new QueryTerms(nounList,"noun",useKanji,nounCount);
-            QueryTerms getAllVerbs = new QueryTerms(verbList, "verb", useKanji,verbCount);
-            QueryTerms getAllAdjectives = new QueryTerms( adjectiveList, "adjectives",useKanji,adjectiveCount);
-            QueryTerms getAllOthers = new QueryTerms(otherList,"other",useKanji,otherCount);
-            QueryTerms getAllGrammar = new QueryTerms(grammarList, "grammar", useKanji,grammarCount);
+            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",useKanji,nounCount);
+            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb", useKanji,verbCount);
+            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",useKanji,adjectiveCount);
+            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",useKanji,otherCount);
+            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar", useKanji,grammarCount);
             getAllNouns.execute();
             getAllVerbs.execute();
             getAllAdjectives.execute();
@@ -155,11 +159,11 @@ public class StoryPage extends AppCompatActivity
         else
         {
             //getAllLessonTerms
-            QueryTerms getAllNouns = new QueryTerms(nounList,"noun",useKanji,lessons,nounCount);
-            QueryTerms getAllVerbs = new QueryTerms(verbList, "verb", useKanji,lessons,verbCount);
-            QueryTerms getAllAdjectives = new QueryTerms( adjectiveList, "adjectives",useKanji,lessons,adjectiveCount);
-            QueryTerms getAllOthers = new QueryTerms(otherList,"other",useKanji,lessons,otherCount);
-            QueryTerms getAllGrammar = new QueryTerms(grammarList, "grammar", useKanji,lessons,grammarCount);
+            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",useKanji,lessons,nounCount);
+            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb", useKanji,lessons,verbCount);
+            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",useKanji,lessons,adjectiveCount);
+            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",useKanji,lessons,otherCount);
+            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar", useKanji,lessons,grammarCount);
             getAllNouns.execute();
             getAllVerbs.execute();
             getAllAdjectives.execute();
