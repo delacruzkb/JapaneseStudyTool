@@ -35,7 +35,8 @@ public class HomePage extends AppCompatActivity
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(storyButton.getContext(),StoryMenuPage.class);
+                Intent intent = new Intent(storyButton.getContext(),TermsMenuPage.class);
+                intent.putExtra("mode","story");
                 startActivity(intent);
             }
         });
@@ -45,7 +46,8 @@ public class HomePage extends AppCompatActivity
         flashCardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(flashCardButton.getContext(), FlashCardPage.class);
+                Intent intent = new Intent(flashCardButton.getContext(),TermsMenuPage.class);
+                intent.putExtra("mode","flashcard");
                 startActivity(intent);
             }
         });

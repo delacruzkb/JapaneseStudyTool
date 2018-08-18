@@ -7,15 +7,17 @@
     <string name="editTermsLabel">Edit Terms</string>
     <string name="loadDataLabel">Load initial Data</string>
 
-    //StoryMenuPage
+    //TermsMenuPage
     <string name="verbLabel"># of Verbs</string>
     <string name="nounLabel"># of Nouns</string>
     <string name="adjectiveLabel"># of Adjectives</string>
     <string name="otherTermLabel"># of Other terms and phrases</string>
     <string name="grammarLabel"># of Grammar points</string>
     <string name="initialCount">1</string>
+    <string name="displayLanguageText">Show Japanese First</string>
     <string name="kanjiToggleText">Kanji</string>
     <string name="lessonKanjiOnlyToggleText">Lesson Kanji Only</string>
+    <string name="displayKanjiToggle">Show Kanji First</string>
     <string name="lessonSelectionText">Include Lessons:</string>
     <string name="submitButtonText">Confirm</string>
 

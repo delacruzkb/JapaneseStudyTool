@@ -12,7 +12,7 @@ import android.widget.TextView;
 import edu.cofc.japanesestudytool.R;
 
 
-public class StoryMenuPage extends AppCompatActivity
+public class TermsMenuPage extends AppCompatActivity
 {
     TextView nounCountText, adjectiveCountText, verbCountText, grammarCountText, otherCountText;
 
@@ -23,53 +23,28 @@ public class StoryMenuPage extends AppCompatActivity
     Button otherCountDecreaseButton, otherCountIncreaseButton;
     Button confirmButton;
 
-    Switch kanjiToggle, lessonKanjiToggle;
+    Switch displayLanguageToggle,kanjiToggle, lessonKanjiToggle,displayKanjiToggle;
 
     CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6;
     CheckBox lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
     CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18;
     CheckBox lesson19, lesson20, lesson21, lesson22, lesson23;
     CheckBox allLessons;
+    String whichMode;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_story_menu_page);
-
+        setContentView(R.layout.activity_terms_menu_page);
+        whichMode= getIntent().getStringExtra("mode");
         // segregated into private methods to ease debugging
         initializeViews();
         setCountButtonOnClickListeners();
         setConfirmButtonOnClickListener();
-
-        lessonKanjiToggle.setVisibility(View.INVISIBLE);
-        kanjiToggle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!kanjiToggle.isChecked())
-                {
-                    lessonKanjiToggle.setChecked(false);
-                    lessonKanjiToggle.setVisibility(View.INVISIBLE);
-                }
-                else
-                {
-                    lessonKanjiToggle.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        allLessons.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                if(allLessons.isChecked())
-                {
-                    unCheckOthers();
-                }
-            }
-        });
-
+        setSwitchOnClickListener();
+        setCheckBoxOnClickListener();
     }
 
     private void initializeViews()
@@ -95,8 +70,12 @@ public class StoryMenuPage extends AppCompatActivity
         confirmButton = findViewById(R.id.confirmButton);
 
         //Instantiate switches
+        displayLanguageToggle = findViewById(R.id.displayLanguageSwitch);
         kanjiToggle = findViewById(R.id.kanjiSwitch);
         lessonKanjiToggle = findViewById(R.id.lessonKanjiSwitch);
+        displayKanjiToggle= findViewById(R.id.displayKanjiSwitch);
+        lessonKanjiToggle.setVisibility(View.INVISIBLE);
+        displayKanjiToggle.setVisibility(View.INVISIBLE);
 
         //Instantiate checkboxes
         lesson1 = findViewById(R.id.lessonCheckBox1);
@@ -246,23 +225,34 @@ public class StoryMenuPage extends AppCompatActivity
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(confirmButton.getContext(), StoryPage.class);
-
+                //if failed, go back to home page
+                Intent intent= new Intent(confirmButton.getContext(),HomePage.class);
+                if(whichMode.equalsIgnoreCase("story"))
+                {
+                    intent = new Intent(confirmButton.getContext(), StoryPage.class);
+                }
+                else if(whichMode.equalsIgnoreCase("flashcard"))
+                {
+                    intent = new Intent(confirmButton.getContext(), FlashCardPage.class);
+                }
                 int nounCount = Integer.parseInt(nounCountText.getText().toString());
                 int adjectiveCount = Integer.parseInt(adjectiveCountText.getText().toString());
                 int verbCount = Integer.parseInt(verbCountText.getText().toString());
                 int grammarCount = Integer.parseInt(grammarCountText.getText().toString());
                 int otherCount = Integer.parseInt(otherCountText.getText().toString());
+                boolean displayJapaneseFirst = displayLanguageToggle.isChecked();
                 boolean kanji = kanjiToggle.isChecked();
                 boolean lessonKanji = lessonKanjiToggle.isChecked();
+                boolean displayKanjiFirst = displayKanjiToggle.isChecked();
                 intent.putExtra("nounCount",nounCount);
                 intent.putExtra("adjectiveCount",adjectiveCount);
                 intent.putExtra("verbCount",verbCount);
                 intent.putExtra("grammarCount",grammarCount);
                 intent.putExtra("otherCount",otherCount);
+                intent.putExtra("displayJapaneseFirst",displayJapaneseFirst);
                 intent.putExtra("kanji",kanji);
                 intent.putExtra("lessonKanji",lessonKanji);
+                intent.putExtra("displayKanjiFirst",displayKanjiFirst);
 
                 if(allLessons.isChecked())
                 {
@@ -323,30 +313,217 @@ public class StoryMenuPage extends AppCompatActivity
         });
     }
 
-    private void unCheckOthers()
+    private void setSwitchOnClickListener()
     {
-        lesson1.setChecked(false);
-        lesson2.setChecked(false);
-        lesson3.setChecked(false);
-        lesson4.setChecked(false);
-        lesson5.setChecked(false);
-        lesson6.setChecked(false);
-        lesson7.setChecked(false);
-        lesson8.setChecked(false);
-        lesson9.setChecked(false);
-        lesson10.setChecked(false);
-        lesson11.setChecked(false);
-        lesson12.setChecked(false);
-        lesson13.setChecked(false);
-        lesson14.setChecked(false);
-        lesson15.setChecked(false);
-        lesson16.setChecked(false);
-        lesson17.setChecked(false);
-        lesson18.setChecked(false);
-        lesson19.setChecked(false);
-        lesson20.setChecked(false);
-        lesson21.setChecked(false);
-        lesson22.setChecked(false);
-        lesson23.setChecked(false);
+        displayLanguageToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!displayLanguageToggle.isChecked())
+                {
+                    displayKanjiToggle.setChecked(false);
+                }
+            }
+        });
+        kanjiToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!kanjiToggle.isChecked())
+                {
+                    lessonKanjiToggle.setChecked(false);
+                    displayKanjiToggle.setChecked(false);
+                    lessonKanjiToggle.setVisibility(View.INVISIBLE);
+                    displayKanjiToggle.setVisibility(View.INVISIBLE);
+                }
+                else
+                {
+                    lessonKanjiToggle.setVisibility(View.VISIBLE);
+                    displayKanjiToggle.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        displayKanjiToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!displayLanguageToggle.isChecked())
+                {
+                    displayKanjiToggle.setChecked(false);
+                }
+            }
+        });
+    }
+
+    private void setCheckBoxOnClickListener()
+    {
+        lesson1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+        lesson23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
+
+        allLessons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if(allLessons.isChecked())
+                {
+                    lesson1.setChecked(false);
+                    lesson2.setChecked(false);
+                    lesson3.setChecked(false);
+                    lesson4.setChecked(false);
+                    lesson5.setChecked(false);
+                    lesson6.setChecked(false);
+                    lesson7.setChecked(false);
+                    lesson8.setChecked(false);
+                    lesson9.setChecked(false);
+                    lesson10.setChecked(false);
+                    lesson11.setChecked(false);
+                    lesson12.setChecked(false);
+                    lesson13.setChecked(false);
+                    lesson14.setChecked(false);
+                    lesson15.setChecked(false);
+                    lesson16.setChecked(false);
+                    lesson17.setChecked(false);
+                    lesson18.setChecked(false);
+                    lesson19.setChecked(false);
+                    lesson20.setChecked(false);
+                    lesson21.setChecked(false);
+                    lesson22.setChecked(false);
+                    lesson23.setChecked(false);
+                }
+            }
+        });
     }
 }

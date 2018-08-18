@@ -16,13 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pages.StoryMenuPage" />
+        <activity android:name=".Pages.TermsMenuPage" />
         <activity android:name=".Pages.AddTermsPage" />
         <activity android:name=".Pages.EditTermsPage" />
         <activity android:name=".Pages.FlashCardPage" />
         <activity android:name=".Pages.StoryPage" />
-        <activity android:name=".Pages.FlashMenuPage">
-        </activity>
     </application>
 
 </manifest>

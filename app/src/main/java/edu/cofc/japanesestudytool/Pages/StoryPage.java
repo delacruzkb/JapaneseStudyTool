@@ -26,8 +26,10 @@ public class StoryPage extends AppCompatActivity
     WebView browser;
     ListView termListView;
     ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
+    boolean useJapaneseFirst;
     boolean useKanji;
     boolean useLessonKanjiOnly;
+    boolean useKanjiFirst;
     int[] lessons;
 
     @Override
@@ -154,11 +156,11 @@ public class StoryPage extends AppCompatActivity
         if(allLessons)
         {
             //getAllTerms
-            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",useKanji,nounCount);
-            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb", useKanji,verbCount);
-            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",useKanji,adjectiveCount);
-            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",useKanji,otherCount);
-            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar", useKanji,grammarCount);
+            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",null,nounCount);
+            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb",null,verbCount);
+            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",null,adjectiveCount);
+            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",null,otherCount);
+            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar",null,grammarCount);
             getAllNouns.execute();
             getAllVerbs.execute();
             getAllAdjectives.execute();
@@ -168,11 +170,11 @@ public class StoryPage extends AppCompatActivity
         else
         {
             //getAllLessonTerms
-            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",useKanji,lessons,nounCount);
-            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb", useKanji,lessons,verbCount);
-            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",useKanji,lessons,adjectiveCount);
-            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",useKanji,lessons,otherCount);
-            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar", useKanji,lessons,grammarCount);
+            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",lessons,nounCount);
+            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb",lessons,verbCount);
+            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",lessons,adjectiveCount);
+            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",lessons,otherCount);
+            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar",lessons,grammarCount);
             getAllNouns.execute();
             getAllVerbs.execute();
             getAllAdjectives.execute();
