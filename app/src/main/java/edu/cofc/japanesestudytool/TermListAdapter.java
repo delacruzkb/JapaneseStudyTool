@@ -76,33 +76,27 @@ public class TermListAdapter extends BaseAdapter
             }
         });
 
-        if(showJapaneseFirst)
+        if(!useKanji)
         {
-            if( useKanji)
+            toKanji.setVisibility(View.INVISIBLE);
+        }
+        if(showKanjiFirst)
+        {
+            termText.setText(term.getJpns());
+            if(showKanjiFirst)
             {
-                if(showKanjiFirst)
+                termText.setText(term.getKanji());
+                if(lessonKanjiOnly&& !term.getReqKanji())
                 {
-                    termText.setText(term.getKanji());
-                }
-                if(lessonKanjiOnly && !term.getReqKanji())
-                {
-                    toKanji.setVisibility(View.INVISIBLE);
                     termText.setText(term.getJpns());
+                    toKanji.setVisibility(View.INVISIBLE);
                 }
             }
-            else
-            {
-                termText.setText(term.getJpns());
-            }
-
         }
         else
         {
             termText.setText(term.getEng());
         }
-
-
-
         return rowView;
     }
 

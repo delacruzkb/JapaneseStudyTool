@@ -12,4 +12,11 @@
     <dimen name="translateButtonWidth">50dp</dimen>
     <dimen name="listViewButtonWidth">35dp</dimen>
     <dimen name="listViewButtonHeight">150dp</dimen>
+
+    <dimen name="flashCardTextSize">50sp</dimen>
+    <dimen name="lessonLabelWidth">30dp</dimen>
+    <dimen name="lessonNumberLabelWidth">10dp</dimen>
+    <dimen name="typeLabelWidth">20dp</dimen>
+    <dimen name="typeValueLabelWidth">50dp</dimen>
+    <dimen name="flashCardHeight">500dp</dimen>
 </resources>

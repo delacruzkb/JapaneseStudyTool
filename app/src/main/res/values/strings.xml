@@ -1,6 +1,10 @@
 <resources>
+    //Generics
     <string name="app_name">JapaneseStudyTool</string>
     <string name="storyButtonLabel">Create a story / 話を作りましょう</string>
+    <string name="toEnglishText">ENG</string>
+    <string name="toJapaneseText">ひらがな</string>
+    <string name="toKanjiText">漢字</string>
     //HomePage
     <string name="flashCardLabel">Flash Cards</string>
     <string name="addTermsLabel">Add New Terms</string>
@@ -27,11 +31,16 @@
     <string name="adjectiveListingLabel">Adjective(s):</string>
     <string name="grammarListingLabel">Grammar point(s):</string>
     <string name="otherListingLabel">Other(s):</string>
-    <string name="toEnglishText">ENG</string>
-    <string name="toJapaneseText">ひらがな</string>
-    <string name="toKanjiText">漢字</string>
     <string name="termMenuText">Terms</string>
     <string name="menuButtonText">Main Menu</string>
     <string name="backButtonText">Back</string>
+
+    //FlashCardPage
+    <string name="lessonLabel">Lesson: </string>
+    <string name="typeLabel">Type: </string>
+    <string name="reqKanjiLabel">Req. Kanji</string>
+    <string name="previousTermLabel">Prev</string>
+    <string name="nextTermLabel">Next</string>
+
 
 </resources>
