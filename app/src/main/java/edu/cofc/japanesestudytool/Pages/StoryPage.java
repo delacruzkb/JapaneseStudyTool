@@ -1,13 +1,8 @@
 package edu.cofc.japanesestudytool.Pages;
 
-
-import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.TermDatabase;
 import edu.cofc.japanesestudytool.TermListAdapter;
-
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +16,6 @@ import java.util.ArrayList;
 
 public class StoryPage extends AppCompatActivity
 {
-    private TermDatabase termDatabase;
     private Button nounListButton,verbListButton, adjectiveListButton, grammarListButton, otherListButton;
     private WebView browser;
     private ListView termListView;
@@ -30,14 +24,12 @@ public class StoryPage extends AppCompatActivity
     private boolean useKanji;
     private boolean useLessonKanjiOnly;
     private boolean useKanjiFirst;
-    private int[] lessons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_page);
-        termDatabase = Room.databaseBuilder(this,TermDatabase.class,"terms").build();
         //Initializing Views
         initializeViews();
 
@@ -118,70 +110,15 @@ public class StoryPage extends AppCompatActivity
 
     private void gatherInformation(Intent intent)
     {
-        int nounCount = intent.getIntExtra("nounCount",0);
-        int verbCount = intent.getIntExtra("verbCount",0);
-        int adjectiveCount = intent.getIntExtra("adjectiveCount",0);
-        int grammarCount = intent.getIntExtra("grammarCount",0);
-        int otherCount = intent.getIntExtra("otherCount",0);
-
         useJapaneseFirst= intent.getBooleanExtra("displayJapaneseFirst",true);
         useKanji = intent.getBooleanExtra("kanji",false);
         useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
         useKanjiFirst = intent.getBooleanExtra("displayKanjiFirst",false);
-        boolean allLessons = intent.getBooleanExtra("all",false);
+        nounList = intent.getParcelableArrayListExtra("nounList");
+        nounList = intent.getParcelableArrayListExtra("verbList");
+        nounList = intent.getParcelableArrayListExtra("adjectiveList");
+        nounList = intent.getParcelableArrayListExtra("otherList");
+        nounList = intent.getParcelableArrayListExtra("grammarList");
 
-        //Collect all lessons
-        if(!allLessons)
-        {
-            boolean[] temp = new boolean[23];
-            int lessonCounter =0;
-            for(int i = 0; i<temp.length; i++)
-            {
-                temp[i]=intent.getBooleanExtra("l"+i,false);
-                if(temp[i])
-                {
-                    lessonCounter++;
-                }
-            }
-            lessons = new int[lessonCounter];
-            int placeCounter =0;
-            for(int i = 0; i<temp.length; i++)
-            {
-                if(temp[i])
-                {
-                    lessons[placeCounter] = i+1;
-                    placeCounter++;
-                }
-            }
-        }
-
-        if(allLessons)
-        {
-            //getAllTerms
-            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",null,nounCount);
-            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb",null,verbCount);
-            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",null,adjectiveCount);
-            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",null,otherCount);
-            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar",null,grammarCount);
-            getAllNouns.execute();
-            getAllVerbs.execute();
-            getAllAdjectives.execute();
-            getAllOthers.execute();
-            getAllGrammar.execute();
-        }
-        else
-        {
-            //getAllLessonTerms
-            QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",lessons,nounCount);
-            QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb",lessons,verbCount);
-            QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",lessons,adjectiveCount);
-            QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",lessons,otherCount);
-            QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar",lessons,grammarCount);
-            getAllNouns.execute();
-            getAllVerbs.execute();
-            getAllAdjectives.execute();
-            getAllOthers.execute();
-            getAllGrammar.execute();
-        }
     }
 }
