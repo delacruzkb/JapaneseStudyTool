@@ -14,23 +14,23 @@ import edu.cofc.japanesestudytool.R;
 
 public class TermsMenuPage extends AppCompatActivity
 {
-    TextView nounCountText, adjectiveCountText, verbCountText, grammarCountText, otherCountText;
+    private TextView nounCountText, adjectiveCountText, verbCountText, grammarCountText, otherCountText;
 
-    Button nounCountDecreaseButton, nounCountIncreaseButton;
-    Button adjectiveCountDecreaseButton, adjectiveCountIncreaseButton;
-    Button verbCountDecreaseButton, verbCountIncreaseButton;
-    Button grammarCountDecreaseButton, grammarCountIncreaseButton;
-    Button otherCountDecreaseButton, otherCountIncreaseButton;
-    Button confirmButton;
+    private Button nounCountDecreaseButton, nounCountIncreaseButton;
+    private Button adjectiveCountDecreaseButton, adjectiveCountIncreaseButton;
+    private Button verbCountDecreaseButton, verbCountIncreaseButton;
+    private Button grammarCountDecreaseButton, grammarCountIncreaseButton;
+    private Button otherCountDecreaseButton, otherCountIncreaseButton;
+    private Button confirmButton;
 
-    Switch displayLanguageToggle,kanjiToggle, lessonKanjiToggle,displayKanjiToggle;
+    private Switch displayLanguageToggle,kanjiToggle, lessonKanjiToggle,displayKanjiToggle;
 
-    CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6;
-    CheckBox lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
-    CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18;
-    CheckBox lesson19, lesson20, lesson21, lesson22, lesson23;
-    CheckBox allLessons;
-    String whichMode;
+    private CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6;
+    private CheckBox lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
+    private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18;
+    private CheckBox lesson19, lesson20, lesson21, lesson22, lesson23;
+    private CheckBox allLessons;
+    private String whichMode;
 
 
     @Override

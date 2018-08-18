@@ -21,16 +21,16 @@ import java.util.ArrayList;
 
 public class StoryPage extends AppCompatActivity
 {
-    TermDatabase termDatabase;
-    Button nounListButton,verbListButton, adjectiveListButton, grammarListButton, otherListButton;
-    WebView browser;
-    ListView termListView;
-    ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
-    boolean useJapaneseFirst;
-    boolean useKanji;
-    boolean useLessonKanjiOnly;
-    boolean useKanjiFirst;
-    int[] lessons;
+    private TermDatabase termDatabase;
+    private Button nounListButton,verbListButton, adjectiveListButton, grammarListButton, otherListButton;
+    private WebView browser;
+    private ListView termListView;
+    private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
+    private boolean useJapaneseFirst;
+    private boolean useKanji;
+    private boolean useLessonKanjiOnly;
+    private boolean useKanjiFirst;
+    private int[] lessons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -112,7 +112,7 @@ public class StoryPage extends AppCompatActivity
 
     private void rePopulateListView(ArrayList<Term> terms)
     {
-        TermListAdapter listAdapter = new TermListAdapter(this,terms,useKanji,useLessonKanjiOnly);
+        TermListAdapter listAdapter = new TermListAdapter(this,terms,useJapaneseFirst,useKanji,useLessonKanjiOnly,useKanjiFirst);
         termListView.setAdapter(listAdapter);
     }
 
@@ -124,8 +124,10 @@ public class StoryPage extends AppCompatActivity
         int grammarCount = intent.getIntExtra("grammarCount",0);
         int otherCount = intent.getIntExtra("otherCount",0);
 
+        useJapaneseFirst= intent.getBooleanExtra("displayJapaneseFirst",true);
         useKanji = intent.getBooleanExtra("kanji",false);
         useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
+        useKanjiFirst = intent.getBooleanExtra("displayKanjiFirst",false);
         boolean allLessons = intent.getBooleanExtra("all",false);
 
         //Collect all lessons

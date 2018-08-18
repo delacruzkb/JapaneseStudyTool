@@ -22,7 +22,7 @@ public class HomePage extends AppCompatActivity
     private Button addTermsButton;
     private Button editTermsButton;
     private Button loadDataButton;
-    TermDatabase termDatabase;
+    private TermDatabase termDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

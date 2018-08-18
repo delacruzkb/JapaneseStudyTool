@@ -16,15 +16,19 @@ public class TermListAdapter extends BaseAdapter
     private Context context;
     private LayoutInflater mLayoutInflater;
     private ArrayList<Term> data;
+    private boolean showJapaneseFirst;
     private boolean useKanji;
     private boolean lessonKanjiOnly;
-    public TermListAdapter(Context context, ArrayList<Term> data, boolean useKanji, boolean lessonKanjiOnly)
+    private boolean showKanjiFirst;
+    public TermListAdapter(Context context, ArrayList<Term> data, boolean showJapaneseFirst, boolean useKanji, boolean lessonKanjiOnly,boolean showKanjiFirst)
     {
         this.context = context;
         this.data = data;
         mLayoutInflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.showJapaneseFirst = showJapaneseFirst;
         this.useKanji = useKanji;
         this.lessonKanjiOnly = lessonKanjiOnly;
+        this.showKanjiFirst = showKanjiFirst;
     }
     @Override
     public int getCount()
@@ -71,19 +75,33 @@ public class TermListAdapter extends BaseAdapter
                 termText.setText(term.getKanji());
             }
         });
-        if( useKanji)
+
+        if(showJapaneseFirst)
         {
-            termText.setText(term.getKanji());
-            if(lessonKanjiOnly && !term.getReqKanji())
+            if( useKanji)
             {
-                toKanji.setVisibility(View.INVISIBLE);
+                if(showKanjiFirst)
+                {
+                    termText.setText(term.getKanji());
+                }
+                if(lessonKanjiOnly && !term.getReqKanji())
+                {
+                    toKanji.setVisibility(View.INVISIBLE);
+                    termText.setText(term.getJpns());
+                }
+            }
+            else
+            {
                 termText.setText(term.getJpns());
             }
+
         }
         else
         {
-            termText.setText(term.getJpns());
+            termText.setText(term.getEng());
         }
+
+
 
         return rowView;
     }
