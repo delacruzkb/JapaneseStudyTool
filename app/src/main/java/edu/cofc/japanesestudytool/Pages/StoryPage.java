@@ -95,8 +95,17 @@ public class StoryPage extends AppCompatActivity
 
         browser = (WebView) findViewById(R.id.googleTranslate);
         browser.setWebViewClient(new WebViewClient());
+        browser.loadUrl("https://translate.google.com/#ja/en");
+        browser.getSettings().setJavaScriptEnabled(true);
+        browser.getSettings().setLoadWithOverviewMode(true);
+        browser.getSettings().setUseWideViewPort(true);
+
+        browser.getSettings().setSupportZoom(true);
         browser.getSettings().setBuiltInZoomControls(true);
-        browser.loadUrl("https://translate.google.com/m?hl=en&sl=ja&tl=en&ie=UTF-8&prev=_m&q=");
+        browser.getSettings().setDisplayZoomControls(false);
+
+        browser.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        browser.setScrollbarFadingEnabled(false);
     }
 
     private void rePopulateListView(ArrayList<Term> terms)
