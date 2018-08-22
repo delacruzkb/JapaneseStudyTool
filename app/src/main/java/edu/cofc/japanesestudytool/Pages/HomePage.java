@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.Buffer;
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteAllTerms;
@@ -91,7 +95,30 @@ public class HomePage extends AppCompatActivity
     private ArrayList<Term> getInitialData()
     {
         ArrayList<Term> returnValue = new ArrayList();
+        try
+        {
+            InputStream is = getAssets().open("jpnsInitialData.csv");
+            String line ="";
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
+            while( (line = reader.readLine()) !=null)
+            {
+                String[] termData = line.split(",");
+                Term term = new Term();
+                term.setJpns(termData[0]);
+                term.setEng(termData[1]);
+                term.setKanji(termData[2]);
+                term.setType(termData[3]);
+                term.setLesson(termData[4]);
+                term.setReqKanji(termData[5]);
+                returnValue.add(term);
+            }
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         return returnValue;
     }
 }
