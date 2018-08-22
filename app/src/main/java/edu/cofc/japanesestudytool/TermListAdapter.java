@@ -75,7 +75,10 @@ public class TermListAdapter extends BaseAdapter
                 termText.setText(term.getKanji());
             }
         });
-
+        if( (term.getKanji()==null) || (term.getKanji().equalsIgnoreCase("NULL"))
+        {
+            toKanji.setVisibility(View.INVISIBLE);
+        }
         if(!useKanji)
         {
             toKanji.setVisibility(View.INVISIBLE);
