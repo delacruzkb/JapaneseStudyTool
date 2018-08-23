@@ -97,7 +97,7 @@ public class HomePage extends AppCompatActivity
         ArrayList<Term> returnValue = new ArrayList();
         try
         {
-            InputStream is = getAssets().open("jpnsInitialData.csv");
+            InputStream is = getAssets().open("jpnsData.csv");
             String line ="";
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 

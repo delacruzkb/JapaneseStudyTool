@@ -88,7 +88,7 @@ Tシャツ,T-Shirt,NULL,Noun,2,NULL
 メニュー,Menu,NULL,Noun,2,NULL
 やさい,Vegetable,NULL,Noun,2,NULL
 ゆうびんきょく,Post Office,NULL,Noun,2,NULL
-（～を）おねがいします,". . ., please.",NULL,Other,2,NULL
+（～を）おねがいします,. . .、please.,NULL,Other,2,NULL
 （～を）ください,Please give me . . .,NULL,Other,2,NULL
 ～えん,. . . Yen,NULL,Other,2,NULL
 １０ページをみてください,Please look at page 10.,NULL,Other,2,NULL
@@ -165,7 +165,7 @@ Tシャツ,T-Shirt,NULL,Noun,2,NULL
 ざっし,Magazine,雑誌,Noun,3,NULL
 しゅうまつ,Weekend,週末,Noun,3,NULL
 スポーツ,Sports,NULL,Noun,3,NULL
-デート,"Date (Romantic, not calendar)",NULL,Noun,3,NULL
+デート,Date (Romantic、 not calendar),NULL,Noun,3,NULL
 テニス,Tennis,NULL,Noun,3,NULL
 テレビ,TV,NULL,Noun,3,NULL
 ばんごはん,Dinner,晩ご飯,Noun,3,NULL
@@ -381,12 +381,12 @@ Good-looking (conjugates like いい),Good-looking,NULL,Adjective,5,NULL
 ぼく,I (used by men),僕,Noun,5,NULL
 ほけん,Insurance,保険,Noun,5,NULL
 まどぐち,Counter,窓口,Noun,5,NULL
-（こうくうびん）でおねがいします。,"Make this (an airmail), Please. (Post Office)",（航空便）でお願いします。,Other,5,NULL
+（こうくうびん）でおねがいします。,Make this (an airmail)、Please. (Post Office),（航空便）でお願いします。,Other,5,NULL
 ～まい,Counter for flat objects,～枚,Other,5,NULL
 ～まで,to (a place) / as far s (a place) / till (a time),NULL,Other,5,NULL
 いっしょに,Together,一緒に,Other,5,NULL
-ごじゅうえんきってをさんまいください。,"Give me three 50-yen stamps, please. (Post Office)",五十円切手を三枚ください。,Other,5,NULL
-これ、おねがいします。,"Can you take care of this, please? (Post Office)",これ、お願いします。,Other,5,NULL
+ごじゅうえんきってをさんまいください。,Give me three 50-yen stamps、please. (Post Office),五十円切手を三枚ください。,Other,5,NULL
+これ、おねがいします。,Can you take care of this、please? (Post Office),これ、お願いします。,Other,5,NULL
 すごく,Extremely,NULL,Other,5,NULL
 それから,and then,NULL,Other,5,NULL
 だいじょうぶ,It's Okay / Not to worry / Everything is under control,大丈夫,Other,5,NULL
@@ -454,7 +454,7 @@ Good-looking (conjugates like いい),Good-looking,NULL,Adjective,5,NULL
 とる➞とって,"(Te-form) forming a sentence that describes two events or activities. (""I did this and did that."")",NULL,Grammar,6,NULL
 とる➞とってはいけません,"(Te-form) stating that something is forbidden (You must not . . ."")",NULL,Grammar,6,NULL
 みる➞みてもいいです（か／よ）,"(Te-form) giving and asking for permission (""You may . . . / May I . . .?"")",NULL,Grammar,6,NULL
-よむ➞よんでください,"(Te-form) making requests ("". . .,please."")",NULL,Grammar,6,NULL
+よむ➞よんでください,"(Te-form) making requests ("". . .、please."")",NULL,Grammar,6,NULL
 CD（シーディー）,CD,NULL,Noun,6,NULL
 イタリア,Italy,NULL,Noun,6,NULL
 おふろ,Bath,お風呂,Noun,6,NULL
@@ -472,7 +472,7 @@ CD（シーディー）,CD,NULL,Noun,6,NULL
 おそく,(do something) late,遅く,Other,6,NULL
 けっこうです,That would be fine. / That wouldn't be necessary. / Right away.,結構です,Other,6,NULL
 すぐ,Right away,NULL,Other,6,NULL
-すみません。りゅびんきょくはどこですか。,"Excuse me, where is a post office? (Directions)",すみせん。郵便局はどこですか。,Other,6,NULL
+すみません。りゅびんきょくはどこですか。,Excuse me、where is a post office? (Directions),すみせん。郵便局はどこですか。,Other,6,NULL
 どうもありがとうございます。,Thank you very much.,NULL,Other,6,NULL
 ひだりにまがる,Turn left (Directions),左に曲がる,Other,6,NULL
 ひとつめのしこうをみぎにまがる,Turn right at the first traffic light (Directions),一つ目の信号を右に曲がる,Other,6,NULL
@@ -906,7 +906,7 @@ AのほうがBより（Property),A is more (Property) then B / Comparing 2 items
 このでんしゃはあきはばらにとまりますか,Does this train stop at Akihabara? (At the station),この電車は秋葉原にとまりますか,Other,10,NULL
 しゅうでんはなんじですか,What time is the last train? (At the station),終電は何時ですか,Other,10,NULL
 せんぱつ,Departing First (At the station),先発,Other,10,NULL
-つぎは～,"Next (stop), . . .",次は～,Other,10,NULL
+つぎは～,Next (stop)、 . . .,次は～,Other,10,NULL
 つぎは～にとまります,Next (we'll stop at) (At the station),次は～に止まります,Other,10,NULL
 でんしゃがまいります,A train is arriving (At the station),電車が参ります,Other,10,NULL
 ドアがしまります。ごちゅういください,The doors are closing. Please be careful. (At the station),ドアが閉まります。ご注意ください,Other,10,NULL
@@ -921,7 +921,7 @@ AのほうがBより（Property),A is more (Property) then B / Comparing 2 items
 りょこうする,To travel,旅行する,Verb-IRR,10,NULL
 （～を）きめる,To decide,（～を）決める,Verb-RU,10,NULL
 かぶせる,To put (a hat) on a (person)'s head,NULL,Verb-RU,10,NULL
-（～に）とまる,"To stay ( at a hotel, etc.)",（～に）泊まる,Verb-U,10,NULL
+（～に）とまる,To stay ( at a hotel、 etc.),（～に）泊まる,Verb-U,10,NULL
 （～を）はらう,To pay,（～を）払う,Verb-U,10,NULL
 かかる,To take (amount of time / money),NULL,Verb-U,10,NULL
 とる,To take off,NULL,Verb-U,10,NULL
@@ -974,7 +974,7 @@ AのほうがBより（Property),A is more (Property) then B / Comparing 2 items
 ～ことがある,Describe that you did something or something happened in earlier times,NULL,Grammar,11,NULL
 ～たい,Describe your hope / aspiration,NULL,Grammar,11,NULL
 ～たり～たりする,Mention activities / events just as examples and in no set order,NULL,Grammar,11,NULL
-NounA　や　NounB,"Connects two nouns, suggesting that the things referred to are proposed as examples and not citing an exhaustive list",NULL,Grammar,11,NULL
+NounA　や　NounB,Connects two nouns、suggesting that the things referred to are proposed as examples and not citing an exhaustive list,NULL,Grammar,11,NULL
 ～ぎょうめ,Line Number . . .,～行目,Noun,11,NULL
 ～ばん,Number . . .,～番,Noun,11,NULL
 ～ページ,Page number . . .,NULL,Noun,11,NULL
@@ -1139,7 +1139,7 @@ NounA　や　NounB,"Connects two nouns, suggesting that the things referred to 
 ジュース,Juice,NULL,Noun,12,NULL
 しゅじゅつ,Operation,手術,Noun,12,NULL
 せいけいげか,Orthopedic surgeon,整形外科,Noun,12,NULL
-せいせき,"Grade (on a test, etc)",成績,Noun,12,NULL
+せいせき,Grade (on a test、 etc),成績,Noun,12,NULL
 せき,Cough,NULL,Noun,12,NULL
 たいおんけい,Thermometer,体温計,Noun,12,NULL
 ちゅうしゃ,Injection,注射,Noun,12,NULL
@@ -1157,7 +1157,7 @@ NounA　や　NounB,"Connects two nouns, suggesting that the things referred to 
 ようじ,Business to take care of,用事,Noun,12,NULL
 レントゲン,X-ray,NULL,Noun,12,NULL
 （～に）アレルギーがあります,I have an allergy to . . .,NULL,Other,12,NULL
-～でしょう,"Probably / . . . , right?",NULL,Other,12,NULL
+～でしょう,Probably / . . . 、right?,NULL,Other,12,NULL
 ～ど,. . . degrees (temperature),～渡,Other,12,NULL
 ～のど,because . . .,NULL,Other,12,NULL
 あしのほねをおりました,I broke my leg,足の骨を折りました,Other,12,NULL
@@ -1663,7 +1663,7 @@ Dictionary form　＋ことができる,Say someone can or has the ability to do
 あのか,seven days,七日,other,13,NULL
 あんしょうばんごう,Personal IDentification number (At the bank),暗証番号,Other,13,NULL
 いちにち,one day,一日,other,13,NULL
-いちまんえんさつをせんえんさつじゅうまいにりょうがえできますか," (At the bank) Can you change a 10,000-yen bill into ten 1,000-yen bills?",一万円札を千円札十枚に両替できますか,Other,13,NULL
+いちまんえんさつをせんえんさつじゅうまいにりょうがえできますか, (At the bank) Can you change a ten thousand yen bill into ten thousand yen bills?,一万円札を千円札十枚に両替できますか,Other,13,NULL
 いつか,five days,五日,other,13,NULL
 いっしょうにいちど,once in a lifetime,一生に一度,other,13,NULL
 いらっしゃいませ,(someone honorable) is present/home,NULL,other,13,NULL
@@ -1966,23 +1966,23 @@ Xがほうしい,I want (x),NULL,grammar,14,NULL
 ～はく,(At the hotel) . . . nights,～泊,Other,15,Null
 ～ばん,number . . .,～番,Other,15,Null
 ～め,-th,～目,Other,15,Null
-～けど,". . ., but / . . ., so",NULL,Other,15,Null
+～けど,. . .、but / . . .、so,NULL,Other,15,Null
 チェックイン（する）,(At the hotel) checking in,NULL,Other,15,Null
 チェックアウト（する）,(At the hotel) checking out,NULL,Other,15,Null
 はい。かしこまりました。,(At the hotel) Alright.,NULL,Other,15,Null
-おきゃくさまのおんあまえとおでんわばんごをおねがいします,"(At the hotel) Your ame and phone number, please.",お客様のお名前とお電話番号をお願いします,Other,15,Null
+おきゃくさまのおんあまえとおでんわばんごをおねがいします,(At the hotel) Your ame and phone number、 please.,お客様のお名前とお電話番号をお願いします,Other,15,Null
 クレジットカードではらえますか,(At the hotel) Can I pay by credit card?,クレジットカードで払えますか,Other,15,Null
-じゃあ、よやくおねがいします,"(At the hotel) Well, I would like to make a reservation",じゃあ、予約お願いします,Other,15,Null
+じゃあ、よやくおねがいします,(At the hotel) Well、 I would like to make a reservation,じゃあ、予約お願いします,Other,15,Null
 にじまでにもつをあずかってくれませんか,(At the hotel) Could you keep my luggage until 2 o'clock,に時まで荷物を預かってくれませんか,Other,15,Null
 もういちど,one more time,もう一度,Other,15,Null
 いちねんじゅう,all year,一年中,other,15,NULL
 いちにちじゅう,All day long,一日中,Other,15,Null
 なんめいさまですか,(At the hotel) How much is it for one night?,一泊いくらですか,Other,15,Null
-いっぱくにしょくつきでおひとりさま、いちまんにせんえんです,"(At the hotel) For one night with two meals, 12,000 yen",一泊に食付でお一人で様、一万二千円です,Other,15,Null
+いっぱくにしょくつきでおひとりさま、いちまんにせんえんです,(At the hotel) For one night with two meals、 twelve thousand yen,一泊に食付でお一人で様、一万二千円です,Other,15,Null
 いっぱくにしょくつき,(At the hotel) one night with two meals,一泊二食付,Other,15,Null
 さんめいです,(At the hotel) Three people,二名です,Other,15,Null
 いっぱくいくらですか,(At the hotel) How many people?,何名様ですか,Other,15,Null
-なんにちからなんぱくのごよやくですか,"(At the hotel) How many nights, starting from what day?",何日から何泊のご予約ですか,Other,15,Null
+なんにちからなんぱくのごよやくですか,(At the hotel) How many nights、 starting from what day?,何日から何泊のご予約ですか,Other,15,Null
 さいきん,recently,最近,Other,15,Null
 らいしゅうのきんようびからさんぱくです,(At the hotel) Three nights from next Friday,来週の金曜日から三泊です,Other,15,Null
 しょくじつき,(At the hotel) with meals,食事付,Other,15,Null
@@ -2081,11 +2081,11 @@ Xがほうしい,I want (x),NULL,grammar,14,NULL
 （Present-tense short form) といいですね,(Polite) Say that you hope something nice happens (for someone other than yourself)(that is out of your control),NULL,Grammar,16,NULL
 （Potential form) といいんですが,(Polite) Say that you hope something nice happens (for yourself) (that is within your control),NULL,Grammar,16,NULL
 （Present-tense short form) といいんですが,(Polite) Say that you hope something nice happens (for yourself)(that is out of your control),NULL,Grammar,16,NULL
-（Person）のために　。。。～て（あげる／くれる／もらう）,"Do something for the sake of (person), a service that does not have the place for the beneficiary",NULL,Grammar,16,NULL
-（Te-form）あげる,"Do something for the sake of others, a service",NULL,Grammar,16,NULL
-"（Ta-form Event A）～とき,（Main event B）","Explain that after event A has occured, event B will follow.",NULL,Grammar,16,NULL
-"（Short Form Event A）～とき,（Main event B）","Explain that before A, B has occured. / Event A and B are hapening at the same time",NULL,Grammar,16,NULL
-"（Event A　ている）～とき,（Main event B）","Explain that during event B, event A occured",NULL,Grammar,16,NULL
+（Person）のために　。。。～て（あげる／くれる／もらう）,Do something for the sake of (person)、 a service that does not have the place for the beneficiary,NULL,Grammar,16,NULL
+（Te-form）あげる,Do something for the sake of others、 a service,NULL,Grammar,16,NULL
+（Ta-form Event A）～とき、（Main event B）,Explain that after event A has occured、 event B will follow.,NULL,Grammar,16,NULL
+（Short Form Event A）～とき、（Main event B）,Explain that before A、 B has occured. / Event A and B are hapening at the same time,NULL,Grammar,16,NULL
+（Event A　ている）～とき、（Main event B）,Explain that during event B、event A occured,NULL,Grammar,16,NULL
 （Te-form）いただけませんか,Make a request of someone ( most- formal),NULL,Grammar,16,NULL
 （Te-form）くださいませんか,Make a request of someone ( most- formal),NULL,Grammar,16,NULL
 （Te-form）てまらえませんか,Make a request of someone ( semi-formal),NULL,Grammar,16,NULL
@@ -2145,7 +2145,7 @@ Xがほうしい,I want (x),NULL,grammar,14,NULL
 （～を）あつめる,to collect,（～を）集める,Verb-RU,16,NULL
 たすける,to help / rescue,助ける,Verb-RU,16,NULL
 アイロンをかける,to Iron (clothes),NULL,Verb-RU,16,NULL
-（～に）のりおくれる,"to miss ( a train, bus, etc)",（～に）乗り遅れる,Verb-RU,16,NULL
+（～に）のりおくれる,to miss ( a train、 bus、 etc),（～に）乗り遅れる,Verb-RU,16,NULL
 (thing)(を)(place)(に)　いれる,To put (somethng) in,(thing)(を)(place)(に)　入れる,Verb-RU,16,NULL
 （～を）みせる,to show,（～を）見せる,Verb-RU,16,NULL
 ちがう,to be different,違う,Verb-U,16,NULL
