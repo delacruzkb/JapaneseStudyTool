@@ -83,7 +83,7 @@ public class TermListAdapter extends BaseAdapter
         {
             toKanji.setVisibility(View.INVISIBLE);
         }
-        if(showKanjiFirst)
+        if(showJapaneseFirst)
         {
             termText.setText(term.getJpns());
             if(showKanjiFirst)
