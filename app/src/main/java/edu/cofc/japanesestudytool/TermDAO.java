@@ -13,14 +13,17 @@ public interface TermDAO
 {
     @Insert
     void insertTerm(Term term);
-
+    @Query("SELECT * FROM Term WHERE type ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTerms(int limit);
     //if allLessons picked
     @Query("SELECT * FROM Term WHERE type LIKE :type ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypes(String type, int limit);
 
     //if not all Lessons picked
-    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson = :lesson ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getAllTypeFromLesson(String type, int lesson, int limit);
+    @Query("SELECT * FROM Term WHERE lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTermFromLesson(int[] lesson, int limit);
+    @Query("SELECT * FROM Term WHERE type LIKE :type and lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTypeFromLesson(String type, int[] lesson, int limit);
 
     //Delete everything
     @Query("DELETE FROM Term")

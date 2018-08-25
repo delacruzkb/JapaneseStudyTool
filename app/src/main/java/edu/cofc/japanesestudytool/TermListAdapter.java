@@ -30,6 +30,10 @@ public class TermListAdapter extends BaseAdapter
         this.lessonKanjiOnly = lessonKanjiOnly;
         this.showKanjiFirst = showKanjiFirst;
     }
+    public ArrayList<Term> getData()
+    {
+        return data;
+    }
     @Override
     public int getCount()
     {

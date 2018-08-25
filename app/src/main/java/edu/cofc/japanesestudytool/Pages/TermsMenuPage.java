@@ -1,7 +1,6 @@
 package edu.cofc.japanesestudytool.Pages;
 
-import android.arch.persistence.room.Room;
-import android.content.Intent;
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,18 +9,13 @@ import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.TermDatabase;
+import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 
 public class TermsMenuPage extends AppCompatActivity
 {
-    private TermDatabase termDatabase;
-    ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termsList;
     private TextView nounCountText, adjectiveCountText, verbCountText, grammarCountText, otherCountText;
     private Button nounCountDecreaseButton, nounCountIncreaseButton;
     private Button adjectiveCountDecreaseButton, adjectiveCountIncreaseButton;
@@ -32,13 +26,11 @@ public class TermsMenuPage extends AppCompatActivity
 
     private Switch displayLanguageToggle,kanjiToggle, lessonKanjiToggle,displayKanjiToggle;
 
-    private CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6;
-    private CheckBox lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
-    private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18;
-    private CheckBox lesson19, lesson20, lesson21, lesson22, lesson23;
+    private CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6,lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
+    private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23;
     private CheckBox allLessons;
     private String whichMode;
-
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -46,13 +38,13 @@ public class TermsMenuPage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terms_menu_page);
         whichMode= getIntent().getStringExtra("mode");
-        termDatabase = Room.databaseBuilder(this,TermDatabase.class,"terms").build();
         // segregated into private methods to ease debugging
         initializeViews();
         setCountButtonOnClickListeners();
         setConfirmButtonOnClickListener();
         setSwitchOnClickListener();
         setCheckBoxOnClickListener();
+        activity = this;
     }
 
     private void initializeViews()
@@ -447,26 +439,18 @@ public class TermsMenuPage extends AppCompatActivity
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //if failed, go back to home page, else go to proper activity
-                Intent intent= new Intent(confirmButton.getContext(),HomePage.class);
-                if(whichMode.equalsIgnoreCase("story"))
-                {
-                    intent = new Intent(confirmButton.getContext(), StoryPage.class);
-                }
-                if(whichMode.equalsIgnoreCase("flashcard"))
-                {
-                    intent = new Intent(confirmButton.getContext(), FlashCardPage.class);
-                }
-                //gather information from views
-                int nounCount = Integer.parseInt(nounCountText.getText().toString());
-                int adjectiveCount = Integer.parseInt(adjectiveCountText.getText().toString());
-                int verbCount = Integer.parseInt(verbCountText.getText().toString());
-                int grammarCount = Integer.parseInt(grammarCountText.getText().toString());
-                int otherCount = Integer.parseInt(otherCountText.getText().toString());
-                boolean displayJapaneseFirst = displayLanguageToggle.isChecked();
-                boolean kanji = kanjiToggle.isChecked();
-                boolean lessonKanji = lessonKanjiToggle.isChecked();
-                boolean displayKanjiFirst = displayKanjiToggle.isChecked();
+                TermMenuMetrics metrics = new TermMenuMetrics();
+                metrics.setMode(whichMode);
+                metrics.setNounCount(Integer.parseInt(nounCountText.getText().toString()));
+                metrics.setAdjectiveCount(Integer.parseInt(adjectiveCountText.getText().toString()));
+                metrics.setVerbCount( Integer.parseInt(verbCountText.getText().toString()));
+                metrics.setGrammarCount(Integer.parseInt(grammarCountText.getText().toString()));
+                metrics.setOtherCount(Integer.parseInt(otherCountText.getText().toString()));
+                metrics.setJapaneseFirst(displayLanguageToggle.isChecked());
+                metrics.setKanji(kanjiToggle.isChecked());
+                metrics.setLessonKanjiOnly(lessonKanjiToggle.isChecked());
+                metrics.setKanjiFirst(displayKanjiToggle.isChecked());
+                metrics.setAllTerms(allLessons.isChecked());
                 //Gather all lessons selected
                 int[] lessons=null;
                 if(!allLessons.isChecked())
@@ -518,41 +502,10 @@ public class TermsMenuPage extends AppCompatActivity
                         }
                     }
                 }
-                // Fill the Arraylists with the proper information
-                QueryTerms getAllNouns = new QueryTerms(termDatabase,nounList,"noun",lessons,nounCount);
-                QueryTerms getAllVerbs = new QueryTerms(termDatabase,verbList, "verb",lessons,verbCount);
-                QueryTerms getAllAdjectives = new QueryTerms( termDatabase,adjectiveList, "adjectives",lessons,adjectiveCount);
-                QueryTerms getAllOthers = new QueryTerms(termDatabase,otherList,"other",lessons,otherCount);
-                QueryTerms getAllGrammar = new QueryTerms(termDatabase,grammarList, "grammar",lessons,grammarCount);
-                getAllNouns.execute();
-                getAllVerbs.execute();
-                getAllAdjectives.execute();
-                getAllOthers.execute();
-                getAllGrammar.execute();
-                //store all required information in the intent
-                intent.putExtra("displayJapaneseFirst",displayJapaneseFirst);
-                intent.putExtra("kanji",kanji);
-                intent.putExtra("lessonKanji",lessonKanji);
-                intent.putExtra("displayKanjiFirst",displayKanjiFirst);
-                if(whichMode.equalsIgnoreCase("story"))
-                {
-                    intent.putParcelableArrayListExtra("nounList", nounList);
-                    intent.putParcelableArrayListExtra("nounList", verbList);
-                    intent.putParcelableArrayListExtra("nounList", adjectiveList);
-                    intent.putParcelableArrayListExtra("nounList", otherList);
-                    intent.putParcelableArrayListExtra("nounList", grammarList);
-                }
-                if(whichMode.equalsIgnoreCase("flashcards"))
-                {
-                    termsList= new ArrayList<>();
-                    termsList.addAll(nounList);
-                    termsList.addAll(verbList);
-                    termsList.addAll(adjectiveList);
-                    termsList.addAll(otherList);
-                    termsList.addAll(grammarList);
-                    intent.putParcelableArrayListExtra("termsList",termsList);
-                }
-                startActivity(intent);
+                metrics.setLessons(lessons);
+                QueryTerms queryTerms = new QueryTerms(metrics, activity);
+                queryTerms.execute();
+
             }
         });
     }
