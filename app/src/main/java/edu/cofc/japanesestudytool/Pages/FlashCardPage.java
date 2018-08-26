@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 import android.content.Intent;
 import android.view.View;
@@ -17,7 +18,7 @@ import java.util.Collections;
 
 public class FlashCardPage extends AppCompatActivity
 {
-    private ArrayList<Term> termsList;
+    private ArrayList<Term> termList;
     private TextView lessonNumberLabel, typeValueLabel, reqKanjiLabel, cardCountLabel;
     private EditText flashCard;
     private Button flipEng, flipJpns, flipKanji, prevCard,nextCard;
@@ -27,14 +28,15 @@ public class FlashCardPage extends AppCompatActivity
     private boolean useKanjiFirst;
     private int currentCardNumber;
     private int cardCount;
+    private TermMenuMetrics metrics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash_card_page);
-        gatherInformation(getIntent());
         initializeViews();
+        gatherInformation(getIntent());
     }
 
     private void initializeViews()
@@ -44,66 +46,72 @@ public class FlashCardPage extends AppCompatActivity
         typeValueLabel = findViewById(R.id.typeValueLabel);
         reqKanjiLabel = findViewById(R.id.reqKanjiLabel);
         flashCard = findViewById(R.id.flashCard);
+        flashCard.setEnabled(false);
         flipEng = findViewById(R.id.flipEng);
+        flipEng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flashCard.setText(termList.get(currentCardNumber).getEng());
+            }
+        });
         flipJpns = findViewById(R.id.flipjpns);
+        flipJpns.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flashCard.setText(termList.get(currentCardNumber).getJpns());
+            }
+        });
         flipKanji = findViewById(R.id.flipKanji);
+        flipKanji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flashCard.setText(termList.get(currentCardNumber).getKanji());
+            }
+        });
         cardCountLabel = findViewById(R.id.cardCountLabel);
         prevCard = findViewById(R.id.prevCard);
-        nextCard = findViewById(R.id.nextCard);
-
         prevCard.setVisibility(View.INVISIBLE);
-        if(termsList == null || termsList.size()==0)
+        prevCard.setOnClickListener(new View.OnClickListener()
         {
-            flashCard.setText("No Lessons applicable");
-        }
-        else
-        {
-            final Term currentCard = termsList.get(0);
-            loadFlipCard(currentCard);
-            prevCard.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v)
+            @Override
+            public void onClick(View v)
+            { if(currentCardNumber == cardCount-1)
+            {
+                nextCard.setVisibility(View.VISIBLE);
+            }
+                if (currentCardNumber == 2)
                 {
-                    if(currentCardNumber == cardCount-1)
-                    {
-                        nextCard.setVisibility(View.VISIBLE);
-                    }
-                    if(currentCardNumber>0) {
-                        if (currentCardNumber == 1) {
-                            prevCard.setVisibility(View.INVISIBLE);
-                        }
-                        currentCardNumber--;
-                        loadFlipCard(termsList.get(currentCardNumber));
-                    }
+                    prevCard.setVisibility(View.INVISIBLE);
                 }
-            });
+                currentCardNumber--;
+                loadFlipCard(termList.get(currentCardNumber));
+            }
+        });
+        nextCard = findViewById(R.id.nextCard);
+        nextCard.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(currentCardNumber==1)
+                {
+                    prevCard.setVisibility(View.VISIBLE);
+                }
+                if(currentCardNumber == cardCount-2)
+                {
+                    nextCard.setVisibility(View.INVISIBLE);
+                }
+                currentCardNumber++;
+                loadFlipCard(termList.get(currentCardNumber));
+            }
+        });
 
-            nextCard.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v)
-                {
-                    if(currentCardNumber==0)
-                    {
-                        prevCard.setVisibility(View.VISIBLE);
-                    }
-                    if(currentCardNumber<cardCount)
-                    {
-                        if(currentCardNumber == cardCount-2)
-                        {
-                            nextCard.setVisibility(View.INVISIBLE);
-                        }
-                        currentCardNumber++;
-                        loadFlipCard(termsList.get(currentCardNumber));
-                    }
-                }
-            });
-        }
 
     }
 
     private void loadFlipCard(Term term) {
-        lessonNumberLabel.setText(term.getLesson());
-        typeValueLabel.setText(term.getLesson());
+        lessonNumberLabel.setText(new Integer(term.getLesson()).toString());
+        typeValueLabel.setText(term.getType());
         reqKanjiLabel.setVisibility(View.INVISIBLE);
         flipKanji.setVisibility(View.VISIBLE);
         if(!useKanji)
@@ -131,18 +139,19 @@ public class FlashCardPage extends AppCompatActivity
         {
             flashCard.setText(term.getEng());
         }
-
-        cardCountLabel.setText(termsList.indexOf(term) +"/"+ cardCount);
+        cardCountLabel.setText(currentCardNumber +"/"+ cardCount);
 
     }
     private void gatherInformation(Intent intent)
     {
-        useJapaneseFirst= intent.getBooleanExtra("displayJapaneseFirst",true);
-        useKanji = intent.getBooleanExtra("kanji",false);
-        useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
-        useKanjiFirst = intent.getBooleanExtra("displayKanjiFirst",false);
-        termsList = (ArrayList<Term>) intent.getSerializableExtra("termsList");
-        Collections.shuffle(termsList);
-        cardCount = termsList.size();
+        metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");
+        termList= (ArrayList<Term>) intent.getSerializableExtra("termList");
+        useJapaneseFirst= metrics.isJapaneseFirst();
+        useKanji = metrics.isKanji();
+        useLessonKanjiOnly = metrics.isLessonKanjiOnly();
+        useKanjiFirst = metrics.isKanjiFirst();
+        cardCount=termList.size();
+        currentCardNumber=1;
+        loadFlipCard(termList.get(0));
     }
 }

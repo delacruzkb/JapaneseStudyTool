@@ -14,7 +14,7 @@ public interface TermDAO
 {
     @Insert (onConflict = OnConflictStrategy.REPLACE)
     void insertTerm(Term term);
-    @Query("SELECT * FROM Term WHERE type ORDER BY RANDOM() LIMIT :limit")
+    @Query("SELECT * FROM Term ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTerms(int limit);
     //if allLessons picked
     @Query("SELECT * FROM Term WHERE type LIKE :type ORDER BY RANDOM() LIMIT :limit")
