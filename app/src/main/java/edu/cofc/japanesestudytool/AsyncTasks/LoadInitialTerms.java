@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -28,11 +29,13 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
     protected void onPostExecute(Void aVoid)
     {
         super.onPostExecute(aVoid);
+        Toast.makeText(context, "Complete.", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected Void doInBackground(Void... voids)
     {
+        Toast.makeText(context, "Please wait . . .", Toast.LENGTH_LONG).show();
         termDatabase.termDAO().deleteAllTerms();
         ArrayList<Term> listOfTerms = new ArrayList();
         try
