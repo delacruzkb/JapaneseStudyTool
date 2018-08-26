@@ -110,12 +110,12 @@ public class StoryPage extends AppCompatActivity
 
     private void gatherInformation(Intent intent)
     {
-        metrics = intent.getParcelableExtra("metrics");
-        nounList=intent.getParcelableArrayListExtra("nounList");
-        verbList=intent.getParcelableArrayListExtra("verbList");
-        adjectiveList=intent.getParcelableArrayListExtra("adjectiveList");
-        grammarList=intent.getParcelableArrayListExtra("grammarList");
-        otherList=intent.getParcelableArrayListExtra("otherList");
+        metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");
+        nounList= (ArrayList<Term>) intent.getSerializableExtra("nounList");
+        verbList=(ArrayList<Term>) intent.getSerializableExtra("verbList");
+        adjectiveList=(ArrayList<Term>) intent.getSerializableExtra("adjectiveList");
+        grammarList=(ArrayList<Term>) intent.getSerializableExtra("grammarList");
+        otherList=(ArrayList<Term>) intent.getSerializableExtra("otherList");
 
         useJapaneseFirst= metrics.isJapaneseFirst();
         useKanji = metrics.isKanji();

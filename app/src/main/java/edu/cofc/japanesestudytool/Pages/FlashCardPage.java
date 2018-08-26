@@ -141,7 +141,7 @@ public class FlashCardPage extends AppCompatActivity
         useKanji = intent.getBooleanExtra("kanji",false);
         useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
         useKanjiFirst = intent.getBooleanExtra("displayKanjiFirst",false);
-        termsList = intent.getParcelableArrayListExtra("termsList");
+        termsList = (ArrayList<Term>) intent.getSerializableExtra("termsList");
         Collections.shuffle(termsList);
         cardCount = termsList.size();
     }

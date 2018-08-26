@@ -1,9 +1,8 @@
 package edu.cofc.japanesestudytool;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.io.Serializable;
 
-public class TermMenuMetrics implements Parcelable
+public class TermMenuMetrics implements Serializable
 {
     boolean allTerms,JapaneseFirst,Kanji,LessonKanjiOnly,KanjiFirst;
     int[] lessons;
@@ -123,59 +122,4 @@ public class TermMenuMetrics implements Parcelable
         this.grammarCount = grammarCount;
     }
 
-    public TermMenuMetrics(Parcel in)
-    {
-        readFromParcel(in);
-    }
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags)
-    {
-        boolean[] switches = {allTerms,JapaneseFirst,Kanji,LessonKanjiOnly,KanjiFirst};
-        dest.writeBooleanArray(switches);
-        dest.writeInt(nounCount);
-        dest.writeInt(verbCount);
-        dest.writeInt(adjectiveCount);
-        dest.writeInt(otherCount);
-        dest.writeInt(grammarCount);
-        dest.writeString(mode);
-        dest.writeIntArray(lessons);
-    }
-
-    public static final Parcelable.Creator CREATOR =
-            new Parcelable.Creator<TermMenuMetrics>() {
-                public TermMenuMetrics createFromParcel(Parcel in) {
-                    return new TermMenuMetrics(in);
-                }
-
-                public TermMenuMetrics[] newArray(int size) {
-                    return new TermMenuMetrics[size];
-                }
-            };
-
-    private void readFromParcel(Parcel in)
-    {
-        boolean[] switches= new boolean[5];
-        in.readBooleanArray(switches);
-        nounCount = in.readInt();
-        verbCount =in.readInt();
-        adjectiveCount =in.readInt();
-        otherCount =in.readInt();
-        grammarCount =in.readInt();
-        mode = in.readString();
-        if(lessons != null)
-        {
-            in.readIntArray(lessons);
-        }
-
-        allTerms = switches[0];
-        JapaneseFirst = switches[1];
-        Kanji = switches[2];
-        LessonKanjiOnly = switches[3];
-        KanjiFirst = switches[4];
-    }
 }

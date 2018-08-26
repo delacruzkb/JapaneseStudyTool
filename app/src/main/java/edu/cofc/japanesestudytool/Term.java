@@ -2,12 +2,11 @@ package edu.cofc.japanesestudytool;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.io.Serializable;
 
 
 @Entity
-public class Term implements Parcelable
+public class Term implements Serializable
 {
     @PrimaryKey (autoGenerate = true)
     int id;
@@ -29,52 +28,6 @@ public class Term implements Parcelable
         lesson = 0;
         reqKanji=false;
     }
-    public Term(Parcel in)
-    {
-        readFromParcel(in);
-    }
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-
-        int i = 0;
-        if(reqKanji)
-        {
-            i=1;
-        }
-        dest.writeInt(id);
-        dest.writeString(jpns);
-        dest.writeString(eng);
-        dest.writeString(kanji);
-        dest.writeString(type);
-        dest.writeString(typeSpecial);
-        dest.writeInt(lesson);
-        dest.writeInt(i);
-    }
-    private void readFromParcel(Parcel in) {
-
-        id = in.readInt();
-        jpns =in.readString();
-        eng= in.readString();
-        kanji = in.readString();
-        type = in.readString();
-        typeSpecial = in.readString();
-        lesson = in.readInt();
-        reqKanji=(in.readInt() == 1);
-    }
-    public static final Parcelable.Creator CREATOR =
-            new Parcelable.Creator<Term>() {
-                public Term createFromParcel(Parcel in) {
-                    return new Term(in);
-                }
-
-                public Term[] newArray(int size) {
-                    return new Term[size];
-                }
-            };
 
     public int getId() {
         return id;

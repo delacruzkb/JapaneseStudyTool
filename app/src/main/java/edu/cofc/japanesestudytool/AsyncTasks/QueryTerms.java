@@ -44,11 +44,12 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
 
         }
         intent.putExtra("metrics",metrics);
-        intent.putParcelableArrayListExtra("nounList",nounList);
-        intent.putParcelableArrayListExtra("verbList",verbList);
-        intent.putParcelableArrayListExtra("adjectiveList",adjectiveList);
-        intent.putParcelableArrayListExtra("grammarList",grammarList);
-        intent.putParcelableArrayListExtra("otherList",otherList);
+        intent.putExtra("nounList",nounList);
+        intent.putExtra("verbList",verbList);
+        intent.putExtra("adjectiveList",adjectiveList);
+        intent.putExtra("grammarList",grammarList);
+        intent.putExtra("otherList",otherList);
+        intent.putExtra("termList",termList);
         parentActivity.startActivity(intent);
     }
 
