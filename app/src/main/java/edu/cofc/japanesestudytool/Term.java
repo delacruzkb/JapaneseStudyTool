@@ -18,6 +18,7 @@ public class Term implements Serializable
     private String typeSpecial;
     private int lesson;
     private boolean reqKanji;
+    private boolean checked;
 
     public Term()
     {
@@ -105,6 +106,13 @@ public class Term implements Serializable
         }
     }
 
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
     public boolean equals(Object term)
     {
         boolean rtnval = false;
