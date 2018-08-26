@@ -137,23 +137,23 @@ public class TermMenuMetrics implements Parcelable
     {
         boolean[] switches = {allTerms,JapaneseFirst,Kanji,LessonKanjiOnly,KanjiFirst};
         dest.writeBooleanArray(switches);
-        dest.writeIntArray(lessons);
         dest.writeInt(nounCount);
         dest.writeInt(verbCount);
         dest.writeInt(adjectiveCount);
         dest.writeInt(otherCount);
         dest.writeInt(grammarCount);
         dest.writeString(mode);
+        dest.writeIntArray(lessons);
     }
 
     public static final Parcelable.Creator CREATOR =
-            new Parcelable.Creator() {
-                public Term createFromParcel(Parcel in) {
-                    return new Term(in);
+            new Parcelable.Creator<TermMenuMetrics>() {
+                public TermMenuMetrics createFromParcel(Parcel in) {
+                    return new TermMenuMetrics(in);
                 }
 
-                public Term[] newArray(int size) {
-                    return new Term[size];
+                public TermMenuMetrics[] newArray(int size) {
+                    return new TermMenuMetrics[size];
                 }
             };
 
@@ -161,13 +161,16 @@ public class TermMenuMetrics implements Parcelable
     {
         boolean[] switches= new boolean[5];
         in.readBooleanArray(switches);
-        in.readIntArray(lessons);
         nounCount = in.readInt();
         verbCount =in.readInt();
         adjectiveCount =in.readInt();
         otherCount =in.readInt();
         grammarCount =in.readInt();
         mode = in.readString();
+        if(lessons != null)
+        {
+            in.readIntArray(lessons);
+        }
 
         allTerms = switches[0];
         JapaneseFirst = switches[1];

@@ -60,4 +60,5 @@
         android:text="@string/loadDataLabel"
         android:textColor="@color/buttonTextColor"
         android:textSize="10sp" />
+
 </LinearLayout>

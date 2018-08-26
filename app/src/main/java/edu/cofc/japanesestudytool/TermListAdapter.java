@@ -93,7 +93,7 @@ public class TermListAdapter extends BaseAdapter
             if(showKanjiFirst)
             {
                 termText.setText(term.getKanji());
-                if(lessonKanjiOnly&& !term.getReqKanji())
+                if(lessonKanjiOnly&& !term.isReqKanji())
                 {
                     termText.setText(term.getJpns());
                     toKanji.setVisibility(View.INVISIBLE);

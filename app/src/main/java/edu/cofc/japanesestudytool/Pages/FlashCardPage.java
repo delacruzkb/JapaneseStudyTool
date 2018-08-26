@@ -116,11 +116,11 @@ public class FlashCardPage extends AppCompatActivity
             if(useKanjiFirst)
             {
                 flashCard.setText(term.getKanji());
-                if(term.getReqKanji())
+                if(term.isReqKanji())
                 {
                     reqKanjiLabel.setVisibility(View.VISIBLE);
                 }
-                if(useLessonKanjiOnly&& !term.getReqKanji())
+                if(useLessonKanjiOnly&& !term.isReqKanji())
                 {
                     flashCard.setText(term.getJpns());
                     flipKanji.setVisibility(View.INVISIBLE);
