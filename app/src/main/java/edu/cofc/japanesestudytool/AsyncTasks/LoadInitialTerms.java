@@ -19,9 +19,11 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
 {
     Context context;
     TermDatabase termDatabase;
-    public LoadInitialTerms(Context iContext)
+    ProgressBar spinner;
+    public LoadInitialTerms(Context iContext,ProgressBar progressBar)
     {
         context = iContext;
+        spinner = progressBar;
         termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
     }
 
@@ -29,13 +31,13 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
     protected void onPostExecute(Void aVoid)
     {
         super.onPostExecute(aVoid);
-        Toast.makeText(context, "Complete.", Toast.LENGTH_LONG).show();
+        spinner.setVisibility(View.INVISIBLE);
     }
 
     @Override
     protected Void doInBackground(Void... voids)
     {
-        Toast.makeText(context, "Please wait . . .", Toast.LENGTH_LONG).show();
+
         termDatabase.termDAO().deleteAllTerms();
         ArrayList<Term> listOfTerms = new ArrayList();
         try
