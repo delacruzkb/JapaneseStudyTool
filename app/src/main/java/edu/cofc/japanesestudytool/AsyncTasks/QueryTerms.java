@@ -56,7 +56,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
     @Override
     protected Void doInBackground(Void... voids)
     {
-        int allTermCount = metrics.getAdjectiveCount() + metrics.getNounCount() + metrics.getVerbCount() + metrics.getGrammarCount() +metrics.getOtherCount();
+
         if(metrics.isAllTerms())
         {
             if(metrics.getMode().equalsIgnoreCase("story"))
@@ -69,7 +69,32 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             }
             if(metrics.getMode().equalsIgnoreCase("flashcard"))
             {
-                termList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTerms(allTermCount);
+                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypes("noun",metrics.getNounCount());
+                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypes("verb",metrics.getVerbCount());
+                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypes("adjective",metrics.getAdjectiveCount());
+                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getAllTypes("grammar",metrics.getGrammarCount());
+                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypes("other",metrics.getOtherCount());
+                termList= new ArrayList<>();
+                if(nounList !=null)
+                {
+                    termList.addAll(nounList);
+                }
+                if(verbList !=null)
+                {
+                    termList.addAll(verbList);
+                }
+                if(adjectiveList !=null)
+                {
+                    termList.addAll(adjectiveList);
+                }
+                if(grammarList !=null)
+                {
+                    termList.addAll(grammarList);
+                }
+                if(otherList !=null)
+                {
+                    termList.addAll(otherList);
+                }
             }
         }
         else
@@ -85,7 +110,32 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             }
             if(metrics.getMode().equalsIgnoreCase("flashcard"))
             {
-                termList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTermFromLesson(lessons,allTermCount);
+                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("noun",lessons,metrics.getNounCount());
+                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("verb",lessons,metrics.getVerbCount());
+                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("adjective",lessons,metrics.getAdjectiveCount());
+                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("grammar",lessons,metrics.getGrammarCount());
+                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("other",lessons,metrics.getOtherCount());
+                termList= new ArrayList<>();
+                if(nounList !=null)
+                {
+                    termList.addAll(nounList);
+                }
+                if(verbList !=null)
+                {
+                    termList.addAll(verbList);
+                }
+                if(adjectiveList !=null)
+                {
+                    termList.addAll(adjectiveList);
+                }
+                if(grammarList !=null)
+                {
+                    termList.addAll(grammarList);
+                }
+                if(otherList !=null)
+                {
+                    termList.addAll(otherList);
+                }
             }
 
         }

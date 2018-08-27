@@ -1,5 +1,7 @@
 package edu.cofc.japanesestudytool.AsyncTasks;
 
+import android.arch.persistence.room.Room;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import edu.cofc.japanesestudytool.Term;
@@ -9,9 +11,9 @@ public class DeleteTerm extends AsyncTask<Term,Void,Void>
 {
     TermDatabase termDatabase;
 
-    public DeleteTerm(TermDatabase termDatabase)
+    public DeleteTerm(Context mContext)
     {
-        this.termDatabase = termDatabase;
+        termDatabase = Room.databaseBuilder(mContext,TermDatabase.class,"terms").build();
     }
 
     @Override

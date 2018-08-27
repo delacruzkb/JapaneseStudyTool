@@ -26,6 +26,9 @@ public interface TermDAO
     @Query("SELECT * FROM Term WHERE type LIKE :type and lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypeFromLesson(String type, int[] lesson, int limit);
 
+    @Query("SELECT* FROM Term WHERE jpns LIKE :japanese OR eng LIKE :english")
+    List<Term> getAllMatchedTerms(String japanese, String english);
+
     //Delete everything
     @Query("DELETE FROM Term")
     public void deleteAllTerms();

@@ -30,10 +30,6 @@ public class TermListAdapter extends BaseAdapter
         this.lessonKanjiOnly = lessonKanjiOnly;
         this.showKanjiFirst = showKanjiFirst;
     }
-    public ArrayList<Term> getData()
-    {
-        return data;
-    }
     @Override
     public int getCount()
     {
@@ -56,6 +52,14 @@ public class TermListAdapter extends BaseAdapter
     {
         View rowView = mLayoutInflater.inflate(R.layout.term_list_item, parent,false);
         final Term term = (Term) getItem(position);
+        if(term.getType().equalsIgnoreCase("verb"))
+        {
+            term.setJpns(term.getJpns()+ " ("+term.getTypeSpecial()+"-verb)");
+            if(!term.getKanji().equalsIgnoreCase("null"))
+            {
+                term.setKanji(term.getKanji()+ " ("+term.getTypeSpecial()+"-verb)");
+            }
+        }
         final CheckBox checkBox = rowView.findViewById(R.id.checkBox);
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override

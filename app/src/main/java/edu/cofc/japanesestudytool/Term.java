@@ -26,8 +26,10 @@ public class Term implements Serializable
         eng= "ア";
         kanji = "a";
         type = "a";
+        typeSpecial = "NULL";
         lesson = 0;
         reqKanji=false;
+        checked = false;
     }
 
     public int getId() {

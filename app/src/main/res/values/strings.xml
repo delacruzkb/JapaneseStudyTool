@@ -42,5 +42,26 @@
     <string name="previousTermLabel">Prev</string>
     <string name="nextTermLabel">Next</string>
 
+    //AddTermPage
+    <string name="addJapaneseLabel">Enter Japanese:</string>
+    <string name="addEnglishLabel">Enter English:</string>
+    <string name="addKanjiLabel">Enter Kanji:</string>
+    <string name="addTypeLabel">Select type:</string>
+    <string name="addTypeNoun">Noun</string>
+    <string name="addTypeVerb">Verb</string>
+    <string name="addTypeAdjective">Adjective</string>
+    <string name="addTypeGrammar">Grammar</string>
+    <string name="addTypeOther">Other</string>
+    <string name="addTypeSpecialLabel">Select verb-type:</string>
+    <string name="addRuVerb">ru</string>
+    <string name="addUVerb">u</string>
+    <string name="addIrregularVerb">irregular</string>
+    <string name="addLessonLabel">Enter lesson(0 for extras):</string>
+    <string name="addRequiredKanjiLabel">Required Kanji</string>
+    <string name="cancelButtonText">Cancel</string>
+    <string name="addTermButton">Add New Term</string>
+
+    <string name="deleteButtonText">X</string>
+    <string name="editButonText">Edit</string>
 
 </resources>

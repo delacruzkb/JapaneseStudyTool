@@ -79,7 +79,7 @@ public class FlashCardPage extends AppCompatActivity
             {
                 nextCard.setVisibility(View.VISIBLE);
             }
-                if (currentCardNumber == 2)
+                if (currentCardNumber == 1)
                 {
                     prevCard.setVisibility(View.INVISIBLE);
                 }
@@ -93,7 +93,7 @@ public class FlashCardPage extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                if(currentCardNumber==1)
+                if(currentCardNumber==0)
                 {
                     prevCard.setVisibility(View.VISIBLE);
                 }
@@ -112,6 +112,10 @@ public class FlashCardPage extends AppCompatActivity
     private void loadFlipCard(Term term) {
         lessonNumberLabel.setText(new Integer(term.getLesson()).toString());
         typeValueLabel.setText(term.getType());
+        if(term.getType().equalsIgnoreCase("verb"))
+        {
+            typeValueLabel.setText(term.getTypeSpecial()+"-"+term.getType());
+        }
         reqKanjiLabel.setVisibility(View.INVISIBLE);
         flipKanji.setVisibility(View.VISIBLE);
         if(!useKanji)
@@ -139,7 +143,7 @@ public class FlashCardPage extends AppCompatActivity
         {
             flashCard.setText(term.getEng());
         }
-        cardCountLabel.setText(currentCardNumber +"/"+ cardCount);
+        cardCountLabel.setText((currentCardNumber+1) +"/"+ cardCount);
 
     }
     private void gatherInformation(Intent intent)
@@ -151,7 +155,7 @@ public class FlashCardPage extends AppCompatActivity
         useLessonKanjiOnly = metrics.isLessonKanjiOnly();
         useKanjiFirst = metrics.isKanjiFirst();
         cardCount=termList.size();
-        currentCardNumber=1;
+        currentCardNumber=0;
         loadFlipCard(termList.get(0));
     }
 }
