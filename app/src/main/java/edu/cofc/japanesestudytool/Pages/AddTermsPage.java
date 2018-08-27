@@ -13,12 +13,14 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class AddTermsPage extends AppCompatActivity
 {
     EditText jpnsTextBox;
     EditText engTextBox;
     EditText kanjiTextBox;
+    TextView verbLabel;
     RadioButton nounRadioButton;
     RadioButton verbRadioButton;
     RadioButton adjectiveRadioButton;
@@ -38,7 +40,8 @@ public class AddTermsPage extends AppCompatActivity
         jpnsTextBox = findViewById(R.id.addJapaneseTextBox);
         engTextBox = findViewById(R.id.addEnglishTextBox);
         kanjiTextBox = findViewById(R.id.addKanjiTextBox);
-
+        verbLabel = findViewById(R.id.addTypeSpecialLabel);
+        verbLabel.setVisibility(View.INVISIBLE);
         nounRadioButton = findViewById(R.id.nounRadioButton);
         nounRadioButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +51,10 @@ public class AddTermsPage extends AppCompatActivity
                 adjectiveRadioButton.setChecked(false);
                 grammarRadioButton.setChecked(false);
                 otherRadioButton.setChecked(false);
+                uRadioButton.setVisibility(View.INVISIBLE);
+                ruRadioButton.setVisibility(View.INVISIBLE);
+                irregularRadioButton.setVisibility(View.INVISIBLE);
+                verbLabel.setVisibility(View.INVISIBLE);
             }
         });
         verbRadioButton = findViewById(R.id.verbRadioButton);
@@ -58,7 +65,11 @@ public class AddTermsPage extends AppCompatActivity
                 verbRadioButton.setChecked(true);
                 adjectiveRadioButton.setChecked(false);
                 grammarRadioButton.setChecked(false);
-                otherRadioButton.setChecked(false);
+
+                uRadioButton.setVisibility(View.VISIBLE);
+                ruRadioButton.setVisibility(View.VISIBLE);
+                irregularRadioButton.setVisibility(View.VISIBLE);
+                verbLabel.setVisibility(View.VISIBLE);
             }
         });
         adjectiveRadioButton = findViewById(R.id.adjectiveRadioButton);
@@ -70,6 +81,10 @@ public class AddTermsPage extends AppCompatActivity
                 adjectiveRadioButton.setChecked(true);
                 grammarRadioButton.setChecked(false);
                 otherRadioButton.setChecked(false);
+                uRadioButton.setVisibility(View.INVISIBLE);
+                ruRadioButton.setVisibility(View.INVISIBLE);
+                irregularRadioButton.setVisibility(View.INVISIBLE);
+                verbLabel.setVisibility(View.INVISIBLE);
             }
         });
         grammarRadioButton = findViewById(R.id.grammarRadioButton);
@@ -81,6 +96,11 @@ public class AddTermsPage extends AppCompatActivity
                 adjectiveRadioButton.setChecked(false);
                 grammarRadioButton.setChecked(true);
                 otherRadioButton.setChecked(false);
+                uRadioButton.setVisibility(View.INVISIBLE);
+                ruRadioButton.setVisibility(View.INVISIBLE);
+                irregularRadioButton.setVisibility(View.INVISIBLE);
+                verbLabel.setVisibility(View.INVISIBLE);
+
             }
         });
         otherRadioButton = findViewById(R.id.otherRadioButton);
@@ -92,6 +112,10 @@ public class AddTermsPage extends AppCompatActivity
                 adjectiveRadioButton.setChecked(false);
                 grammarRadioButton.setChecked(false);
                 otherRadioButton.setChecked(true);
+                uRadioButton.setVisibility(View.INVISIBLE);
+                ruRadioButton.setVisibility(View.INVISIBLE);
+                irregularRadioButton.setVisibility(View.INVISIBLE);
+                verbLabel.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -122,12 +146,15 @@ public class AddTermsPage extends AppCompatActivity
                 irregularRadioButton.setChecked(true);
             }
         });
+        uRadioButton.setVisibility(View.INVISIBLE);
+        ruRadioButton.setVisibility(View.INVISIBLE);
+        irregularRadioButton.setVisibility(View.INVISIBLE);
 
         lessonTextBox = findViewById(R.id.addLessonTextBox);
 
         reqKanjiCheckbox = findViewById(R.id.addReqKanjiCheckBox);
 
-        addNewTermButton = findViewById(R.id.addTermsButton);
+        addNewTermButton = findViewById(R.id.addNewTerms);
         addNewTermButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -135,7 +162,7 @@ public class AddTermsPage extends AppCompatActivity
             {
                 boolean engSupplied =!(engTextBox.getText().toString() == null || engTextBox.getText().toString().equalsIgnoreCase(""));
                 boolean jpnsSupplied=!(jpnsTextBox.getText().toString() == null || jpnsTextBox.getText().toString().equalsIgnoreCase(""));
-                boolean lessonSupplied =!(jpnsTextBox.getText().toString() == null || jpnsTextBox.getText().toString().equalsIgnoreCase(""));
+                boolean lessonSupplied =!(lessonTextBox.getText().toString() == null || lessonTextBox.getText().toString().equalsIgnoreCase(""));
                 if(engSupplied && jpnsSupplied && lessonSupplied)
                 {
                     Term temp = new Term();
@@ -190,17 +217,17 @@ public class AddTermsPage extends AppCompatActivity
                     String message="";
                     if(!engSupplied)
                     {
-                        message+= "English+\n";
+                        message+= "English\n";
                     }
                     if(!jpnsSupplied)
                     {
                         message+="Japanese\n";
                     }
-                    if(lessonSupplied)
+                    if(!lessonSupplied)
                     {
                         message+= "Lesson";
                     }
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                    AlertDialog.Builder builder = new AlertDialog.Builder(addNewTermButton.getContext());
                     builder.setTitle("ERROR");
                     builder.setMessage("Please fix the following fields\n"+message);
                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

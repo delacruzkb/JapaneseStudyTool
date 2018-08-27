@@ -1,10 +1,8 @@
 package edu.cofc.japanesestudytool.AsyncTasks;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.arch.persistence.room.Room;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Button;
@@ -41,7 +39,10 @@ public class AddNewTerm extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else
         {
+            //TODO: go to new activity, screw dialogs, use the same layout for dialog list item
+            //TODO: copy this for edit terms also, then win, then cry
             final Dialog builder = new Dialog(mContext);
+            builder.setContentView(R.layout.add_term_dialog_layout);
             builder.setTitle("Found Similarities");
             ListView listView = builder.findViewById(R.id.similarTermListView);
             AddTermDialogListAdapter addTermDialogListAdapter = new AddTermDialogListAdapter(terms, mContext);
