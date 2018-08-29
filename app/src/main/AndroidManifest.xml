@@ -23,10 +23,10 @@
         <activity android:name=".Pages.EditTermsPage" />
         <activity android:name=".Pages.FlashCardPage" />
         <activity android:name=".Pages.StoryPage" />
-        <activity android:name=".Pages.SimilarTermsPage"
-            android:theme="@style/AppTheme.customPopUpTheme"
-            >
-        </activity>
+        <activity
+            android:name=".Pages.SimilarTermsPage"
+            android:theme="@style/AppTheme.customPopUpTheme" />
+        <activity android:name=".Pages.EditTermsMenuPage"></activity>
     </application>
 
 </manifest>

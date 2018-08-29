@@ -102,19 +102,19 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             int[] lessons = metrics.getLessons();
             if(metrics.getMode().equalsIgnoreCase("story"))
             {
-                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("noun",lessons,metrics.getNounCount());
-                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("verb",lessons,metrics.getVerbCount());
-                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("adjective",lessons,metrics.getAdjectiveCount());
-                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("grammar",lessons,metrics.getGrammarCount());
-                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("other",lessons,metrics.getOtherCount());
+                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("noun",lessons,metrics.getNounCount());
+                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("verb",lessons,metrics.getVerbCount());
+                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("grammar",lessons,metrics.getGrammarCount());
+                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("other",lessons,metrics.getOtherCount());
             }
             if(metrics.getMode().equalsIgnoreCase("flashcard"))
             {
-                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("noun",lessons,metrics.getNounCount());
-                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("verb",lessons,metrics.getVerbCount());
-                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("adjective",lessons,metrics.getAdjectiveCount());
-                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("grammar",lessons,metrics.getGrammarCount());
-                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLesson("other",lessons,metrics.getOtherCount());
+                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("noun",lessons,metrics.getNounCount());
+                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("verb",lessons,metrics.getVerbCount());
+                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("grammar",lessons,metrics.getGrammarCount());
+                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("other",lessons,metrics.getOtherCount());
                 termList= new ArrayList<>();
                 if(nounList !=null)
                 {

@@ -42,7 +42,7 @@
     <string name="previousTermLabel">Prev</string>
     <string name="nextTermLabel">Next</string>
 
-    //AddTermPage
+    //Add or Edit TermPage
     <string name="addJapaneseLabel">Enter Japanese:</string>
     <string name="addEnglishLabel">Enter English:</string>
     <string name="addKanjiLabel">Enter Kanji:</string>
@@ -60,11 +60,15 @@
     <string name="addRequiredKanjiLabel">Required Kanji</string>
     <string name="cancelButtonText">Cancel</string>
     <string name="addTermButton">Add New Term</string>
+    <string name="loadAllTermsLabel">Load full list(will take time)</string>
+    <string name="loadAllTermsButtonText">Load</string>
+    <string name="searchEditableButtonText">Search</string>
 
     //Similarities Dialog
     <string name="deleteButtonText">X</string>
     <string name="editButtonText">Edit</string>
     <string name="similaritiesTitle">Similarities Found</string>
     <string name="newTermLabel">New Term</string>
+
 
 </resources>

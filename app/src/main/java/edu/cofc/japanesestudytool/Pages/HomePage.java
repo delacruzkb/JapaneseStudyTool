@@ -9,19 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.Buffer;
-import java.util.ArrayList;
-
-import edu.cofc.japanesestudytool.AsyncTasks.DeleteAllTerms;
-import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
 import edu.cofc.japanesestudytool.AsyncTasks.LoadInitialTerms;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermDatabase;
 
 public class HomePage extends AppCompatActivity
@@ -79,7 +69,7 @@ public class HomePage extends AppCompatActivity
         editTermsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(editTermsButton.getContext(),EditTermsPage.class);
+                Intent intent = new Intent(editTermsButton.getContext(),EditTermsMenuPage.class);
                 startActivity(intent);
             }
         });

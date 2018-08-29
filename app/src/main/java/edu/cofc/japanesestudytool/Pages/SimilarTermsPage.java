@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import edu.cofc.japanesestudytool.AddTermDialogListAdapter;
+import edu.cofc.japanesestudytool.AddTermListAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
@@ -57,8 +57,8 @@ public class SimilarTermsPage extends AppCompatActivity
         newTypeTextBox = findViewById(R.id.newTermTypeTextBox);
         newReqKanjiTextBox = findViewById(R.id.newTermReqKanjiTextBox);
         similarTermsList = findViewById(R.id.similarTermListView);
-        AddTermDialogListAdapter addTermDialogListAdapter = new AddTermDialogListAdapter(similarTerms,this);
-        similarTermsList.setAdapter(addTermDialogListAdapter);
+        AddTermListAdapter addTermListAdapter = new AddTermListAdapter(similarTerms,this);
+        similarTermsList.setAdapter(addTermListAdapter);
         cancel = findViewById(R.id.cancelNewTermButton);
         cancel.setOnClickListener(new View.OnClickListener()
         {

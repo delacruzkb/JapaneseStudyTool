@@ -11,18 +11,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
 
-public class AddTermDialogListAdapter extends BaseAdapter
+public class AddTermListAdapter extends BaseAdapter
 {
     private ArrayList<Term> similarTerms;
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-    public AddTermDialogListAdapter(ArrayList<Term> similarTerms, Context mContext)
+    public AddTermListAdapter(ArrayList<Term> similarTerms, Context mContext)
     {
         this.similarTerms = similarTerms;
         this.mContext = mContext;
@@ -48,7 +46,7 @@ public class AddTermDialogListAdapter extends BaseAdapter
     @Override
     public View getView(final int position, View convertView, ViewGroup parent)
     {
-        View rowView = mLayoutInflater.inflate(R.layout.add_term_dialog_list_item, parent,false);
+        View rowView = mLayoutInflater.inflate(R.layout.similar_term_list_item, parent,false);
         final Term term = (Term) getItem(position);
         EditText jpns = rowView.findViewById(R.id.similarHiraganaTextBox);
         jpns.setEnabled(false);

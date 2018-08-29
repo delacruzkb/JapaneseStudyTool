@@ -10,7 +10,7 @@
     tools:context=".Pages.AddTermsPage">
 
     <TextView
-        android:id="@+id/addJapaneseLabel"
+        android:id="@+id/addJapaneseLabel2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/addJapaneseLabel"
@@ -28,7 +28,7 @@
         android:textSize="@dimen/textSize" />
 
     <View
-        android:id="@+id/divider6"
+        android:id="@+id/divider29"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dividerHeight"
         android:background="@color/dividerColor" />
@@ -260,7 +260,7 @@
         android:background="@color/dividerColor" />
 
     <Button
-        android:id="@+id/addNewTerms"
+        android:id="@+id/addNewTermButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonColor"
