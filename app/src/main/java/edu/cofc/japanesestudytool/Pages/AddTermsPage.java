@@ -209,6 +209,7 @@ public class AddTermsPage extends AppCompatActivity
                     }
                     temp.setLesson(lesson);
                     temp.setReqKanji(reqKanjiCheckbox.isChecked());
+                    resetFields();
                     AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);
                     addNewTerm.execute();
                 }
@@ -242,5 +243,22 @@ public class AddTermsPage extends AppCompatActivity
             }
         });
 
+    }
+
+    private void resetFields()
+    {
+        jpnsTextBox.setText("");
+        engTextBox.setText("");
+        kanjiTextBox.setText("");
+        nounRadioButton.setChecked(true);
+        verbRadioButton.setChecked(false);
+        adjectiveRadioButton.setChecked(false);
+        otherRadioButton.setChecked(false);
+        grammarRadioButton.setChecked(false);
+        ruRadioButton.setVisibility(View.INVISIBLE);
+        uRadioButton.setVisibility(View.INVISIBLE);
+        irregularRadioButton.setVisibility(View.INVISIBLE);
+        lessonTextBox.setText("");
+        reqKanjiCheckbox.setChecked(false);
     }
 }
