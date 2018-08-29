@@ -5,12 +5,11 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:orientation="vertical"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    tools:context=".Pages.EditTermsPage">
+    tools:context=".Pages.EditTermsMenuPage">
 
-    <ListView
-        android:id="@+id/editTermsListView"
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:text="Button" />
 </LinearLayout>

@@ -1,10 +1,271 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".Pages.AddTermsPage">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/addJapaneseLabel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addJapaneseLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <EditText
+        android:id="@+id/addJapaneseTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/addPageTextBoxHeight"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <View
+        android:id="@+id/divider29"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/addEnglishLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addEnglishLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <EditText
+        android:id="@+id/addEnglishTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/addPageTextBoxHeight"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <View
+        android:id="@+id/divider11"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/addKanjiLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addKanjiLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <EditText
+        android:id="@+id/addKanjiTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/addPageTextBoxHeight"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <View
+        android:id="@+id/divider12"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/addTypeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addTypeLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/nounRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:checked="true"
+            android:text="@string/addTypeNoun"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <RadioButton
+            android:id="@+id/verbRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:text="@string/addTypeVerb"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <RadioButton
+            android:id="@+id/adjectiveRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:text="@string/addTypeAdjective"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <RadioButton
+            android:id="@+id/otherRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:text="@string/addTypeOther"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/grammarRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:text="@string/addTypeGrammar"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider13"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/addTypeSpecialLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addTypeSpecialLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/uRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:checked="true"
+            android:text="@string/addUVerb"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <RadioButton
+            android:id="@+id/rURadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:text="@string/addRuVerb"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <RadioButton
+            android:id="@+id/irregularRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:text="@string/addIrregularVerb"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider14"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:layout_weight="0"
+        android:background="@color/dividerColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/addLessonLabel"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <EditText
+            android:id="@+id/addLessonTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <CheckBox
+        android:id="@+id/addReqKanjiCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/checkBoxColor"
+        android:text="@string/addRequiredKanjiLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <View
+        android:id="@+id/divider15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <Button
+        android:id="@+id/addNewTermButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/addTermButton"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/textSize" />
+
+</LinearLayout>

@@ -582,7 +582,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/checkBoxColor"
-                android:checked="false"
+                android:checked="true"
                 android:duplicateParentState="false"
                 android:text="All"
                 android:textColor="@color/textColor"

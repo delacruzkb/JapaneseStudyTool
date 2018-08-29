@@ -2,152 +2,100 @@ package edu.cofc.japanesestudytool;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.support.annotation.NonNull;
+import java.io.Serializable;
 
 
 @Entity
-public class Term implements Parcelable
+public class Term implements Serializable
 {
-    @PrimaryKey @NonNull
-    private String id;
+    @PrimaryKey (autoGenerate = true)
+    int id;
+
     private String jpns;
     private String eng;
     private String kanji;
     private String type;
+    private String typeSpecial;
     private int lesson;
     private boolean reqKanji;
+    private boolean checked;
 
     public Term()
     {
-        id = "アイディIDNULL0";
         jpns ="a";
         eng= "ア";
         kanji = "a";
         type = "a";
+        typeSpecial = "NULL";
         lesson = 0;
         reqKanji=false;
+        checked = false;
     }
-    public Term(Parcel in)
-    {
-        readFromParcel(in);
-    }
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
 
-        int i = 0;
-        if(reqKanji)
-        {
-            i=1;
-        }
-        dest.writeString(id);
-        dest.writeString(jpns);
-        dest.writeString(eng);
-        dest.writeString(kanji);
-        dest.writeString(type);
-        dest.writeInt(lesson);
-        dest.writeInt(i);
-    }
-    private void readFromParcel(Parcel in) {
-
-        id = in.readString();
-        jpns =in.readString();
-        eng= in.readString();
-        kanji = in.readString();
-        type = in.readString();
-        lesson = in.readInt();
-        reqKanji=(in.readInt() == 1);
-    }
-    public static final Parcelable.Creator CREATOR =
-            new Parcelable.Creator() {
-                public Term createFromParcel(Parcel in) {
-                    return new Term(in);
-                }
-
-                public Term[] newArray(int size) {
-                    return new Term[size];
-                }
-            };
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-
-    public String getJpns()
-    {
+    public String getJpns() {
         return jpns;
     }
 
-    public void setJpns(String jpns)
-    {
+    public void setJpns(String jpns) {
         this.jpns = jpns;
-        renewId();
     }
 
-
-    public String getKanji()
-    {
-        return kanji;
-    }
-
-    public void setKanji(String kanji)
-    {
-        this.kanji = kanji;
-        renewId();
-    }
-
-
-    public String getEng()
-    {
+    public String getEng() {
         return eng;
     }
 
-    public void setEng(String eng)
-    {
-        this.eng = eng.toLowerCase();
+    public void setEng(String eng) {
+        this.eng = eng;
     }
 
+    public String getKanji() {
+        return kanji;
+    }
+
+    public void setKanji(String kanji) {
+        this.kanji = kanji;
+    }
 
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
-        this.type = type.toLowerCase();
+        this.type = type;
     }
 
-    public int getLesson()
-    {
+    public String getTypeSpecial() {
+        return typeSpecial;
+    }
+
+    public void setTypeSpecial(String typeSpecial) {
+        this.typeSpecial = typeSpecial;
+    }
+
+    public int getLesson() {
         return lesson;
     }
 
-    public void setLesson(int lesson)
-    {
+    public void setLesson(int lesson) {
         this.lesson = lesson;
     }
 
-    public void setLesson(String lesson)
-    {
-        this.lesson = Integer.parseInt(lesson);
-    }
-
-    public boolean getReqKanji() {
+    public boolean isReqKanji() {
         return reqKanji;
     }
 
-    public void setReqKanji(boolean flag)
-    {
-        reqKanji = flag;
+    public void setReqKanji(boolean reqKanji) {
+        this.reqKanji = reqKanji;
     }
+
     public void setReqKanji(String flag)
         {
         if( flag.equalsIgnoreCase("kanji"))
@@ -160,6 +108,13 @@ public class Term implements Parcelable
         }
     }
 
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
     public boolean equals(Object term)
     {
         boolean rtnval = false;
@@ -176,11 +131,6 @@ public class Term implements Parcelable
 
     }
 
-
-    private void renewId()
-    {
-        id = getJpns() + getEng()+ getKanji() + getLesson();
-    }
 
 
 }

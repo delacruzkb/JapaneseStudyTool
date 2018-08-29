@@ -1,5 +1,7 @@
 package edu.cofc.japanesestudytool.AsyncTasks;
 
+import android.arch.persistence.room.Room;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import java.util.ArrayList;
@@ -11,9 +13,9 @@ public class InsertTerms extends AsyncTask<ArrayList<Term>,Void,Void>
 {
     TermDatabase termDatabase;
 
-    public InsertTerms(TermDatabase termDatabase)
+    public InsertTerms(Context context)
     {
-        this.termDatabase = termDatabase;
+        termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
     }
 
     @Override

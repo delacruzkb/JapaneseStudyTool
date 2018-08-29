@@ -3,6 +3,8 @@ package edu.cofc.japanesestudytool.Pages;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermListAdapter;
+import edu.cofc.japanesestudytool.TermMenuMetrics;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,10 +22,8 @@ public class StoryPage extends AppCompatActivity
     private WebView browser;
     private ListView termListView;
     private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
-    private boolean useJapaneseFirst;
-    private boolean useKanji;
-    private boolean useLessonKanjiOnly;
-    private boolean useKanjiFirst;
+    private boolean useJapaneseFirst, useKanji,useLessonKanjiOnly, useKanjiFirst;
+    private TermMenuMetrics metrics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -104,21 +104,22 @@ public class StoryPage extends AppCompatActivity
 
     private void rePopulateListView(ArrayList<Term> terms)
     {
-        TermListAdapter listAdapter = new TermListAdapter(this,terms,useJapaneseFirst,useKanji,useLessonKanjiOnly,useKanjiFirst);
-        termListView.setAdapter(listAdapter);
+        TermListAdapter termListAdapter = new TermListAdapter(this.getApplicationContext(),terms,useJapaneseFirst,useKanji,useLessonKanjiOnly,useKanjiFirst);
+        termListView.setAdapter(termListAdapter);
     }
 
     private void gatherInformation(Intent intent)
     {
-        useJapaneseFirst= intent.getBooleanExtra("displayJapaneseFirst",true);
-        useKanji = intent.getBooleanExtra("kanji",false);
-        useLessonKanjiOnly = intent.getBooleanExtra("lessonKanji",false);
-        useKanjiFirst = intent.getBooleanExtra("displayKanjiFirst",false);
-        nounList = intent.getParcelableArrayListExtra("nounList");
-        nounList = intent.getParcelableArrayListExtra("verbList");
-        nounList = intent.getParcelableArrayListExtra("adjectiveList");
-        nounList = intent.getParcelableArrayListExtra("otherList");
-        nounList = intent.getParcelableArrayListExtra("grammarList");
+        metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");
+        nounList= (ArrayList<Term>) intent.getSerializableExtra("nounList");
+        verbList=(ArrayList<Term>) intent.getSerializableExtra("verbList");
+        adjectiveList=(ArrayList<Term>) intent.getSerializableExtra("adjectiveList");
+        grammarList=(ArrayList<Term>) intent.getSerializableExtra("grammarList");
+        otherList=(ArrayList<Term>) intent.getSerializableExtra("otherList");
 
+        useJapaneseFirst= metrics.isJapaneseFirst();
+        useKanji = metrics.isKanji();
+        useLessonKanjiOnly = metrics.isLessonKanjiOnly();
+        useKanjiFirst = metrics.isKanjiFirst();
     }
 }

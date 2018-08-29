@@ -1,0 +1,2234 @@
+おはよう,Good morning,NULL,Other,NULL,1,NULL
+おはようございます,Good morning (polite),NULL,Other,NULL,1,NULL
+こんにちは,Good afternoon,NULL,Other,NULL,1,NULL
+こんばんは,Good evening,NULL,Other,NULL,1,NULL
+さようなら,Good-bye,NULL,Other,NULL,1,NULL
+おやすみ（なさい）,Good night,NULL,Other,NULL,1,NULL
+ありがとう,Thank you,NULL,Other,NULL,1,NULL
+ありがとうございます,Thank you (polite),NULL,Other,NULL,1,NULL
+すみません,Excuse me / I'm sorry,NULL,Other,NULL,1,NULL
+いいえ,No / Not at all,NULL,Other,NULL,1,NULL
+いってきます,I'll go and come back,NULL,Other,NULL,1,NULL
+いってらっしゃい,Please go and come back,NULL,Other,NULL,1,NULL
+ただいま,I'm home,NULL,Other,NULL,1,NULL
+おかえり（なさい）,Welcome home,NULL,Other,NULL,1,NULL
+いただきます,Thank you for the meal (before eating),NULL,Other,NULL,1,NULL
+ごちそうさま（でした）,Thank you for the mean ( after eating),NULL,Other,NULL,1,NULL
+はじめまして,How do you do?,NULL,Other,NULL,1,NULL
+よろしくおねがいします,Nice to meet you,NULL,Other,NULL,1,NULL
+〜ですか／〜か,Question Sentences ,NULL,Grammar,NULL,1,NULL
+～（なん）ですか,Question Sentences,NULL,Grammar,NULL,1,NULL
+XのY,X's Y,NULL,Grammar,NULL,1,NULL
+XはYです,X is Y,NULL,Grammar,NULL,1,NULL
+～ご,. . . Language (Type of language),NULL,Noun,NULL,1,NULL
+～さん,Mr./Mrs.,NULL,Noun,NULL,1,NULL
+～じん,. . . People (Type of people),NULL,Noun,NULL,1,NULL
+アジアけんきゅう,Asian Studies,NULL,Noun,NULL,1,NULL
+アメリカ,America / U.S.A,NULL,Noun,NULL,1,NULL
+イギリス,Britain,NULL,Noun,NULL,1,NULL
+おとうさん,Father,NULL,Noun,NULL,1,NULL
+かがく,Science,NULL,Noun,NULL,1,NULL
+かんこく,Korea,NULL,Noun,NULL,1,NULL
+けいざい,Economics,NULL,Noun,NULL,1,NULL
+こくさいかんけい,International Studies,NULL,Noun,NULL,1,NULL
+コンピューター,Computer Science,NULL,Noun,NULL,1,NULL
+しゅふ,House Wife,NULL,Noun,NULL,1,NULL
+じんるいがく,Anthropology,NULL,Noun,NULL,1,NULL
+スウェーデン,Sweden,NULL,Noun,NULL,1,NULL
+せんこう,Major (School Major),NULL,Noun,NULL,1,NULL
+だいがく,College / University,NULL,Noun,NULL,1,NULL
+だいがくいんせい,Graduate Student,NULL,Noun,NULL,1,NULL
+はん,Half,NULL,Noun,NULL,1,NULL
+ばんごう,Number,NULL,Noun,NULL,1,NULL
+ビジネス,Business,NULL,Noun,NULL,1,NULL
+べんごし,Lawyer,NULL,Noun,NULL,1,NULL
+りゅうがくせい,International Student,NULL,Noun,NULL,1,NULL
+れきし,History,NULL,Noun,NULL,1,NULL
+～さい,. . . Years old,NULL,Other,NULL,1,NULL
+～じ,. . . O'clock,NULL,Other,NULL,1,NULL
+～ねんせい,. . . Year student,NULL,Other,NULL,1,NULL
+あの,um . . .,NULL,Other,NULL,1,NULL
+ええ,Yes (Less formal),NULL,Other,NULL,1,NULL
+おいくつですか,How old are you?,NULL,Other,NULL,1,NULL
+そうです,That's right.,NULL,Other,NULL,1,NULL
+そうですか,I see. / Is that so?,NULL,Other,NULL,1,NULL
+なんさいですか,How old are you?,NULL,Other,NULL,1,NULL
+はい,Yes (More formal),NULL,Other,NULL,1,NULL
+はたち,20 Years old,NULL,Other,NULL,1,NULL
+～ね／～よ,""". . . Right?"" / "". . . I tell you"" (Authoritative)",NULL,Grammar,NULL,2,NULL
+Noun じゃないです,Negate a statement,NULL,Grammar,NULL,2,NULL
+Noun も,"(Noun) too. (Used like ""is also"")",NULL,Grammar,NULL,2,NULL
+ここ／そこ／あそこ／どこ,Here/There/Over there/Where,NULL,Grammar,NULL,2,NULL
+この／その／あの／どの ＋ Noun,This/That/Which (Noun),NULL,Grammar,NULL,2,NULL
+これ／それ／あれ／どれ,This/That/Which thing,NULL,Grammar,NULL,2,NULL
+だれの ＋ Noun,Who's (Noun),NULL,Grammar,NULL,2,NULL
+Tシャツ,T-Shirt,NULL,Noun,NULL,2,NULL
+えんぴつ,Pencil,NULL,Noun,NULL,2,NULL
+おいしい,Delicious,NULL,Noun,NULL,2,NULL
+カーテン,Curtain,NULL,Noun,NULL,2,NULL
+かさ,Umbrella,NULL,Noun,NULL,2,NULL
+かばん,Bag,NULL,Noun,NULL,2,NULL
+きつ,Shoes,NULL,Noun,NULL,2,NULL
+きっさたん,Café,NULL,Noun,NULL,2,NULL
+けしゴム,Eraser,NULL,Noun,NULL,2,NULL
+こくばん,Blackboard / Chalkboard,NULL,Noun,NULL,2,NULL
+さいふ,Wallet,NULL,Noun,NULL,2,NULL
+さかな,Fish,NULL,Noun,NULL,2,NULL
+ジーンズ,Jeans,NULL,Noun,NULL,2,NULL
+だれ,Who,NULL,Noun,NULL,2,NULL
+でんき,Lights,NULL,Noun,NULL,2,NULL
+ドア,Door,NULL,Noun,NULL,2,NULL
+トイレ,Toilet / Restroom,NULL,Noun,NULL,2,NULL
+どこ,Where,NULL,Noun,NULL,2,NULL
+とんかつ,Pork Cutlet,NULL,Noun,NULL,2,NULL
+にく,Meat,NULL,Noun,NULL,2,NULL
+ノート,Notebook,NULL,Noun,NULL,2,NULL
+ペン,Pen,NULL,Noun,NULL,2,NULL
+ぼうし,Hat / Cap,NULL,Noun,NULL,2,NULL
+メニュー,Menu,NULL,Noun,NULL,2,NULL
+やさい,Vegetable,NULL,Noun,NULL,2,NULL
+ゆうびんきょく,Post Office,NULL,Noun,NULL,2,NULL
+（～を）おねがいします,. . .、please.,NULL,Other,NULL,2,NULL
+（～を）ください,Please give me . . .,NULL,Other,NULL,2,NULL
+～えん,. . . Yen,NULL,Other,NULL,2,NULL
+１０ページをみてください,Please look at page 10.,NULL,Other,NULL,2,NULL
+いくら,How much,NULL,Other,NULL,2,NULL
+いらしゃいませ,Welcome ( to our store).,NULL,Other,NULL,2,NULL
+きいてください,Please listen. / Please ask.,NULL,Other,NULL,2,NULL
+じゃあ,Then . . . / If that is the case . . .,NULL,Other,NULL,2,NULL
+ちょっとまってください,Please wait.,NULL,Other,NULL,2,NULL
+どうぞ,Please / Here it is.,NULL,Other,NULL,2,NULL
+どうも,Thank you.,NULL,Other,NULL,2,NULL
+もういちどいってください,Please say it again.,NULL,Other,NULL,2,NULL
+ゆっくりいってください,Please say it slowly.,NULL,Other,NULL,2,NULL
+わかりました,I understand. / I understood.,NULL,Other,NULL,2,NULL
+わかりましたか,Do you understand?,NULL,Other,NULL,2,NULL
+わかりません,I don't understand. / I don't know.,NULL,Other,NULL,2,NULL
+いち,One,一,Noun,NULL,3,Kanji
+いちじ,One o'clock,一時,Noun,NULL,3,Kanji
+いちねんせい,First-year student,一年生,Noun,NULL,3,Kanji
+いちまん,Ten thousand,一万,Noun,NULL,3,Kanji
+いっぷん,One minute,一分,Noun,NULL,3,Kanji
+えん,Circle,円,Noun,NULL,3,Kanji
+えんだか,Strong yen,円高,Noun,NULL,3,Kanji
+きゅう,Nine,九,Noun,NULL,3,Kanji
+きゅうさい,Nine years old,九歳,Noun,NULL,3,Kanji
+くじ,Nine o'clock,九時,Noun,NULL,3,Kanji
+ご,Five,五,Noun,NULL,3,Kanji
+ごさい,Five years old,五歳,Noun,NULL,3,Kanji
+ごじ,Five o'clock,五時,Noun,NULL,3,Kanji
+こどものとき,In one's childhood,子供の時,Noun,NULL,3,Kanji
+さん,Three,三,Noun,NULL,3,Kanji
+さんじ,Three o'clock,三時,Noun,NULL,3,Kanji
+さんぜん,Three thousand,三千,Noun,NULL,3,Kanji
+さんびゃく,Three hundred,三百,Noun,NULL,3,Kanji
+しち／なな,Seven,七,Noun,NULL,3,Kanji
+しちじ,Seven o'clock,七時,Noun,NULL,3,Kanji
+じゅう,Ten,十,Noun,NULL,3,Kanji
+じゅうさい／しっさい,Ten years old,十歳,Noun,NULL,3,Kanji
+じゅうじ,Ten o'clock,十時,Noun,NULL,3,Kanji
+じゅうまん,One hundred thousand,十万,Noun,NULL,3,Kanji
+せん,Thousand,千,Noun,NULL,3,Kanji
+せんえん,One thousand yen,千円,Noun,NULL,3,Kanji
+ななにん／しちにん,Seven people,七人,Noun,NULL,3,Kanji
+に,Two,二,Noun,NULL,3,Kanji
+にじ,Two o'clock,二時,Noun,NULL,3,Kanji
+にねんせい,Second-year student,二年生,Noun,NULL,3,Kanji
+はち,Eight,八,Noun,NULL,3,Kanji
+はちじ,Eight o'clock,八時,Noun,NULL,3,Kanji
+はっさい,Eight years old,八歳,Noun,NULL,3,Kanji
+はっせん,Eight thousand,八千,Noun,NULL,3,Kanji
+はっぴゃく,Eight hundred,八百,Noun,NULL,3,Kanji
+ひゃく,Hundred,百,Noun,NULL,3,Kanji
+ひゃくえん,One hundred yen,百万円,Noun,NULL,3,Kanji
+ひゃくまん,One million,百万,Noun,NULL,3,Kanji
+ふつかかん,Two days,二日間,Noun,NULL,3,Kanji
+まるい,Round,円い,Noun,NULL,3,Kanji
+よじ,Four o'clock,四時,Noun,NULL,3,Kanji
+よねんせい,Fourth-year student,四年生,Noun,NULL,3,Kanji
+よん,Four,四,Noun,NULL,3,Kanji
+ろく,Six,六,Noun,NULL,3,Kanji
+ろくじ,Six o'clock,六時,Noun,NULL,3,Kanji
+ろっぴゃく,Six hundred,六百,Noun,NULL,3,Kanji
+ろっぷん,Six minutes,六分,Noun,NULL,3,Kanji
+いい,Good,NULL,Adjective,NULL,3,NULL
+～ませんか,Extending an invitation,NULL,Grammar,NULL,3,NULL
+いく➞いきます,Verb conjugation (afirmative),NULL,Grammar,NULL,3,NULL
+いく➞いきません,Verb conjugation (negative),NULL,Grammar,NULL,3,NULL
+アイスクリーム,Ice Cream,NULL,Noun,NULL,3,NULL
+あさごはん,Breakfast,朝ご飯,Noun,NULL,3,NULL
+いつ,When,NULL,Noun,NULL,3,NULL
+おさけ,Sake / Alcohol,お酒,Noun,NULL,3,NULL
+おちゃ,Green Tea,お茶,Noun,NULL,3,NULL
+おんがく,Music,音楽,Noun,NULL,3,NULL
+コーヒー,Coffee,NULL,Noun,NULL,3,NULL
+ざっし,Magazine,雑誌,Noun,NULL,3,NULL
+しゅうまつ,Weekend,週末,Noun,NULL,3,NULL
+スポーツ,Sports,NULL,Noun,NULL,3,NULL
+デート,Date (Romantic、 not calendar),NULL,Noun,NULL,3,NULL
+テニス,Tennis,NULL,Noun,NULL,3,NULL
+テレビ,TV,NULL,Noun,NULL,3,NULL
+ばんごはん,Dinner,晩ご飯,Noun,NULL,3,NULL
+ハンバーガー,Hamburger,NULL,Noun,NULL,3,NULL
+ひるごはん,Lunch,昼ご飯,Noun,NULL,3,NULL
+～ごろ,At about . . .,NULL,Other,NULL,3,NULL
+あまり ＋ Negative,Not much,NULL,Other,NULL,3,NULL
+ぜんぜん ＋ Negative,Not at all,全然　＋ Negative,Other,NULL,3,NULL
+そうですね,That's right. / Let me see.,NULL,Other,NULL,3,NULL
+たいてい,Usually,NULL,Other,NULL,3,NULL
+ちょっと,A little,NULL,Other,NULL,3,NULL
+でも,But,NULL,Other,NULL,3,NULL
+どうですか,How about . . . ? / How is . . . ?,NULL,Other,NULL,3,NULL
+よく,Often / Much,NULL,Other,NULL,3,NULL
+（～を）する,To do,NULL,Verb,IRR,3,NULL
+（～を）たべる,To eat,（～を）食べる,Verb,RU,3,NULL
+（～を）みる,To see / To look at / To watch,（～を）見る,Verb,RU,3,NULL
+ねる,To (go to) sleep,寝る,Verb,RU,3,NULL
+（～を）のむ,To drink,（～を）飲む,Verb,U,3,NULL
+(Destination)(に／へ)　かえる,To go back / To return,(Destination)(に／へ)　帰る,Verb,U,3,NULL
+へたな,Poor at,下手な,Adjective,NULL,4,Kanji
+いちがつ,January,一月,Noun,NULL,4,Kanji
+いちねんじゅう,All year round,一年中,Noun,NULL,4,Kanji
+いつか,5th day of the month,五日,Noun,NULL,4,Kanji
+いっかげつ,One Month,一か月,Noun,NULL,4,Kanji
+うえ,Top / Above,上,Noun,NULL,4,Kanji
+おくじゅう,Rooftop,屋上,Noun,NULL,4,Kanji
+おととい,The day before yesterday,NULL,Noun,NULL,4,Kanji
+おととし,The year before last,NULL,Noun,NULL,4,Kanji
+かざん,Volcano,火山,Noun,NULL,4,Kanji
+かせい,Mars,火星,Noun,NULL,4,Kanji
+かようび,Tuesday,火曜日,Noun,NULL,4,Kanji
+き,Tree,木,Noun,NULL,4,Kanji
+きのう,Yesterday,昨日,Noun,NULL,4,Kanji
+きむらさん,Mr./Mrs. Kimura,木村さん,Noun,NULL,4,Kanji
+きんようび,Friday,金曜日,Noun,NULL,4,Kanji
+げつようび,Monday,月曜日,Noun,NULL,4,Kanji
+ここのか,9th day of the month,九日,Noun,NULL,4,Kanji
+このひと,This person,この人,Noun,NULL,4,Kanji
+さらいげつ,The month after next,再来月,Noun,NULL,4,Kanji
+さらいしゅう,The week after next,再来週,Noun,NULL,4,Kanji
+さらいねん,The year after next,再来年,Noun,NULL,4,Kanji
+さんじはん,Half past three,三時半,Noun,NULL,4,Kanji
+さんにん,Three people,三人,Noun,NULL,4,Kanji
+じゅういちがつ,November,十一月,Noun,NULL,4,Kanji
+じゅういちにち,11th day of the month,十一日,Noun,NULL,4,Kanji
+じゅうにがつ,December,十二月,Noun,NULL,4,Kanji
+じゅうよっか,14th day of the month,十四日,Noun,NULL,4,Kanji
+すいえい,Swimming,水泳,Noun,NULL,4,Kanji
+すいどう,Water supply,水道,Noun,NULL,4,Kanji
+すいようび,Wednesday,水曜日,Noun,NULL,4,Kanji
+ちゅうがく,Junior high school,中学,Noun,NULL,4,Kanji
+ついたち,1st day of the month,一日,Noun,NULL,4,Kanji
+つき,Moon,月,Noun,NULL,4,Kanji
+つち,Soil,土,Noun,NULL,4,Kanji
+とうか,10th day of the month,十日,Noun,NULL,4,Kanji
+とち,Land,土地,Noun,NULL,4,Kanji
+なのか,7th day of the month,七日,Noun,NULL,4,Kanji
+にかげつかまえ,Two months ago,二か月前,Noun,NULL,4,Kanji
+にがつ,February,二月,Noun,NULL,4,Kanji
+にしゅうかんまえ,Two weeks ago,二週間前,Noun,NULL,4,Kanji
+にほんご,Japanese,日本語,Noun,NULL,4,Kanji
+にほんじん,Japanese people,日本人,Noun,NULL,4,Kanji
+ねんど,Clay,粘土,Noun,NULL,4,Kanji
+はちがつ,August,八月,Noun,NULL,4,Kanji
+はなび,Fireworks,花火,Noun,NULL,4,Kanji
+ははのひ,Mother's day,母の日,Noun,NULL,4,Kanji
+はんがく,Half price,半額,Noun,NULL,4,Kanji
+はんとし,Half a year,半年,Noun,NULL,4,Kanji
+はんぶん,Half,半分,Noun,NULL,4,Kanji
+ひ,Fire,火,Noun,NULL,4,Kanji
+ふつか,2nd day of the month,二日,Noun,NULL,4,Kanji
+みずぎ,Bathing suit,水着,Noun,NULL,4,Kanji
+みっか,3rd day of the month,三日,Noun,NULL,4,Kanji
+みっか,Three days,三日,Noun,NULL,4,Kanji
+むいか,6th day of the month,六日,Noun,NULL,4,Kanji
+もくようび,Thursday,木曜日,Noun,NULL,4,Kanji
+やまもとさん,Mr./Mrs. Yamamoto,山本さん,Noun,NULL,4,Kanji
+ようか,8th day of the month,八日,Noun,NULL,4,Kanji
+ようび,Day of the week,曜日,Noun,NULL,4,Kanji
+よっか,4th day of the month,四日,Noun,NULL,4,Kanji
+りょうきん,Charge,料金,Noun,NULL,4,Kanji
+ろくがつ,June,六月,Noun,NULL,4,Kanji
+（～の）した,Under,（～の）下,Other,NULL,4,Kanji
+（～の）なか,Inside,（～の）中,Other,NULL,4,Kanji
+ください,Please give / do . . .,下さい,Other,NULL,4,Kanji
+ひとりで,Alone,一人で,Other,NULL,4,Kanji
+のぼる,To go up,上る,Verb,U,4,Kanji
+（に）も,Go to two places / do something on two different occasions,NULL,Grammar,NULL,4,NULL
+Xがあります,There is X (object) || You own X || X is an upcoming event,NULL,Grammar,NULL,4,NULL
+Xがいます,There is X (person),NULL,Grammar,NULL,4,NULL
+XはYの（Location word）です,X is (location word) of Y,NULL,Grammar,NULL,4,NULL
+じゃありませんでした,Past tense of です (conservative),NULL,Grammar,NULL,4,NULL
+たくさん,Expression of a large quantity,NULL,Grammar,NULL,4,NULL
+でした／じゃなかったです,Past tense of です,NULL,Grammar,NULL,4,NULL
+ではありませんでした,Past tense of です (more likely to be seen in writing),NULL,Grammar,NULL,4,NULL
+と,"Connect two nouns / ""together with""",NULL,Grammar,NULL,4,NULL
+ました／ませんでした,Past tense of verbs,NULL,Grammar,NULL,4,NULL
+も,Two or more people performing the same activity,NULL,Grammar,NULL,4,NULL
+一時間,Duration of an activity,NULL,Grammar,NULL,4,NULL
+（～の）とき,when . . . / at the time of . . .,（～の）時,Noun,NULL,4,NULL
+～じかん,. . . Hours,～時間,Noun,NULL,4,NULL
+あなた,You,NULL,Noun,NULL,4,NULL
+アルバイト,Part-time job,NULL,Noun,NULL,4,NULL
+いぬ,Dog,犬,Noun,NULL,4,NULL
+おてら,Temple,お寺,Noun,NULL,4,NULL
+おみやげ,Souvenir,お土産,Noun,NULL,4,NULL
+クラス,Class,NULL,Noun,NULL,4,NULL
+こうえん,Park,公園,Noun,NULL,4,NULL
+ごはん,Rice / Meal,ご飯,Noun,NULL,4,NULL
+しゃしん,Picture / Photograph,写真,Noun,NULL,4,NULL
+スーパー,Supermarket,NULL,Noun,NULL,4,NULL
+デパート,Department store,NULL,Noun,NULL,4,NULL
+ねこ,Cat,猫,Noun,NULL,4,NULL
+バスてい,Bus stop,バス停,Noun,NULL,4,NULL
+パン,Bread,NULL,Noun,NULL,4,NULL
+ひと,Person,人,Noun,NULL,4,NULL
+ホテル,Hotel,NULL,Noun,NULL,4,NULL
+ほんや,Bookstore,本屋,Noun,NULL,4,NULL
+まち,Town; city,町,Noun,NULL,4,NULL
+メール,E-mail,NULL,Noun,NULL,4,NULL
+レストラン,Restaurant,NULL,Noun,NULL,4,NULL
+（～の）うえ,On,（～の）上,Other,NULL,4,NULL
+（～の）となり,Next (similar items),（～の）隣,Other,NULL,4,NULL
+（～の）まえ,Front,（～の）前,Other,NULL,4,NULL
+（～の）よこ,Next (broader),NULL,Other,NULL,4,NULL
+（A)(と)(B)(の）,. . . Is between (A) and (B),間,Other,NULL,4,NULL
+～ぐらい,About (approximate measurements),NULL,Other,NULL,4,NULL
+～と,Together with (a person),NULL,Other,NULL,4,NULL
+ごめんなさい,I'm sorry,NULL,Other,NULL,4,NULL
+だから,So / Therefore,NULL,Other,NULL,4,NULL
+たくさｎ,Many / A lot,NULL,Other,NULL,4,NULL
+どうして,Why,NULL,Other,NULL,4,NULL
+(Place)(に)(Thing)(が)　いる,(a person) is in/stays at a (place),NULL,Verb,RU,4,NULL
+（～が）わかる,To understand,NULL,Verb,U,4,NULL
+（～を）かう,To buy,（～を）買う,Verb,U,4,NULL
+（～を）とる,To take (a picture),（～を）撮る,Verb,U,4,NULL
+（～を）まつ,To wait,（～を）待つ,Verb,U,4,NULL
+(Person)(に)(Thing)(を)　かく,To write (person) (a thing),(Person)(に)(Thing)(を)　書く,Verb,U,4,NULL
+(Place)(に)(Thing)(が)　ある,There is a (thing) at (place),NULL,Verb,U,4,NULL
+げんき（な）,Fine,元気（な）,Adjective,NULL,5,Kanji
+いけん,Opinion,意見,Noun,NULL,5,Kanji
+いちぎょうめ,First line,一行目,Noun,NULL,5,Kanji
+いんしゅうんてん,Drunken driving,飲酒運転,Noun,NULL,5,Kanji
+おがわさん,Mr./Ms. Ogawa,小川さん,Noun,NULL,5,Kanji
+がんじつ,The first day of the year,元日,Noun,NULL,5,Kanji
+けんぶつ,Sightseeing,見物,Noun,NULL,5,Kanji
+してつ,Private railroad,私鉄,Noun,NULL,5,Kanji
+じもと,Local,地元,Noun,NULL,5,Kanji
+じょせい,Woman,女性,Noun,NULL,5,Kanji
+しりつだいがく,Private university,私立大学,Noun,NULL,5,Kanji
+たなかさん,Mr./Ms. Tanaka,田中さん,Noun,NULL,5,Kanji
+たべもの,Food,食べ物,Noun,NULL,5,Kanji
+だんしがくせい,Male student,男子学生,Noun,NULL,5,Kanji
+だんせい,Man,男性,Noun,NULL,5,Kanji
+たんぼ,Rice Field,田んぼ,Noun,NULL,5,Kanji
+ちょうじょ,The eldest daughter,長女,Noun,NULL,5,Kanji
+てんき,Weather,天気,Noun,NULL,5,Kanji
+てんごく,Heaven,天気,Noun,NULL,5,Kanji
+てんさい,Genius,天才,Noun,NULL,5,Kanji
+てんのう,Japanese emperor,天皇,Noun,NULL,5,Kanji
+にんき,Popularity,人気,Noun,NULL,5,Kanji
+のみもの,Drink,飲み物,Noun,NULL,5,Kanji
+はなみ,Flower viewing,花見,Noun,NULL,5,Kanji
+ふじさん,Mt. Fuji,富士山,Noun,NULL,5,Kanji
+やまかわさん,Mr./Ms. Yamakawa,山川さん,Noun,NULL,5,Kanji
+やまださん,Mr./Ms. Yamada,山田さん,Noun,NULL,5,Kanji
+たべる,To eat,食べる,Verb,RU,5,Kanji
+みる,To see,見る,Verb,RU,5,Kanji
+のむ,To drink,飲む,Verb,U,5,Kanji
+Good-looking (conjugates like いい),Good-looking,NULL,Adjective,NULL,5,NULL
+あつい,Hot,暑い,Adjective,NULL,5,NULL
+いそがしい,Busy,忙しい,Adjective,NULL,5,NULL
+おおきい,Large,大きい,Adjective,NULL,5,NULL
+おもしろい,Interesting / Funny,面白い,Adjective,NULL,5,NULL
+きらい（な）,Disgusted with / to dislike,嫌い（な）,Adjective,NULL,5,NULL
+きれい（な）,Beautiful / Clean,NULL,Adjective,NULL,5,NULL
+げんき（な）,Healthy / Energeic,元気（な）,Adjective,NULL,5,NULL
+こわい,Frightening,怖い,Adjective,NULL,5,NULL
+さむい,Cold (temperature),寒い,Adjective,NULL,5,NULL
+しずか（な）,Quiet,静か（な）,Adjective,NULL,5,NULL
+すき（な）,Fond of / To like,好き（な）,Adjective,NULL,5,NULL
+だいきらい（な）,To hate,大嫌い（な）,Adjective,NULL,5,NULL
+だいすき（な）,Very fond of / to love,大好き（な）,Adjective,NULL,5,NULL
+たのしい,Fun,楽しい,Adjective,NULL,5,NULL
+つまらない,Boring,NULL,Adjective,NULL,5,NULL
+にぎやか（な）,Lively,NULL,Adjective,NULL,5,NULL
+ひま（な）,Not busy / To have a lot of free time,暇（な）,Adjective,NULL,5,NULL
+むずかしい,Difficult,難しい,Adjective,NULL,5,NULL
+やさしい,Easy (problem) / Kind (person),NULL,Adjective,NULL,5,NULL
+やすい,Inexpensive / Cheap (thing),安い,Adjective,NULL,5,NULL
+～ましょう／～ましょうか,"""Let's . . ."" / ""Let's . . . ?""",NULL,Grammar,NULL,5,NULL
+さむい➞さむいです,Adjective conjugation (affirmative),NULL,Grammar,NULL,5,NULL
+さむい➞さむかったです,Past-tense adjective conjugation (affirmative),NULL,Grammar,NULL,5,NULL
+さむい➞さむくないです／さむくありません,Adjective conjugation (negative),NULL,Grammar,NULL,5,NULL
+さむい➞さむくなかったです／さむくありませんでした,Past-tense adjective conjugation (negative),NULL,Grammar,NULL,5,NULL
+うみ,Sea,海,Noun,NULL,5,NULL
+おしろ,Castle,NULL,Noun,NULL,5,NULL
+おまんじゅう,Sweet Bun,NULL,Noun,NULL,5,NULL
+かきとめ,Registered mail,書留,Noun,NULL,5,NULL
+きって,Postal Stamp,切手,Noun,NULL,5,NULL
+きっぷ,Ticket,切符,Noun,NULL,5,NULL
+こうくうびん,Airmail,航空便,Noun,NULL,5,NULL
+こづつみ,Parcel,小包,Noun,NULL,5,NULL
+サーフィン,Surfing,NULL,Noun,NULL,5,NULL
+そくたつ,Special delivery,速達,Noun,NULL,5,NULL
+テスト,Test,NULL,Noun,NULL,5,NULL
+はがき,Postcard,葉書,Noun,NULL,5,NULL
+バス,Bus,NULL,Noun,NULL,5,NULL
+ひこうき,Airplane,飛行機,Noun,NULL,5,NULL
+ふなびん,Surface mail,船便,Noun,NULL,5,NULL
+へや,Room,部屋,Noun,NULL,5,NULL
+ぼく,I (used by men),僕,Noun,NULL,5,NULL
+ほけん,Insurance,保険,Noun,NULL,5,NULL
+まどぐち,Counter,窓口,Noun,NULL,5,NULL
+（こうくうびん）でおねがいします。,Make this (an airmail)、Please. (Post Office),（航空便）でお願いします。,Other,NULL,5,NULL
+～まい,Counter for flat objects,～枚,Other,NULL,5,NULL
+～まで,to (a place) / as far s (a place) / till (a time),NULL,Other,NULL,5,NULL
+いっしょに,Together,一緒に,Other,NULL,5,NULL
+ごじゅうえんきってをさんまいください。,Give me three 50-yen stamps、please. (Post Office),五十円切手を三枚ください。,Other,NULL,5,NULL
+これ、おねがいします。,Can you take care of this、please? (Post Office),これ、お願いします。,Other,NULL,5,NULL
+すごく,Extremely,NULL,Other,NULL,5,NULL
+それから,and then,NULL,Other,NULL,5,NULL
+だいじょうぶ,It's Okay / Not to worry / Everything is under control,大丈夫,Other,NULL,5,NULL
+では、おげんきで,Take care,では、お元気で,Other,NULL,5,NULL
+とても,Very,NULL,Other,NULL,5,NULL
+どんな,what kind of . . .,NULL,Other,NULL,5,NULL
+なんにちぐらいかかりますか,How many days will it take? (Post Office),何日ぐらいかかりますか。,Other,NULL,5,NULL
+ひゃくごじゅうえんになります。,It will be 150 yen. (Post Office),百五十円になります。,Other,NULL,5,NULL
+また,Again,NULL,Other,NULL,5,NULL
+でかける,To go out,出かける,Verb,RU,5,NULL
+およぐ,To swim,泳ぐ,Verb,U,5,NULL
+きく,To ask,聞く,Verb,U,5,NULL
+のる,To ride / To board,乗る,Verb,U,5,NULL
+やる,To do / To perform,NULL,Verb,U,5,NULL
+おおきい,Big,大きい,Adjective,NULL,6,Kanji
+たいへん（な）,Tough (situation),大変（な）,Adjective,NULL,6,Kanji
+いっしょうにいちど,Once in a life time,一生に一度,Noun,NULL,6,Kanji
+うせつ,Right turn,右折,Noun,NULL,6,Kanji
+かいがい,Overseas,回外,Noun,NULL,6,Kanji
+がいこくじん,Foreigner,外国人,Noun,NULL,6,Kanji
+がくぶ,Department / Faculty,学部,Noun,NULL,6,Kanji
+かんこく,South Korea,韓国,Noun,NULL,6,Kanji
+かんさい,Kansai area,関西,Noun,NULL,6,Kanji
+かんとう,Kanto Area,関東,Noun,NULL,6,Kanji
+きせつ,Left turn,左折,Noun,NULL,6,Kanji
+きた,North,北,Noun,NULL,6,Kanji
+きたぐち,North exit,北口,Noun,NULL,6,Kanji
+こっかい,The Diet,国会,Noun,NULL,6,Kanji
+こっかいどう,Hokkaido,北海道,Noun,NULL,6,Kanji
+ごふん,Five Minutes,ごふん,Noun,NULL,6,Kanji
+さきに,Ahead,北に,Noun,NULL,6,Kanji
+さゆう,Right and Left,左右,Noun,NULL,6,Kanji
+しゅっせき,Attendance,出席,Noun,NULL,6,Kanji
+じゅっぶん／じっぶん,Ten minutes,じゅっぶん／じっぶん,Noun,NULL,6,Kanji
+じんこう,Population,人口,Noun,NULL,6,Kanji
+せいよう,The West,西洋,Noun,NULL,6,Kanji
+せんぱい,Senior member,先輩,Noun,NULL,6,Kanji
+そと,Outside,外,Noun,NULL,6,Kanji
+だいがく,University,大学,Noun,NULL,6,Kanji
+たいしかん,Embassy,大使館,Noun,NULL,6,Kanji
+とうなんアジア,Southeast Asia,東南アジア,Noun,NULL,6,Kanji
+とうほく,Tohoku area,東北,Noun,NULL,6,Kanji
+とうよう,The East,東洋,Noun,NULL,6,Kanji
+なんきょく,Antartica,南極,Noun,NULL,6,Kanji
+にし,West,西,Noun,NULL,6,Kanji
+にしぐち,West Exit,西口,Noun,NULL,6,Kanji
+ひがし,East,東,Noun,NULL,6,Kanji
+ひがしぐち,East Exit,東口,Noun,NULL,6,Kanji
+ひだりきき,Left-handed,左利き,Noun,NULL,6,Kanji
+ひだりて,Left hand,左手,Noun,NULL,6,Kanji
+ほくせい,Northwest,北西,Noun,NULL,6,Kanji
+ほっきょく,North Pole,北極,Noun,NULL,6,Kanji
+みぎがわ,Right side,右側,Noun,NULL,6,Kanji
+みぎて,Right hand,右手,Noun,NULL,6,Kanji
+みなみ,South,南,Noun,NULL,6,Kanji
+みなみぐち,South exit,南口,Noun,NULL,6,Kanji
+みんとう,Southeast,南東,Noun,NULL,6,Kanji
+ゆしゅつ,Export,輸出,Noun,NULL,6,Kanji
+うまれる,To be born,生まれる,Verb,U,6,Kanji
+だす,To take something out,出す,Verb,U,6,Kanji
+まなぶ,To study,学ぶ,Verb,U,6,Kanji
+わける,To divide,分ける,Verb,U,6,Kanji
+～から,Explains the reason,NULL,Grammar,NULL,6,NULL
+～ましょうか,"""Let me do . . ."" (offering asistance)",NULL,Grammar,NULL,6,NULL
+とる➞とって,"(Te-form) forming a sentence that describes two events or activities. (""I did this and did that."")",NULL,Grammar,NULL,6,NULL
+とる➞とってはいけません,"(Te-form) stating that something is forbidden (You must not . . ."")",NULL,Grammar,NULL,6,NULL
+みる➞みてもいいです（か／よ）,"(Te-form) giving and asking for permission (""You may . . . / May I . . .?"")",NULL,Grammar,NULL,6,NULL
+よむ➞よんでください,"(Te-form) making requests ("". . .、please."")",NULL,Grammar,NULL,6,NULL
+CD（シーディー）,CD,NULL,Noun,NULL,6,NULL
+イタリア,Italy,NULL,Noun,NULL,6,NULL
+おふろ,Bath,お風呂,Noun,NULL,6,NULL
+かんじ,Kanji / Chinese character,漢字,Noun,NULL,6,NULL
+シェフ,Chef,NULL,Noun,NULL,6,NULL
+しみんびょういん,Municipal Hospital,市民病院,Noun,NULL,6,NULL
+シャワー,Shower,NULL,Noun,NULL,6,NULL
+にもつ,Baggage,荷物,Noun,NULL,6,NULL
+パソコン,Personal computer,NULL,Noun,NULL,6,NULL
+ページ,Page,NULL,Noun,NULL,6,NULL
+まっすぐ,Straight,NULL,Noun,NULL,6,NULL
+みなさん,Everyone,NULL,Noun,NULL,6,NULL
+ワイン,Wine,NULL,Noun,NULL,6,NULL
+～から,because . . .,NULL,Other,NULL,6,NULL
+おそく,(do something) late,遅く,Other,NULL,6,NULL
+けっこうです,That would be fine. / That wouldn't be necessary. / Right away.,結構です,Other,NULL,6,NULL
+すぐ,Right away,NULL,Other,NULL,6,NULL
+すみません。りゅびんきょくはどこですか。,Excuse me、where is a post office? (Directions),すみせん。郵便局はどこですか。,Other,NULL,6,NULL
+どうもありがとうございます。,Thank you very much.,NULL,Other,NULL,6,NULL
+ひだりにまがる,Turn left (Directions),左に曲がる,Other,NULL,6,NULL
+ひとつめのしこうをみぎにまがる,Turn right at the first traffic light (Directions),一つ目の信号を右に曲がる,Other,NULL,6,NULL
+ふたつめのかどをひだりにまがる,Turn left at the second corner (Directions),二つ目の角を左に曲がる,Other,NULL,6,NULL
+ほんとうですか,Really?,本当ですか,Other,NULL,6,NULL
+まっすぐいって、みっつめのかどをみぎにまがってください。ゆうびんきょくはみちにありますよ,Go straight and turn right at the third corner. The post office is on the right. (Directions),まっすぐ行って、三つ目の角を右に曲がってください。郵便局は右側にありますよ。,Other,NULL,6,NULL
+みぎにまがる,Turn right (Directions),右に曲がる,Other,NULL,6,NULL
+みちのひだりがわ,Left side of the street (Directions),道の左側,Other,NULL,6,NULL
+みちのみぎがわ,Right side of the street (Directions),道の右側,Other,NULL,6,NULL
+みちをわたる,Cross the street (Directions),道を渡る,Other,NULL,6,NULL
+ゆっくり,Slowly / Leisurely / Unhurriedly,NULL,Other,NULL,6,NULL
+（～を）つれてくる,To bring (a person),（～を）連れてくる,Verb,IRR,6,NULL
+（～に）でんわをかける,To make a phone call,（～に）電話をかける,Verb,RU,6,NULL
+（～を）あける,To open (something),（～を）開ける,Verb,RU,6,NULL
+（～を）おりる,To get off,（～を）降りる,Verb,RU,6,NULL
+（～を）しめる,To close (something),（～を）閉める,Verb,RU,6,NULL
+（～を）つける,To turn on,NULL,Verb,RU,6,NULL
+（～を）わすれる,To forget / To leave behind,（～を）忘れる,Verb,RU,6,NULL
+(Person)(に)(Thing)(を)　おしえる,To teach / To instruct (something) to (a person),(Person)(に)(Thing)(を)　教える,Verb,RU,6,NULL
+(Person)(に)(Thing)(を)　かりる,To borrow a (thing) from (a person),(Person)(に)(Thing)(を)　借りる,Verb,RU,6,NULL
+シャワーをあびる,To take a shower,シャワーを浴びる,Verb,RU,6,NULL
+（～に）はいる,To enter,（～に）入る,Verb,U,6,NULL
+（～を）つかう,To use,（～を）使う,Verb,U,6,NULL
+（～を）もつ,To carry / To hold,（～を）持つ,Verb,U,6,NULL
+（～を）やすむ,To be absent from ( with particle) / To rest (without particle),（～を）休む,Verb,U,6,NULL
+(Person)(に)(Thing)(を)　かえす,To return (a thing) to (Person),(Person)(に)(Thing)(を)　返す,Verb,U,6,NULL
+(Person/Task)(を）てつだう,To help (a person or with a task),(Person/Task)(を）手伝う,Verb,U,6,NULL
+(Seat)(に）すわる,To sit down on (Seat),(Seat)(に）座る,Verb,U,6,NULL
+あそぶ,To play / To spend time pleasantly,遊ぶ,Verb,U,6,NULL
+いそぐ,To hurry,急ぐ,Verb,U,6,NULL
+おふろにはいる,To take a bath,お風呂に入る,Verb,U,6,NULL
+けす,To turn off / to erase,消す,Verb,U,6,NULL
+しぬ,To Die,死ぬ,Verb,U,6,NULL
+たばこをすう,To smoke,たばこを吸う,Verb,U,6,NULL
+さいこう,The best,最高,Adjective,NULL,7,Kanji
+かいぎ,Meeting,会議,Noun,NULL,7,Kanji
+かいしゃ,Company,会社,Noun,NULL,7,Kanji
+かえり,Return,帰り,Noun,NULL,7,Kanji
+きこく,Going Home,帰国,Noun,NULL,7,Kanji
+きたく,Returning home,帰宅,Noun,NULL,7,Kanji
+きょうかい,Church,教会,Noun,NULL,7,Kanji
+きょうこ,Kyoko,京子,Noun,NULL,7,Kanji
+きょうと,Kyoto,京都,Noun,NULL,7,Kanji
+けいご,Honorific expressions,敬語,Noun,NULL,7,Kanji
+ことうさん,Father,お父さん,Noun,NULL,7,Kanji
+しゃかい,Society,社会,Noun,NULL,7,Kanji
+しょうがくせい,Elementary School Student,小学生,Noun,NULL,7,Kanji
+しょうがっこう,Elementary School,小学校,Noun,NULL,7,Kanji
+そふ,Grandfather,祖父,Noun,NULL,7,Kanji
+そぼ,Grandmother,祖母,Noun,NULL,7,Kanji
+ちち,(my) father,父,Noun,NULL,7,Kanji
+ちゅうがっこう,Junior high school,中学校,Noun,NULL,7,Kanji
+にほんご,Japanese Language,日本語,Noun,NULL,7,Kanji
+にゅうしゃ,Entry to a company,入社,Noun,NULL,7,Kanji
+はは,Mother,母,Noun,NULL,7,Kanji
+ふぼ,Father and Mother,父母,Noun,NULL,7,Kanji
+ぼご,Mother Tounge,母語,Noun,NULL,7,Kanji
+まいねん／まいとし,Every year,毎年,Noun,NULL,7,Kanji
+もじ,Letter / Character,文字,Noun,NULL,7,Kanji
+ゆにゅう,Import,輸入,Noun,NULL,7,Kanji
+じょうきゅする,To go to the capital,上京する,Verb,IRR,7,Kanji
+いれる,To put something in,入れる,Verb,U,7,Kanji
+かえる,To return,帰る,Verb,U,7,Kanji
+はいる,To enter,入る,Verb,U,7,Kanji
+あたまがいい,Bright / smart / clever (conjugates like いい),頭がい,Adjective,NULL,7,NULL
+かわいい,cute,NULL,Adjective,NULL,7,NULL
+しんせつ（な）,Kind,親切（な）,Adjective,NULL,7,NULL
+せがたかいい,tall (stature),背が高い,Adjective,NULL,7,NULL
+せがひくい,short (stature),背が低い,Adjective,NULL,7,NULL
+はやい,Fast,速い,Adjective,NULL,7,NULL
+べんり（な）,Convinient,便利（な）,Adjective,NULL,7,NULL
+みじかい,short (length),短い,Adjective,NULL,7,NULL
+Verb stem ＋　にいく,Use to describe movement and purpose,NULL,Grammar,NULL,7,NULL
+かわいくて、げんきで、しんせつです。,(Te form) Joining sentences with adjectives,NULL,Grammar,NULL,7,NULL
+けっこんする➞けっこんしています。,A past event that is connected with the present,NULL,Grammar,NULL,7,NULL
+よむ➞よんでいます。,An action in progress,NULL,Grammar,NULL,7,NULL
+DVD（ディーブイディー）,DVD,NULL,Noun,NULL,7,NULL
+あたま,Head,頭,Noun,NULL,7,NULL
+あね,(My) older sister,姉,Noun,NULL,7,NULL
+アパート,Apartment,NULL,Noun,NULL,7,NULL
+おじいさん,Grandfather; old man,NULL,Noun,NULL,7,NULL
+おしり,Buttocks,NULL,Noun,NULL,7,NULL
+おばあさん,Grandmother/old woman,NULL,Noun,NULL,7,NULL
+かた,Shoulder,肩,Noun,NULL,7,NULL
+かみ,Hair,髪,Noun,NULL,7,NULL
+きょうだい,Brothers and sisters,兄弟,Noun,NULL,7,NULL
+くび,Neck,首,Noun,NULL,7,NULL
+ゲーム,game,NULL,Noun,NULL,7,NULL
+コンビニ,Convenience store,NULL,Noun,NULL,7,NULL
+サークル,club activity,NULL,Noun,NULL,7,NULL
+じゅく,Cram school,NULL,Noun,NULL,7,NULL
+せかな,Back　(Body Part),背中,Noun,NULL,7,NULL
+はな,Nose,鼻,Noun,NULL,7,NULL
+はは,(my) mother,母,Noun,NULL,7,NULL
+みみ,Ear,耳,Noun,NULL,7,NULL
+むね,Breast / Chest,胸,Noun,NULL,7,NULL
+め,Eye,目,Noun,NULL,7,NULL
+めがね,glasses,眼鏡,Noun,NULL,7,NULL
+ゆび,Finger,指,Noun,NULL,7,NULL
+～が,. . . but,NULL,Other,NULL,7,NULL
+～にん,(counter for people),～人,Other,NULL,7,NULL
+なにも　＋Negative,not . . . anything,何も 　＋Negative,Other,NULL,7,NULL
+ひとり,One person,一人,Other,NULL,7,NULL
+ふたり,Two people,二人,Other,NULL,7,NULL
+もしもし,Hello? (used on the phone),NULL,Other,NULL,7,NULL
+もちろん,Of course,NULL,Other,NULL,7,NULL
+よかったら,if you like,NULL,Other,NULL,7,NULL
+（～と）けっこんする,To get married,（～と）結婚する,Verb,IRR,7,NULL
+（～を）たのしみにする,To look forward to,NULL,Verb,IRR,7,NULL
+（～を）きる,To put on (clothes above your waist),（～を）着る,Verb,RU,7,NULL
+つとめる／～につとめています,To work for,勤める／〜に勤めています,Verb,RU,7,NULL
+やせています,To be thin,NULL,Verb,RU,7,NULL
+やせる,To lose weight,NULL,Verb,RU,7,NULL
+（～を）かぶる,To put on (a hat),NULL,Verb,U,7,NULL
+（～を）しっています, I know,（～を）知っています,Verb,U,7,NULL
+（～を）しりません, I do not know,（～を）知りません,Verb,U,7,NULL
+（～を）しる,To get to know,（～を）知る,Verb,U,7,NULL
+（～を）はく,To put on (items below your waist),NULL,Verb,U,7,NULL
+（めがねを）かける,To put on (glasses),NULL,Verb,U,7,NULL
+からだにきをつける,To take care of one self,からだに気をつける,Verb,U,7,NULL
+とる,To take(a class),NULL,Verb,U,7,NULL
+ふとっています,to be on the heavy side,太っています,Verb,U,7,NULL
+ふとる,To gain weight,太る,Verb,U,7,NULL
+しんせん（な）,Fresh,新鮮（な）,Adjective,NULL,8,Kanji
+えきいん,Station attendant,駅員,Noun,NULL,8,Kanji
+かいいん,Member,会員,Noun,NULL,8,Kanji
+かじ,Fire,火事,Noun,NULL,8,Kanji
+きゅうじつ,Holiday,休日,Noun,NULL,8,Kanji
+くるまいす,Wheel chair,車いす,Noun,NULL,8,Kanji
+げんごがく,Linguistics,言語学,Noun,NULL,8,Kanji
+ことば,Word / Language,言葉,Noun,NULL,8,Kanji
+さくしゃ,Author,作者,Noun,NULL,8,Kanji
+さくひん,Artistic Piece,作品,Noun,NULL,8,Kanji
+じかい,Next time,次回,Noun,NULL,8,Kanji
+しかえし,Revenge,仕返し,Noun,NULL,8,Kanji
+じじょ,Second Daughter,次女,Noun,NULL,8,Kanji
+しんかんせん,Bullet Train,新幹線,Noun,NULL,8,Kanji
+ちゅうしゃじょう,Parking lot,駐車場,Noun,NULL,8,Kanji
+てんいん,Store Clerk,店員,Noun,NULL,8,Kanji
+でんち,Battery,電池,Noun,NULL,8,Kanji
+どくしょ,Reading books,読書,Noun,NULL,8,Kanji
+なにか,Something,何か,Noun,NULL,8,Kanji
+ふしぎ（な）,Mysterious,不思議（な）,Noun,NULL,8,Kanji
+へんじ,Reply,返事,Noun,NULL,8,Kanji
+もくじ,Table of contents,目次,Noun,NULL,8,Kanji
+よみもの,Reading matter,読み物,Noun,NULL,8,Kanji
+なんじ,What time,何時,Other,NULL,8,Kanji
+なんにん,How many people,何人,Other,NULL,8,Kanji
+（～を）つくる,To make,（～を）作る,Verb,U,8,Kanji
+いう,To say,言う,Verb,U,8,Kanji
+おもいだす,To recall / To remember,思い出す,Verb,U,8,Kanji
+おもう,To think,思う,Verb,U,8,Kanji
+きこえる,Can be heard,聞こえる,Verb,U,8,Kanji
+つかえる,To serve / To work under,仕える,Verb,U,8,Kanji
+やすむ,To be absent / To rest,休む,Verb,U,8,Kanji
+（～が）じょうず（な）,Skillfuly / good at,（～が）じょうず（な）,Adjective,NULL,8,NULL
+（～が）へた（な）,Clumsy / poor at,（～が）へた（な）,Adjective,NULL,8,NULL
+（Short form）～といいました,Quote what a person said ( when you were not there to hear it),NULL,Grammar,NULL,8,NULL
+（Short form）～といっていました,Quote what a person said ( when you were there to hear it),NULL,Grammar,NULL,8,NULL
+（Short form）～とおもいます,Quote thoughts,NULL,Grammar,NULL,8,NULL
+（Short form）～ないでください,Request that someone refrain from doing something,NULL,Grammar,NULL,8,NULL
+（Verb）のがすきです,Add の to a verbal short form to express the idea of doing that activity (as a noun),NULL,Grammar,NULL,8,NULL
+しずか➞しずかだ,Short forms (Present Tense Affirmative),NULL,Grammar,NULL,8,NULL
+なにか／なにも,Something/Anything,NULL,Grammar,NULL,8,NULL
+よむ➞よまない,Short forms (Present Tense Negative),NULL,Grammar,NULL,8,NULL
+アンケート,Questionnaire,NULL,Noun,NULL,8,NULL
+カメラ,Camera,NULL,Noun,NULL,8,NULL
+カラオケ,Karaoke,NULL,Noun,NULL,8,NULL
+くうき,Air,空気,Noun,NULL,8,NULL
+こくばん,Blackboard,黒板,Noun,NULL,8,NULL
+ざん業務ょう,Overtime work,残業,Noun,NULL,8,NULL
+ストレス,Stress,NULL,Noun,NULL,8,NULL
+てんきよほう,Weather forecast,天気予報,Noun,NULL,8,NULL
+ところ,Place,所,Noun,NULL,8,NULL
+トマト,Tomato,NULL,Noun,NULL,8,NULL
+なつ,Summer,夏,Noun,NULL,8,NULL
+パーティー,Party,NULL,Noun,NULL,8,NULL
+バーベキュー,Barbecue,NULL,Noun,NULL,8,NULL
+はし,Chopsticks,NULL,Noun,NULL,8,NULL
+ふゆ,Winter,冬,Noun,NULL,8,NULL
+ホームステイ,Homestay / Living with a local family,NULL,Noun,NULL,8,NULL
+～がとくいです,is comfortable with . . . (a skill ),NULL,Other,NULL,8,NULL
+～がにてです,is uncomfortable with . . . (a skill ),NULL,Other,NULL,8,NULL
+～について,About . . . / Concerning . . .,NULL,Other,NULL,8,NULL
+ううん,Uh-Uh / No,NULL,Other,NULL,8,NULL
+うん,Uh-Huh / Yes,NULL,Other,NULL,8,NULL
+かんぱい,Cheers! (a toast),乾杯,Other,NULL,8,NULL
+ざんねん（ですね）,That's too bad.,残念（ですね）,Other,NULL,8,NULL
+つぎに,Secondly,次に,Other,NULL,8,NULL
+まず,First of all,NULL,Other,NULL,8,NULL
+まだ　＋Negative,Not . . . yet,NULL,Other,NULL,8,NULL
+みんなで,All (of the people) together,NULL,Other,NULL,8,NULL
+（～に）でんわする,To call,（～を）電話する,Verb,IRR,8,NULL
+（～を）うんてんする,To drive,（～を）運転する,Verb,IRR,8,NULL
+（～を）せんたくする,To do laundry,（～を）洗濯する,Verb,IRR,8,NULL
+（～を）そうじする,To clean,（～を）掃除する,Verb,IRR,8,NULL
+りょうりする,To cook,（～に）料理する,Verb,IRR,8,NULL
+（～を）じろじろみる,To stare (at . . .),（～を）じろじろ見る,Verb,RU,8,NULL
+（～を）すてる,To throw away,（～を）捨てる,Verb,RU,8,NULL
+（～を）はじめる,To begin,（～を）始める,Verb,RU,8,NULL
+こたえる,To answer,答える,Verb,RU,8,NULL
+つかれている,To be tired,疲れている,Verb,RU,8,NULL
+（～を）あらう,To wash,（～を）洗う,Verb,U,8,NULL
+（～を）いる,To need,NULL,Verb,U,8,NULL
+（～を）きる,To cut,（～を）切る,Verb,U,8,NULL
+（～を）もっていく,To take (a thing),（～を）持っていく,Verb,U,8,NULL
+あめがふる,It rains,雨が降る,Verb,U,8,NULL
+おそくなる,To be late,遅くなる,Verb,U,8,NULL
+しろい,White,白い,Adjective,NULL,9,Kanji
+あいだ,Between,間,Noun,NULL,9,Kanji
+いっしゅかん,One Week,一週間,Noun,NULL,9,Kanji
+うき,Rainy,雨,Noun,NULL,9,Kanji
+かいわ,Conversation,会話,Noun,NULL,9,Kanji
+かない,My wife,家内,Noun,NULL,9,Kanji
+ごぜんちゅう,In the morning,午前中,Noun,NULL,9,Kanji
+こだい,Ancient times,古代,Noun,NULL,9,Kanji
+さっか,Author,作家,Noun,NULL,9,Kanji
+じかん,Time,時間,Noun,NULL,9,Kanji
+しめい,Full name,氏名,Noun,NULL,9,Kanji
+しょうじょ,Girl,少女,Noun,NULL,9,Kanji
+しょうねん,Boy,少年,Noun,NULL,9,Kanji
+しりあい,Acquaintance,知り合い,Noun,NULL,9,Kanji
+しろ,White color,白,Noun,NULL,9,Kanji
+しんゆう,Best Friend,親友,Noun,NULL,9,Kanji
+ちじん,Acquaintance,知人,Noun,NULL,9,Kanji
+ちめい,Place name,地名,Noun,NULL,9,Kanji
+つゆ,Rainy Season,雨期,Noun,NULL,9,Kanji
+にじかん,Two hours,二時間,Noun,NULL,9,Kanji
+にんげん,Human Being,人間,Noun,NULL,9,Kanji
+はくし,Blank sheet,白紙,Noun,NULL,9,Kanji
+はくちょう,Swan,白鳥,Noun,NULL,9,Kanji
+はなし,Talk / Story,話,Noun,NULL,9,Kanji
+まえ,Before / Front,前,Noun,NULL,9,Kanji
+まえうり,Advance sale,前売り,Noun,NULL,9,Kanji
+めいし,Name card,名刺,Noun,NULL,9,Kanji
+ゆうじょう,Friendship,友情,Noun,NULL,9,Kanji
+ゆうじん,Friend,友人,Noun,NULL,9,Kanji
+らいにち,Visit to Japan,来日,Noun,NULL,9,Kanji
+しょうしょう,a little,少々,Other,NULL,9,Kanji
+すくない,Few,少ない,Other,NULL,9,Kanji
+ちゅうこ,Secondhand,中古,Other,NULL,9,Kanji
+きます,To come,来ます,Verb,IRR,9,Kanji
+こない,Not to come,来ない,Verb,IRR,9,Kanji
+かく,To write,書く,Verb,U,9,Kanji
+しる,To know,知る,Verb,U,9,Kanji
+いじわる（な）,Mean-spirited,意地悪（な）,Adjective,NULL,9,NULL
+きいろい,Yellow,黄色い,Adjective,NULL,9,NULL
+きんいろ,Gold,金色,Adjective,NULL,9,NULL
+ぎんいろ,Silver,銀色,Adjective,NULL,9,NULL
+グリーン,Green,NULL,Adjective,NULL,9,NULL
+くるい,Black,黒い,Adjective,NULL,9,NULL
+グレー,Gray,NULL,Adjective,NULL,9,NULL
+ゴールド,Gold,NULL,Adjective,NULL,9,NULL
+さびしい,Lonely,寂しい,Adjective,NULL,9,NULL
+シルバー,Silver,NULL,Adjective,NULL,9,NULL
+ちゃいろい,Brown,茶色い,Adjective,NULL,9,NULL
+はいいろ,Gray,灰色,Adjective,NULL,9,NULL
+ピンク,Pink,NULL,Adjective,NULL,9,NULL
+みずいろ,Light Blue,水色,Adjective,NULL,9,NULL
+みどり,Green,緑,Adjective,NULL,9,NULL
+むらさき,Purple,紫,Adjective,NULL,9,NULL
+わかい,Young,若い,Adjective,NULL,9,NULL
+(Explination)～から、(Situation),Explain a situation in one sentence,NULL,Grammar,NULL,9,NULL
+ほんをよんでいるがくせい,Qualifying nouns with verbs and adjectives,NULL,Grammar,NULL,9,NULL
+まだ～ていません,Express something you have not yet done,NULL,Grammar,NULL,9,NULL
+もう～ていました,Express something you have already done,NULL,Grammar,NULL,9,NULL
+よむ➞よまなかった,Past-tense short form (Negative),NULL,Grammar,NULL,9,NULL
+よむ➞よんだ,Past-tense short form (affirmative),NULL,Grammar,NULL,9,NULL
+あかいかばん,Red Bag,赤いかばん,Noun,NULL,9,NULL
+いいこ,Good Child,いい子,Noun,NULL,9,NULL
+おべんとう,Boxed lunch,お弁当,Noun,NULL,9,NULL
+ギター,Guitar,NULL,Noun,NULL,9,NULL
+きもの,Kimono / Japanese traditonal dress,NULL,Noun,NULL,9,NULL
+くすり,Medicine,薬,Noun,NULL,9,NULL
+ごちそう,Excellent food,NULL,Noun,NULL,9,NULL
+コンサート,Concert,NULL,Noun,NULL,9,NULL
+さくぶん,essay / composition,作文,Noun,NULL,9,NULL
+しけん,Exam,試験,Noun,NULL,9,NULL
+スキー,Ski,NULL,Noun,NULL,9,NULL
+たんご,Word / vocabulary,単語,Noun,NULL,9,NULL
+ピアノ,Piano,NULL,Noun,NULL,9,NULL
+ひる,Noon,昼,Noun,NULL,9,NULL
+みどりのセーター,Green Sweater,緑のセーター,Noun,NULL,9,NULL
+りょう,Dormitory,NULL,Noun,NULL,9,NULL
+（お）たんじょうびおめでとう,Happy Birthday,NULL,Other,NULL,9,NULL
+～おめでとう（ございます）,Congratulations on . . .,NULL,Other,NULL,9,NULL
+～から,From . . .,NULL,Other,NULL,9,NULL
+あかがいちばんすきです,I like red the best,赤がいちばん好きです,Other,NULL,9,NULL
+いろいろおせわになりました,Thank you for everything,NULL,Other,NULL,9,NULL
+おあいできるのをたのしみにしています,I am looking forward to seeing you,お会いできるのを楽しみにしております。,Other,NULL,9,NULL
+かおがあおいですね,You look pale,顔が青いですね,Other,NULL,9,NULL
+からだにきをつけてください,Please take care of yourself,体に気をつけてください,Other,NULL,9,NULL
+グリーンのセーター,Green Sweater,NULL,Other,NULL,9,NULL
+しろくろのしゃしん,Black and white picture,白黒の写真,Other,NULL,9,NULL
+ぜひ,By all means,是非,Other,NULL,9,NULL
+ところで,By the way,NULL,Other,NULL,9,NULL
+メアリーさんはきんぱつです,Mary has blonde hair,メアリーさんは金髪です,Other,NULL,9,NULL
+もう,Already,NULL,Other,NULL,9,NULL
+うんどうする,To do physical exercises,運動する,Verb,IRR,9,NULL
+おんないする,To show someone around,NULL,Verb,IRR,9,NULL
+さんぽする,To take a walk,散歩する,Verb,IRR,9,NULL
+はなしをする,To have a talk,話す,Verb,IRR,9,NULL
+（～に）でる,To appear / To attend,（～に）出る,Verb,RU,9,NULL
+（～を）おぼえる,To memorize,（～を）覚える,Verb,RU,9,NULL
+（～が）おわる,(Something) ends,（～が）終わる,Verb,U,9,NULL
+（～が）はじまる,(Something) begins,（～が）始まる,Verb,U,9,NULL
+（～が）ひく,To play ( a string instrument or piano),（～が）弾く,Verb,U,9,NULL
+(Person)(に)(thing)(に)　もらう,To get (something) from (person),NULL,Verb,U,9,NULL
+おどる,To dance,踊る,Verb,U,9,NULL
+くすりをのむ,To take medicine,薬を飲む,Verb,U,9,NULL
+にんきがある,To be popular,（～が）人気がある,Verb,U,9,NULL
+きたやまちょう,Kitayama Town,北山町,Noun,NULL,10,Kanji
+こくりつだいがく,National university,国立大学,Noun,NULL,10,Kanji
+こんや,tonight,今夜,Noun,NULL,10,Kanji
+じどうしゃ,Automobile,自動車,Noun,NULL,10,Kanji
+じどうはんばいき,Vending Machine,自動販売機,Noun,NULL,10,Kanji
+しゃちょう,Company President,社長,Noun,NULL,10,Kanji
+じゆう,Freedom,自由,Noun,NULL,10,Kanji
+じゅうどう,Judo,柔道,Noun,NULL,10,Kanji
+しょじひん,Belongings,所持品,Noun,NULL,10,Kanji
+しょどう,Calligraphy,書道,Noun,NULL,10,Kanji
+しりつこうこう,Private high school,私立高校,Noun,NULL,10,Kanji
+しんせつ,New snow,新雪,Noun,NULL,10,Kanji
+ちょうちょう,Mayor of a town,町長,Noun,NULL,10,Kanji
+ちょうなん,The eldest son,長男,Noun,NULL,10,Kanji
+とし,Year,年,Noun,NULL,10,Kanji
+ばいてん,Stand / Stall,売店,Noun,NULL,10,Kanji
+ばいばい,Selling and Buying,売買,Noun,NULL,10,Kanji
+ほっかいどう,Hokkaido,北海道,Noun,NULL,10,Kanji
+まいあさ,Every morning,毎朝,Noun,NULL,10,Kanji
+まち,Town,町,Noun,NULL,10,Kanji
+みち,Way / Road,道,Noun,NULL,10,Kanji
+ゆきだるま,snowman,雪だるま,Noun,NULL,10,Kanji
+よあけ,Dawn,夜明け,Noun,NULL,10,Kanji
+よなか,Middle of night,夜中,Noun,NULL,10,Kanji
+ただしい,Right (correct),正しい,Other,NULL,10,Kanji
+いじゅうする,To immigrate,移住する,Verb,IRR,10,Kanji
+うる,To sell,売る,Verb,U,10,Kanji
+かう,To buy,買う,Verb,U,10,Kanji
+もつ,To hold,持つ,Verb,U,10,Kanji
+あたたかい,Warm,暖かい,Adjective,NULL,10,NULL
+おそい,Slow / Late,遅い,Adjective,NULL,10,NULL
+かんたん（な）,Easy / Simple,簡単（な）,Adjective,NULL,10,NULL
+すずしい,Cool (Weather),涼しい,Adjective,NULL,10,NULL
+つめたい,Cold (Things / People),冷たい,Adjective,NULL,10,NULL
+ねむい,Sleepy,眠い,Adjective,NULL,10,NULL
+（Adjective)＋なる,To become (adjective),NULL,Grammar,NULL,10,NULL
+（Collection of items)のなかでAがいちばん（Property),Among (a collection of items) A is the most (property),NULL,Grammar,NULL,10,NULL
+（どこ／だれ／なに）か,Somewhere / Someone / Something,NULL,Grammar,NULL,10,NULL
+（どこ／だれ／なに）も,Not anywhere / Not anyone / Not anything,NULL,Grammar,NULL,10,NULL
+～つもりだ,I intend to do . . .,NULL,Grammar,NULL,10,NULL
+AとBと（どしら／ぢっち）のほうが（Property)ですか,Asking for another person's opinion on two things,NULL,Grammar,NULL,10,NULL
+AのほうがBより（Property),A is more (Property) then B / Comparing 2 items,NULL,Grammar,NULL,10,NULL
+で,Decribe the means of transportation and the instruments you use,NULL,Grammar,NULL,10,NULL
+～ばんせん,Track number . . .,～番線,Noun,NULL,10,NULL
+あき,Fall,秋,Noun,NULL,10,NULL
+いいこと,Good deed,NULL,Noun,NULL,10,NULL
+いちごうしゃ,Car No. 1 (At the station),一号車,Noun,NULL,10,NULL
+いちばんうしろ,Last car / Tail end (At the station),いちばん後ろ,Noun,NULL,10,NULL
+いちばんまえ,First car / Front end (At the station),いちばん前,Noun,NULL,10,NULL
+おうふく,Round Trip (At the station),往復,Noun,NULL,10,NULL
+おもち,rice cake,NULL,Noun,NULL,10,NULL
+かいさつ,Gate,改札,Noun,NULL,10,NULL
+かいすうけん,Coupons,回数券,Noun,NULL,10,NULL
+かいだん,Stairs (At the station),階段,Noun,NULL,10,NULL
+がくわり,Student discount,学割,Noun,NULL,10,NULL
+かさ,Bamboo hat,NULL,Noun,NULL,10,NULL
+かたみち,One way (At the station),片道ｓ,Noun,NULL,10,NULL
+かなし,Sad,NULL,Noun,NULL,10,NULL
+きせつ,Season,季節,Noun,NULL,10,NULL
+きっぷうりば,Ticket vending Area,切符売り場,Noun,NULL,10,NULL
+きゅうこう,Express,急行,Noun,NULL,10,NULL
+きんえんしゃ,Nonsmoking car (At the station),禁煙車,Noun,NULL,10,NULL
+クリスマス,Christmas,NULL,Noun,NULL,10,NULL
+クレジットカード,Credit card,NULL,Noun,NULL,10,NULL
+ケーキ,Cake,NULL,Noun,NULL,10,NULL
+こえ,voice,声,Noun,NULL,10,NULL
+ことや,Barber's,床屋,Noun,NULL,10,NULL
+サッカー,Soccer,NULL,Noun,NULL,10,NULL
+しあわせ（な）,Happy,NULL,Noun,NULL,10,NULL
+じぞう／おじぞうさん,Guardian Deity of children,NULL,Noun,NULL,10,NULL
+していせき,Reserved Seat,指定席,Noun,NULL,10,NULL
+じぱつ,Departing second (At the station),自発,Noun,NULL,10,NULL
+シャツ,Shirt,NULL,Noun,NULL,10,NULL
+じゆうせき,General Admission seat (At the station),自由席,Noun,NULL,10,NULL
+しゅうてん,Last train (At the station),しゅうてん,Noun,NULL,10,NULL
+じょうしゃけん,(boarding) ticket,乗車券,Noun,NULL,10,NULL
+しんかんせん,Shinkansen / Bullet Train,新幹線,Noun,NULL,10,NULL
+すし,Sushi,NULL,Noun,NULL,10,NULL
+せいかつ,Life / Living,生活,Noun,NULL,10,NULL
+せかい,World,世界,Noun,NULL,10,NULL
+ディーワーリ,Diwali,NULL,Noun,NULL,10,NULL
+ていきけん,Commuter's pass,定期券,Noun,NULL,10,NULL
+てぶくろ,Gloves,手袋,Noun,NULL,10,NULL
+てんぷら,Tempura,天ぷら,Noun,NULL,10,NULL
+と,Door,戸,Noun,NULL,10,NULL
+とっきゅう,Super Express,特急,Noun,NULL,10,NULL
+ねん,Year,年,Noun,NULL,10,NULL
+のりかえ,Transfer,乗り換え,Noun,NULL,10,NULL
+ばいてん,Shop / Stand,売店,Noun,NULL,10,NULL
+ハヌカー,Chanukkah,NULL,Noun,NULL,10,NULL
+はる,Spring,春,Noun,NULL,10,NULL
+バレンタインデー,St. Valentaine's Day,NULL,Noun,NULL,10,NULL
+ハロウィーン,Halloween,NULL,Noun,NULL,10,NULL
+パンツ,Pants,NULL,Noun,NULL,10,NULL
+びっくりする,To be suprised,NULL,Noun,NULL,10,NULL
+びん,Flight,便,Noun,NULL,10,NULL
+ふつう,Local,普通,Noun,NULL,10,NULL
+ふね,Ship / Boat,船,Noun,NULL,10,NULL
+ホーム,Platform,NULL,Noun,NULL,10,NULL
+やきゅう,Baseball,野球,Noun,NULL,10,NULL
+やまみち,Mountain road,山道,Noun,NULL,10,NULL
+ゆうめいじん,Celebrity,有名人,Noun,NULL,10,NULL
+よやく,Reservation,予約,Noun,NULL,10,NULL
+らいがっき,Next semester,来学期,Noun,NULL,10,NULL
+ラマダン,Ramadan,NULL,Noun,NULL,10,NULL
+りんご,Apple,NULL,Noun,NULL,10,NULL
+～いき,Bound for . . .,～行き,Other,NULL,10,NULL
+～か～,or,NULL,Other,NULL,10,NULL
+～かげつ,for . . . months,～か月,Other,NULL,10,NULL
+～ご,in . . . times / after . . .,～後,Other,NULL,10,NULL
+～しゅうかん,for . . . weeks,～週間,Other,NULL,10,NULL
+～で,by (means of transportation) / with (a tool),NULL,Other,NULL,10,NULL
+～ねん,. . . Years,～年,Other,NULL,10,NULL
+～ほうめん,Serving . . . areas,～方面,Other,NULL,10,NULL
+あるいて,On foot,歩いて,Other,NULL,10,NULL
+いちばん,Best,一番,Other,NULL,10,NULL
+がくわりがつかえますか,Can I get a student discount (At the station),学割が使えますか,Other,NULL,10,NULL
+かまくらいきのでんしゃはどれですか。。。にばんせんです,Which one is the train bound for kamakura? ... Track number two. (At the station),鎌倉行きの電車はどれですか。。。にばんせんです,Other,NULL,10,NULL
+このごろ,these days,NULL,Other,NULL,10,NULL
+このでんしゃはあきはばらにとまりますか,Does this train stop at Akihabara? (At the station),この電車は秋葉原にとまりますか,Other,NULL,10,NULL
+しゅうでんはなんじですか,What time is the last train? (At the station),終電は何時ですか,Other,NULL,10,NULL
+せんぱつ,Departing First (At the station),先発,Other,NULL,10,NULL
+つぎは～,Next (stop)、 . . .,次は～,Other,NULL,10,NULL
+つぎは～にとまります,Next (we'll stop at) (At the station),次は～に止まります,Other,NULL,10,NULL
+でんしゃがまいります,A train is arriving (At the station),電車が参ります,Other,NULL,10,NULL
+ドアがしまります。ごちゅういください,The doors are closing. Please be careful. (At the station),ドアが閉まります。ご注意ください,Other,NULL,10,NULL
+とうきょうまでのしていせきをいちまいおねがいします,One reserved ticket to Tokyo please. (At the station),東京までの指定席を一枚お願いします,Other,NULL,10,NULL
+どうやって,How / By what means,NULL,Other,NULL,10,NULL
+どちら,Which,NULL,Other,NULL,10,NULL
+どっち,Which,NULL,Other,NULL,10,NULL
+どのぐらい,How much / How long,NULL,Other,NULL,10,NULL
+はやく,(do something) early / Fast,早く／速く,Other,NULL,10,NULL
+まもなくはっしゃします,We will be Leaving soon (At the station),まもなく発車します,Other,NULL,10,NULL
+（～を）ねんしゅうする,To practice,（～を）練習する,Verb,IRR,10,NULL
+りょこうする,To travel,旅行する,Verb,IRR,10,NULL
+（～を）きめる,To decide,（～を）決める,Verb,RU,10,NULL
+かぶせる,To put (a hat) on a (person)'s head,NULL,Verb,RU,10,NULL
+（～に）とまる,To stay ( at a hotel、 etc.),（～に）泊まる,Verb,U,10,NULL
+（～を）はらう,To pay,（～を）払う,Verb,U,10,NULL
+かかる,To take (amount of time / money),NULL,Verb,U,10,NULL
+とる,To take off,NULL,Verb,U,10,NULL
+なる,To become,NULL,Verb,U,10,NULL
+きゅうりょく（な）,Powerful,強力（な）,Adjective,NULL,11,Kanji
+きんべん（な）,Diligent,勤勉（な）,Adjective,NULL,11,Kanji
+ごうじょう（な）,Obstinate,強情（な）,Adjective,NULL,11,Kanji
+すき（な）,To like,好き（な）,Adjective,NULL,11,Kanji
+だいすき（な）,To love,大好き（な）,Adjective,NULL,11,Kanji
+つよい,Strong,強い,Adjective,NULL,11,Kanji
+ゆのう（な）,Talented,有能（な）,Adjective,NULL,11,Kanji
+あかるい,Cheerful / Bright,明るい,Noun,NULL,11,Kanji
+いちば,Market,市場,Noun,NULL,11,Kanji
+いろいろなところ,Various Places,いろいろな所,Noun,NULL,11,Kanji
+えいがかん,Movie theater,映画館,Noun,NULL,11,Kanji
+がか,Painter,画家,Noun,NULL,11,Kanji
+かし,Lyrics,歌手,Noun,NULL,11,Kanji
+かしゅ,Singer,歌手,Noun,NULL,11,Kanji
+かみ,Paper,紙,Noun,NULL,11,Kanji
+かわぐちし,Kawaguchi City,川口市,Noun,NULL,11,Kanji
+きゅうびょう,Sudden Illness,急病,Noun,NULL,11,Kanji
+きんしょ,Neighborhood,近所,Noun,NULL,11,Kanji
+けいかく,Plan,計画,Noun,NULL,11,Kanji
+こうい,Good will,好意,Noun,NULL,11,Kanji
+ごうとう,Robbery,強盗,Noun,NULL,11,Kanji
+こうぶつ,Favorite food,好物,Noun,NULL,11,Kanji
+こっか,National anthem,国歌,Noun,NULL,11,Kanji
+このみ,Liking / Taste,好み,Noun,NULL,11,Kanji
+さいきん,Recently,最近,Noun,NULL,11,Kanji
+しちょう,Mayor,市長,Noun,NULL,11,Kanji
+しやくしょ,city hall,市役所,Noun,NULL,11,Kanji
+じゅうびょう,Serious Illness,重病,Noun,NULL,11,Kanji
+しゅわ,Sign language,手話,Noun,NULL,11,Kanji
+せつめい,Explanation,説明,Noun,NULL,11,Kanji
+だいがくいん,Graduate school,大学院,Noun,NULL,11,Kanji
+だいどころ,Kitchen,台所,Noun,NULL,11,Kanji
+ちゅうきんとう,The middle and Near east,中近東,Noun,NULL,11,Kanji
+はつめい,Invention,発明,Noun,NULL,11,Kanji
+ひとりたび,Traveling Alone,一人旅,Noun,NULL,11,Kanji
+ひょうし,Cover Page,表紙,Noun,NULL,11,Kanji
+ぶんめい,Civilization,文明,Noun,NULL,11,Kanji
+まんが,Comic,漫画,Noun,NULL,11,Kanji
+ゆうりょう,Toll / Fee,有料,Noun,NULL,11,Kanji
+りょかん,Japanese Inn,旅館,Noun,NULL,11,Kanji
+りょけん,Passport,旅券,Noun,NULL,11,Kanji
+わし,Japanese Paper,和紙,Noun,NULL,11,Kanji
+つとめる,To try hard,勉める,Verb,RU,11,Kanji
+ある,To exist,有る,Verb,U,11,Kanji
+うつる,To be reflected,映る,Verb,U,11,Kanji
+～ことがある,Describe that you did something or something happened in earlier times,NULL,Grammar,NULL,11,NULL
+～たい,Describe your hope / aspiration,NULL,Grammar,NULL,11,NULL
+～たり～たりする,Mention activities / events just as examples and in no set order,NULL,Grammar,NULL,11,NULL
+NounA　や　NounB,Connects two nouns、suggesting that the things referred to are proposed as examples and not citing an exhaustive list,NULL,Grammar,NULL,11,NULL
+～ぎょうめ,Line Number . . .,～行目,Noun,NULL,11,NULL
+～ばん,Number . . .,～番,Noun,NULL,11,NULL
+～ページ,Page number . . .,NULL,Noun,NULL,11,NULL
+アウトドア,Outdoor activities,NULL,Noun,NULL,11,NULL
+うちゅうひこうし,Astronaut,宇宙飛行士,Noun,NULL,11,NULL
+おかし,Snacks / Sweets,お菓子,Noun,NULL,11,NULL
+おとこ,Man,男,Noun,NULL,11,NULL
+おへんじ,Reply,お返事,Noun,NULL,11,NULL
+おまつり,Festival,おまつり,Noun,NULL,11,NULL
+おもちゃ,Toy,NULL,Noun,NULL,11,NULL
+おんせん,Spa / Hot spring,温泉,Noun,NULL,11,NULL
+おんな,Woman,女,Noun,NULL,11,NULL
+かたいいいかた,Bookish expression,かたい言い方,Noun,NULL,11,NULL
+かっこ,Parenthesis,NULL,Noun,NULL,11,NULL
+かんごし,Nurse,看護師,Noun,NULL,11,NULL
+キャンプ,Camp,NULL,Noun,NULL,11,NULL
+くだけたいいかた,Colloquial expression,くだけた言い方,Noun,NULL,11,NULL
+けいさつかん,Police Officer,警察官,Noun,NULL,11,NULL
+こたえ,Answer,答,Noun,NULL,11,NULL
+こちら,This person (polite),NULL,Noun,NULL,11,NULL
+こんがっき,This semester,今学期,Noun,NULL,11,NULL
+さっか,Writer,作家,Noun,NULL,11,NULL
+しつもん,Question,質問,Noun,NULL,11,NULL
+しめきり,Deadline,NULL,Noun,NULL,11,NULL
+ジャーナリスト,Journalist,NULL,Noun,NULL,11,NULL
+しゃちょう,President of a company,社長,Noun,NULL,11,NULL
+しゅうらい,Future,将来,Noun,NULL,11,NULL
+じゅぎょう,Class,授業,Noun,NULL,11,NULL
+しゅみ,Hobby,趣味,Noun,NULL,11,NULL
+しょうぼうし,Firefighter,消防士,Noun,NULL,11,NULL
+じょゆう,Actress,女優,Noun,NULL,11,NULL
+だいとうりょう,President of a country,大統領,Noun,NULL,11,NULL
+つり,Fishing,NULL,Noun,NULL,11,NULL
+ていねいないいかた,Polite expression,ていねいな言い方,Noun,NULL,11,NULL
+ドライブ,Drive,NULL,Noun,NULL,11,NULL
+はいゆう,Actor / Actress,俳優,Noun,NULL,11,NULL
+ばつ,Wrong,NULL,Noun,NULL,11,NULL
+はつおん,Pronunciation,発音,Noun,NULL,11,NULL
+バンド,Band,NULL,Noun,NULL,11,NULL
+ビール,Beer,NULL,Noun,NULL,11,NULL
+びじゅつかん,Art Museum,美術館,Noun,NULL,11,NULL
+ひょうじゅんご,Standard Japanese,標準語,Noun,NULL,11,NULL
+ふたりずつ,Two people each,二人ずつ,Noun,NULL,11,NULL
+まる,Correct,NULL,Noun,NULL,11,NULL
+まんがか,Cartoonist,漫画家,Noun,NULL,11,NULL
+みずうみ,Lake,湖,Noun,NULL,11,NULL
+やきゅうせんしゃ,Baseball Player,野球選手,Noun,NULL,11,NULL
+ゆめ,Dream,夢,Noun,NULL,11,NULL
+ルーメート,Roommate,NULL,Noun,NULL,11,NULL
+れい,Example,例,Noun,NULL,11,NULL
+れんしゅう,Exercise,練習,Noun,NULL,11,NULL
+（Event)（の）あと,After ( an event),（Event)（の）後,Other,NULL,11,NULL
+(Place)（の）しゅっしん,Coming from,(Place)（の）出身,Other,NULL,11,NULL
+～だけ,just . . . / only . . .,NULL,Other,NULL,11,NULL
+～てん,. . . points,～点,Other,NULL,11,NULL
+～ぼしゅう,Looking for . . .,～募集,Other,NULL,11,NULL
+おなじです,Same thing,同じです,Other,NULL,11,NULL
+きょうかしょうをとじてください,Close the textbook,教科書を閉じてください,Other,NULL,11,NULL
+きょうはこれでおわります,That's it for today,今日はこれで終わります,Other,NULL,11,NULL
+これから,From now on,NULL,Other,NULL,11,NULL
+しゅくだいをだしてください,Hand in the homework,宿題を出してください,Other,NULL,11,NULL
+だいたいおなじです,More or less the same,だいたい同じです,Other,NULL,11,NULL
+たとえば,for example,NULL,Other,NULL,11,NULL
+だめです,No good,NULL,Other,NULL,11,NULL
+ちょっとちがいます,A little diffrerent,ちょっと違います,Other,NULL,11,NULL
+つかえません,Can't use it,使えません,Other,NULL,11,NULL
+てをあげてください,Raise your hand,手をあげてください,Other,NULL,11,NULL
+どちらでもいいです,Both are fine,NULL,Other,NULL,11,NULL
+となりのひとにきいてください,Ask the person sitting next to you,となりの人に聞いてください,Other,NULL,11,NULL
+ひさしぶり,it has been a long time,久しぶり,Other,NULL,11,NULL
+ほかに,anything else,NULL,Other,NULL,11,NULL
+まあまあ,okay / so-so,NULL,Other,NULL,11,NULL
+もっと,more,NULL,Other,NULL,11,NULL
+やめてください,Please stop,NULL,Other,NULL,11,NULL
+よんできてください,Read it before coming to class,読んできてください,Other,NULL,11,NULL
+（～に）ちこくする,To be late ( for an appointment),（～に）遅刻する,Verb,IRR,11,NULL
+(Person)(に)(Person)(を)　しょうかいする,To introduce,(Person)(に)(Person)(を)　紹介する,Verb,IRR,11,NULL
+(Place)（に）りゅうがくする,To study abroad,(Place)（に）留学する,Verb,IRR,11,NULL
+けんかする,To have a fight / To quarrel,NULL,Verb,IRR,11,NULL
+ダイエットする,To go on a diet,NULL,Verb,IRR,11,NULL
+（～を）やめる,To quit,NULL,Verb,RU,11,NULL
+つかれる,To get tired,疲れる,Verb,RU,11,NULL
+（～を）かう,To own (a pet),（～を）飼う,Verb,U,11,NULL
+（～を）サボる,To cut (clasess),NULL,Verb,U,11,NULL
+（～を）とる,To take (a class) / To get (a grade),（～を）取る,Verb,U,11,NULL
+(Place)（に）のぼる,To climb,(Place)（に）登る,Verb,U,11,NULL
+うそをつく,To tell a lie,NULL,Verb,U,11,NULL
+おなかがすく,To become hungry,NULL,Verb,U,11,NULL
+ならう,To learn,（～を）習う,Verb,U,11,NULL
+とくべつ（な）,Special,特別（な）,adjective,NULL,12,Kanji
+あお,Blue Color,青,Noun,NULL,12,Kanji
+あおしんごう,Green Light,青信号,Noun,NULL,12,Kanji
+あおぞら,Blue Sky,青空,Noun,NULL,12,Kanji
+あか,Red Color,赤,Noun,NULL,12,Kanji
+あかちゃん,Baby,赤ちゃん,Noun,NULL,12,Kanji
+いちど,Once,一度,Noun,NULL,12,Kanji
+うし,Cow,牛,Noun,NULL,12,Kanji
+おおむかし,Ancient times,大昔,Noun,NULL,12,Kanji
+おつかい,Errand,お使い,Noun,NULL,12,Kanji
+おんど,Temperature,温度,Noun,NULL,12,Kanji
+かみさま,God,神さま,Noun,NULL,12,Kanji
+ぎゅうにく,Beef,牛肉,Noun,NULL,12,Kanji
+けしき,Scenery,景色,Noun,NULL,12,Kanji
+こうし,Calf / Veal,子牛,Noun,NULL,12,Kanji
+こうべし,Kobe City,神戸市,Noun,NULL,12,Kanji
+こくれん,United Nations,国連,Noun,NULL,12,Kanji
+さべつ,Discrimination,差別,Noun,NULL,12,Kanji
+さんじゅうど,30 Degrees,三十渡,Noun,NULL,12,Kanji
+しんとう,Shinto Religion,神道,Noun,NULL,12,Kanji
+せいねん,Youth,青年,Noun,NULL,12,Kanji
+せきじゅうじ,The Red Cross,赤十字,Noun,NULL,12,Kanji
+せきどう,The equator,赤道,Noun,NULL,12,Kanji
+そうちょう,Early Morning,早朝,Noun,NULL,12,Kanji
+たいし,Ambassador,大使,Noun,NULL,12,Kanji
+たいど,Attitude,態度,Noun,NULL,12,Kanji
+とくしょく,Characteristics,特色,Noun,NULL,12,Kanji
+ひとびと,People,人々,Noun,NULL,12,Kanji
+べつべつに,Separately,別々に,Noun,NULL,12,Kanji
+むかし,Old times,昔,Noun,NULL,12,Kanji
+むかしはなし,Old tale,昔話,Noun,NULL,12,Kanji
+れんきゅう,Consecutive holidays,連休,Noun,NULL,12,Kanji
+ろうどう,Labor,労働,Noun,NULL,12,Kanji
+しようちゅう,"""Occupied""",使用中,Other,NULL,12,Kanji
+ともばたらき,Both Husband and wife working,共働き,Other,NULL,12,Kanji
+きりつする,To stand up,起立する,Verb,IRR,12,Kanji
+はやおきする,To get up early,早起きする,Verb,IRR,12,Kanji
+わかれる,To separate,別れる,Verb,RU,12,Kanji
+おこす,To wake someone up,起こす,Verb,U,12,Kanji
+つかう,To use,使う,Verb,U,12,Kanji
+つれてかえる,To bring (a person) back,連れて帰る,Verb,U,12,Kanji
+あまい,Sweet,甘い,Adjective,NULL,12,NULL
+いたい,Hurt / Painful,痛い,Adjective,NULL,12,NULL
+おおい,There are many . . .,多い,Adjective,NULL,12,NULL
+すてき（な）,Nice,素敵（な）,Adjective,NULL,12,NULL
+せまい,Narrow / Not spacious,狭い,Adjective,NULL,12,NULL
+つごうがわるい,Inconvenient / To have a scheduling conflict,都合が悪い,Adjective,NULL,12,NULL
+わるい,Bad,悪い,Adjective,NULL,12,NULL
+（Present tense short form)～ほうがいいです,Giving advice (negative),NULL,Grammar,NULL,12,NULL
+（Stem of masu form)～すぎる,"""Too much"" or ""Too Excess""",NULL,Grammar,NULL,12,NULL
+（Ta form)～ほうがいいです,Giving advice (affirmative),NULL,Grammar,NULL,12,NULL
+～でしょう,Make a guess or prediction ( follows verbs and い-adjectives),NULL,Grammar,NULL,12,NULL
+～ないといけません,Say something is necessary to do,NULL,Grammar,NULL,12,NULL
+～なきゃいけません／～なきゃなりません,Say something is necessary to do,NULL,Grammar,NULL,12,NULL
+～なくちゃいけません,Say something is necessary to do,NULL,Grammar,NULL,12,NULL
+～なくてはいけません,Say something is necessary to do,NULL,Grammar,NULL,12,NULL
+～なければいけません／～なければなりません,Say something is necessary to do,NULL,Grammar,NULL,12,NULL
+～ので,Give a reason for the situation described (formal),NULL,Grammar,NULL,12,NULL
+～んです,Explination mode of speech,NULL,Grammar,NULL,12,NULL
+たべなきゃ／たべなくちゃ／たべないと,"Say something is necessary to do ( in casual speech leaving out the ""いけません"")",NULL,Grammar,NULL,12,NULL
+おてあらい,Restroom,お手洗い,Noun,NULL,12,NULL
+かぜ,Cold (illness),風邪,Noun,NULL,12,NULL
+かれ,Boyfriend / He,彼,Noun,NULL,12,NULL
+がんか,ophthalmologist,眼科,Noun,NULL,12,NULL
+きおん,Temperature ( weather - not used for things),気温,Noun,NULL,12,NULL
+くもり,Cloudy weather,曇り,Noun,NULL,12,NULL
+げか,Surgeon,外科,Noun,NULL,12,NULL
+こうせいぶっしつ,antibiotic,抗生物質,Noun,NULL,12,NULL
+さんふじんか,Obstetrician and gynecologist,産婦人科,Noun,NULL,12,NULL
+しあい,Match / Game,試合,Noun,NULL,12,NULL
+しか,dentist,歯科,Noun,NULL,12,NULL
+じびか,ortorhinolaryngologist / ENT doctor,耳鼻科,Noun,NULL,12,NULL
+ジュース,Juice,NULL,Noun,NULL,12,NULL
+しゅじゅつ,Operation,手術,Noun,NULL,12,NULL
+せいけいげか,Orthopedic surgeon,整形外科,Noun,NULL,12,NULL
+せいせき,Grade (on a test、 etc),成績,Noun,NULL,12,NULL
+せき,Cough,NULL,Noun,NULL,12,NULL
+たいおんけい,Thermometer,体温計,Noun,NULL,12,NULL
+ちゅうしゃ,Injection,注射,Noun,NULL,12,NULL
+ないか,Physician,内科,Noun,NULL,12,NULL
+のど,Throat,NULL,Noun,NULL,12,NULL
+はな,Flower,花,Noun,NULL,12,NULL
+はれ,Sunny Weather,晴れ,Noun,NULL,12,NULL
+ひふか,Dermatologist,皮膚科,Noun,NULL,12,NULL
+ふく,Clothes,服,Noun,NULL,12,NULL
+ふつかよい,Hangover,二日酔い,Noun,NULL,12,NULL
+プレセント,Present,NULL,Noun,NULL,12,NULL
+ホームシック,Homesickness,NULL,Noun,NULL,12,NULL
+マイナス,Minus,NULL,Noun,NULL,12,NULL
+もの,Thing ( concrete object),物,Noun,NULL,12,NULL
+ようじ,Business to take care of,用事,Noun,NULL,12,NULL
+レントゲン,X-ray,NULL,Noun,NULL,12,NULL
+（～に）アレルギーがあります,I have an allergy to . . .,NULL,Other,NULL,12,NULL
+～でしょう,Probably / . . . 、right?,NULL,Other,NULL,12,NULL
+～ど,. . . degrees (temperature),～渡,Other,NULL,12,NULL
+～のど,because . . .,NULL,Other,NULL,12,NULL
+あしのほねをおりました,I broke my leg,足の骨を折りました,Other,NULL,12,NULL
+いたみどめです。しょくごにのんでください。,These are painkillers. Please take one after meals. (Health and Illness / Doctor's Office),痛み止めです。食後に飲んでください。,Other,NULL,12,NULL
+おだいじに,Get well soon,お大事に,Other,NULL,12,NULL
+おだいじに。,Please take care. (Health and Illness / Doctor's Office),お大事に。,Other,NULL,12,NULL
+かふんしょうです,I have hay fever.,花粉症です,Other,NULL,12,NULL
+きぶんがわるいです,I am not feeling well,気分が悪いです,Other,NULL,12,NULL
+くしゃみがでます,I sneeze.,くしゃみが出ます,Other,NULL,12,NULL
+けがをしました,I hurt myself,NULL,Other,NULL,12,NULL
+げりです,I have diarrhea.,下痢です,Other,NULL,12,NULL
+げんきがない,Don't look well,元気がない,Other,NULL,12,NULL
+このかみになまえとじゅうしょをかいてください。,Please fill in your name and address on this paper. (Health and Illness / Doctor's Office),この紙に名前と住所を書いてください。,Other,NULL,12,NULL
+これわなんのくすりですか。,What kind of medicine are these? (Health and Illness / Doctor's Office),これは何の薬ですか。,Other,NULL,12,NULL
+すみません。はじめてなんですが。,Excuse me. This is my first visit. (Health and Illness / Doctor's Office),すみません。初めてなんですが。,Other,NULL,12,NULL
+せいりです,I have my period.,生理です,Other,NULL,12,NULL
+せなかがかゆいです,My back itches,背中がかるいです,Other,NULL,12,NULL
+たぶん,Probably / Maybe,多分,Other,NULL,12,NULL
+できるだけ,As much as possible,NULL,Other,NULL,12,NULL
+にさんにち,for two to three days,二三日,Other,NULL,12,NULL
+はい、ほけんしょうをみせてください。,Okay. Please show me your health insurance certificate. (Health and Illness / Doctor's Office),はい、保険証を見せてください。,Other,NULL,12,NULL
+はきました,I threw up,吐きました,Other,NULL,12,NULL
+はじめて,for the first time,初めて,Other,NULL,12,NULL
+はっしんがあります,I have rashes,発疹があります,Other,NULL,12,NULL
+はなみずがでます,I have a runny nose.,花水が出ます,Other,NULL,12,NULL
+べんぴです,I am constipated.,便秘です,Other,NULL,12,NULL
+むしばがあります,I have a bad tooth.,虫歯があります,Other,NULL,12,NULL
+めまいがします,I feel dizzy,NULL,Other,NULL,12,NULL
+もうすぐ,Very soon / in a few moments or days,NULL,Other,NULL,12,NULL
+やけどをしました,I burned myself,NULL,Other,NULL,12,NULL
+わかりました。,I see.,NULL,Other,NULL,12,NULL
+きんちょうする,To get nervous,緊張する,Verb,IRR,12,NULL
+しんぱいする,To worry,心配する,Verb,IRR,12,NULL
+せきがでる,To cough,せきが出る,Verb,RU,12,NULL
+わかれる,To break up / To separate,心配する,Verb,RU,12,NULL
+（～を）なくす,To lose,NULL,Verb,U,12,NULL
+あるく,To walk,歩く,Verb,U,12,NULL
+かぜをひく,To catch a cold,風邪をひく,Verb,U,12,NULL
+きょうみがある,To be interested (in . . .),興味がある,Verb,U,12,NULL
+ねつがある,To have a fever,熱がある,Verb,U,12,NULL
+のどがかわく,To become thirsty,のどが渇く,Verb,U,12,NULL
+かわいそう（な）,Pitiful,NULL,Adjective,NULL,12,NULL
+あまのがわ,The Milky Way,天の川,Noun,NULL,12,NULL
+たんざく,Strip of fancy paper,NULL,Noun,NULL,12,NULL
+てん,The heavens / The sky,天,Noun,NULL,12,NULL
+ねがい,Wish,願い,Noun,NULL,12,NULL
+はじめ（な）,Serious / Sober / Diligent,NULL,Noun,NULL,12,NULL
+はたけ,Farm,畑,Noun,NULL,12,NULL
+むこう,The other side / Over there,向こう,Noun,NULL,12,NULL
+むすめ,Daughter,娘,Noun,NULL,12,NULL
+わたしたち,We,私たち,Noun,NULL,12,NULL
+～など,And so forth,NULL,Other,NULL,12,NULL
+～までに,By . . .,NULL,Other,NULL,12,NULL
+ある～,One . . . (ある日 one day),NULL,Other,NULL,12,NULL
+いちねんにいちど,Once a year,一年に一度,Other,NULL,12,NULL
+みつける,To find,見つける,Verb,RU,12,NULL
+おこる,To get angry,怒る,Verb,U,12,NULL
+かなう,To be realized,NULL,Verb,U,12,NULL
+なく,To cry,泣く,Verb,U,12,NULL
+はたをおる,To weave,はたを織る,Verb,U,12,NULL
+いしゃ,Doctor,医者,Noun,NULL,1,NULL
+いしゃ,Doctor,医者,Noun,NULL,10,NULL
+オーストラリア,Australia,NULL,Noun,NULL,1,NULL
+オーストラリア,Australia,NULL,Noun,NULL,11,NULL
+せいじ,Politics,政治,Noun,NULL,12,NULL
+せいじ,Politics,政治,Noun,NULL,12,NULL
+にほん,Japan,日本,Noun,NULL,1,NULL
+にほん,Japan,日本,Noun,NULL,4,Kanji
+ちゅうごく,China,中国,Noun,NULL,1,NULL
+ちゅうごく,China,中国,Noun,NULL,4,Kanji
+ちゅうごく,China,中国,Noun,NULL,6,Kanji
+いま,Now,今,Noun,NULL,1,NULL
+いま,Now,今,Noun,NULL,5,Kanji
+わたし,I,私,Noun,NULL,1,NULL
+わたし,I,私,Noun,NULL,5,Kanji
+がくせい,Student,学生,Noun,NULL,1,NULL
+がくせい,Student,学生,Noun,NULL,6,Kanji
+せんせい,Teacher,先生,Noun,NULL,1,NULL
+せんせい,Teacher,先生,Noun,NULL,6,Kanji
+だいがくせい,College student,大学生,Noun,NULL,1,NULL
+だいがくせい,College student,大学生,Noun,NULL,6,Kanji
+だいがくせい,College student,大学生,Noun,NULL,8,NULL
+えいご,English Language,英語,Noun,NULL,1,NULL
+えいご,English Language,英語,Noun,NULL,7,Kanji
+おかあさん,Mother,お母さん,Noun,NULL,1,NULL
+おかあさん,Mother,お母さん,Noun,NULL,7,Kanji
+こうこう,High school,高校,Noun,NULL,1,NULL
+こうこう,High school,高校,Noun,NULL,7,Kanji
+こうこうせい,High school student,高校生,Noun,NULL,1,NULL
+こうこうせい,High school student,高校生,Noun,NULL,7,Kanji
+ぶんがく,Literature,文学,Noun,NULL,1,NULL
+ぶんがく,Literature,文学,Noun,NULL,7,Kanji
+いもうと,Younger Sister,妹,Noun,NULL,1,NULL
+いもうと,Younger Sister,妹,Noun,NULL,7,Kanji
+おとうと,Younger brother,弟,Noun,NULL,1,NULL
+おとうと,Younger brother,弟,Noun,NULL,7,Kanji
+おにいさん,Older brother,お兄さん,Noun,NULL,1,NULL
+おにいさん,Older brother,お兄さん,Noun,NULL,7,Kanji
+おねえさん,Older sister,お姉さん,Noun,NULL,1,NULL
+おねえさん,Older sister,お姉さん,Noun,NULL,7,Kanji
+かいしゃいん,Office Worker,会社員,Noun,NULL,1,NULL
+かいしゃいん,Office Worker,会社員,Noun,NULL,7,Kanji
+かいしゃいん,Office Worker,会社員,Noun,NULL,8,Kanji
+しごと,Job / Work / Occupation,仕事,Noun,NULL,1,NULL
+しごと,Job / Work / Occupation,仕事,Noun,NULL,8,Kanji
+なん／なに,What,何,Other,NULL,1,NULL
+なん／なに,What,何,Other,NULL,8,Kanji
+でんわ,Telephone,電話,Noun,NULL,1,NULL
+でんわ,Telephone,電話,Noun,NULL,8,Kanji
+でんわ,Telephone,電話,Noun,NULL,9,Kanji
+ともだち,Friend,友だち,Noun,NULL,1,NULL
+ともだち,Friend,友だち,Noun,NULL,9,Kanji
+なまえ,Name,名前,Noun,NULL,1,NULL
+なまえ,Name,名前,Noun,NULL,9,Kanji
+ごご,P.M. / In the afternoon,午後,Other,NULL,1,NULL
+ごご,P.M. / In the afternoon,午後,Other,NULL,9,Kanji
+ごぜん,A.M.,午前,Other,NULL,1,NULL
+ごぜん,A.M.,午前,Other,NULL,9,Kanji
+おしょうがつ,New Year,お正月,Noun,NULL,10,Kanji
+おしょうがつ,New Year,お正月,Noun,NULL,11,NULL
+じゅうしょ,Address,住所,Noun,NULL,10,Kanji
+じゅうしょ,Address,住所,Noun,NULL,11,Kanji
+びょういん,Beauty Parlor,美容院,Noun,NULL,10,NULL
+びょういん,Beauty Parlor,美容院,Noun,NULL,11,Kanji
+ぎゅうにゅう,Milk,牛乳,Noun,NULL,10,NULL
+ぎゅうにゅう,Milk,牛乳,Noun,NULL,12,Kanji
+ゆき,Snow,雪,Noun,NULL,10,Kanji
+ゆき,Snow,雪,Noun,NULL,12,NULL
+むかしむかし,Once upon a time,昔々,Other,NULL,10,NULL
+むかしむかし,Once upon a time,昔々,Other,NULL,12,Kanji
+はたらく,To work,働く,Verb,U,11,NULL
+はたらく,To work,働く,Verb,U,12,Kanji
+いみ,Meaning,意味,Noun,NULL,12,NULL
+いみ,Meaning,意味,Noun,NULL,11,NULL
+かのじょ,Girlfriend / She,彼女,Noun,NULL,12,NULL
+かのじょ,Girlfriend / She,彼女,Noun,NULL,11,NULL
+とけい,Watch / Clock,時計,Noun,NULL,2,NULL
+とけい,Watch / Clock,時計,Noun,NULL,3,Kanji
+ほん,Book,本,Noun,NULL,2,NULL
+ほん,Book,本,Noun,NULL,4,Kanji
+いす,Chair,NULL,Noun,NULL,2,NULL
+いす,Chair,NULL,Noun,NULL,4,NULL
+つくえ,Desk,机,Noun,NULL,2,NULL
+つくえ,Desk,机,Noun,NULL,4,NULL
+ぎんこう,Bank,銀行,Noun,NULL,2,NULL
+ぎんこう,Bank,銀行,Noun,NULL,5,Kanji
+たかい,Expensive / High,高い,Adjective,NULL,2,NULL
+たかい,Expensive / High,高い,Adjective,NULL,7,Kanji
+まど,Window,窓,Noun,NULL,2,NULL
+まど,Window,窓,Noun,NULL,7,NULL
+しんぶん,Newspaper,新聞,Noun,NULL,2,NULL
+しんぶん,Newspaper,新聞,Noun,NULL,8,Kanji
+じてんしゃ,Bicycle,自転車,Noun,NULL,2,NULL
+じてんしゃ,Bicycle,自転車,Noun,NULL,8,Kanji
+じてんしゃ,Bicycle,自転車,Noun,NULL,10,Kanji
+じしょ,Dictionary,辞書,Noun,NULL,2,NULL
+じしょ,Dictionary,辞書,Noun,NULL,9,Kanji
+としょかん,Library,図書館,Noun,NULL,2,NULL
+としょかん,Library,図書館,Noun,NULL,9,Kanji
+さんねんせい,Third-year student,三年生,Noun,NULL,3,Kanji
+さんねんせい,Third-year student,三年生,Noun,NULL,10,Kanji
+あさ,Morning,朝,Noun,NULL,3,NULL
+あさ,Morning,朝,Noun,NULL,10,NULL
+えいが,Movie,映画,Noun,NULL,3,NULL
+えいが,Movie,映画,Noun,NULL,11,Kanji
+（～を）べんきょうする,To study,勉強する,Verb,IRR,3,NULL
+（～を）べんきょうする,To study,勉強する,Verb,IRR,11,Kanji
+はやい,Early,早い,Adjective,NULL,3,NULL
+はやい,Early,早い,Adjective,NULL,12,Kanji
+ときどき,Sometimes,時々,Other,NULL,3,Kanji
+ときどき,Sometimes,時々,Other,NULL,12,Kanji
+おきる,To get up,起きる,Verb,RU,3,NULL
+おきる,To get up,起きる,Verb,RU,12,Kanji
+くがつ,September,九月,Noun,NULL,3,NULL
+くがつ,September,九月,Noun,NULL,4,Kanji
+ごがつ,May,五月,Noun,NULL,3,NULL
+ごがつ,May,五月,Noun,NULL,4,Kanji
+さんがつ,March,三月,Noun,NULL,3,NULL
+さんがつ,March,三月,Noun,NULL,4,Kanji
+しがつ,April,四月,Noun,NULL,3,NULL
+しがつ,April,四月,Noun,NULL,4,Kanji
+しちがつ,July,七月,Noun,NULL,3,NULL
+しちがつ,July,七月,Noun,NULL,4,Kanji
+じゅうがつ,October,十月,Noun,NULL,3,NULL
+じゅうがつ,October,十月,Noun,NULL,4,Kanji
+どようび,Saturday,土曜日,Noun,NULL,3,NULL
+どようび,Saturday,土曜日,Noun,NULL,4,Kanji
+にちようび,Sunday,日曜日,Noun,NULL,3,NULL
+にちようび,Sunday,日曜日,Noun,NULL,4,Kanji
+みず,Water,水,Noun,NULL,3,NULL
+みず,Water,水,Noun,NULL,4,Kanji
+あした,Tomorrow,明日,Noun,NULL,3,NULL
+あした,Tomorrow,明日,Noun,NULL,4,NULL
+あした,Tomorrow,明日,Noun,NULL,11,Kanji
+きょう,Today,今日,Noun,NULL,3,NULL
+きょう,Today,今日,Noun,NULL,4,NULL
+きょう,Today,今日,Noun,NULL,5,Kanji
+まいにち,Every day,毎日,Noun,NULL,3,NULL
+まいにち,Every day,毎日,Noun,NULL,4,NULL
+まいにち,Every day,毎日,Noun,NULL,7,Kanji
+こんばん,Tonight,今晩,Noun,NULL,3,NULL
+こんばん,Tonight,今晩,Noun,NULL,5,Kanji
+(Destination)(に／へ)　いく,To go,(Destination)(に／へ)　行く,Verb,U,3,NULL
+(Destination)(に／へ)　いく,To go,(Destination)(に／へ)　行く,Verb,U,5,Kanji
+がっこう,School, 学校,Noun,NULL,3,NULL
+がっこう,School, 学校,Noun,NULL,6,Kanji
+がっこう,School, 学校,Noun,NULL,7,Kanji
+まいばん,Every night,毎晩,Noun,NULL,3,NULL
+まいばん,Every night,毎晩,Noun,NULL,7,Kanji
+（～を）きく,To listen / To hear,（～を）聞く,Verb,U,3,NULL
+（～を）きく,To listen / To hear,（～を）聞く,Verb,U,8,Kanji
+（～を）よむ,To read,（～を）読む,Verb,U,3,NULL
+（～を）よむ,To read,（～を）読む,Verb,U,8,Kanji
+いえ,House,家,Noun,NULL,3,NULL
+いえ,House,家,Noun,NULL,9,Kanji
+いつつ,Five,五つ,Noun,NULL,3,Kanji
+いつつ,Five,五つ,Noun,NULL,9,NULL
+うち,House / Home,家,Noun,NULL,3,NULL
+うち,House / Home,家,Noun,NULL,9,Kanji
+ここのつ,Nine,九つ,Noun,NULL,3,Kanji
+ここのつ,Nine,九つ,Noun,NULL,9,NULL
+とお,Ten,十,Noun,NULL,3,Kanji
+とお,Ten,十,Noun,NULL,9,NULL
+ななつ,Seven,七つ,Noun,NULL,3,Kanji
+ななつ,Seven,七つ,Noun,NULL,9,NULL
+ひとつ,One,一つ,Noun,NULL,3,Kanji
+ひとつ,One,一つ,Noun,NULL,9,NULL
+ふたつ,Two,二つ,Noun,NULL,3,Kanji
+ふたつ,Two,二つ,Noun,NULL,9,NULL
+みっつ,Three,三つ,Noun,NULL,3,Kanji
+みっつ,Three,三つ,Noun,NULL,9,NULL
+むっつ,Six,六つ,Noun,NULL,3,Kanji
+むっつ,Six,六つ,Noun,NULL,9,NULL
+やっつ,Eight,八つ,Noun,NULL,3,Kanji
+やっつ,Eight,八つ,Noun,NULL,9,NULL
+よっつ,Four,よっつ,Noun,NULL,3,Kanji
+よっつ,Four,よっつ,Noun,NULL,9,NULL
+(Destination)(に／へ)　くる,To come,(Destination)(に／へ)　来る,Verb,IRR,3,NULL
+(Destination)(に／へ)　くる,To come,(Destination)(に／へ)　来る,Verb,IRR,9,Kanji
+(Language)(を／で)　はなす,To speak / To talk,(Language)(を／で)　話す,Verb,U,3,NULL
+(Language)(を／で)　はなす,To speak / To talk,(Language)(を／で)　話す,Verb,U,9,Kanji
+おかねもち,Rich person,お金持ち,Noun,NULL,4,Kanji
+おかねもち,Rich person,お金持ち,Noun,NULL,10,Kanji
+かいもの,Shopping,買い物,Noun,NULL,4,NULL
+かいもの,Shopping,買い物,Noun,NULL,10,Kanji
+ちかてつ,Subway,地下鉄,Noun,NULL,4,Kanji
+ちかてつ,Subway,地下鉄,Noun,NULL,10,NULL
+じょうず（な）,Good at,上手（な）,Adjective,NULL,4,Kanji
+じょうず（な）,Good at,上手（な）,Adjective,NULL,11,Kanji
+てがみ,Letter,手紙,Noun,NULL,4,NULL
+てがみ,Letter,手紙,Noun,NULL,11,Kanji
+びょういん,Hospital,病院,Noun,NULL,4,NULL
+びょういん,Hospital,病院,Noun,NULL,11,Kanji
+（～の）ちかく,Near / Nearby,（～の）近く,Other,NULL,4,NULL
+（～の）ちかく,Near / Nearby,（～の）近く,Other,NULL,11,Kanji
+ことし,This year,今年,Noun,NULL,4,NULL
+ことし,This year,今年,Noun,NULL,5,Kanji
+ことし,This year,今年,Noun,NULL,10,Kanji
+こんげつ,This Month,今月,Noun,NULL,4,Kanji
+こんげつ,This Month,今月,Noun,NULL,5,Kanji
+こんげつ,This Month,今月,Noun,NULL,8,NULL
+おかね,Money,お金,Noun,NULL,4,Kanji
+おかね,Money,お金,Noun,NULL,6,NULL
+こんしゅう,This week,今週,Noun,NULL,4,NULL
+こんしゅう,This week,今週,Noun,NULL,6,Kanji
+せんしゅう,Last week,先週,Noun,NULL,4,NULL
+せんしゅう,Last week,先週,Noun,NULL,6,Kanji
+（～の）ひだり,Left,（～の）左,Other,NULL,4,Kanji
+（～の）ひだり,Left,（～の）左,Other,NULL,6,NULL
+（～の）みぎ,Right (directional),（～の）右,Other,NULL,4,Kanji
+（～の）みぎ,Right (directional),（～の）右,Other,NULL,6,NULL
+らいねん,Next Year,来年,Noun,NULL,4,NULL
+らいねん,Next Year,来年,Noun,NULL,6,NULL
+らいねん,Next Year,来年,Noun,NULL,10,Kanji
+せんげつ,Last month,先月,Noun,NULL,4,NULL
+せんげつ,Last month,先月,Noun,NULL,6,Kanji
+せんげつ,Last month,先月,Noun,NULL,9,NULL
+らいしゅう,Next week,来週,Noun,NULL,4,NULL
+らいしゅう,Next week,来週,Noun,NULL,6,NULL
+らいしゅう,Next week,来週,Noun,NULL,9,Kanji
+こども,Child,子供,Noun,NULL,4,NULL
+こども,Child,子供,Noun,NULL,7,Kanji
+(Person)(に)　あう,To meet / to see (a person),(Person)(に)　会う,Verb,U,4,NULL
+(Person)(に)　あう,To meet / to see (a person),(Person)(に)　会う,Verb,U,7,Kanji
+あさって,The day after tomorrow,NULL,Noun,NULL,4,NULL
+あさって,The day after tomorrow,NULL,Noun,NULL,8,NULL
+らいげつ,Next month,来月,Noun,NULL,4,NULL
+らいげつ,Next month,来月,Noun,NULL,8,Kanji
+きょねん,Last year,去年,Noun,NULL,4,NULL
+きょねん,Last year,去年,Noun,NULL,9,Kanji
+にっき,Diary,日記,Noun,NULL,4,Kanji
+にっき,Diary,日記,Noun,NULL,9,NULL
+（～の）うしろ,Back (of) / Behind (of),（～の）後ろ,Other,NULL,4,NULL
+（～の）うしろ,Back (of) / Behind (of),（～の）後ろ,Other,NULL,9,Kanji
+きもち,Feeling,気持ち,Noun,NULL,5,Kanji
+きもち,Feeling,気持ち,Noun,NULL,10,Kanji
+ちょうしょく,Breakfast,朝食,Noun,NULL,5,Kanji
+ちょうしょく,Breakfast,朝食,Noun,NULL,10,Kanji
+たんじょうび,Birthday,誕生日,Noun,NULL,5,NULL
+たんじょうび,Birthday,誕生日,Noun,NULL,10,NULL
+かわ,River,川,Noun,NULL,5,Kanji
+かわ,River,川,Noun,NULL,11,NULL
+やま,Mountain,山,Noun,NULL,5,Kanji
+やま,Mountain,山,Noun,NULL,11,NULL
+りょこう,Travel,旅行,Noun,NULL,5,Kanji
+りょこう,Travel,旅行,Noun,NULL,11,Kanji
+しゅくだい,Homework,宿題,Noun,NULL,5,NULL
+しゅくだい,Homework,宿題,Noun,NULL,11,NULL
+でんき,Electricity,電気,Noun,NULL,5,Kanji
+でんき,Electricity,電気,Noun,NULL,6,NULL
+でんき,Electricity,電気,Noun,NULL,8,Kanji
+ちいさい,Small,小さい,Adjective,NULL,5,NULL
+ちいさい,Small,小さい,Adjective,NULL,7,Kanji
+おとこのひと,Man,男の人,Noun,NULL,5,Kanji
+おとこのひと,Man,男の人,Noun,NULL,7,NULL
+おんなのひと,Woman,女の人,Noun,NULL,5,Kanji
+おんなのひと,Woman,女の人,Noun,NULL,7,NULL
+しょくどう,Cafeteria,食堂,Noun,NULL,5,Kanji
+しょくどう,Cafeteria,食堂,Noun,NULL,7,NULL
+おとこのこ,Boy,男の子,Noun,NULL,5,Kanji
+おとこのこ,Boy,男の子,Noun,NULL,7,Kanji
+おとこのこ,Boy,男の子,Noun,NULL,11,NULL
+おんなのこ,Girl,女の子,Noun,NULL,5,Kanji
+おんなのこ,Girl,女の子,Noun,NULL,7,Kanji
+おんなのこ,Girl,女の子,Noun,NULL,11,NULL
+あたらしい,New,新しい,Adjective,NULL,5,NULL
+あたらしい,New,新しい,Adjective,NULL,8,Kanji
+しょくじ,Meal,食事,Noun,NULL,5,Kanji
+しょくじ,Meal,食事,Noun,NULL,8,NULL
+やすみ,Holiday / Day off / Absence,休み,Noun,NULL,5,NULL
+やすみ,Holiday / Day off / Absence,休み,Noun,NULL,8,Kanji
+ふるい,Old (for things),古い,Adjective,NULL,5,NULL
+ふるい,Old (for things),古い,Adjective,NULL,9,Kanji
+じぶん,Oneself,自分,Noun,NULL,6,Kanji
+じぶん,Oneself,自分,Noun,NULL,10,Kanji
+でぐち,Exit (At the station),出口,Noun,NULL,6,Kanji
+でぐち,Exit (At the station),出口,Noun,NULL,10,NULL
+よる,Night,夜,Noun,NULL,6,NULL
+よる,Night,夜,Noun,NULL,10,Kanji
+（～を）もってくる,To bring (a thing),（～を）持ってくる,Verb,IRR,6,NULL
+（～を）もってくる,To bring (a thing),（～を）持ってくる,Verb,IRR,10,Kanji
+たつ,To stand up,立つ,Verb,U,6,NULL
+たつ,To stand up,立つ,Verb,U,10,Kanji
+えき,Station,駅,Noun,NULL,6,NULL
+えき,Station,駅,Noun,NULL,10,NULL
+がいこく,Foreign Country,外国,Noun,NULL,6,Kanji
+がいこく,Foreign Country,外国,Noun,NULL,11,NULL
+おとな,Adult,大人,Noun,NULL,6,Kanji
+おとな,Adult,大人,Noun,NULL,12,NULL
+くち,Mouth,口,Noun,NULL,6,Kanji
+くち,Mouth,口,Noun,NULL,7,NULL
+くに,Country / place of origin,国,Noun,NULL,6,Kanji
+くに,Country / place of origin,国,Noun,NULL,7,NULL
+とうきょう,Tokyo,東京,Noun,NULL,6,Kanji
+とうきょう,Tokyo,東京,Noun,NULL,7,Kanji
+いりぐち,Entrance (At the station),入り口／入口,Noun,NULL,6,Kanji
+いりぐち,Entrance (At the station),入り口／入口,Noun,NULL,7,Kanji
+いりぐち,Entrance (At the station),入り口／入口,Noun,NULL,10,NULL
+つぎ,Next,次,Noun,NULL,6,NULL
+つぎ,Next,次,Noun,NULL,8,Kanji
+でんしゃ,Train,電車,Noun,NULL,6,NULL
+でんしゃ,Train,電車,Noun,NULL,8,Kanji
+いつも,Always,NULL,Other,NULL,6,NULL
+いつも,Always,NULL,Other,NULL,8,NULL
+きょうかしょ,Textbook,教科書,Noun,NULL,6,NULL
+きょうかしょ,Textbook,教科書,Noun,NULL,9,Kanji
+あとで,Later on,後で,Other,NULL,6,NULL
+あとで,Later on,後で,Other,NULL,9,Kanji
+（～を）でる,To exit,（～を）出る,Verb,RU,6,Kanji
+（～を）でる,To exit,（～を）出る,Verb,RU,9,NULL
+ピザ,Pizza,NULL,Noun,NULL,6,NULL
+ピザ,Pizza,NULL,Noun,NULL,9,NULL
+ながい,Long,長い,Adjective,NULL,7,NULL
+ながい,Long,長い,Adjective,NULL,10,Kanji
+すむ／～にすんでいます,To live,住む,Verb,U,7,NULL
+すむ／～にすんでいます,To live,住む,Verb,U,10,Kanji
+かお,Face,顔,Noun,NULL,7,NULL
+かお,Face,顔,Noun,NULL,10,NULL
+（～を）うたう,To sing,歌う,Adjective,NULL,7,NULL
+（～を）うたう,To sing,歌う,Adjective,NULL,11,Kanji
+うた,Song,歌,Noun,NULL,7,NULL
+うた,Song,歌,Noun,NULL,11,Kanji
+て,Hand,手,Noun,NULL,7,NULL
+て,Hand,手,Noun,NULL,11,Kanji
+ぶんか,Culture,文化,Noun,NULL,7,Kanji
+ぶんか,Culture,文化,Noun,NULL,11,NULL
+ぶんぽう,Grammar,文法,Noun,NULL,7,Kanji
+ぶんぽう,Grammar,文法,Noun,NULL,11,NULL
+じんじゃ,Shrine,神社,Noun,NULL,7,Kanji
+じんじゃ,Shrine,神社,Noun,NULL,11,NULL
+じんじゃ,Shrine,神社,Noun,NULL,12,Kanji
+べつに　＋Negative,Nothing in particular,別に　＋Negative,Other,NULL,7,NULL
+べつに　＋Negative,Nothing in particular,別に　＋Negative,Other,NULL,12,Kanji
+あし,Leg / Foot,足,Noun,NULL,7,NULL
+あし,Leg / Foot,足,Noun,NULL,12,NULL
+おなか,Stomach,NULL,Noun,NULL,7,NULL
+おなか,Stomach,NULL,Noun,NULL,12,NULL
+は,Tooth,歯,Noun,NULL,7,NULL
+は,Tooth,歯,Noun,NULL,12,NULL
+くるま,Car,車,Noun,NULL,7,NULL
+くるま,Car,車,Noun,NULL,8,Kanji
+さくぶん,Composition,作文,Noun,NULL,7,Kanji
+さくぶん,Composition,作文,Noun,NULL,8,Kanji
+でんしじしょ,Electric Dictionary,電車辞書,Noun,NULL,7,NULL
+でんしじしょ,Electric Dictionary,電車辞書,Noun,NULL,8,Kanji
+まいしゅう,Every week,毎週,Noun,NULL,7,Kanji
+まいしゅう,Every week,毎週,Noun,NULL,8,NULL
+かぞく,Family,家族,Noun,NULL,7,NULL
+かぞく,Family,家族,Noun,NULL,9,Kanji
+すこし,a Little,少し,Other,NULL,7,NULL
+すこし,a Little,少し,Other,NULL,9,Kanji
+みんな,All,NULL,Noun,NULL,7,NULL
+みんな,All,NULL,Noun,NULL,9,NULL
+けさ,This morning,今朝,Noun,NULL,8,NULL
+けさ,This morning,今朝,Noun,NULL,10,Kanji
+こと,Things / matters,事,Noun,NULL,8,Kanji
+こと,Things / matters,事,Noun,NULL,11,NULL
+ほうげん,Dialect,方言,Noun,NULL,8,Kanji
+ほうげん,Dialect,方言,Noun,NULL,11,NULL
+あめ,Rain,雨,Noun,NULL,8,NULL
+あめ,Rain,雨,Noun,NULL,9,Kanji
+～のあと,After . . .,～の後,Other,NULL,8,NULL
+～のあと,After . . .,～の後,Other,NULL,9,Kanji
+さいごに,Lastly,最後に,Other,NULL,8,NULL
+さいごに,Lastly,最後に,Other,NULL,9,Kanji
+ゆうめい（な）,Famous,有名（な）,Adjective,NULL,8,NULL
+ゆうめい（な）,Famous,有名（な）,Adjective,NULL,9,Kanji
+ゆうめい（な）,Famous,有名（な）,Adjective,NULL,11,Kanji
+しょうご,Noon,正午,Noun,NULL,9,Kanji
+しょうご,Noon,正午,Noun,NULL,10,Kanji
+かぶき,Kabuki / Traditional Japanese theatrical art,歌舞伎,Noun,NULL,9,NULL
+かぶき,Kabuki / Traditional Japanese theatrical art,歌舞伎,Noun,NULL,11,Kanji
+びょうき,Illness,病気,Noun,NULL,9,NULL
+びょうき,Illness,病気,Noun,NULL,11,Kanji
+ホストファミリー,Host Family,NULL,Noun,NULL,9,NULL
+ホストファミリー,Host Family,NULL,Noun,NULL,11,NULL
+そして,and then,NULL,Other,NULL,9,NULL
+そして,and then,NULL,Other,NULL,11,NULL
+いろいろ（な）,Various,色々（な）,Adjective,NULL,9,NULL
+いろいろ（な）,Various,色々（な）,Adjective,NULL,12,Kanji
+いろ,Color,色,Noun,NULL,9,NULL
+いろ,Color,色,Noun,NULL,12,Kanji
+こんど,Near future,今度,Noun,NULL,9,NULL
+こんど,Near future,今度,Noun,NULL,12,Kanji
+あおい,Blue,青い,Adjective,NULL,9,NULL
+あおい,Blue,青い,Adjective,NULL,12,NULL
+あかい,Red,赤い,Adjective,NULL,9,NULL
+あかい,Red,赤い,Adjective,NULL,12,NULL
+いろいろ（な）,Various / Different kinds of,NULL,Adjective,NULL,13,NULL
+うれしい,Glad,NULL,Adjective,NULL,13,NULL
+かなしい,Sad,悲しい,Adjective,NULL,13,NULL
+からい,Hot and spicy / Salty,辛い,Adjective,NULL,13,NULL
+きびしい,Strict,厳しい,Adjective,NULL,13,NULL
+しあわせ（な）,Happy / lasting hapiness,幸せ（な）,Adjective,NULL,13,NULL
+すごい,Incredible / Awesome,NULL,Adjective,NULL,13,NULL
+だめ（な）,No good,NULL,Adjective,NULL,13,NULL
+ちかい,Close / Near,近い,Adjective,NULL,13,NULL
+めずらしい,rare,NULL,adjective,NULL,13,NULL
+（Noun)なら,Say only (noun) applies to a statement,NULL,Grammar,NULL,13,NULL
+（Period)（に）(frequency),Describe the frequency of an event over a period of time,NULL,Grammar,NULL,13,NULL
+(te-form) + みる,Say you are trying something,NULL,Grammar,NULL,13,NULL
+～し,Explain a situaiton using multiple reasons,NULL,Grammar,NULL,13,NULL
+～そうです,Say something is seemingly (property),NULL,Grammar,NULL,13,NULL
+Dictionary form　＋ことができない,Say someone can or has the ability to do something ( negative),NULL,Grammar,NULL,13,NULL
+Dictionary form　＋ことができる,Say someone can or has the ability to do something ( affirmative),NULL,Grammar,NULL,13,NULL
+いく➞いける／みる➞みられる,Say someone can or has the ability to do something,NULL,Grammar,NULL,13,NULL
+ウエイター,Waiter,NULL,Noun,NULL,13,NULL
+おたく,(someone's) house/home,お宅,Noun,NULL,13,NULL
+おとな,adult,大人,Noun,NULL,13,NULL
+おなじ,same time,同じ,Noun,NULL,13,NULL
+がいこくご,foreign language,外国語,Noun,NULL,13,NULL
+がっき,musical instrument,楽器,Noun,NULL,13,NULL
+かめ,turtle,NULL,Noun,NULL,13,NULL
+カレー,curry,NULL,Noun,NULL,13,NULL
+けいけん,experience,経験,Noun,NULL,13,NULL
+こうこく,advertisement,広告,Noun,NULL,13,NULL
+こうしゃ,tea (black tea),紅茶,Noun,NULL,13,NULL
+ことば,Language,言葉,Noun,NULL,13,NULL
+ゴルフ,golf,NULL,Noun,NULL,13,NULL
+スーツケース,suitcase,NULL,Noun,NULL,13,NULL
+すっぽん,snapping turtle / terrapin,NULL,Noun,NULL,13,NULL
+セーター,sweater,NULL,Noun,NULL,13,NULL
+せみ,shop / store,店,Noun,NULL,13,NULL
+ぞう,elephant,象,Noun,NULL,13,NULL
+だいいちいんしょう,the first impression,第一印象,Noun,NULL,13,NULL
+なべ,pot,NULL,Noun,NULL,13,NULL
+なんでも,anything / everything,NULL,Noun,NULL,13,NULL
+バイオリン,violin,NULL,Noun,NULL,13,NULL
+バイク,motorcycle,NULL,Noun,NULL,13,NULL
+ぶっか,(consumer prices),物価,Noun,NULL,13,NULL
+ぶんぽう,grammar,文法,Noun,NULL,13,NULL
+べんごし,lawyer,弁護士,Noun,NULL,13,NULL
+ぼしゅう,recruitment,募集,Noun,NULL,13,NULL
+まんいんでんしゃ,Jam-packed train,満員電車,Noun,NULL,13,NULL
+やくざ,yakuza / gangster,NULL,Noun,NULL,13,NULL
+やくそく,promise / appointment,約束,Noun,NULL,13,NULL
+ラッシュ,The rush hour,NULL,Noun,NULL,13,NULL
+レポート,(term) paper,NULL,Noun,NULL,13,NULL
+わたしく,I (formal),私,Noun,NULL,13,NULL
+～かい,. . . times,～回,other,NULL,13,NULL
+～キロ,. . . kilometers / . . . kilograms,NULL,other,NULL,13,NULL
+～ともうします,My name is . . .,～と申します,other,NULL,13,NULL
+あのか,seven days,七日,other,NULL,13,NULL
+あんしょうばんごう,Personal IDentification number (At the bank),暗証番号,Other,NULL,13,NULL
+いちにち,one day,一日,other,NULL,13,NULL
+いちまんえんさつをせんえんさつじゅうまいにりょうがえできますか, (At the bank) Can you change a ten thousand yen bill into ten thousand yen bills?,一万円札を千円札十枚に両替できますか,Other,NULL,13,NULL
+いつか,five days,五日,other,NULL,13,NULL
+いっしょうにいちど,once in a lifetime,一生に一度,other,NULL,13,NULL
+いらっしゃいませ,(someone honorable) is present/home,NULL,other,NULL,13,NULL
+おあずけいれ, (ATM) deposit,お預け入れ,Other,NULL,13,NULL
+おかねをおろします, (At the bank) I will withdraw money.,お金をおろします,Other,NULL,13,NULL
+おひきだし, (ATM) withdrawal,お引き出し,Other,NULL,13,NULL
+おふりこみ, (ATM) bank transfer,お振込み,Other,NULL,13,NULL
+からだにいい,good for health,体にいい,other,NULL,13,NULL
+キャッシュカード,Bank Card (At the bank),NULL,Other,NULL,13,NULL
+きんがく,amount  (At the bank),金額,Other,NULL,13,NULL
+クレジットカード, (ATM) credit card,NULL,Other,NULL,13,NULL
+こうざ,Account (At the bank),口座,Other,NULL,13,NULL
+こうざにおかねをふりこみたいんですが, (At the bank) I would like to deposit money into the account.,口座にお金を振り込みたいんですが,Other,NULL,13,NULL
+こうざをとじたいんですが, (At the bank) I would like to close an account.,口座を閉じたいいんですが,Other,NULL,13,NULL
+こうざをひらきたいんですが, (At the bank) I would like to open an account.,口座を開きたいんですが,Other,NULL,13,NULL
+ここのか,nine days,九日,other,NULL,13,NULL
+さんだかしょうかい, (ATM) balance inquiry,残高照会,Other,NULL,13,NULL
+じつは,as a matter of fact . . .,実は,other,NULL,13,NULL
+ぜんぶ,all,全部,other,NULL,13,NULL
+つうちょう,Passbook (At the bank),通帳,Other,NULL,13,NULL
+つうちょうきにゅう, (ATM) passbook update,通帳記入,Other,NULL,13,NULL
+てすうりょう,Commission (At the bank),手数料,Other,NULL,13,NULL
+とうか,ten days,十日,other,NULL,13,NULL
+ドルをえんにかえてください, (At the bank) Please change dollars into yen.,ドルを円にかえてください,Other,NULL,13,NULL
+ひゃくえんだま,100-yen coin (At the bank),百円玉,Other,NULL,13,NULL
+ふつか,two days,二日,other,NULL,13,NULL
+みっか,three days,三日,other,NULL,13,NULL
+むいか,six days,六日,other,NULL,13,NULL
+もう～ない,not any longer,NULL,other,NULL,13,NULL
+やっぱり,after all,NULL,other,NULL,13,NULL
+ようか,eight days,八日,other,NULL,13,NULL
+よきん,Savings (At the bank),預金,Other,NULL,13,NULL
+よっか,four days,四日,other,NULL,13,NULL
+（～に）かんどうする,To be moved/touched (by),（～に）感動する,Verb,IRR,13,NULL
+ニヤクする,to grin,NULL,Verb,IRR,13,NULL
+（～のことを）かんがえる,To think about,（～のことを）考える,Verb,RU,13,NULL
+こんでいる,to be crowded,込んでいる,Verb,RU,13,NULL
+（～を）おむ,To knit,（～を）編む,Verb,U,13,NULL
+（～を）みがく,To brush (teeth) / to polish,（～を）磨く,Verb,U,13,NULL
+(Person)(に)(thing)(を）かす,To lend / to rent,(Person)(に)(thing)(を）貸す,Verb,U,13,NULL
+がんばる,To do one's best / to try hard,頑張る,Verb,U,13,NULL
+こむ,to get crowded,込む,Verb,U,13,NULL
+なく,To cry,泣く,Verb,U,13,NULL
+やくそくをまもる,To keep a promise,約束を守る,Verb,U,13,NULL
+あんぜん（な）,safe,安全（な）,adjective,NULL,13,kanji
+とくべつ（な）,special,特別（な）,adjective,NULL,13,kanji
+ふあん（な）,uneasy / worried,不安（な）,adjective,NULL,13,kanji
+むり（な）,impossible,無理（な）,Adjective,NULL,13,kanji
+やすい,cheap,安い,adjective,NULL,13,kanji
+あくま,devil,悪魔,noun,NULL,13,kanji
+あさごはん,breakfast,朝ご飯,noun,NULL,13,kanji
+うみ,sea,海,Noun,NULL,13,kanji
+かいがい,overseas,海外,Noun,NULL,13,kanji
+かいがん,coast,海岸,Noun,NULL,13,kanji
+かいもの,shopping,買い物,Noun,NULL,13,kanji
+からだ,body,体,noun,NULL,13,kanji
+からて,karate,空手,noun,NULL,13,kanji
+きもの,kimono,着物,Noun,NULL,13,kanji
+ぎゅうにく,beef,牛肉,noun,NULL,13,kanji
+きゅうりょう,salary,給料,Noun,NULL,13,kanji
+きんにく,muscle,筋肉,noun,NULL,13,kanji
+くうき,air,空気,noun,NULL,13,kanji
+くうこう,airport,空港,noun,NULL,13,kanji
+こうべこう,kobe port,神戸港,noun,NULL,13,kanji
+ごはん,rice / meal,ご飯,noun,NULL,13,kanji
+さいあく,the worst,最悪,noun,NULL,13,kanji
+じゅぎょうりょう,tuition,授業料,Noun,NULL,13,kanji
+そら,sky,空,noun,NULL,13,kanji
+たいじゅう,body weight,体重,noun,NULL,13,kanji
+たいそう,gymnastics / physical exercises,体操,noun,NULL,13,kanji
+たべもの,food,食べ物,Noun,NULL,13,kanji
+ちゅうしょく,lunch,昼食,Noun,NULL,13,kanji
+ちり,geography,地理,Noun,NULL,13,kanji
+どうきゅうせい,classmate,同級生,Noun,NULL,13,kanji
+どうじ,same time,同時,Noun,NULL,13,kanji
+どうぶつ,animal,動物,Noun,NULL,13,kanji
+どうりょう,coworker,同僚,Noun,NULL,13,kanji
+とくちょう,characteristic,特徴,Noun,NULL,13,kanji
+とっきゅう,super express,特急,Noun,NULL,13,kanji
+とり,bird,鳥,Noun,NULL,13,kanji
+にく,meat,肉,noun,NULL,13,kanji
+にくや,meat shop,肉屋,noun,NULL,13,kanji
+にほんかい,the japan sea,日本海,Noun,NULL,13,kanji
+のみもの,drink,飲み物,Noun,NULL,13,kanji
+はくしょう,swan,白鳥,Noun,NULL,13,kanji
+ばんごはん,dinner,晩ご飯,noun,NULL,13,kanji
+ひる,noon / daytime,昼,Noun,NULL,13,kanji
+ひるごはん,lunch,昼ご飯,Noun,NULL,13,kanji
+ひるね,nap,昼寝,Noun,NULL,13,kanji
+ひるやすみ,lunch break,昼休み,Noun,NULL,13,kanji
+ぶたにく,pork,豚肉,noun,NULL,13,kanji
+ホンコン,hong kong,香港,noun,NULL,13,kanji
+みなと,port,港,noun,NULL,13,kanji
+もの,Things,物,Noun,NULL,13,kanji
+やきとり,grilled chicken,焼き鳥,Noun,NULL,13,kanji
+りゆう,reason,理由,Noun,NULL,13,kanji
+りょうきん,charge,料金,Noun,NULL,13,kanji
+りょうり,cooking,料理,Noun,NULL,13,kanji
+わるい,bad,悪い,noun,NULL,13,kanji
+あく,to be vacant,空く,other,NULL,13,kanji
+あんしん,relief,安心,other,NULL,13,kanji
+おおさかちゃく,arriving at osaka,大阪着,other,NULL,13,kanji
+おなじ,the same,同じ,other,NULL,13,kanji
+きぶんがわるい,to feel sick,気分が悪い,other,NULL,13,kanji
+とくに,especially,特に,Other,NULL,13,kanji
+きる,to wear,着る,verb,RU,13,kanji
+つく,to arrive,着く,Verb,U,13,kanji
+（Thing)（が）ほしい,to want,（Thing)（が）欲しい,adjective,NULL,14,NULL
+けち（な）,Stingy / cheap,NULL,adjective,NULL,14,NULL
+(giver)(が)(わたしに)(item)(を)(あげる),(giver) gives (me) an (item),NULL,grammar,NULL,14,NULL
+(giver)(は／が)(recipient)(に)(item)(を)(あげる),(giver) gives (recipient) an (item),NULL,grammar,NULL,14,NULL
+(recipient)(は／が)(giver)(に／から)(item)もらう,(recipient) recieves (item) (from) (giver),NULL,grammar,NULL,14,NULL
+(Short-form)かもしれません,Make a guess with a 50-50 percent probability,NULL,grammar,NULL,14,NULL
+（Ta-form)らどうですか,Give an advise or recommendation,NULL,grammar,NULL,14,NULL
+Number＋しか＋Negative,As little as . . . / only . . .,NULL,grammar,NULL,14,NULL
+number＋も,As many as . . .,NULL,grammar,NULL,14,NULL
+Xがほうしい,I want (x),NULL,grammar,NULL,14,NULL
+アドバイス,Advice,NULL,Noun,NULL,14,NULL
+あに,(my) my older brother,兄,Noun,NULL,14,NULL
+おおやさん,Landlord / Landlady,大家さん,Noun,NULL,14,NULL
+おかえし,return (as a token of gratitude),お返し,Noun,NULL,14,NULL
+おくさん,(your/his) wife,奥さん,Noun,NULL,14,NULL
+おじさん,uncle / middle-aged man,NULL,Noun,NULL,14,NULL
+おばさん,aunt / middle-aged woman,NULL,Noun,NULL,14,NULL
+グラス,tumbler / glass,NULL,Noun,NULL,14,NULL
+クリスマス,Christmas,NULL,Noun,NULL,14,NULL
+ごしゅじん,(your/her) huband,ご主人,Noun,NULL,14,NULL
+さら,plate / dish,皿,Noun,NULL,14,NULL
+じかん,time,時間,Noun,NULL,14,NULL
+しゅっちょう,business trip,出張,Noun,NULL,14,NULL
+せんぱい,senior member of a group,先輩,Noun,NULL,14,NULL
+チケット,ticket,NULL,Noun,NULL,14,NULL
+ちちおや,father,父親,Noun,NULL,14,NULL
+チョコレート,chocolate,NULL,Noun,NULL,14,NULL
+としうえ,being older,年上,Noun,NULL,14,NULL
+トレーナー,sweat shirt,NULL,Noun,NULL,14,NULL
+なやみ,Worry,悩み,Noun,NULL,14,NULL
+ぬいぐるみ,stuffed animal,NULL,Noun,NULL,14,NULL
+ネクタイ,necktie,NULL,Noun,NULL,14,NULL
+ばあい,case,ばあい,Noun,NULL,14,NULL
+バレンタインデー,St. Valentine's Day,NULL,Noun,NULL,14,NULL
+ビデオカメラ,camcorder,NULL,Noun,NULL,14,NULL
+ふうふ,married couple / husband and whife,夫婦,Noun,NULL,14,NULL
+ホワイトデー,White Day,NULL,Noun,NULL,14,NULL
+マフラー,Winter scarf,NULL,Noun,NULL,14,NULL
+まんが,Comic book,漫画,Noun,NULL,14,NULL
+マンション,multistory apartment building / condominium,NULL,Noun,NULL,14,NULL
+みかん,mandarin orange,NULL,Noun,NULL,14,NULL
+みなさん,everyone / all of you,皆さん,Noun,NULL,14,NULL
+ゆびわ,ring,指輪,Noun,NULL,14,NULL
+ラジオ,radio,NULL,Noun,NULL,14,NULL
+りれきしょ,resume,履歴書,Noun,NULL,14,NULL
+～くん,mr. / mrs .  .  . (casual),～君,Other,NULL,14,NULL
+～こ,(Generic counter for smaller items),～個,Other,NULL,14,NULL
+～さつ,(counter for bound volumes),～冊,Other,NULL,14,NULL
+～だい,(counter for equipment),～台,Other,NULL,14,NULL
+～たち,( makes a noun plural),NULL,Other,NULL,14,NULL
+～ねんかん,for . . . years,～年間,Other,NULL,14,NULL
+～ひき,(counter for smaller animals),～匹,Other,NULL,14,NULL
+～ほん,(counter for long objects),～本,Other,NULL,14,NULL
+おなじ,same,同じ,Other,NULL,14,NULL
+こんな～,. . . like this / this kind of . . .,NULL,Other,NULL,14,NULL
+ちょうど,Exactly,NULL,Other,NULL,14,NULL
+どうしたらいい,What should one do,NULL,Other,NULL,14,NULL
+よく,well,NULL,Other,NULL,14,NULL
+わたしたち,We,私たち,Other,NULL,14,NULL
+(person)(に)　そうだんする,to consult,(person)(に)　相談する,Verb,IRR,14,NULL
+(person)(に)　プロポーズする,to propose marriage,NULL,Verb,IRR,14,NULL
+（～が）できる,to come into existence / to be made,NULL,Verb,IRR,14,NULL
+（～を）あきらめる,to give up,NULL,Verb,RU,14,NULL
+(person)(に)(thing)(を)　あげる,to give ( to others),NULL,Verb,RU,14,NULL
+(person)(に)(thing)(を)　くれる,To give (me),NULL,Verb,RU,14,NULL
+(person)(に)(thing)(を)　おくる,To send,(person)(に)(thing)(を)　送る,Verb,U,14,NULL
+(thing)(が)　にあう,To look good (on somebody),(thing)(が)　似合う,Verb,U,14,NULL
+あいす,to love,愛する,Verb,U,14,NULL
+つきあう,to date,付き合う,Verb,U,14,NULL
+しんせつ（な）,Kind,親切（な）,adjective,NULL,14,Kanji
+たのしい,fun,楽しい,adjective,NULL,14,Kanji
+らく（な）,easy / comfortable,楽（な）,adjective,NULL,14,Kanji
+いいん,clinic,医院,Noun,NULL,14,Kanji
+いがく,medical science,医学,Noun,NULL,14,Kanji
+いしゃ,doctor,医者,Noun,NULL,14,Kanji
+えいかいわ,english conversation,英会話,Noun,NULL,14,Kanji
+えいご,english language,英語,Noun,NULL,14,Kanji
+えいこく,england,英国,Noun,NULL,14,Kanji
+えいゆう,hero,英雄,Noun,NULL,14,Kanji
+おうぞく,Member of royalty,王族,Noun,NULL,14,Kanji
+おと,sound,音,Noun,NULL,14,Kanji
+おべんとう,lunch box,お弁当,Noun,NULL,14,Kanji
+おんがく,music,音楽,Noun,NULL,14,Kanji
+がくしゃ,scholar,学者,Noun,NULL,14,Kanji
+かこ,the past,過去,Noun,NULL,14,Kanji
+かぞく,family,家族,Noun,NULL,14,Kanji
+がっき,musical instrument,楽器,Noun,NULL,14,Kanji
+かのじょ,she / boyfriend,彼女,Noun,NULL,14,Kanji
+かれ,He / boyfriend,彼,Noun,NULL,14,Kanji
+かれら,they,彼ら,Noun,NULL,14,Kanji
+かわりに,instead,代わりに,Noun,NULL,14,Kanji
+きって,postage stamp,切手,Noun,NULL,14,Kanji
+きっぷ,ticket,切符,Noun,NULL,14,Kanji
+きゅうがくせい,90's,九十年代,Noun,NULL,14,Kanji
+きゅうこう,express train,急行,Noun,NULL,14,Kanji
+きょねん,last year,去年,Noun,NULL,14,Kanji
+じだい,age / era,時代,Noun,NULL,14,Kanji
+したしい,intimate,親しい,Noun,NULL,14,Kanji
+じゅうだい,in one's teens,十代,Noun,NULL,14,Kanji
+じょうしゃ,riding a car,乗車,Noun,NULL,14,Kanji
+じょうば,horseback riding,乗馬,Noun,NULL,14,Kanji
+しょてん,bookstore,書店,Noun,NULL,14,Kanji
+しんゆう,best friend,親友,Noun,NULL,14,Kanji
+すいぞくかん,aquarium,水族館,Noun,NULL,14,Kanji
+たいせつ（な）,precious,大切（な）,Noun,NULL,14,Kanji
+ちちおや,Father,父親,Noun,NULL,14,Kanji
+てんいん,store clerk,店員,Noun,NULL,14,Kanji
+でんきだい,electrcity fee,電気代,Noun,NULL,14,Kanji
+どくしゃ,reader,読者,Noun,NULL,14,Kanji
+とっっきゅう,super express,特急,Noun,NULL,14,Kanji
+のりもの,vehicle,乗り物,Noun,NULL,14,Kanji
+はいしゃ,dentist,歯医者,Noun,NULL,14,Kanji
+ばいてん,stall,売店,Noun,NULL,14,Kanji
+はつおん,pronounciation,発音,Noun,NULL,14,Kanji
+ははおや,mother,母親,Noun,NULL,14,Kanji
+ほんとうに,really,本当に,Noun,NULL,14,Kanji
+ほんね,real intention,本音,Noun,NULL,14,Kanji
+みせ,shop,店,Noun,NULL,14,Kanji
+みんぞく,race,民族,Noun,NULL,14,Kanji
+りゅがくせい,foreign students,留学生,Noun,NULL,14,Kanji
+りょうしん,parents,両親,Noun,NULL,14,Kanji
+るす,absence / not at home,留守,Noun,NULL,14,Kanji
+わかもの,Young people,若者,Noun,NULL,14,Kanji
+きゅうに,suddenly,急に,Other,NULL,14,Kanji
+とうじ,at that time,当時,Other,NULL,14,Kanji
+しょうきょする,to erase,消去する,Verb,IRR,14,Kanji
+りゅうがくする,to study abroad,留学する,Verb,IRR,14,Kanji
+あたる,to hit,当たる,Verb,U,14,Kanji
+いそぐ,to hurry,急ぐ,Verb,U,14,Kanji
+きる,to cut,切る,Verb,U,14,Kanji
+さる,to leave,去る,Verb,U,14,Kanji
+のる,to ride,乗る,Verb,U,14,Kanji
+ひろい,spacious / wide,広い,adjective,NULL,15,Null
+たべる➞たべよう,(Volational form) Suggest a plan ( similar to ましょう),NULL,grammar,NULL,15,Null
+(Volational Form)＋とおもっています,Talk about a decision you have made,NULL,grammar,NULL,15,Null
+(Volational Form)＋とおもいます,Talk about a decision you have made on the spot,NULL,grammar,NULL,15,Null
+（te-form)おく,Describe an action performed in preparation for something,NULL,grammar,NULL,15,Null
+きのうかったほん,Use a sentence to qualify a noun,NULL,grammar,NULL,15,Null
+インターネット,Internet,NULL,Noun,NULL,15,Null
+クラブ,night club,NULL,Noun,NULL,15,Null
+ジャケット,jacket,NULL,Noun,NULL,15,Null
+そば,soba / japanese buckwheat noodle,NULL,Noun,NULL,15,Null
+プール,swimming pool,NULL,Noun,NULL,15,Null
+ペット,pet,NULL,Noun,NULL,15,Null
+シングル,(At the hotel) single room,NULL,Noun,NULL,15,Null
+ダブル,(At the hotel) double room,NULL,Noun,NULL,15,Null
+ツイン,(At the hotel) twin room,NULL,Noun,NULL,15,Null
+フロント,(At the hotel) receptionist / front desk,NULL,Noun,NULL,15,Null
+くじら,Whale,NULL,Noun,NULL,15,NULL
+ホームレス,homeless,NULL,Noun,NULL,15,NULL
+トロッコれっしゃ,small train usually for tourists,トロッコ列車,Noun,NULL,15,NULL
+よてい,schedule / plan,予定,Noun,NULL,15,Null
+ほけん,insurance,保険,Noun,NULL,15,Null
+わりびきけん,discount coupon,割引券,Noun,NULL,15,Null
+そつぎょうしき,graduation ceremony,卒業式,Noun,NULL,15,Null
+みなみ,south,南,Noun,NULL,15,NULL
+げんばく,atomic bomb,原爆,Noun,NULL,15,NULL
+きつえんルーム,(At the hotel) smoking room,喫煙ルーム,Noun,NULL,15,Null
+ちか,underground,地下,Noun,NULL,15,NULL
+ちず,map,地図,Noun,NULL,15,Null
+じしん,earthquake,地震,Noun,NULL,15,Null
+がいこくじん,Foreigner,外国人,Noun,NULL,15,Null
+かぐ,Furniture,家具,Noun,NULL,15,Null
+しま,island,島,Noun,NULL,15,NULL
+へいわ,peace,平和,Noun,NULL,15,NULL
+へいわきねんしりょうか,Peace memorial Museum,平和記念資料館,Noun,NULL,15,NULL
+ひろば,square / open space,広場,Noun,NULL,15,NULL
+にわ,garden,庭,Noun,NULL,15,Null
+たてもの,building,建物,Noun,NULL,15,NULL
+せんそう,war,戦争,Noun,NULL,15,NULL
+てんいん,hand / arm,手,Noun,NULL,15,NULL
+りょかん,japanese inn,旅館,Noun,NULL,15,Null
+むかし,old days,昔,Noun,NULL,15,NULL
+えいがかん,Movie theatre,映画館,Noun,NULL,15,Null
+けしき,scenery,景色,Noun,NULL,15,NULL
+ばんぐみ,broadcast program,番組,Noun,NULL,15,Null
+はっぴょう,presentation,発表,Noun,NULL,15,Null
+きんえんルーム,(At the hotel) non-smoking room,禁煙ルーム,Noun,NULL,15,Null
+ぜいきん,tax,税金,Noun,NULL,15,Null
+たけ,bamboo,竹,Noun,NULL,15,NULL
+こうよう,Red leaves / Autimn tints,紅葉,Noun,NULL,15,NULL
+けいけん,experience,経験,Noun,NULL,15,Null
+けっこんしき,wedding,結婚式,Noun,NULL,15,Null
+え,Painting / Picture / Drawing,絵,Noun,NULL,15,Null
+みどり,green,緑,Noun,NULL,15,NULL
+しめきり,deadline,締め切り,Noun,NULL,15,Null
+しゅうかん,custom,習慣,Noun,NULL,15,Null
+しぜん,Nature,自然,Noun,NULL,15,NULL
+でんち,battery,電池,Noun,NULL,15,Null
+しか,deer,鹿,Noun,NULL,15,NULL
+～つき,(At the hotel) with . . .,～付,Other,NULL,15,Null
+～めい,(At the hotel) . . . person(s),～名,Other,NULL,15,Null
+～はく,(At the hotel) . . . nights,～泊,Other,NULL,15,Null
+～ばん,number . . .,～番,Other,NULL,15,Null
+～め,-th,～目,Other,NULL,15,Null
+～けど,. . .、but / . . .、so,NULL,Other,NULL,15,Null
+チェックイン（する）,(At the hotel) checking in,NULL,Other,NULL,15,Null
+チェックアウト（する）,(At the hotel) checking out,NULL,Other,NULL,15,Null
+はい。かしこまりました。,(At the hotel) Alright.,NULL,Other,NULL,15,Null
+おきゃくさまのおんあまえとおでんわばんごをおねがいします,(At the hotel) Your ame and phone number、 please.,お客様のお名前とお電話番号をお願いします,Other,NULL,15,Null
+クレジットカードではらえますか,(At the hotel) Can I pay by credit card?,クレジットカードで払えますか,Other,NULL,15,Null
+じゃあ、よやくおねがいします,(At the hotel) Well、 I would like to make a reservation,じゃあ、予約お願いします,Other,NULL,15,Null
+にじまでにもつをあずかってくれませんか,(At the hotel) Could you keep my luggage until 2 o'clock,に時まで荷物を預かってくれませんか,Other,NULL,15,Null
+もういちど,one more time,もう一度,Other,NULL,15,Null
+いちねんじゅう,all year,一年中,other,NULL,15,NULL
+いちにちじゅう,All day long,一日中,Other,NULL,15,Null
+なんめいさまですか,(At the hotel) How much is it for one night?,一泊いくらですか,Other,NULL,15,Null
+いっぱくにしょくつきでおひとりさま、いちまんにせんえんです,(At the hotel) For one night with two meals、 twelve thousand yen,一泊に食付でお一人で様、一万二千円です,Other,NULL,15,Null
+いっぱくにしょくつき,(At the hotel) one night with two meals,一泊二食付,Other,NULL,15,Null
+さんめいです,(At the hotel) Three people,二名です,Other,NULL,15,Null
+いっぱくいくらですか,(At the hotel) How many people?,何名様ですか,Other,NULL,15,Null
+なんにちからなんぱくのごよやくですか,(At the hotel) How many nights、 starting from what day?,何日から何泊のご予約ですか,Other,NULL,15,Null
+さいきん,recently,最近,Other,NULL,15,Null
+らいしゅうのきんようびからさんぱくです,(At the hotel) Three nights from next Friday,来週の金曜日から三泊です,Other,NULL,15,Null
+しょくじつき,(At the hotel) with meals,食事付,Other,NULL,15,Null
+（～を）よくうする,To reserve,（～を）予約する,Verb,IRR,15,Null
+(School)(を)　そつぎょうする,To graduate (from . . .),(School)(を)　卒業する,Verb,IRR,15,Null
+(Item)(に)　する,To decide on (an item),NULL,Verb,IRR,15,Null
+ちゅういする,to watch out,注意する,Verb,IRR,15,NULL
+かんこうする,To do sightseeing,観光する,Verb,IRR,15,Null
+（～が）みえる,To be visible,（～が）見える,Verb,RU,15,Null
+（～に）きをつける,To be cautious/careful,（～に）気をつける,Verb,RU,15,Null
+(Matter)(を)　しらべる,To look into (a matter),(Matter)(を)　調べる,Verb,RU,15,Null
+うまれる,to be born,生まれる,Verb,RU,15,NULL
+おとされる,to be dropped,落とされる,Verb,RU,15,NULL
+（～を）おろす,to withdraw (money),（～を）下ろす,Verb,U,15,Null
+（～を）うる,to sell,（～を）売る,Verb,U,15,Null
+（～を）さがす,to look for,（～を）探す,Verb,U,15,Null
+（～を）かく,To draw / to paint,（～を）描く,Verb,U,15,Null
+（～を）さそう,to invite,（～を）誘う,Verb,U,15,Null
+(Person)(と)　つきあう,to date (a person),(Person)(と)　付き合う,Verb,U,15,Null
+(Place)(に)　つく,To arrive,(Place)(に)　着く,Verb,U,15,Null
+(Purpose)(に)　つきあう,to keep company,(Purpose)(に)　付き合う,Verb,U,15,Null
+しゃべる,to chat,NULL,Verb,U,15,Null
+ほけんにはいる,To buy insurance,保険に入る,Verb,U,15,Null
+たのしむ,To enjoy,楽しむ,Verb,U,15,NULL
+のこす,to leave / to preserve,残す,Verb,U,15,NULL
+はしる,to run,走る,Verb,U,15,NULL
+とおる,to pass / to go through,通る,Verb,U,15,NULL
+ひろい,wide / spacious,広い,adjective,NULL,15,Kanji
+おてら,temple,お寺,Noun,NULL,15,Kanji
+いっそく,one pair of shoes,一足,noun,NULL,15,Kanji
+にんぎょ,mermaid,人魚,Noun,NULL,15,Kanji
+しゃくち,rented land,借地,Noun,NULL,15,Kanji
+しゃくや,rented house,借家,Noun,NULL,15,Kanji
+しゃっきん,debt,借金,Noun,NULL,15,Kanji
+しょか,early summer,初夏,Noun,NULL,15,Kanji
+みそ,soybean paste,味噌,Noun,NULL,15,Kanji
+かいてんずし,rotating sushi,回転ずし,Noun,NULL,15,Kanji
+ちか,underground,地下,Noun,NULL,15,Kanji
+ちかてつ,subway,地下鉄,Noun,NULL,15,Kanji
+ちず,map,地図,Noun,NULL,15,Kanji
+ちきゅう,earth / globe,地球,Noun,NULL,15,Kanji
+じしん,earthquake,地震,Noun,NULL,15,Kanji
+ばあい,case,場合,Noun,NULL,15,Kanji
+ばしょ,place,場所,Noun,NULL,15,Kanji
+なつ,summer,夏,Noun,NULL,15,Kanji
+なつやすみ,summer vacation,夏休み,Noun,NULL,15,Kanji
+じいん,sacred building,寺院,Noun,NULL,15,Kanji
+こうこく,advertisement,広告,Noun,NULL,15,Kanji
+ひろば,square / open space,広場,Noun,NULL,15,Kanji
+ひろしま,hiroshima,広島,Noun,NULL,15,Kanji
+たてもの,building,建物,Noun,NULL,15,Kanji
+とうじ,Toji ( the name of a temple ),東寺,Noun,NULL,15,Kanji
+し,death,死,Noun,NULL,15,Kanji
+ぜんでら,zen temple,禅寺,Noun,NULL,15,Kanji
+じてんしゃ,bicycle,自転車,Noun,NULL,15,Kanji
+きょうみ,interest,興味,Noun,NULL,15,Kanji
+はしりがき,hasty writing,走り書き,Noun,NULL,15,Kanji
+しゅみ,hobby,趣味,Noun,NULL,15,Kanji
+あし,foot / leg,足,Noun,NULL,15,Kanji
+きんぎょ,goldfish,金魚,Noun,NULL,15,Kanji
+ちゅうしゃじょう,parking lot,駐車場,Noun,NULL,15,Kanji
+さかな,fish,魚,Noun,NULL,15,Kanji
+うおいちば,fish market,魚市場,Noun,NULL,15,Kanji
+ししゃ,the dead,ししゃ,Other,NULL,15,Kanji
+あじ,taste,味,other,NULL,15,Kanji
+けんこく,founding a nation,建国,other,NULL,15,Kanji
+ひっし,desperate,必死,Other,NULL,15,Kanji
+いみ,meaning,意味,Other,NULL,15,Kanji
+いけん,opinion,意見,other,NULL,15,Kanji
+みずぶそく,lack of water,水不足,other,NULL,15,Kanji
+だっそう,escape from a prison,脱走,Other,NULL,15,Kanji
+つうきん,goint to work,通勤,other,NULL,15,Kanji
+つうがく,going to school,通学,other,NULL,15,Kanji
+ちゅういする,to watch out,注意する,Verb,IRR,15,Kanji
+ちゅうもんする,to order,注文する,Verb,IRR,15,Kanji
+よういする,to prepare,用意する,Verb,IRR,15,Kanji
+うんてんする,to drive,運転する,Verb,IRR,15,Kanji
+かりる,to borrow,借りる,Verb,RU,15,Kanji
+たてる,to build,建てる,Verb,RU,15,Kanji
+はしる,to run,走る,Verb,RU,15,Kanji
+たりる,to be sufficient,足りる,Verb,RU,15,Kanji
+たつ,to be built,達つ,Verb,RU,15,Kanji
+しぬ,to die,死ぬ,Verb,U,15,Kanji
+そそぐ,to pour,注ぐ,Verb,U,15,Kanji
+ころぶ,to tumble / to fall down,転ぶ,Verb,U,15,Kanji
+かよう,to commute,通う,Verb,U,15,Kanji
+とおる,to go through / to pass,通る,Verb,U,15,Kanji
+えきいん（さん）,Station attendant,駅員,Noun,NULL,16,NULL
+きたない,dirty,汚い,adjective,NULL,16,NULL
+よわい,weak,弱い,adjective,NULL,16,NULL
+（Potential  form) といいね,(Casual) Say that you hope something nice happens (for someone other than yourself) (that is within your control),NULL,Grammar,NULL,16,NULL
+（Present-tense short form) といいね,(Casual) Say that you hope something nice happens (for someone other than yourself)(that is out of your control),NULL,Grammar,NULL,16,NULL
+（Potential form) といいんだけど,(Casual) Say that you hope something nice happens (for yourself) (that is within your control)),NULL,Grammar,NULL,16,NULL
+（Present-tense short form) といいんだけど,(Casual) Say that you hope something nice happens (for yourself)(that is out of your control),NULL,Grammar,NULL,16,NULL
+（Potential form) といいですね,(Polite) Say that you hope something nice happens (for someone other than yourself) (that is within your control),NULL,Grammar,NULL,16,NULL
+（Present-tense short form) といいですね,(Polite) Say that you hope something nice happens (for someone other than yourself)(that is out of your control),NULL,Grammar,NULL,16,NULL
+（Potential form) といいんですが,(Polite) Say that you hope something nice happens (for yourself) (that is within your control),NULL,Grammar,NULL,16,NULL
+（Present-tense short form) といいんですが,(Polite) Say that you hope something nice happens (for yourself)(that is out of your control),NULL,Grammar,NULL,16,NULL
+（Person）のために　。。。～て（あげる／くれる／もらう）,Do something for the sake of (person)、 a service that does not have the place for the beneficiary,NULL,Grammar,NULL,16,NULL
+（Te-form）あげる,Do something for the sake of others、 a service,NULL,Grammar,NULL,16,NULL
+（Ta-form Event A）～とき、（Main event B）,Explain that after event A has occured、 event B will follow.,NULL,Grammar,NULL,16,NULL
+（Short Form Event A）～とき、（Main event B）,Explain that before A、 B has occured. / Event A and B are hapening at the same time,NULL,Grammar,NULL,16,NULL
+（Event A　ている）～とき、（Main event B）,Explain that during event B、event A occured,NULL,Grammar,NULL,16,NULL
+（Te-form）いただけませんか,Make a request of someone ( most- formal),NULL,Grammar,NULL,16,NULL
+（Te-form）くださいませんか,Make a request of someone ( most- formal),NULL,Grammar,NULL,16,NULL
+（Te-form）てまらえませんか,Make a request of someone ( semi-formal),NULL,Grammar,NULL,16,NULL
+（Te-form）てくれませんか,Make a request of someone ( semi-formal),NULL,Grammar,NULL,16,NULL
+（Te-form）てもらえない,Make a request of someone (Casual),NULL,Grammar,NULL,16,NULL
+（Te-form）てくれない,Make a request of someone (Casual),NULL,Grammar,NULL,16,NULL
+(Person)(に)(Te-form)　もらう,Recieving service from someone,NULL,Grammar,NULL,16,NULL
+（Te-form）くれるといいんですが,Say you hope that someone else will do something for you ( inderect request),,Grammar,NULL,16,NULL
+（Te-form）くれる,Someone did something for you,NULL,Grammar,NULL,16,NULL
+（Te-form）すみませんでした,to appologize for something,NULL,Grammar,NULL,16,NULL
+めざましどけい,alarm clock,目覚まし時計,Noun,NULL,16,NULL
+どこでも,anywhere,NULL,Noun,NULL,16,NULL
+きょうしつ,classroom,教室,Noun,NULL,16,NULL
+ひ,day,日,Noun,NULL,16,NULL
+しょうがくせい,elementary students,小学生,Noun,NULL,16,NULL
+ファイル,file / portfolio,NULL,Noun,NULL,16,NULL
+きまつしけん,final examination,期末試験,Noun,NULL,16,NULL
+みらい,future,未来,Noun,NULL,16,NULL
+ごみ,garbage,NULL,Noun,NULL,16,NULL
+だいがくいん,graduate school,大学院,Noun,NULL,16,NULL
+すいせんじょう,letter of recommendation,推薦状,Noun,NULL,16,NULL
+おや,parents,親,Noun,NULL,16,NULL
+みかた,person on one's side,味方,Noun,NULL,16,NULL
+ばしょ,place,場所,Noun,NULL,16,NULL
+ポケット,pocket,NULL,Noun,NULL,16,NULL
+しんせき,relatives,親せき,Noun,NULL,16,NULL
+けんきゅう,research,研究,Noun,NULL,16,NULL
+ロボット,robot,NULL,Noun,NULL,16,NULL
+しょうがくきん,scholarship,奨学金,Noun,NULL,16,NULL
+ひみつ,secret tool,NULL,Noun,NULL,16,NULL
+おおきさ,size,大きさ,Noun,NULL,16,NULL
+そら,sky,空,Noun,NULL,16,NULL
+さとう,sugar,砂糖,Noun,NULL,16,NULL
+どうぐ,tool,道具,Noun,NULL,16,NULL
+たいふう,typhoon,台風,Noun,NULL,16,NULL
+みち,way / road / directions,道,Noun,NULL,16,NULL
+すると,. .  . Then . . .,NULL,Other,NULL,16,NULL
+じぶんで,(do something) by oneself,自分で,other,NULL,16,NULL
+このぐらい,About this much,NULL,other,NULL,16,NULL
+きょうじゅうに,by the end of today,今日中に,other,NULL,16,NULL
+しつれいいします,Excuse me. / Sorry to interrupt you.,失礼します,other,NULL,16,NULL
+たとえば,for example,例えば,Other,NULL,16,NULL
+これから,From now on,NULL,other,NULL,16,NULL
+ごめん,I'm sorry. (casual),NULL,other,NULL,16,NULL
+また,in addition,NULL,Other,NULL,16,NULL
+じゅぎょうちゅうに,in class / during the class,授業ちゅに,other,NULL,16,NULL
+ほかの,other,NULL,other,NULL,16,NULL
+～いがい,Other than . . .,～以外,Other,NULL,16,NULL
+～のようなもの,something like . . .,NULL,Other,NULL,16,NULL
+そんな～,such,NULL,Other,NULL,16,NULL
+このあいだ,the other day,この間,other,NULL,16,NULL
+ええと,well . . . / let me see . . .,NULL,other,NULL,16,NULL
+(place)(で／に)(Person)(を)　むかえにくる,to come to pick up,(place)(で／に)(Person)(を)　迎えに来る,Verb,IRR,16,NULL
+せつめいする,to explain,説明する,Verb,IRR,16,NULL
+あさねぼうする,To oversleep,朝寝坊する,Verb,IRR,16,NULL
+(place)(を)　あんないする,To show ( someone) around,(place)(を)　案内する,Verb,IRR,16,NULL
+（～を）あつめる,to collect,（～を）集める,Verb,RU,16,NULL
+たすける,to help / rescue,助ける,Verb,RU,16,NULL
+アイロンをかける,to Iron (clothes),NULL,Verb,RU,16,NULL
+（～に）のりおくれる,to miss ( a train、 bus、 etc),（～に）乗り遅れる,Verb,RU,16,NULL
+(thing)(を)(place)(に)　いれる,To put (somethng) in,(thing)(を)(place)(に)　入れる,Verb,RU,16,NULL
+（～を）みせる,to show,（～を）見せる,Verb,RU,16,NULL
+ちがう,to be different,違う,Verb,U,16,NULL
+（～が）みつかる,to be found,（～が）見つかる,Verb,U,16,NULL
+みちにまよう,To become lost / to lose one's way,道に迷う,Verb,U,16,NULL
+つづく,to continue,続く,Verb,U,16,NULL
+うつす,to copy,写す,Verb,U,16,NULL
+（～を）なおす,To correct / to fix,（～を）直す,Verb,U,16,NULL
+とぶ,to fly,飛ぶ,Verb,U,16,NULL
+おちこむ,To get depresed,NULL,Verb,U,16,NULL
+(place)(まで / に)(Person)(を）むかえにいく,to go to pick up,(place)(まで / に)(Person)(を）迎えに行く,Verb,U,16,NULL
+こまる,to have dfficulty,落ち込む,Verb,U,16,NULL
+わらう,to laugh,わらう,Verb,U,16,NULL
+もどる,to return / to go back,戻る,Verb,U,16,NULL
+(Person)(を)(Place)(に)　つれていく,To take (someone) to (a place),(Person)(を)(Place)(に)　連れていく,Verb,U,16,NULL
+（～を）　だす,to take (something) out / to hand in (something),（～を）出す,Verb,U,16,NULL
+やくす,to translate,訳す,Verb,U,16,NULL
+(Person)(に)(Meal)(を)　おごる,to treat (someone) to a meal,NULL,Verb,U,16,NULL
+（～を）おこす,to wake ( someone) up,（～を）起こす,Verb,U,16,NULL
+うんがいい,lucky,運がいい,adjective,NULL,16,Kanji
+すべて,all,全て,Noun,NULL,16,Kanji
+ぜんぶ,all ,全部,Noun,NULL,16,Kanji
+どうぶつ,animal,動物,Noun,NULL,16,Kanji
+こうこがく,archeology,考古学,Noun,NULL,16,Kanji
+じどうしゃ,automobile,自動車,Noun,NULL,16,Kanji
+ちかしつ,basement,地下室,Noun,NULL,16,Kanji
+ほんや,bookstore,本屋,Noun,NULL,16,Kanji
+せわ,care,世話,Noun,NULL,16,Kanji
+こども,child,子供,Noun,NULL,16,Kanji
+キリストきょう,christianity,キリスト教,Noun,NULL,16,Kanji
+きょうかい,church,教会,Noun,NULL,16,Kanji
+きょうしつ,classroom,教室,Noun,NULL,16,Kanji
+ぶちょう,department manager,部長,Noun,NULL,16,Kanji
+うんてん,driving,運転,Noun,NULL,16,Kanji
+まったく,entirely,全く,Noun,NULL,16,Kanji
+ゆうがた,evening,夕方,Noun,NULL,16,Kanji
+まいしゅう,every week,毎週,Noun,NULL,16,Kanji
+うんどう,exercise,運動,Noun,NULL,16,Kanji
+うんめい,fate,運命,Noun,NULL,16,Kanji
+しはつ,first train,始発,Noun,NULL,16,Kanji
+さかなや,fish shop,魚屋,Noun,NULL,16,Kanji
+せだい,generation,世代,Noun,NULL,16,Kanji
+かんがえ,idea,考え,Noun,NULL,16,Kanji
+おくない,indoor,屋内,Noun,NULL,16,Kanji
+せんしゅう,last week,先週,Noun,NULL,16,Kanji
+げんかい,limit,限界,Noun,NULL,16,Kanji
+ほうほう,method,方法,Noun,NULL,16,Kanji
+ていきょう,offer,提供,Noun,NULL,16,Kanji
+いっしゅうかん,one week,一週間,Noun,NULL,16,Kanji
+かいてん,opening of a store,開店,Noun,NULL,16,Kanji
+みかた,person on one's side,味方,Noun,NULL,16,Kanji
+せいかい,political world,政界,Noun,NULL,16,Kanji
+けんきゅうしつ,professor's office,研究室,Noun,NULL,16,Kanji
+さんこう,reference,参考,Noun,NULL,16,Kanji
+おくじょう,rooftop,屋上,Noun,NULL,16,Kanji
+へや,room,部屋,Noun,NULL,16,Kanji
+あんぜん,safety,部屋,Noun,NULL,16,Kanji
+にしゅうめ,second week,二週目,Noun,NULL,16,Kanji
+かいし,start,開始,Noun,NULL,16,Kanji
+テニスぶ,tennis club,テニス部,Noun,NULL,16,Kanji
+きょうかしょ,textbook,教科書,Noun,NULL,16,Kanji
+よのなか,the society,世の中,Noun,NULL,16,Kanji
+さんせい,the third generaiton,三世,Noun,NULL,16,Kanji
+せかい,the world,世界,Noun,NULL,16,Kanji
+どうし,verb,動詞,Noun,NULL,16,Kanji
+しかい,visibility,視界,Noun,NULL,16,Kanji
+まちあいしつ,waiting room,待合室,Noun,NULL,16,Kanji
+よみかた,way of reading,読み方,Noun,NULL,16,Kanji
+しゅうまつ,weekend,週末,Noun,NULL,16,Kanji
+ぜんこく,whole country,全国,Noun,NULL,16,Kanji
+～いか,. . . or less,～以下,Other,NULL,16,Kanji
+～いじょう,. . . or more,～以上,Other,NULL,16,Kanji
+いぜん,before / formerly,～以前,Other,NULL,16,Kanji
+りょうほう,both,両方,other,NULL,16,Kanji
+～いがい,other than . . .,～以外,Other,NULL,16,Kanji
+～いない,within . . .,～以内,Other,NULL,16,Kanji
+はじまる,(something) begins,始まる,Verb,RU,16,Kanji
+はじめる,to begin (something),始める,Verb,RU,16,Kanji
+あける,to open (something),開ける,Verb,RU,16,Kanji
+おしえる,to teach,教える,Verb,RU,16,Kanji
+かんがえる,to think,考える,Verb,RU,16,Kanji
+あく,(something) opens,開く,Verb,U,16,Kanji
+はこぶ,to carry,運ぶ,Verb,U,16,Kanji
+うごく,to move,動く,Verb,U,16,Kanji
+そなえる,to offer something ot the spirit,供える,Verb,U,16,Kanji
+ひらく,to open,開く,Verb,U,16,Kanji

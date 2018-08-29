@@ -52,7 +52,22 @@ public class TermListAdapter extends BaseAdapter
     {
         View rowView = mLayoutInflater.inflate(R.layout.term_list_item, parent,false);
         final Term term = (Term) getItem(position);
-        CheckBox checkBox = rowView.findViewById(R.id.checkBox);
+        if(term.getType().equalsIgnoreCase("verb"))
+        {
+            term.setJpns(term.getJpns()+ " ("+term.getTypeSpecial()+"-verb)");
+            if(!term.getKanji().equalsIgnoreCase("null"))
+            {
+                term.setKanji(term.getKanji()+ " ("+term.getTypeSpecial()+"-verb)");
+            }
+        }
+        final CheckBox checkBox = rowView.findViewById(R.id.checkBox);
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    term.setChecked(checkBox.isChecked());
+            }
+        });
+        checkBox.setChecked(term.isChecked());
         final EditText termText = rowView.findViewById(R.id.termText);
         Button toEng = rowView.findViewById(R.id.toEnglishButton);
         toEng.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +104,7 @@ public class TermListAdapter extends BaseAdapter
             if(showKanjiFirst)
             {
                 termText.setText(term.getKanji());
-                if(lessonKanjiOnly&& !term.getReqKanji())
+                if(lessonKanjiOnly&& !term.isReqKanji())
                 {
                     termText.setText(term.getJpns());
                     toKanji.setVisibility(View.INVISIBLE);
