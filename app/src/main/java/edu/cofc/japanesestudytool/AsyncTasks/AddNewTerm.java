@@ -3,6 +3,7 @@ package edu.cofc.japanesestudytool.AsyncTasks;
 import android.app.Dialog;
 import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.AddTermDialogListAdapter;
 import edu.cofc.japanesestudytool.R;
+import edu.cofc.japanesestudytool.SimilarTermDialog;
 import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermDatabase;
 
@@ -34,40 +36,15 @@ public class AddNewTerm extends AsyncTask<Void,Void,ArrayList<Term>>
         {
             ArrayList<Term> temp = new ArrayList<>();
             temp.add(mTerm);
-            InsertTerms insertTerms = new InsertTerms(termDatabase);
+            InsertTerms insertTerms = new InsertTerms(mContext);
             insertTerms.execute(temp);
         }
         else
         {
-            //TODO: go to new activity, screw dialogs, use the same layout for dialog list item
-            //TODO: copy this for edit terms also, then win, then cry
-            final Dialog builder = new Dialog(mContext);
-            builder.setContentView(R.layout.add_term_dialog_layout);
-            builder.setTitle("Found Similarities");
-            ListView listView = builder.findViewById(R.id.similarTermListView);
-            AddTermDialogListAdapter addTermDialogListAdapter = new AddTermDialogListAdapter(terms, mContext);
-            listView.setAdapter(addTermDialogListAdapter);
-
-            Button cancelButton =builder.findViewById(R.id.cancelNewTermButton);
-            cancelButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    builder.dismiss();
-                }
-            });
-            Button proceedButton = builder.findViewById(R.id.proceedNewTermButton);
-            proceedButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v)
-                {
-                    ArrayList<Term> temp = new ArrayList<>();
-                    temp.add(mTerm);
-                    InsertTerms insertTerms = new InsertTerms(termDatabase);
-                    insertTerms.execute(temp);
-                    builder.dismiss();
-                }
-            });
-            builder.show();
+            Intent intent = new Intent(mContext, SimilarTermDialog.class);
+            intent.putExtra("similarTerms",terms);
+            intent.putExtra("newTerm",mTerm);
+            mContext.startActivity(intent);
         }
     }
 

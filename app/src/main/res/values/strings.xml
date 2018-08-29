@@ -62,6 +62,7 @@
     <string name="addTermButton">Add New Term</string>
 
     <string name="deleteButtonText">X</string>
-    <string name="editButonText">Edit</string>
+    <string name="editButtonText">Edit</string>
+    <string name="similaritiesTitle">Similarities Found</string>
 
 </resources>

@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -48,14 +51,18 @@ public class AddTermDialogListAdapter extends BaseAdapter
         View rowView = mLayoutInflater.inflate(R.layout.add_term_dialog_list_item, parent,false);
         final Term term = (Term) getItem(position);
         EditText jpns = rowView.findViewById(R.id.similarHiraganaTextBox);
+        jpns.setEnabled(false);
         jpns.setText(term.getJpns());
         EditText eng = rowView.findViewById(R.id.similarEnglishTextBox);
+        eng.setEnabled(false);
         eng.setText(term.getEng());
         EditText kanji = rowView.findViewById(R.id.similarKanjiTextBox);
+        kanji.setEnabled(false);
         kanji.setText(term.getKanji());
-        EditText lesson = rowView.findViewById(R.id.similarLessonTextBox);
-        lesson.setText(term.getLesson());
-        EditText type = rowView.findViewById(R.id.similarTypeTextBox);
+        TextView lesson = rowView.findViewById(R.id.similarLessonTextBox);
+        Integer tempInt = new Integer(term.getLesson());
+        lesson.setText(tempInt.toString());
+        TextView type = rowView.findViewById(R.id.similarTypeTextBox);
         if(term.getType().equalsIgnoreCase("verb"))
         {
             type.setText(term.getTypeSpecial()+ "-"+term.getType());
@@ -94,6 +101,6 @@ public class AddTermDialogListAdapter extends BaseAdapter
             }
         });
 
-        return null;
+        return rowView;
     }
 }

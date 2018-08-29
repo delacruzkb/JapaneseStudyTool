@@ -5,6 +5,7 @@
     <dimen name="storyCountBoxHeight">45dp</dimen>
     <dimen name="dividerHeight">5sp</dimen>
     <dimen name="textSize">18sp</dimen>
+    <dimen name="titleTextSize">30sp</dimen>
 
     <dimen name="translateWebViewHeight">300dp</dimen>
     <dimen name="listViewHeight">80dp</dimen>
