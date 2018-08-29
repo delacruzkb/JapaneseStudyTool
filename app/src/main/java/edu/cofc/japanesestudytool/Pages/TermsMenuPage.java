@@ -12,7 +12,7 @@ import android.widget.TextView;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
-
+//TODO:handle "no lessons found"
 
 public class TermsMenuPage extends AppCompatActivity
 {

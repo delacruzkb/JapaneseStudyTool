@@ -61,8 +61,10 @@
     <string name="cancelButtonText">Cancel</string>
     <string name="addTermButton">Add New Term</string>
 
+    //Similarities Dialog
     <string name="deleteButtonText">X</string>
     <string name="editButtonText">Edit</string>
     <string name="similaritiesTitle">Similarities Found</string>
+    <string name="newTermLabel">New Term</string>
 
 </resources>

@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -21,23 +23,40 @@ public class SimilarTermDialog extends AppCompatActivity
     Button addNewTerm;
     ArrayList<Term> similarTerms;
     Term newTerm;
+    EditText newEngTextBox;
+    EditText newJpnsTextBox;
+    EditText newKanjiTextBox;
+    TextView newLessonTextBox;
+    TextView newTypeTextBox;
+    TextView newReqKanjiTextBox;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int width = dm.widthPixels;
-        int height = dm.heightPixels;
-        getWindow().setLayout((int)(width*.8),(int)(height*.8));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_similar_term_dialog);
+
         Intent intent = getIntent();
         newTerm = (Term) intent.getSerializableExtra("newTerm");
         similarTerms = (ArrayList<Term>)intent.getSerializableExtra("similarTerms");
+        instantiateViews();
+        loadNewTermOntoDisplay(newTerm);
+
+    }
+
+    private void instantiateViews()
+    {
+        newEngTextBox = findViewById(R.id.newTermEnglishTextBox);
+        newEngTextBox.setEnabled(false);
+        newJpnsTextBox = findViewById(R.id.newTermHiraganaTextBox);
+        newJpnsTextBox.setEnabled(false);
+        newKanjiTextBox = findViewById(R.id.newTermKanjiTextBox);
+        newKanjiTextBox.setEnabled(false);
+        newLessonTextBox = findViewById(R.id.newTermLessonTextBox);
+        newTypeTextBox = findViewById(R.id.newTermTypeTextBox);
+        newReqKanjiTextBox = findViewById(R.id.newTermReqKanjiTextBox);
         similarTermsList = findViewById(R.id.similarTermListView);
         AddTermDialogListAdapter addTermDialogListAdapter = new AddTermDialogListAdapter(similarTerms,this);
         similarTermsList.setAdapter(addTermDialogListAdapter);
-
         cancel = findViewById(R.id.cancelNewTermButton);
         cancel.setOnClickListener(new View.OnClickListener()
         {
@@ -47,13 +66,13 @@ public class SimilarTermDialog extends AppCompatActivity
                 AlertDialog.Builder warning = new AlertDialog.Builder(cancel.getContext());
                 warning.setTitle("Cancel");
                 warning.setMessage("Are you sure you want to cancel?");
-                warning.setNegativeButton("Go back to List", new DialogInterface.OnClickListener() {
+                warning.setPositiveButton("Go back to List", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
                 });
-                warning.setPositiveButton("Yes, Cancel Add.", new DialogInterface.OnClickListener() {
+                warning.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         onBackPressed();
@@ -93,5 +112,18 @@ public class SimilarTermDialog extends AppCompatActivity
                 dialog.show();
             }
         });
+    }
+    private void loadNewTermOntoDisplay(Term term)
+    {
+        newEngTextBox.setText(term.getEng());
+        newJpnsTextBox.setText(term.getJpns());
+        newKanjiTextBox.setText(term.getKanji());
+        newTypeTextBox.setText(term.getType());
+        Integer tempInt = new Integer(term.getLesson());
+        newLessonTextBox.setText(tempInt.toString());
+        if(!term.isReqKanji())
+        {
+            newReqKanjiTextBox.setVisibility(View.INVISIBLE);
+        }
     }
 }

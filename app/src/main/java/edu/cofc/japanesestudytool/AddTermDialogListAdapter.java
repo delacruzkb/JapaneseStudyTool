@@ -71,6 +71,11 @@ public class AddTermDialogListAdapter extends BaseAdapter
         {
             type.setText(term.getType());
         }
+        TextView reqKanji = rowView.findViewById(R.id.similarReqKanjiTextBox);
+        if(!term.isReqKanji())
+        {
+            reqKanji.setVisibility(View.INVISIBLE);
+        }
         Button deleteButton = rowView.findViewById(R.id.deleteSimilarTermButton);
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +84,7 @@ public class AddTermDialogListAdapter extends BaseAdapter
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
                 builder.setTitle("Warning");
                 builder.setMessage("Would you like to delete this from the database?");
-                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
