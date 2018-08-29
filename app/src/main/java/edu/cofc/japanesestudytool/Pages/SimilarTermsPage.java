@@ -1,11 +1,10 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Pages;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,9 +13,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import edu.cofc.japanesestudytool.AddTermDialogListAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
+import edu.cofc.japanesestudytool.R;
+import edu.cofc.japanesestudytool.Term;
 
-public class SimilarTermDialog extends AppCompatActivity
+public class SimilarTermsPage extends AppCompatActivity
 {
     ListView similarTermsList;
     Button cancel;
@@ -33,7 +35,7 @@ public class SimilarTermDialog extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_similar_term_dialog);
+        setContentView(R.layout.activity_similar_terms_page);
 
         Intent intent = getIntent();
         newTerm = (Term) intent.getSerializableExtra("newTerm");

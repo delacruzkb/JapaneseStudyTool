@@ -7,7 +7,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    tools:context=".SimilarTermDialog">
+    tools:context=".Pages.SimilarTermsPage">
 
     <TextView
         android:id="@+id/textView"

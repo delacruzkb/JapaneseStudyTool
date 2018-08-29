@@ -1,19 +1,13 @@
 package edu.cofc.japanesestudytool.AsyncTasks;
 
-import android.app.Dialog;
 import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import edu.cofc.japanesestudytool.AddTermDialogListAdapter;
-import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.SimilarTermDialog;
+import edu.cofc.japanesestudytool.Pages.SimilarTermsPage;
 import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermDatabase;
 
@@ -41,7 +35,7 @@ public class AddNewTerm extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else
         {
-            Intent intent = new Intent(mContext, SimilarTermDialog.class);
+            Intent intent = new Intent(mContext, SimilarTermsPage.class);
             intent.putExtra("similarTerms",terms);
             intent.putExtra("newTerm",mTerm);
             mContext.startActivity(intent);

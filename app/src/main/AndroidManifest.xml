@@ -23,7 +23,7 @@
         <activity android:name=".Pages.EditTermsPage" />
         <activity android:name=".Pages.FlashCardPage" />
         <activity android:name=".Pages.StoryPage" />
-        <activity android:name=".SimilarTermDialog"
+        <activity android:name=".Pages.SimilarTermsPage"
             android:theme="@style/AppTheme.customPopUpTheme"
             >
         </activity>
