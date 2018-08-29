@@ -97,7 +97,8 @@ public class AddTermDialogListAdapter extends BaseAdapter
                     }
                 });
 
-
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
 
