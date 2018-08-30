@@ -79,7 +79,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else if(mode.equalsIgnoreCase("Req. Kanji"))
         {
-            reqKanji = value.equalsIgnoreCase("true");
+            reqKanji = value.equalsIgnoreCase("required");
         }
         termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
     }
