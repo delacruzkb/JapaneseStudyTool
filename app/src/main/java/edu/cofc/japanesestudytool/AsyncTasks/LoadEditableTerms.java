@@ -4,6 +4,7 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     String typeSpecial;
     boolean reqKanji;
 
+    String mode;
     TermDatabase termDatabase;
 
     public LoadEditableTerms(Context mContext) {
@@ -33,16 +35,52 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
     }
 
-    public LoadEditableTerms(Context mContext, EditTermsMetrics editTermsMetrics) {
+    public LoadEditableTerms(Context mContext, String mMode, String value)
+    {
         this.context = mContext;
-        this.editTermsMetrics = editTermsMetrics;
-        japanese = editTermsMetrics.getJapanese();
-        english = editTermsMetrics.getEnglish();
-        kanji = editTermsMetrics.getKanji();
-        lesson = editTermsMetrics.getLesson();
-        termType = editTermsMetrics.getTermType();
-        typeSpecial = editTermsMetrics.getTypeSpecial();
-        reqKanji = editTermsMetrics.isReqKanji();
+        mode = mMode;
+        if(mode.equalsIgnoreCase("Japanese"))
+        {
+            japanese = value;
+        }
+        else if(mode.equalsIgnoreCase("English"))
+        {
+            english=value;
+        }
+        else if(mode.equalsIgnoreCase("Kanji"))
+        {
+            kanji = value;
+        }
+        else if(mode.equalsIgnoreCase("Type"))
+        {
+            if(value.charAt(0) == 'u')
+            {
+                termType = "verb";
+                typeSpecial ="u";
+            }
+            else if(value.charAt(0) == 'r')
+            {
+                termType = "verb";
+                typeSpecial ="ru";
+            }
+            else if (value.charAt(0) == 'i')
+            {
+                termType = "verb";
+                typeSpecial ="irr";
+            }
+            else
+            {
+                termType = value;
+            }
+        }
+        else  if(mode.equalsIgnoreCase("Lesson"))
+        {
+            lesson = Integer.valueOf(value);
+        }
+        else if(mode.equalsIgnoreCase("Req. Kanji"))
+        {
+            reqKanji = value.equalsIgnoreCase("true");
+        }
         termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
     }
 
@@ -59,43 +97,37 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     protected ArrayList<Term> doInBackground(Void... voids)
     {
         ArrayList<Term> returnValue = new ArrayList<>();
-        if(editTermsMetrics==null)
+        if(mode.equalsIgnoreCase("Japanese"))
         {
-            returnValue = (ArrayList<Term>)termDatabase.termDAO().getAllTerms();
+            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchJpns(japanese);
         }
-        else
+        else if(mode.equalsIgnoreCase("English"))
         {
-            if(!japanese.equalsIgnoreCase(""))
+            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchEng(english);
+        }
+        else if(mode.equalsIgnoreCase("Kanji"))
+        {
+            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchKanji(kanji);
+        }
+        else if(mode.equalsIgnoreCase("Type"))
+        {
+            if(termType.equalsIgnoreCase("verb"))
             {
-                returnValue = (ArrayList<Term>)termDatabase.termDAO().searchJpns(japanese);
-            }
-            else if(!english.equalsIgnoreCase(""))
-            {
-                returnValue = (ArrayList<Term>)termDatabase.termDAO().searchEng(english);
-            }
-            else if(!kanji.equalsIgnoreCase(""))
-            {
-                returnValue = (ArrayList<Term>)termDatabase.termDAO().searchKanji(kanji);
-            }
-            else if(!termType.equalsIgnoreCase(""))
-            {
-                if(!typeSpecial.equalsIgnoreCase(""))
-                {
-                    returnValue = (ArrayList<Term>)termDatabase.termDAO().searchType(termType,typeSpecial);
-                }
-                else
-                {
-                    returnValue = (ArrayList<Term>)termDatabase.termDAO().searchType(termType);
-                }
-            }
-            else if(lesson>0)
-            {
-                returnValue = (ArrayList<Term>)termDatabase.termDAO().searchReqKanjiAndLesson(reqKanji,lesson);
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchType(termType, typeSpecial);
             }
             else
             {
-                returnValue = (ArrayList<Term>)termDatabase.termDAO().searchReqKanji(reqKanji);
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchType(termType);
             }
+
+        }
+        else  if(mode.equalsIgnoreCase("Lesson"))
+        {
+            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchLesson(lesson);
+        }
+        else if(mode.equalsIgnoreCase("Req. Kanji"))
+        {
+            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchReqKanji(reqKanji);
         }
 
         return returnValue;

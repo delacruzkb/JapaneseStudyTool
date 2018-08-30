@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight=".6"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/divider230"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/searchHiraganaLabel"
+                android:layout_width="@dimen/addTermLabelWidth"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/toJapaneseText"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/searchHiraganaTextBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider240"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/searchEnglishLabel"
+                android:layout_width="@dimen/addTermLabelWidth"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/toEnglishText"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/searchEnglishTextBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider250"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/searchKanjiLabel"
+                android:layout_width="@dimen/addTermLabelWidth"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/toKanjiText"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/searchKanjiTextBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2142150"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/searchLessonLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lessonLabel"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:id="@+id/searchLessonTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:id="@+id/searchTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/typeLabel"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:id="@+id/searchTypeTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider270"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:id="@+id/searchReqKanjiTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addRequiredKanjiLabel"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <View
+            android:id="@+id/divider219"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/dividerColor" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/editTermButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/editButtonText"
+        android:textColor="@color/buttonTextColor" />
+
+    <Button
+        android:id="@+id/deleteTermButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/deleteButtonText"
+        android:textColor="@color/buttonTextColor" />
+</LinearLayout>

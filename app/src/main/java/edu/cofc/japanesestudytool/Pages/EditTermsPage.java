@@ -1,5 +1,6 @@
 package edu.cofc.japanesestudytool.Pages;
 
+import edu.cofc.japanesestudytool.EditTermListAdapter;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 
@@ -21,6 +22,7 @@ public class EditTermsPage extends AppCompatActivity
         Intent intent = getIntent();
         terms = (ArrayList<Term>) intent.getSerializableExtra("terms");
         editTermsListView = findViewById(R.id.editTermsListView);
-        //TODO:add list adapter when implemented
+        EditTermListAdapter editTermListAdapter = new EditTermListAdapter(terms,this);
+        editTermsListView.setAdapter(editTermListAdapter);
     }
 }

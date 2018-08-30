@@ -47,8 +47,8 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji")
     List<Term> searchReqKanji(boolean reqKanji);
 
-    @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji AND lesson = :lesson")
-    List<Term> searchReqKanjiAndLesson(boolean reqKanji, int lesson);
+    @Query("SELECT* FROM Term WHERE lesson = :lesson")
+    List<Term> searchLesson(int lesson);
 
 
 

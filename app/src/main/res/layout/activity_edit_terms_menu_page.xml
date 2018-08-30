@@ -5,11 +5,84 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".Pages.EditTermsMenuPage">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/loadAllLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="@string/loadAllTermsLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <Button
+        android:id="@+id/loadDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/loadAllTermsButtonText"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/textSize" />
+
+    <View
+        android:id="@+id/divider28"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/loadAllLabel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/searchSpecificAttributeLabel"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <Spinner
+        android:id="@+id/editSearchDropDownBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="@color/buttonColor"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/specificDropDrown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="@color/buttonColor"
+        android:spinnerMode="dropdown" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <EditText
+        android:id="@+id/searchEditTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
+    <View
+        android:id="@+id/divider30"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/searchEditableButtonText"
+        android:textSize="@dimen/textSize" />
 </LinearLayout>

@@ -63,6 +63,7 @@
     <string name="loadAllTermsLabel">Load full list(will take time)</string>
     <string name="loadAllTermsButtonText">Load</string>
     <string name="searchEditableButtonText">Search</string>
+    <string name="searchSpecificAttributeLabel">Edit by Attribute:</string>
 
     //Similarities Dialog
     <string name="deleteButtonText">X</string>
