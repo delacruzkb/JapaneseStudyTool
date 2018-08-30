@@ -12,7 +12,6 @@ import android.widget.TextView;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
-//TODO:handle "no lessons found"
 
 public class TermsMenuPage extends AppCompatActivity
 {
@@ -30,7 +29,6 @@ public class TermsMenuPage extends AppCompatActivity
     private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23;
     private CheckBox allLessons;
     private String whichMode;
-    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,7 +42,6 @@ public class TermsMenuPage extends AppCompatActivity
         setConfirmButtonOnClickListener();
         setSwitchOnClickListener();
         setCheckBoxOnClickListener();
-        activity = this;
     }
 
     private void initializeViews()
@@ -503,7 +500,7 @@ public class TermsMenuPage extends AppCompatActivity
                     }
                 }
                 metrics.setLessons(lessons);
-                QueryTerms queryTerms = new QueryTerms(metrics, activity);
+                QueryTerms queryTerms = new QueryTerms(metrics, confirmButton.getContext());
                 queryTerms.execute();
 
             }

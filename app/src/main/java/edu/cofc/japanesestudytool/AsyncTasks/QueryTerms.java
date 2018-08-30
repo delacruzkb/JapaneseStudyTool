@@ -1,8 +1,11 @@
 package edu.cofc.japanesestudytool.AsyncTasks;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import java.util.ArrayList;
@@ -19,12 +22,10 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
     TermDatabase termDatabase;
     TermMenuMetrics metrics;
     Context mContext;
-    Activity parentActivity;
     ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termList;
-    public QueryTerms(TermMenuMetrics termMenuMetrics, Activity activity)
+    public QueryTerms(TermMenuMetrics termMenuMetrics, Context context)
     {
-        mContext = activity.getApplicationContext();
-        parentActivity = activity;
+        mContext = context;
         metrics = termMenuMetrics;
         termDatabase = Room.databaseBuilder(mContext,TermDatabase.class,"terms").build();
     }
@@ -32,24 +33,42 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
     @Override
     protected void onPostExecute(Void voids)
     {
-        Intent intent = new Intent(mContext, HomePage.class);
-        if(metrics.getMode().equalsIgnoreCase("story"))
+        if(nounList.size() == 0)
         {
-            intent = new Intent(mContext, StoryPage.class);
+            AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+            builder.setTitle("Error");
+            builder.setMessage("No terms found");
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            Dialog dialog = builder.create();
+            dialog.show();
         }
-        if(metrics.getMode().equalsIgnoreCase("flashcard"))
+        else
         {
-            intent = new Intent(mContext, FlashCardPage.class);
+            Intent intent = new Intent(mContext, HomePage.class);
+            if(metrics.getMode().equalsIgnoreCase("story"))
+            {
+                intent = new Intent(mContext, StoryPage.class);
+            }
+            if(metrics.getMode().equalsIgnoreCase("flashcard"))
+            {
+                intent = new Intent(mContext, FlashCardPage.class);
 
+            }
+            intent.putExtra("metrics",metrics);
+            intent.putExtra("nounList",nounList);
+            intent.putExtra("verbList",verbList);
+            intent.putExtra("adjectiveList",adjectiveList);
+            intent.putExtra("grammarList",grammarList);
+            intent.putExtra("otherList",otherList);
+            intent.putExtra("termList",termList);
+            mContext.startActivity(intent);
         }
-        intent.putExtra("metrics",metrics);
-        intent.putExtra("nounList",nounList);
-        intent.putExtra("verbList",verbList);
-        intent.putExtra("adjectiveList",adjectiveList);
-        intent.putExtra("grammarList",grammarList);
-        intent.putExtra("otherList",otherList);
-        intent.putExtra("termList",termList);
-        parentActivity.startActivity(intent);
+
     }
 
     @Override
