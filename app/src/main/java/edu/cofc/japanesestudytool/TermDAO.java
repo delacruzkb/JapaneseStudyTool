@@ -19,7 +19,7 @@ public interface TermDAO
     List<Term> getAllTerms();
 
 
-    @Query("SELECT * FROM Term WHERE type LIKE :type ORDER BY RANDOM() LIMIT :limit")
+    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypes(String type, int limit);
 
     @Query("SELECT * FROM Term WHERE type LIKE :type and lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")

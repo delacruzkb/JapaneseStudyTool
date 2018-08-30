@@ -52,7 +52,7 @@ public class TermListAdapter extends BaseAdapter
     {
         View rowView = mLayoutInflater.inflate(R.layout.term_list_item, parent,false);
         final Term term = (Term) getItem(position);
-        if(term.getType().equalsIgnoreCase("verb"))
+        if(term.getType().contains("verb"))
         {
             term.setJpns(term.getJpns()+ "("+term.getType()+")");
             if(!term.getKanji().equalsIgnoreCase("null"))

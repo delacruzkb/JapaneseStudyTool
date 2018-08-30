@@ -27,7 +27,6 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         parentActivity = activity;
         metrics = termMenuMetrics;
         termDatabase = Room.databaseBuilder(mContext,TermDatabase.class,"terms").build();
-
     }
 
     @Override

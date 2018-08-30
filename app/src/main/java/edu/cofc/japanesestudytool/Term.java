@@ -24,7 +24,7 @@ public class Term implements Serializable
         jpns ="a";
         eng= "ア";
         kanji = "a";
-        type = "a";
+        type = "u-verb";
         lesson = 0;
         reqKanji=false;
         checked = false;
