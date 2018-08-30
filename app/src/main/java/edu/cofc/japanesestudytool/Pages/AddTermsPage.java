@@ -192,15 +192,15 @@ public class AddTermsPage extends AppCompatActivity
                 temp.setType("verb");
                 if(uRadioButton.isChecked())
                 {
-                    temp.setTypeSpecial("u");
+                    temp.setType("u-verb");
                 }
                 else if(ruRadioButton.isChecked())
                 {
-                    temp.setTypeSpecial("ru");
+                    temp.setType("ru-verb");
                 }
                 else if(irregularRadioButton.isChecked())
                 {
-                    temp.setTypeSpecial("irr");
+                    temp.setType("irr-verb");
                 }
             }
             else if(adjectiveRadioButton.isChecked())

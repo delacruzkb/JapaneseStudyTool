@@ -9,23 +9,6 @@
     android:focusableInTouchMode="true"
     tools:context=".Pages.EditTermsMenuPage">
 
-    <TextView
-        android:id="@+id/loadAllLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/loadAllTermsLabel"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
-
-    <Button
-        android:id="@+id/loadDataButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/buttonColor"
-        android:text="@string/loadAllTermsButtonText"
-        android:textColor="@color/buttonTextColor"
-        android:textSize="@dimen/textSize" />
-
     <View
         android:id="@+id/divider28"
         android:layout_width="match_parent"

@@ -22,7 +22,7 @@ public class EditTermsMenuPage extends AppCompatActivity
     private EditText searchEditTextBox;
     private final String[] items = new String[]{"Japanese","English","Kanji","Type","Lesson","Req. Kanji"};
     private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
-    private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
+    private final String[] lessonSpec = new String[]{"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
             "20","21","22","23"};
     private final String[] reqKanjiSpec = new String[]{"Required","Non-required"};
     @Override
@@ -31,15 +31,6 @@ public class EditTermsMenuPage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_terms_menu_page);
 
-        loadAllButton = findViewById(R.id.loadDataButton);
-        loadAllButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                LoadEditableTerms loadEditableTerms = new LoadEditableTerms(loadAllButton.getContext());
-                loadEditableTerms.execute();
-            }
-        });
         searchEditTextBox = findViewById(R.id.searchEditTextBox);
         searchEditTextBox.setVisibility(View.INVISIBLE);
 

@@ -16,7 +16,6 @@ import edu.cofc.japanesestudytool.TermDatabase;
 public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
 {
     Context context;
-    EditTermsMetrics editTermsMetrics;
     String japanese;
 
     String english;
@@ -29,11 +28,6 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     String mode;
     TermDatabase termDatabase;
 
-    public LoadEditableTerms(Context mContext) {
-        this.context = mContext;
-        editTermsMetrics = null;
-        termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
-    }
 
     public LoadEditableTerms(Context mContext, String mMode, String value)
     {
@@ -111,15 +105,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else if(mode.equalsIgnoreCase("Type"))
         {
-            if(termType.equalsIgnoreCase("verb"))
-            {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchType(termType, typeSpecial);
-            }
-            else
-            {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchType(termType);
-            }
-
+            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchType(termType);
         }
         else  if(mode.equalsIgnoreCase("Lesson"))
         {

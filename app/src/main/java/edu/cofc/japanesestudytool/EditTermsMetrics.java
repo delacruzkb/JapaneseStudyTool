@@ -7,7 +7,6 @@ public class EditTermsMetrics
     String kanji;
     int lesson;
     String termType;
-    String typeSpecial;
     boolean reqKanji;
 
     public EditTermsMetrics()
@@ -17,7 +16,6 @@ public class EditTermsMetrics
         kanji="";
         lesson = 0;
         termType ="";
-        typeSpecial="";
         reqKanji=false;
     }
 
@@ -61,13 +59,6 @@ public class EditTermsMetrics
         this.termType = termType;
     }
 
-    public String getTypeSpecial() {
-        return typeSpecial;
-    }
-
-    public void setTypeSpecial(String typeSpecial) {
-        this.typeSpecial = typeSpecial;
-    }
 
     public boolean isReqKanji() {
         return reqKanji;

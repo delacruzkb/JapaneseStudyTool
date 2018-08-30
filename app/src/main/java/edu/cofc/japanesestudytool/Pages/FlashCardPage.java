@@ -112,10 +112,6 @@ public class FlashCardPage extends AppCompatActivity
     private void loadFlipCard(Term term) {
         lessonNumberLabel.setText(new Integer(term.getLesson()).toString());
         typeValueLabel.setText(term.getType());
-        if(term.getType().equalsIgnoreCase("verb"))
-        {
-            typeValueLabel.setText(term.getTypeSpecial()+"-"+term.getType());
-        }
         reqKanjiLabel.setVisibility(View.INVISIBLE);
         flipKanji.setVisibility(View.VISIBLE);
         if(!useKanji)

@@ -60,14 +60,7 @@ public class EditTermListAdapter extends BaseAdapter
         Integer tempInt = new Integer(term.getLesson());
         lesson.setText(tempInt.toString());
         TextView type = rowView.findViewById(R.id.searchTypeTextBox);
-        if(term.getType().equalsIgnoreCase("verb"))
-        {
-            type.setText(term.getTypeSpecial()+ "-"+term.getType());
-        }
-        else
-        {
-            type.setText(term.getType());
-        }
+        type.setText(term.getType());
         TextView reqKanji = rowView.findViewById(R.id.searchReqKanjiTextBox);
         if(!term.isReqKanji())
         {

@@ -54,9 +54,8 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                 term.setEng(termData[1]);
                 term.setKanji(termData[2]);
                 term.setType(termData[3]);
-                term.setTypeSpecial(termData[4]);
-                term.setLesson(Integer.parseInt(termData[5]));
-                term.setReqKanji(termData[6]);
+                term.setLesson(Integer.parseInt(termData[4]));
+                term.setReqKanji(termData[5]);
                 listOfTerms.add(term);
             }
 

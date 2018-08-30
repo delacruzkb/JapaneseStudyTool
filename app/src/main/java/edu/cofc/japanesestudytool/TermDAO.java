@@ -29,25 +29,22 @@ public interface TermDAO
     List<Term> getAllMatchedTerms(String japanese, String english);
 
 
-    @Query("SELECT* FROM Term WHERE jpns LIKE :japanese")
+    @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%' ORDER BY jpns")
     List<Term> searchJpns(String japanese);
 
-    @Query("SELECT* FROM Term WHERE eng LIKE :english")
+    @Query("SELECT* FROM Term WHERE eng LIKE  '%' || :english || '%' ORDER BY eng")
     List<Term> searchEng(String english);
 
-    @Query("SELECT* FROM Term WHERE kanji LIKE :kanji")
+    @Query("SELECT* FROM Term WHERE kanji LIKE '%' || :kanji || '%' ORDER BY jpns")
     List<Term> searchKanji(String kanji);
 
-    @Query("SELECT* FROM Term WHERE type LIKE :type")
+    @Query("SELECT* FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY jpns")
     List<Term> searchType(String type);
 
-    @Query("SELECT* FROM Term WHERE type LIKE :type AND typeSpecial LIKE :typeSpecial")
-    List<Term> searchType(String type, String typeSpecial);
-
-    @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji")
+    @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji ORDER BY jpns")
     List<Term> searchReqKanji(boolean reqKanji);
 
-    @Query("SELECT* FROM Term WHERE lesson = :lesson")
+    @Query("SELECT* FROM Term WHERE lesson = :lesson ORDER BY jpns")
     List<Term> searchLesson(int lesson);
 
 

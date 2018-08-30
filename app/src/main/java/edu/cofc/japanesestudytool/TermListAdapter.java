@@ -54,10 +54,10 @@ public class TermListAdapter extends BaseAdapter
         final Term term = (Term) getItem(position);
         if(term.getType().equalsIgnoreCase("verb"))
         {
-            term.setJpns(term.getJpns()+ " ("+term.getTypeSpecial()+"-verb)");
+            term.setJpns(term.getJpns()+ "("+term.getType()+")");
             if(!term.getKanji().equalsIgnoreCase("null"))
             {
-                term.setKanji(term.getKanji()+ " ("+term.getTypeSpecial()+"-verb)");
+                term.setKanji(term.getKanji()+ " ("+term.getType()+")");
             }
         }
         final CheckBox checkBox = rowView.findViewById(R.id.checkBox);

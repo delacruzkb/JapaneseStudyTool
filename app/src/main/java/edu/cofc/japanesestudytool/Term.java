@@ -15,7 +15,6 @@ public class Term implements Serializable
     private String eng;
     private String kanji;
     private String type;
-    private String typeSpecial;
     private int lesson;
     private boolean reqKanji;
     private boolean checked;
@@ -26,7 +25,6 @@ public class Term implements Serializable
         eng= "ア";
         kanji = "a";
         type = "a";
-        typeSpecial = "NULL";
         lesson = 0;
         reqKanji=false;
         checked = false;
@@ -72,13 +70,6 @@ public class Term implements Serializable
         this.type = type;
     }
 
-    public String getTypeSpecial() {
-        return typeSpecial;
-    }
-
-    public void setTypeSpecial(String typeSpecial) {
-        this.typeSpecial = typeSpecial;
-    }
 
     public int getLesson() {
         return lesson;
