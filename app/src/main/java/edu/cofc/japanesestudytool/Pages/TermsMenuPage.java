@@ -27,7 +27,7 @@ public class TermsMenuPage extends AppCompatActivity
 
     private CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6,lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
     private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23;
-    private CheckBox allLessons;
+    private CheckBox allLessons, extraTerms;
     private String whichMode;
 
     @Override
@@ -99,6 +99,7 @@ public class TermsMenuPage extends AppCompatActivity
         lesson22 = findViewById(R.id.lessonCheckBox22);
         lesson23 = findViewById(R.id.lessonCheckBox23);
         allLessons = findViewById(R.id.allLessonsCheckBox);
+        extraTerms = findViewById(R.id.extraTerms);
     }
 
     private void setCountButtonOnClickListeners()
@@ -396,6 +397,12 @@ public class TermsMenuPage extends AppCompatActivity
                 allLessons.setChecked(false);
             }
         });
+        extraTerms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allLessons.setChecked(false);
+            }
+        });
 
         allLessons.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -426,6 +433,7 @@ public class TermsMenuPage extends AppCompatActivity
                     lesson21.setChecked(false);
                     lesson22.setChecked(false);
                     lesson23.setChecked(false);
+                    extraTerms.setChecked(false);
                 }
             }
         });
@@ -453,7 +461,7 @@ public class TermsMenuPage extends AppCompatActivity
                 if(!allLessons.isChecked())
                 {
                     //Gather Status of all checkboxes
-                    boolean[] temp = new boolean[23];
+                    boolean[] temp = new boolean[24];
                     temp[0]= lesson1.isChecked();
                     temp[1]= lesson2.isChecked();
                     temp[2]= lesson3.isChecked();
@@ -477,6 +485,7 @@ public class TermsMenuPage extends AppCompatActivity
                     temp[20]= lesson21.isChecked();
                     temp[21]= lesson22.isChecked();
                     temp[22]= lesson23.isChecked();
+                    temp[23] = extraTerms.isChecked();
 
                     //Count how many lessons are selected
                     int lessonCounter=0;

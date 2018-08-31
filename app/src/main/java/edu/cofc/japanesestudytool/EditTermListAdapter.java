@@ -1,8 +1,10 @@
 package edu.cofc.japanesestudytool;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
+import edu.cofc.japanesestudytool.Pages.EditSingleTermDialogPage;
 
 public class EditTermListAdapter extends BaseAdapter
 {
@@ -43,7 +46,7 @@ public class EditTermListAdapter extends BaseAdapter
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent)
+    public View getView(final int position, final View convertView, ViewGroup parent)
     {
         View rowView = mLayoutInflater.inflate(R.layout.edit_term_list_item, parent,false);
         final Term term = (Term) getItem(position);
@@ -71,7 +74,9 @@ public class EditTermListAdapter extends BaseAdapter
             @Override
             public void onClick(View v)
             {
-                //TODO: make popup edit list or go to an edit activity
+                Intent intent = new Intent(context,EditSingleTermDialogPage.class);
+                intent.putExtra("term",term);
+                ((Activity)context).startActivityForResult(intent,1);
             }
         });
 

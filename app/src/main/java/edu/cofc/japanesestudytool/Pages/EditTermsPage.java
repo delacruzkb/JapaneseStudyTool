@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-
+//TODO: configure refresh after edit
 public class EditTermsPage extends AppCompatActivity
 {
     ListView editTermsListView;
@@ -21,8 +21,18 @@ public class EditTermsPage extends AppCompatActivity
         setContentView(R.layout.activity_edit_terms_page);
         Intent intent = getIntent();
         terms = (ArrayList<Term>) intent.getSerializableExtra("terms");
+
         editTermsListView = findViewById(R.id.editTermsListView);
         EditTermListAdapter editTermListAdapter = new EditTermListAdapter(terms,this);
         editTermsListView.setAdapter(editTermListAdapter);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent intent = new Intent(this, EditTermsMenuPage.class);
+        startActivity(intent);
+        finish();
     }
 }

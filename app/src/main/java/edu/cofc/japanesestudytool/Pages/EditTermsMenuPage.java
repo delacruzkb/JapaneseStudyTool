@@ -1,5 +1,6 @@
 package edu.cofc.japanesestudytool.Pages;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,6 @@ import edu.cofc.japanesestudytool.R;
 
 public class EditTermsMenuPage extends AppCompatActivity
 {
-    private Button loadAllButton;
     private Button searchButton;
     private Spinner dropDownBar;
     private Spinner specificDropDownBar;
@@ -106,5 +106,14 @@ public class EditTermsMenuPage extends AppCompatActivity
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
+        finish();
     }
 }

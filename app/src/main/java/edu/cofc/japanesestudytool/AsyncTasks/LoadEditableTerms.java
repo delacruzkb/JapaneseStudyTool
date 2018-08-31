@@ -1,5 +1,6 @@
 package edu.cofc.japanesestudytool.AsyncTasks;
 
+import android.app.Activity;
 import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
@@ -82,6 +83,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     protected void onPostExecute(ArrayList<Term> terms)
     {
         super.onPostExecute(terms);
+        ((Activity)context).finish();
         Intent intent = new Intent(context,EditTermsPage.class);
         intent.putExtra("terms",terms);
         context.startActivity(intent);

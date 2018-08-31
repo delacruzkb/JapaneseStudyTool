@@ -578,6 +578,16 @@
                 android:textSize="@dimen/textSize" />
 
             <CheckBox
+                android:id="@+id/extraTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/checkBoxColor"
+                android:duplicateParentState="false"
+                android:text="Extras"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <CheckBox
                 android:id="@+id/allLessonsCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

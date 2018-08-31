@@ -9,10 +9,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class AddTermsPage extends AppCompatActivity
@@ -20,16 +21,11 @@ public class AddTermsPage extends AppCompatActivity
     EditText jpnsTextBox;
     EditText engTextBox;
     EditText kanjiTextBox;
-    TextView verbLabel;
-    RadioButton nounRadioButton;
-    RadioButton verbRadioButton;
-    RadioButton adjectiveRadioButton;
-    RadioButton grammarRadioButton;
-    RadioButton otherRadioButton;
-    RadioButton uRadioButton;
-    RadioButton ruRadioButton;
-    RadioButton irregularRadioButton;
-    EditText lessonTextBox;
+    Spinner typeDropDownBar;
+    Spinner lessonDropDownBar;
+    private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
+    private final String[] lessonSpec = new String[]{"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
+            "20","21","22","23"};
     CheckBox reqKanjiCheckbox;
     Button addTermButton;
 
@@ -46,120 +42,14 @@ public class AddTermsPage extends AppCompatActivity
         jpnsTextBox = findViewById(R.id.addJapaneseTextBox);
         engTextBox = findViewById(R.id.addEnglishTextBox);
         kanjiTextBox = findViewById(R.id.addKanjiTextBox);
-        verbLabel = findViewById(R.id.addTypeSpecialLabel);
-        verbLabel.setVisibility(View.INVISIBLE);
-        nounRadioButton = findViewById(R.id.nounRadioButton);
-        nounRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nounRadioButton.setChecked(true);
-                verbRadioButton.setChecked(false);
-                adjectiveRadioButton.setChecked(false);
-                grammarRadioButton.setChecked(false);
-                otherRadioButton.setChecked(false);
-                uRadioButton.setVisibility(View.INVISIBLE);
-                ruRadioButton.setVisibility(View.INVISIBLE);
-                irregularRadioButton.setVisibility(View.INVISIBLE);
-                verbLabel.setVisibility(View.INVISIBLE);
-            }
-        });
-        verbRadioButton = findViewById(R.id.verbRadioButton);
-        verbRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nounRadioButton.setChecked(false);
-                verbRadioButton.setChecked(true);
-                adjectiveRadioButton.setChecked(false);
-                grammarRadioButton.setChecked(false);
 
-                uRadioButton.setVisibility(View.VISIBLE);
-                ruRadioButton.setVisibility(View.VISIBLE);
-                irregularRadioButton.setVisibility(View.VISIBLE);
-                verbLabel.setVisibility(View.VISIBLE);
-            }
-        });
-        adjectiveRadioButton = findViewById(R.id.adjectiveRadioButton);
-        adjectiveRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nounRadioButton.setChecked(false);
-                verbRadioButton.setChecked(false);
-                adjectiveRadioButton.setChecked(true);
-                grammarRadioButton.setChecked(false);
-                otherRadioButton.setChecked(false);
-                uRadioButton.setVisibility(View.INVISIBLE);
-                ruRadioButton.setVisibility(View.INVISIBLE);
-                irregularRadioButton.setVisibility(View.INVISIBLE);
-                verbLabel.setVisibility(View.INVISIBLE);
-            }
-        });
-        grammarRadioButton = findViewById(R.id.grammarRadioButton);
-        grammarRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nounRadioButton.setChecked(false);
-                verbRadioButton.setChecked(false);
-                adjectiveRadioButton.setChecked(false);
-                grammarRadioButton.setChecked(true);
-                otherRadioButton.setChecked(false);
-                uRadioButton.setVisibility(View.INVISIBLE);
-                ruRadioButton.setVisibility(View.INVISIBLE);
-                irregularRadioButton.setVisibility(View.INVISIBLE);
-                verbLabel.setVisibility(View.INVISIBLE);
-
-            }
-        });
-        otherRadioButton = findViewById(R.id.otherRadioButton);
-        otherRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nounRadioButton.setChecked(false);
-                verbRadioButton.setChecked(false);
-                adjectiveRadioButton.setChecked(false);
-                grammarRadioButton.setChecked(false);
-                otherRadioButton.setChecked(true);
-                uRadioButton.setVisibility(View.INVISIBLE);
-                ruRadioButton.setVisibility(View.INVISIBLE);
-                irregularRadioButton.setVisibility(View.INVISIBLE);
-                verbLabel.setVisibility(View.INVISIBLE);
-            }
-        });
-
-        uRadioButton = findViewById(R.id.uRadioButton);
-        uRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                uRadioButton.setChecked(true);
-                ruRadioButton.setChecked(false);
-                irregularRadioButton.setChecked(false);
-            }
-        });
-        ruRadioButton = findViewById(R.id.rURadioButton);
-        ruRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                uRadioButton.setChecked(false);
-                ruRadioButton.setChecked(true);
-                irregularRadioButton.setChecked(false);
-            }
-        });
-        irregularRadioButton = findViewById(R.id.irregularRadioButton);
-        irregularRadioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                uRadioButton.setChecked(false);
-                ruRadioButton.setChecked(false);
-                irregularRadioButton.setChecked(true);
-            }
-        });
-        uRadioButton.setVisibility(View.INVISIBLE);
-        ruRadioButton.setVisibility(View.INVISIBLE);
-        irregularRadioButton.setVisibility(View.INVISIBLE);
-
-        lessonTextBox = findViewById(R.id.addLessonTextBox);
-
+        typeDropDownBar = findViewById(R.id.addTypeDropDownBar);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,typeSpecs);
+        typeDropDownBar.setAdapter(adapter);
+        lessonDropDownBar = findViewById(R.id.addLessonDropDownBar);
+        adapter =  new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,lessonSpec);
+        lessonDropDownBar.setAdapter(adapter);
         reqKanjiCheckbox = findViewById(R.id.addReqKanjiCheckBox);
-
         addTermButton = findViewById(R.id.addNewTermButton);
         addTermButton.setOnClickListener(new View.OnClickListener()
         {
@@ -176,52 +66,14 @@ public class AddTermsPage extends AppCompatActivity
     {
         boolean engSupplied =!(engTextBox.getText().toString() == null || engTextBox.getText().toString().equalsIgnoreCase(""));
         boolean jpnsSupplied=!(jpnsTextBox.getText().toString() == null || jpnsTextBox.getText().toString().equalsIgnoreCase(""));
-        boolean lessonSupplied =!(lessonTextBox.getText().toString() == null || lessonTextBox.getText().toString().equalsIgnoreCase(""));
-        if(engSupplied && jpnsSupplied && lessonSupplied)
+        if(engSupplied && jpnsSupplied)
         {
             Term temp = new Term();
             temp.setEng(engTextBox.getText().toString());
             temp.setJpns(jpnsTextBox.getText().toString());
             temp.setKanji(kanjiTextBox.getText().toString());
-            if(nounRadioButton.isChecked())
-            {
-                temp.setType("noun");
-            }
-            else if(verbRadioButton.isChecked())
-            {
-                temp.setType("verb");
-                if(uRadioButton.isChecked())
-                {
-                    temp.setType("u-verb");
-                }
-                else if(ruRadioButton.isChecked())
-                {
-                    temp.setType("ru-verb");
-                }
-                else if(irregularRadioButton.isChecked())
-                {
-                    temp.setType("irr-verb");
-                }
-            }
-            else if(adjectiveRadioButton.isChecked())
-            {
-                temp.setType("adjective");
-            }
-            else if(grammarRadioButton.isChecked())
-            {
-                temp.setType("grammar");
-            }
-            else if(otherRadioButton.isChecked())
-            {
-                temp.setType("other");
-            }
-
-            int lesson = Integer.parseInt(lessonTextBox.getText().toString());
-            if(lesson>23)
-            {
-                lesson = 0;
-            }
-            temp.setLesson(lesson);
+            temp.setType(typeDropDownBar.getSelectedItem().toString());
+            temp.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
             temp.setReqKanji(reqKanjiCheckbox.isChecked());
             resetFields();
             AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);
@@ -237,10 +89,6 @@ public class AddTermsPage extends AppCompatActivity
             if(!jpnsSupplied)
             {
                 message+="Japanese\n";
-            }
-            if(!lessonSupplied)
-            {
-                message+= "Lesson";
             }
             AlertDialog.Builder builder = new AlertDialog.Builder(addTermButton.getContext());
             builder.setTitle("ERROR");
@@ -261,15 +109,6 @@ public class AddTermsPage extends AppCompatActivity
         jpnsTextBox.setText("");
         engTextBox.setText("");
         kanjiTextBox.setText("");
-        nounRadioButton.setChecked(true);
-        verbRadioButton.setChecked(false);
-        adjectiveRadioButton.setChecked(false);
-        otherRadioButton.setChecked(false);
-        grammarRadioButton.setChecked(false);
-        ruRadioButton.setVisibility(View.INVISIBLE);
-        uRadioButton.setVisibility(View.INVISIBLE);
-        irregularRadioButton.setVisibility(View.INVISIBLE);
-        lessonTextBox.setText("");
         reqKanjiCheckbox.setChecked(false);
     }
 }

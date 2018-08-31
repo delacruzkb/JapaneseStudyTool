@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
-//TODO:handle void lessons
 public class FlashCardPage extends AppCompatActivity
 {
     private ArrayList<Term> termList;
