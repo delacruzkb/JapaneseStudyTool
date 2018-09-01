@@ -112,7 +112,6 @@ public class EditTermsMenuPage extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         AlertDialog.Builder builder = new AlertDialog.Builder(searchButton.getContext());
         builder.setTitle("Warning");
         builder.setMessage("Return to the menu??");

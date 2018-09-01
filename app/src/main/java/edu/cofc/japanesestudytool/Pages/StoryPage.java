@@ -5,10 +5,16 @@ import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermListAdapter;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -50,6 +56,7 @@ public class StoryPage extends AppCompatActivity
             public void onClick(View v)
             {
                 rePopulateListView(nounList);
+
             }
         });
         verbListButton = findViewById(R.id.verbListButton);
@@ -106,6 +113,16 @@ public class StoryPage extends AppCompatActivity
 
     private void rePopulateListView(ArrayList<Term> terms)
     {
+        //Remove keyboard for viewing
+        InputMethodManager imm = (InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(this);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        //populate
         TermListAdapter termListAdapter = new TermListAdapter(this.getApplicationContext(),terms,useJapaneseFirst,useKanji,useLessonKanjiOnly,useKanjiFirst);
         termListView.setAdapter(termListAdapter);
     }
@@ -123,5 +140,27 @@ public class StoryPage extends AppCompatActivity
         useKanji = metrics.isKanji();
         useLessonKanjiOnly = metrics.isLessonKanjiOnly();
         useKanjiFirst = metrics.isKanjiFirst();
+    }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(browser.getContext());
+        builder.setTitle(getResources().getString(R.string.warningTitle));
+        builder.setMessage(getResources().getString(R.string.onBackPressedMessage));
+        builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                StoryPage.super.onBackPressed();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
     }
 }

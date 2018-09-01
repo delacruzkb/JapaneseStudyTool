@@ -52,14 +52,6 @@ public class TermListAdapter extends BaseAdapter
     {
         View rowView = mLayoutInflater.inflate(R.layout.term_list_item, parent,false);
         final Term term = (Term) getItem(position);
-        if(term.getType().contains("verb"))
-        {
-            term.setJpns(term.getJpns()+ "("+term.getType()+")");
-            if(!term.getKanji().equalsIgnoreCase("null"))
-            {
-                term.setKanji(term.getKanji()+ " ("+term.getType()+")");
-            }
-        }
         final CheckBox checkBox = rowView.findViewById(R.id.checkBox);
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +61,7 @@ public class TermListAdapter extends BaseAdapter
         });
         checkBox.setChecked(term.isChecked());
         final EditText termText = rowView.findViewById(R.id.termText);
+        termText.setEnabled(false);
         Button toEng = rowView.findViewById(R.id.toEnglishButton);
         toEng.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +74,10 @@ public class TermListAdapter extends BaseAdapter
             @Override
             public void onClick(View v) {
                 termText.setText(term.getJpns());
+                if(term.getType().contains("verb"))
+                {
+                    termText.setText(term.getJpns() + "(" + term.getType() + ")");
+                }
             }
         });
         Button toKanji = rowView.findViewById(R.id.toKanjiButton);
@@ -88,6 +85,10 @@ public class TermListAdapter extends BaseAdapter
             @Override
             public void onClick(View v) {
                 termText.setText(term.getKanji());
+                if(term.getType().contains("verb"))
+                {
+                    termText.setText(term.getKanji() + "(" + term.getType() + ")");
+                }
             }
         });
         if( (term.getKanji()==null) || (term.getKanji().equalsIgnoreCase("NULL")))
@@ -101,12 +102,24 @@ public class TermListAdapter extends BaseAdapter
         if(showJapaneseFirst)
         {
             termText.setText(term.getJpns());
+            if(term.getType().contains("verb"))
+            {
+                termText.setText(term.getJpns() + "(" + term.getType() + ")");
+            }
             if(showKanjiFirst)
             {
                 termText.setText(term.getKanji());
+                if(term.getType().contains("verb"))
+                {
+                    termText.setText(term.getKanji() + "(" + term.getType() + ")");
+                }
                 if(lessonKanjiOnly&& !term.isReqKanji())
                 {
                     termText.setText(term.getJpns());
+                    if(term.getType().contains("verb"))
+                    {
+                        termText.setText(term.getJpns() + "(" + term.getType() + ")");
+                    }
                     toKanji.setVisibility(View.INVISIBLE);
                 }
             }
