@@ -16,6 +16,7 @@
 
         <TextView
             android:id="@+id/nounCountLabel"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6.5"
             android:gravity="center_vertical"
@@ -25,6 +26,7 @@
 
         <Button
             android:id="@+id/nounCountDecreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -34,6 +36,7 @@
 
         <EditText
             android:id="@+id/nounCountInput"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
@@ -45,6 +48,7 @@
 
         <Button
             android:id="@+id/nounCountIncreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -60,6 +64,7 @@
 
         <TextView
             android:id="@+id/adjectiveCountLabel"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6.5"
             android:gravity="center_vertical"
@@ -69,6 +74,7 @@
 
         <Button
             android:id="@+id/adjectiveCountDecreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -78,6 +84,7 @@
 
         <EditText
             android:id="@+id/adjectiveCountInput"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
@@ -89,6 +96,7 @@
 
         <Button
             android:id="@+id/adjectiveCountIncreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -104,6 +112,7 @@
 
         <TextView
             android:id="@+id/verbCountLabel"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6.5"
             android:gravity="center_vertical"
@@ -113,6 +122,7 @@
 
         <Button
             android:id="@+id/verbCountDecreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -122,6 +132,7 @@
 
         <EditText
             android:id="@+id/verbCountInput"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
@@ -133,6 +144,7 @@
 
         <Button
             android:id="@+id/verbCountIncreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -148,6 +160,7 @@
 
         <TextView
             android:id="@+id/grammarCountLabel"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6.5"
             android:gravity="center_vertical"
@@ -157,6 +170,7 @@
 
         <Button
             android:id="@+id/grammarCountDecreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -166,6 +180,7 @@
 
         <EditText
             android:id="@+id/grammarCountInput"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
@@ -177,6 +192,7 @@
 
         <Button
             android:id="@+id/grammarCountIncreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -188,11 +204,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
-        android:orientation="horizontal"
-        an>
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/otherCountLabel"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6.5"
             android:gravity="center_vertical"
@@ -202,6 +218,7 @@
 
         <Button
             android:id="@+id/otherCountDecreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
@@ -211,6 +228,7 @@
 
         <EditText
             android:id="@+id/otherCountInput"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
@@ -222,6 +240,7 @@
 
         <Button
             android:id="@+id/otherCountIncreaseButton"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
