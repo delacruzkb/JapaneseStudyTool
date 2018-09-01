@@ -1,5 +1,7 @@
 package edu.cofc.japanesestudytool.Pages;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -8,6 +10,7 @@ import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 import android.content.Intent;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,6 +49,7 @@ public class FlashCardPage extends AppCompatActivity
         reqKanjiLabel = findViewById(R.id.reqKanjiLabel);
         flashCard = findViewById(R.id.flashCard);
         flashCard.setEnabled(false);
+        flashCard.setMovementMethod(new ScrollingMovementMethod());
         flipEng = findViewById(R.id.flipEng);
         flipEng.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +145,34 @@ public class FlashCardPage extends AppCompatActivity
         cardCountLabel.setText((currentCardNumber+1) +"/"+ cardCount);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        AlertDialog.Builder builder = new AlertDialog.Builder(flashCard.getContext());
+        builder.setTitle("Warning");
+        builder.setMessage("Return to the menu??");
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton("Return", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                Intent intent = new Intent(flashCard.getContext(), HomePage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
     private void gatherInformation(Intent intent)
     {
         metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");

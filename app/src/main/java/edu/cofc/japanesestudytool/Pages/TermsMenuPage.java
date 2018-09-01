@@ -1,13 +1,15 @@
 package edu.cofc.japanesestudytool.Pages;
 
-import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Switch;
-import android.widget.TextView;
 
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
@@ -15,7 +17,7 @@ import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 public class TermsMenuPage extends AppCompatActivity
 {
-    private TextView nounCountText, adjectiveCountText, verbCountText, grammarCountText, otherCountText;
+    private EditText nounCountText, adjectiveCountText, verbCountText, grammarCountText, otherCountText;
     private Button nounCountDecreaseButton, nounCountIncreaseButton;
     private Button adjectiveCountDecreaseButton, adjectiveCountIncreaseButton;
     private Button verbCountDecreaseButton, verbCountIncreaseButton;
@@ -29,6 +31,8 @@ public class TermsMenuPage extends AppCompatActivity
     private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23;
     private CheckBox allLessons, extraTerms;
     private String whichMode;
+    private final int minCountLimit=0;
+    private final int maxCountLimit=50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,6 +43,7 @@ public class TermsMenuPage extends AppCompatActivity
         // segregated into private methods to ease debugging
         initializeViews();
         setCountButtonOnClickListeners();
+        setCountTextOnFocusChangeListeners();
         setConfirmButtonOnClickListener();
         setSwitchOnClickListener();
         setCheckBoxOnClickListener();
@@ -102,6 +107,31 @@ public class TermsMenuPage extends AppCompatActivity
         extraTerms = findViewById(R.id.extraTerms);
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(confirmButton.getContext());
+        builder.setTitle(getResources().getString(R.string.warningTitle));
+        builder.setMessage(getResources().getString(R.string.onBackPressedMessage));
+        builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                Intent intent = new Intent(confirmButton.getContext(), HomePage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
     private void setCountButtonOnClickListeners()
     {
         nounCountDecreaseButton.setOnClickListener(new View.OnClickListener()
@@ -109,8 +139,9 @@ public class TermsMenuPage extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                makeCountsValid();
                 int count = Integer.parseInt(nounCountText.getText().toString());
-                if(count > 0)
+                if(count > minCountLimit)
                 {
                     nounCountText.setText((count-1) + "");
                 }
@@ -121,8 +152,9 @@ public class TermsMenuPage extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                makeCountsValid();
                 int count = Integer.parseInt(nounCountText.getText().toString());
-                if(count < 15)
+                if(count < maxCountLimit)
                 {
                     nounCountText.setText((count+1) + "");
                 }
@@ -131,9 +163,11 @@ public class TermsMenuPage extends AppCompatActivity
 
         adjectiveCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                makeCountsValid();
                 int count = Integer.parseInt(adjectiveCountText.getText().toString());
-                if(count > 0)
+                if(count > minCountLimit)
                 {
                     adjectiveCountText.setText((count-1) + "");
                 }
@@ -142,9 +176,11 @@ public class TermsMenuPage extends AppCompatActivity
 
         adjectiveCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                makeCountsValid();
                 int count = Integer.parseInt(adjectiveCountText.getText().toString());
-                if(count < 15)
+                if(count < maxCountLimit)
                 {
                     adjectiveCountText.setText((count+1) + "");
                 }
@@ -154,8 +190,9 @@ public class TermsMenuPage extends AppCompatActivity
         verbCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                makeCountsValid();
                 int count = Integer.parseInt(verbCountText.getText().toString());
-                if(count > 0)
+                if(count > minCountLimit)
                 {
                     verbCountText.setText((count-1) + "");
                 }
@@ -165,8 +202,9 @@ public class TermsMenuPage extends AppCompatActivity
         verbCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                makeCountsValid();
                 int count = Integer.parseInt(verbCountText.getText().toString());
-                if(count < 15)
+                if(count < maxCountLimit)
                 {
                     verbCountText.setText((count+1) + "");
                 }
@@ -176,8 +214,9 @@ public class TermsMenuPage extends AppCompatActivity
         grammarCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                makeCountsValid();
                 int count = Integer.parseInt(grammarCountText.getText().toString());
-                if(count > 0)
+                if(count > minCountLimit)
                 {
                     grammarCountText.setText((count-1) + "");
                 }
@@ -187,8 +226,9 @@ public class TermsMenuPage extends AppCompatActivity
         grammarCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                makeCountsValid();
                 int count = Integer.parseInt(grammarCountText.getText().toString());
-                if(count < 15)
+                if(count < maxCountLimit)
                 {
                     grammarCountText.setText((count+1) + "");
                 }
@@ -198,8 +238,9 @@ public class TermsMenuPage extends AppCompatActivity
         otherCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                makeCountsValid();
                 int count = Integer.parseInt(otherCountText.getText().toString());
-                if(count > 0)
+                if(count > minCountLimit)
                 {
                     otherCountText.setText((count-1) + "");
                 }
@@ -209,13 +250,33 @@ public class TermsMenuPage extends AppCompatActivity
         otherCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                makeCountsValid();
                 int count = Integer.parseInt(otherCountText.getText().toString());
-                if(count <15 )
+                if(count <maxCountLimit )
                 {
                     otherCountText.setText((count+1) + "");
                 }
             }
         });
+    }
+
+    private void setCountTextOnFocusChangeListeners()
+    {
+        View.OnFocusChangeListener listener = new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                makeCountsValid();
+            }
+        };
+        nounCountText.setOnFocusChangeListener(listener);
+
+        adjectiveCountText.setOnFocusChangeListener(listener);
+
+        verbCountText.setOnFocusChangeListener(listener);
+
+        grammarCountText.setOnFocusChangeListener(listener);
+
+        otherCountText.setOnFocusChangeListener(listener);
     }
 
     private void setSwitchOnClickListener()
@@ -259,150 +320,36 @@ public class TermsMenuPage extends AppCompatActivity
 
     private void setCheckBoxOnClickListener()
     {
-        lesson1.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 allLessons.setChecked(false);
             }
-        });
-        lesson2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson16.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson17.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson18.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson19.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson20.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        lesson23.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
-        extraTerms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        });
+        };
+        lesson1.setOnClickListener(listener);
+        lesson2.setOnClickListener(listener);
+        lesson3.setOnClickListener(listener);
+        lesson4.setOnClickListener(listener);
+        lesson5.setOnClickListener(listener);
+        lesson6.setOnClickListener(listener);
+        lesson7.setOnClickListener(listener);
+        lesson8.setOnClickListener(listener);
+        lesson9.setOnClickListener(listener);
+        lesson10.setOnClickListener(listener);
+        lesson11.setOnClickListener(listener);
+        lesson12.setOnClickListener(listener);
+        lesson13.setOnClickListener(listener);
+        lesson14.setOnClickListener(listener);
+        lesson15.setOnClickListener(listener);
+        lesson16.setOnClickListener(listener);
+        lesson17.setOnClickListener(listener);
+        lesson18.setOnClickListener(listener);
+        lesson19.setOnClickListener(listener);
+        lesson20.setOnClickListener(listener);
+        lesson21.setOnClickListener(listener);
+        lesson22.setOnClickListener(listener);
+        lesson23.setOnClickListener(listener);
+        extraTerms.setOnClickListener(listener);
 
         allLessons.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -446,6 +393,7 @@ public class TermsMenuPage extends AppCompatActivity
             public void onClick(View v) {
                 TermMenuMetrics metrics = new TermMenuMetrics();
                 metrics.setMode(whichMode);
+                makeCountsValid();
                 metrics.setNounCount(Integer.parseInt(nounCountText.getText().toString()));
                 metrics.setAdjectiveCount(Integer.parseInt(adjectiveCountText.getText().toString()));
                 metrics.setVerbCount( Integer.parseInt(verbCountText.getText().toString()));
@@ -514,5 +462,73 @@ public class TermsMenuPage extends AppCompatActivity
 
             }
         });
+    }
+
+    private void makeCountsValid()
+    {
+        if(nounCountText.getText().toString().equalsIgnoreCase(""))
+        {
+            nounCountText.setText("0");
+        }
+        else if(nounCountText.getText().toString().length() >6)
+        {
+            nounCountText.setText(Integer.toString(maxCountLimit));
+        }
+        else if(Integer.parseInt(nounCountText.getText().toString()) >maxCountLimit)
+        {
+            nounCountText.setText(Integer.toString(maxCountLimit));
+        }
+
+        if((adjectiveCountText.getText().toString().equalsIgnoreCase("")))
+        {
+            adjectiveCountText.setText("0");
+        }
+        else if(adjectiveCountText.getText().toString().length() >6)
+        {
+            adjectiveCountText.setText(Integer.toString(maxCountLimit));
+        }
+        else if(Integer.parseInt(adjectiveCountText.getText().toString()) >maxCountLimit)
+        {
+            adjectiveCountText.setText(Integer.toString(maxCountLimit));
+        }
+
+        if((verbCountText.getText().toString().equalsIgnoreCase("")))
+        {
+            verbCountText.setText("0");
+        }
+        else if(verbCountText.getText().toString().length() >6)
+        {
+            verbCountText.setText(Integer.toString(maxCountLimit));
+        }
+        else if(Integer.parseInt( verbCountText.getText().toString()) >maxCountLimit)
+        {
+            verbCountText.setText(Integer.toString(maxCountLimit));
+        }
+
+        if((grammarCountText.getText().toString().equalsIgnoreCase("")))
+        {
+            grammarCountText.setText("0");
+        }
+        else if(grammarCountText.getText().toString().length() >6)
+        {
+            grammarCountText.setText(Integer.toString(maxCountLimit));
+        }
+        else if(Integer.parseInt(grammarCountText.getText().toString()) >maxCountLimit)
+        {
+            grammarCountText.setText(Integer.toString(maxCountLimit));
+        }
+
+        if((otherCountText.getText().toString().equalsIgnoreCase("")))
+        {
+            otherCountText.setText("0");
+        }
+        else if(otherCountText.getText().toString().length() >6)
+        {
+            otherCountText.setText(Integer.toString(maxCountLimit));
+        }
+        else if(Integer.parseInt(otherCountText.getText().toString()) >maxCountLimit)
+        {
+            otherCountText.setText(Integer.toString(maxCountLimit));
+        }
     }
 }

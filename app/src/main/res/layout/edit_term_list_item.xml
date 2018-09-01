@@ -118,7 +118,7 @@
                 android:id="@+id/searchLessonLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.1"
                 android:text="@string/lessonLabel"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
@@ -127,7 +127,7 @@
                 android:id="@+id/searchLessonTextBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.25"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
@@ -135,7 +135,7 @@
                 android:id="@+id/searchTypeLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.15"
                 android:text="@string/typeLabel"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />

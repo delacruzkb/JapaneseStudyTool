@@ -44,7 +44,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
         DisplayMetrics dp = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dp);
         double factor = 0.8;
-        getWindow().setLayout((int)(dp.widthPixels*factor),(int)(dp.heightPixels*factor));
+        getWindow().setLayout((int)(dp.widthPixels),(int)(dp.heightPixels*factor));
 
         originalTerm = (Term) getIntent().getSerializableExtra("term");
         japaneseTextBox = findViewById(R.id.editHiraganaTextBox);

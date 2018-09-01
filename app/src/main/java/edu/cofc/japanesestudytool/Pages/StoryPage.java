@@ -102,6 +102,8 @@ public class StoryPage extends AppCompatActivity
         browser.setScrollbarFadingEnabled(false);
     }
 
+
+
     private void rePopulateListView(ArrayList<Term> terms)
     {
         TermListAdapter termListAdapter = new TermListAdapter(this.getApplicationContext(),terms,useJapaneseFirst,useKanji,useLessonKanjiOnly,useKanjiFirst);

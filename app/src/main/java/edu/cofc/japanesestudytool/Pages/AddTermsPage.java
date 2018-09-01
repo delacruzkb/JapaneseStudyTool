@@ -5,6 +5,7 @@ import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -104,6 +105,31 @@ public class AddTermsPage extends AppCompatActivity
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        AlertDialog.Builder builder = new AlertDialog.Builder(jpnsTextBox.getContext());
+        builder.setTitle("Warning");
+        builder.setMessage("Return to the menu??");
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton("Return", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(jpnsTextBox.getContext(), HomePage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
     private void resetFields()
     {
         jpnsTextBox.setText("");

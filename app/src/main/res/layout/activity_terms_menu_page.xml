@@ -33,11 +33,13 @@
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
-        <TextView
+        <EditText
             android:id="@+id/nounCountInput"
             android:layout_width="@dimen/storyCountBoxWidth"
             android:layout_height="@dimen/storyCountBoxHeight"
             android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
             android:text="@string/initialCount"
             android:textAlignment="center"
             android:textColor="@color/textColor"
@@ -78,11 +80,13 @@
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
-        <TextView
+        <EditText
             android:id="@+id/adjectiveCountInput"
             android:layout_width="@dimen/storyCountBoxWidth"
             android:layout_height="@dimen/storyCountBoxHeight"
             android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
             android:text="@string/initialCount"
             android:textAlignment="center"
             android:textColor="@color/textColor"
@@ -123,11 +127,13 @@
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
-        <TextView
+        <EditText
             android:id="@+id/verbCountInput"
             android:layout_width="@dimen/storyCountBoxWidth"
             android:layout_height="@dimen/storyCountBoxHeight"
             android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
             android:text="@string/initialCount"
             android:textAlignment="center"
             android:textColor="@color/textColor"
@@ -168,11 +174,13 @@
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
-        <TextView
+        <EditText
             android:id="@+id/grammarCountInput"
             android:layout_width="@dimen/storyCountBoxWidth"
             android:layout_height="@dimen/storyCountBoxHeight"
             android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
             android:text="@string/initialCount"
             android:textAlignment="center"
             android:textColor="@color/textColor"
@@ -213,11 +221,13 @@
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
-        <TextView
+        <EditText
             android:id="@+id/otherCountInput"
             android:layout_width="@dimen/storyCountBoxWidth"
-            android:layout_height="45dp"
+            android:layout_height="@dimen/storyCountBoxHeight"
             android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
             android:text="@string/initialCount"
             android:textAlignment="center"
             android:textColor="@color/textColor"
@@ -370,6 +380,13 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/lesson8To14CheckBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <CheckBox
                 android:id="@+id/lessonCheckBox7"
                 android:layout_width="wrap_content"
@@ -380,13 +397,6 @@
                 android:text="7"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/lesson8To14CheckBoxes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <CheckBox
                 android:id="@+id/lessonCheckBox8"
@@ -443,6 +453,13 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/lessons15To21CheckBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <CheckBox
                 android:id="@+id/lessonCheckBox13"
                 android:layout_width="wrap_content"
@@ -464,13 +481,6 @@
                 android:text="14"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/lessons15To21CheckBoxes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <CheckBox
                 android:id="@+id/lessonCheckBox15"
@@ -516,6 +526,12 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <CheckBox
                 android:id="@+id/lessonCheckBox19"
                 android:layout_width="wrap_content"
@@ -549,12 +565,6 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <CheckBox
                 android:id="@+id/lessonCheckBox22"
                 android:layout_width="wrap_content"
@@ -587,23 +597,23 @@
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
-            <CheckBox
-                android:id="@+id/allLessonsCheckBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/checkBoxColor"
-                android:checked="true"
-                android:duplicateParentState="false"
-                android:text="All"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
-
         </TableRow>
 
     </TableLayout>
 
+    <CheckBox
+        android:id="@+id/allLessonsCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/checkBoxColor"
+        android:checked="true"
+        android:duplicateParentState="false"
+        android:text="All"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
+
     <View
-        android:id="@+id/divider3"
+        android:id="@+id/divider13"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dividerHeight"
         android:background="@color/dividerColor" />

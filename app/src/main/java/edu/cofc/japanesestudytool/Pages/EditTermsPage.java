@@ -4,7 +4,9 @@ import edu.cofc.japanesestudytool.EditTermListAdapter;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -31,8 +33,25 @@ public class EditTermsPage extends AppCompatActivity
     public void onBackPressed()
     {
         super.onBackPressed();
-        Intent intent = new Intent(this, EditTermsMenuPage.class);
-        startActivity(intent);
-        finish();
+        AlertDialog.Builder builder = new AlertDialog.Builder(editTermsListView.getContext());
+        builder.setTitle("Warning");
+        builder.setMessage("Return to the menu??");
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton("Return", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(editTermsListView.getContext(), EditTermsMenuPage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
     }
 }

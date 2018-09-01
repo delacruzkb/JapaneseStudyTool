@@ -160,7 +160,7 @@
                     android:id="@+id/textView10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:text="@string/lessonLabel"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
@@ -169,7 +169,7 @@
                     android:id="@+id/newTermLessonTextBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
 
@@ -177,7 +177,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:text="@string/typeLabel"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />

@@ -5,6 +5,12 @@
     <string name="toEnglishText">ENG</string>
     <string name="toJapaneseText">ひらがな</string>
     <string name="toKanjiText">漢字</string>
+    <string name="onBackPressedMessage">Are you sure you want to return?</string>
+    <string name="warningTitle">Warning</string>
+    <string name="errorTitle">Error</string>
+    <string name="cancelLabel">Cancel</string>
+    <string name="proceedLabel">Proceed</string>
+
     //HomePage
     <string name="flashCardLabel">Flash Cards</string>
     <string name="addTermsLabel">Add New Terms</string>
