@@ -37,9 +37,7 @@
     <string name="adjectiveListingLabel">Adjective(s):</string>
     <string name="grammarListingLabel">Grammar point(s):</string>
     <string name="otherListingLabel">Other(s):</string>
-    <string name="termMenuText">Terms</string>
-    <string name="menuButtonText">Main Menu</string>
-    <string name="backButtonText">Back</string>
+
 
     //FlashCardPage
     <string name="lessonLabel">Lesson: </string>
