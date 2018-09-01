@@ -9,6 +9,8 @@
 
     //StoryPage
     <dimen name="typeButtonHeight">50dp</dimen>
+    //TermListItem
+    <dimen name="termListItemHeight">150dp</dimen>
 
 
     <dimen name="flashCardTextSize">40sp</dimen>

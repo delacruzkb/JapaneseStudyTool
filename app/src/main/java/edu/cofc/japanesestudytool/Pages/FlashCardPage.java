@@ -148,24 +148,20 @@ public class FlashCardPage extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         AlertDialog.Builder builder = new AlertDialog.Builder(flashCard.getContext());
-        builder.setTitle("Warning");
-        builder.setMessage("Return to the menu??");
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.warningTitle));
+        builder.setMessage(getResources().getString(R.string.onBackPressedMessage));
+        builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
-        builder.setPositiveButton("Return", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                Intent intent = new Intent(flashCard.getContext(), HomePage.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
+                FlashCardPage.super.onBackPressed();
             }
         });
         AlertDialog dialog = builder.create();
@@ -184,5 +180,9 @@ public class FlashCardPage extends AppCompatActivity
         cardCount=termList.size();
         currentCardNumber=0;
         loadFlipCard(termList.get(0));
+        if(termList.size()<2)
+        {
+            nextCard.setVisibility(View.INVISIBLE);
+        }
     }
 }
