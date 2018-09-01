@@ -10,6 +10,10 @@
     <string name="errorTitle">Error</string>
     <string name="cancelLabel">Cancel</string>
     <string name="proceedLabel">Proceed</string>
+    <string name="noTermsFound">No Term(s) found.</string>
+    <string name="okLabel">OK</string>
+    <string name="emptyStringMessage">Please do not leave any fields blank</string>
+
 
     //HomePage
     <string name="flashCardLabel">Flash Cards</string>
@@ -45,7 +49,10 @@
     <string name="previousTermLabel">Prev</string>
     <string name="nextTermLabel">Next</string>
 
-    //Add or Edit TermPage
+    //Edit TermPage
+    <string name="deleteFromDatabaseWarning">You are about to delete this term from the database.</string>
+    <string name="searchExactMatch">Search for exact match</string>
+    <string name="searchSpecificAttributeLabel">Search by Attribute:</string>
     <string name="addJapaneseLabel">Enter Japanese:</string>
     <string name="addEnglishLabel">Enter English:</string>
     <string name="addKanjiLabel">Enter Kanji:</string>
@@ -66,7 +73,7 @@
     <string name="loadAllTermsLabel">Load full list(will take time)</string>
     <string name="loadAllTermsButtonText">Load</string>
     <string name="searchEditableButtonText">Search</string>
-    <string name="searchSpecificAttributeLabel">Edit by Attribute:</string>
+
 
     //Similarities Dialog
     <string name="deleteButtonText">X</string>

@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
 
 import edu.cofc.japanesestudytool.AsyncTasks.LoadEditableTerms;
 import edu.cofc.japanesestudytool.EditTermsMetrics;
@@ -22,10 +23,11 @@ public class EditTermsMenuPage extends AppCompatActivity
     private Spinner dropDownBar;
     private Spinner specificDropDownBar;
     private EditText searchEditTextBox;
+    private Switch searchExactSwitch;
     private final String[] items = new String[]{"Japanese","English","Kanji","Type","Lesson","Req. Kanji"};
     private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
-    private final String[] lessonSpec = new String[]{"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
-            "20","21","22","23"};
+    private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
+            "20","21","22","23","extra"};
     private final String[] reqKanjiSpec = new String[]{"Required","Non-required"};
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -53,6 +55,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                     searchEditTextBox.setVisibility(View.VISIBLE);
                     searchEditTextBox.requestFocus();
                     specificDropDownBar.setVisibility(View.INVISIBLE);
+                    searchExactSwitch.setVisibility(View.VISIBLE);
                 }
                 else if(mode.equalsIgnoreCase("Type"))
                 {
@@ -60,6 +63,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                     specificDropDownBar.setVisibility(View.VISIBLE);
                     ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(dropDownBar.getContext(),android.R.layout.simple_spinner_dropdown_item,typeSpecs);
                     specificDropDownBar.setAdapter(tempAdapter);
+                    searchExactSwitch.setVisibility(View.INVISIBLE);
                 }
                 else  if(mode.equalsIgnoreCase("Lesson"))
                 {
@@ -67,6 +71,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                     specificDropDownBar.setVisibility(View.VISIBLE);
                     ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(dropDownBar.getContext(),android.R.layout.simple_spinner_dropdown_item,lessonSpec);
                     specificDropDownBar.setAdapter(tempAdapter);
+                    searchExactSwitch.setVisibility(View.INVISIBLE);
                 }
                 else if(mode.equalsIgnoreCase("Req. Kanji"))
                 {
@@ -74,6 +79,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                     specificDropDownBar.setVisibility(View.VISIBLE);
                     ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(dropDownBar.getContext(),android.R.layout.simple_spinner_dropdown_item,reqKanjiSpec);
                     specificDropDownBar.setAdapter(tempAdapter);
+                    searchExactSwitch.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -84,16 +90,23 @@ public class EditTermsMenuPage extends AppCompatActivity
             }
         });
 
+        searchExactSwitch = findViewById(R.id.searchExact);
         searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String mode = dropDownBar.getSelectedItem().toString();
                 String value="";
+                boolean isFieldEmpty=false;
                 if(mode.equalsIgnoreCase("Japanese")|| mode.equalsIgnoreCase("English")
                         || mode.equalsIgnoreCase("Kanji"))
                 {
                     value = searchEditTextBox.getText().toString();
+                    if(value.length() ==0)
+                    {
+                        isFieldEmpty = true;
+                    }
                 }
                 else if(mode.equalsIgnoreCase("Type")
                         || mode.equalsIgnoreCase("Lesson")
@@ -102,9 +115,31 @@ public class EditTermsMenuPage extends AppCompatActivity
                    value = specificDropDownBar.getSelectedItem().toString();
 
                 }
+                if(value.equalsIgnoreCase("extra"))
+                {
+                    value="0";
+                }
+                if(isFieldEmpty)
+                {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(searchButton.getContext());
+                    builder.setTitle(getResources().getString(R.string.errorTitle));
+                    builder.setMessage(getResources().getString(R.string.emptyStringMessage));
+                    builder.setPositiveButton(getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
 
-                LoadEditableTerms loadEditableTerms = new LoadEditableTerms(searchButton.getContext(),mode,value);
-                loadEditableTerms.execute();
+                            dialog.dismiss();
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+                else
+                {
+                    LoadEditableTerms loadEditableTerms = new LoadEditableTerms(searchButton.getContext(),mode,value, searchExactSwitch.isChecked());
+                    loadEditableTerms.execute();
+                }
+
 
             }
         });
@@ -113,17 +148,18 @@ public class EditTermsMenuPage extends AppCompatActivity
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(searchButton.getContext());
-        builder.setTitle("Warning");
-        builder.setMessage("Return to the menu??");
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.warningTitle));
+        builder.setMessage(getResources().getString(R.string.onBackPressedMessage));
+        builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
-        builder.setPositiveButton("Return", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
                 Intent intent = new Intent(searchButton.getContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
@@ -132,6 +168,5 @@ public class EditTermsMenuPage extends AppCompatActivity
         });
         AlertDialog dialog = builder.create();
         dialog.show();
-
     }
 }

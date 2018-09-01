@@ -87,15 +87,15 @@ public class EditTermListAdapter extends BaseAdapter
             public void onClick(View v)
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Warning");
-                builder.setMessage("Would you like to delete this from the database?");
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setTitle(context.getResources().getString(R.string.warningTitle));
+                builder.setMessage(context.getResources().getString(R.string.deleteFromDatabaseWarning));
+                builder.setNegativeButton(context.getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
                 });
-                builder.setPositiveButton("Proceed", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(context.getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which)
                     {

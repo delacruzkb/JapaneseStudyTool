@@ -38,7 +38,16 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE kanji LIKE '%' || :kanji || '%' ORDER BY jpns")
     List<Term> searchKanji(String kanji);
 
-    @Query("SELECT* FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY jpns")
+    @Query("SELECT* FROM Term WHERE jpns LIKE :japanese ORDER BY jpns")
+    List<Term> searchExactJpns(String japanese);
+
+    @Query("SELECT* FROM Term WHERE eng LIKE  :english ORDER BY eng")
+    List<Term> searchExactEng(String english);
+
+    @Query("SELECT* FROM Term WHERE kanji LIKE :kanji ORDER BY jpns")
+    List<Term> searchExactKanji(String kanji);
+
+    @Query("SELECT* FROM Term WHERE type LIKE :type ORDER BY jpns")
     List<Term> searchType(String type);
 
     @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji ORDER BY jpns")

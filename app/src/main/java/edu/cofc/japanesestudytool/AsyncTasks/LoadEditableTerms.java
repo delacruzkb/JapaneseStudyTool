@@ -23,14 +23,13 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     String kanji;
     int lesson;
     String termType;
-    String typeSpecial;
     boolean reqKanji;
-
+    boolean isExact;
     String mode;
     TermDatabase termDatabase;
 
 
-    public LoadEditableTerms(Context mContext, String mMode, String value)
+    public LoadEditableTerms(Context mContext, String mMode, String value, boolean isExact)
     {
         this.context = mContext;
         mode = mMode;
@@ -48,25 +47,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else if(mode.equalsIgnoreCase("Type"))
         {
-            if(value.charAt(0) == 'u')
-            {
-                termType = "verb";
-                typeSpecial ="u";
-            }
-            else if(value.charAt(0) == 'r')
-            {
-                termType = "verb";
-                typeSpecial ="ru";
-            }
-            else if (value.charAt(0) == 'i')
-            {
-                termType = "verb";
-                typeSpecial ="irr";
-            }
-            else
-            {
-                termType = value;
-            }
+            termType = value;
         }
         else  if(mode.equalsIgnoreCase("Lesson"))
         {
@@ -76,6 +57,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         {
             reqKanji = value.equalsIgnoreCase("required");
         }
+        this.isExact =isExact;
         termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
     }
 
@@ -95,15 +77,38 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         ArrayList<Term> returnValue = new ArrayList<>();
         if(mode.equalsIgnoreCase("Japanese"))
         {
-            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchJpns(japanese);
+            if(isExact)
+            {
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchExactJpns(japanese);
+            }
+            else
+            {
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchJpns(japanese);
+            }
+
         }
         else if(mode.equalsIgnoreCase("English"))
         {
-            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchEng(english);
+            if(isExact)
+            {
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchExactEng(english);
+            }
+            else
+            {
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchEng(english);
+            }
         }
         else if(mode.equalsIgnoreCase("Kanji"))
         {
-            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchKanji(kanji);
+            if(isExact)
+            {
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchExactKanji(kanji);
+            }
+            else
+            {
+                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchKanji(kanji);
+            }
+
         }
         else if(mode.equalsIgnoreCase("Type"))
         {

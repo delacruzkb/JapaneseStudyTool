@@ -50,7 +50,6 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/termListItemHeight"
         android:layout_weight="5.5"
-        android:background="@color/translateTextBoxColor"
         android:editable="false"
         android:ems="10"
         android:inputType="textMultiLine"

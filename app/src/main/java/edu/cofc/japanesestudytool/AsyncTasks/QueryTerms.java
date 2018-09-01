@@ -1,6 +1,5 @@
 package edu.cofc.japanesestudytool.AsyncTasks;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.arch.persistence.room.Room;
@@ -13,6 +12,7 @@ import java.util.ArrayList;
 import edu.cofc.japanesestudytool.Pages.FlashCardPage;
 import edu.cofc.japanesestudytool.Pages.HomePage;
 import edu.cofc.japanesestudytool.Pages.StoryPage;
+import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermDatabase;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
@@ -38,9 +38,9 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
                 && otherList.size()==0))
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-            builder.setTitle("Error");
-            builder.setMessage("No terms found");
-            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setTitle(mContext.getResources().getString(R.string.errorTitle));
+            builder.setMessage(mContext.getResources().getString(R.string.noTermsFound));
+            builder.setPositiveButton(mContext.getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();

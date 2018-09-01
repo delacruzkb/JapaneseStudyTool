@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
-    android:orientation="vertical"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:orientation="vertical"
     tools:context=".Pages.EditTermsMenuPage">
 
     <View
@@ -45,6 +45,23 @@
         android:layout_height="@dimen/dividerHeight"
         android:background="@color/dividerColor" />
 
+    <Switch
+        android:id="@+id/searchExact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:splitTrack="false"
+        android:text="@string/searchExactMatch"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
+    <View
+        android:id="@+id/divider30"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
     <EditText
         android:id="@+id/searchEditTextBox"
         android:layout_width="match_parent"
@@ -54,17 +71,12 @@
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize" />
 
-    <View
-        android:id="@+id/divider30"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
     <Button
         android:id="@+id/searchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/searchEditableButtonText"
+        android:textColor="@color/textColor"
         android:textSize="@dimen/textSize" />
 </LinearLayout>
