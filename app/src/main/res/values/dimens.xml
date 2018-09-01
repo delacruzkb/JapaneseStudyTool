@@ -12,13 +12,13 @@
     //TermListItem
     <dimen name="termListItemHeight">150dp</dimen>
 
-
+    //FlashCardPage
     <dimen name="flashCardTextSize">40sp</dimen>
+
     <dimen name="lessonLabelWidth">30dp</dimen>
     <dimen name="lessonNumberLabelWidth">10dp</dimen>
     <dimen name="typeLabelWidth">20dp</dimen>
     <dimen name="typeValueLabelWidth">50dp</dimen>
-    <dimen name="flashCardHeight">500dp</dimen>
 
     <dimen name="addPageTextBoxHeight">70dp</dimen>
 
