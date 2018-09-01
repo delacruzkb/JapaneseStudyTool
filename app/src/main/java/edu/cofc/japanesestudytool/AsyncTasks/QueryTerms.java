@@ -33,7 +33,9 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
     @Override
     protected void onPostExecute(Void voids)
     {
-        if(nounList.size() == 0)
+        if((nounList.size() == 0 && adjectiveList.size()==0
+                && verbList.size()==0 && grammarList.size() ==0
+                && otherList.size()==0))
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
             builder.setTitle("Error");
