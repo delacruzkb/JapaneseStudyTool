@@ -23,7 +23,7 @@
 
             <TextView
                 android:id="@+id/searchHiraganaLabel"
-                android:layout_width="@dimen/addTermLabelWidth"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/toJapaneseText"
@@ -32,9 +32,9 @@
 
             <EditText
                 android:id="@+id/searchHiraganaTextBox"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2.75"
                 android:ems="10"
                 android:inputType="textMultiLine"
                 android:textColor="@color/textColor"
@@ -54,7 +54,7 @@
 
             <TextView
                 android:id="@+id/searchEnglishLabel"
-                android:layout_width="@dimen/addTermLabelWidth"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/toEnglishText"
@@ -63,9 +63,9 @@
 
             <EditText
                 android:id="@+id/searchEnglishTextBox"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2.75"
                 android:ems="10"
                 android:inputType="textMultiLine"
                 android:textColor="@color/textColor"
@@ -85,7 +85,7 @@
 
             <TextView
                 android:id="@+id/searchKanjiLabel"
-                android:layout_width="@dimen/addTermLabelWidth"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/toKanjiText"
@@ -94,9 +94,9 @@
 
             <EditText
                 android:id="@+id/searchKanjiTextBox"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2.75"
                 android:ems="10"
                 android:inputType="textMultiLine"
                 android:textColor="@color/textColor"

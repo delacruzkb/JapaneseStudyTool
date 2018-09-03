@@ -16,7 +16,7 @@
         android:text="@string/similaritiesTitle"
         android:textAlignment="center"
         android:textColor="@color/textColor"
-        android:textSize="@dimen/titleTextSize" />
+        android:textSize="@dimen/textSize" />
 
     <View
         android:id="@+id/divider5"
@@ -33,6 +33,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0.1"
         android:orientation="horizontal">
 
         <TextView
@@ -65,7 +66,7 @@
 
                 <TextView
                     android:id="@+id/textview5"
-                    android:layout_width="@dimen/addTermLabelWidth"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/toJapaneseText"
@@ -74,9 +75,9 @@
 
                 <EditText
                     android:id="@+id/newTermHiraganaTextBox"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2.751"
                     android:ems="10"
                     android:inputType="textMultiLine"
                     android:textColor="@color/textColor"
@@ -96,7 +97,7 @@
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="@dimen/addTermLabelWidth"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/toEnglishText"
@@ -105,9 +106,9 @@
 
                 <EditText
                     android:id="@+id/newTermEnglishTextBox"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2.75"
                     android:ems="10"
                     android:inputType="textMultiLine"
                     android:textColor="@color/textColor"
@@ -127,7 +128,7 @@
 
                 <TextView
                     android:id="@+id/textView7"
-                    android:layout_width="@dimen/addTermLabelWidth"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/toKanjiText"
@@ -136,9 +137,9 @@
 
                 <EditText
                     android:id="@+id/newTermKanjiTextBox"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2.75"
                     android:ems="10"
                     android:inputType="textMultiLine"
                     android:textColor="@color/textColor"

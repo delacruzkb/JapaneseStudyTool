@@ -53,6 +53,8 @@
     <string name="deleteFromDatabaseWarning">You are about to delete this term from the database.</string>
     <string name="searchExactMatch">Search for exact match</string>
     <string name="searchSpecificAttributeLabel">Search by Attribute:</string>
+    <string name="fillEnglishAndJapanese">Please make sure to fill in the Japanese and English fields</string>
+
     <string name="addJapaneseLabel">Enter Japanese:</string>
     <string name="addEnglishLabel">Enter English:</string>
     <string name="addKanjiLabel">Enter Kanji:</string>

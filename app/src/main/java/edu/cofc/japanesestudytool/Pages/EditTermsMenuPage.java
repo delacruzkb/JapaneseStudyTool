@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -25,7 +26,7 @@ public class EditTermsMenuPage extends AppCompatActivity
     private EditText searchEditTextBox;
     private Switch searchExactSwitch;
     private final String[] items = new String[]{"Japanese","English","Kanji","Type","Lesson","Req. Kanji"};
-    private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
+    private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irr-verb","adjective","grammar","other"};
     private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
             "20","21","22","23","extra"};
     private final String[] reqKanjiSpec = new String[]{"Required","Non-required"};
@@ -37,7 +38,17 @@ public class EditTermsMenuPage extends AppCompatActivity
 
         searchEditTextBox = findViewById(R.id.searchEditTextBox);
         searchEditTextBox.setVisibility(View.INVISIBLE);
-
+        searchEditTextBox.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(keyCode == event.KEYCODE_ENTER|| keyCode == event.KEYCODE_DPAD_CENTER)
+                {
+                    //do nothing
+                    return true;
+                }
+                return false;
+            }
+        });
         specificDropDownBar = findViewById(R.id.specificDropDrown);
         specificDropDownBar.setVisibility(View.INVISIBLE);
         dropDownBar = findViewById(R.id.editSearchDropDownBar);

@@ -43,7 +43,7 @@ public class Term implements Serializable
     }
 
     public void setJpns(String jpns) {
-        this.jpns = jpns;
+        this.jpns = jpns.toLowerCase();
     }
 
     public String getEng() {
@@ -51,7 +51,7 @@ public class Term implements Serializable
     }
 
     public void setEng(String eng) {
-        this.eng = eng;
+        this.eng = eng.toLowerCase();
     }
 
     public String getKanji() {
@@ -59,7 +59,7 @@ public class Term implements Serializable
     }
 
     public void setKanji(String kanji) {
-        this.kanji = kanji;
+        this.kanji = kanji.toLowerCase();
     }
 
     public String getType() {
@@ -67,7 +67,7 @@ public class Term implements Serializable
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = type.toLowerCase();
     }
 
 

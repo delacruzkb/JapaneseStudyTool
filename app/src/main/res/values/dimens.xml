@@ -15,14 +15,9 @@
     //FlashCardPage
     <dimen name="flashCardTextSize">40sp</dimen>
 
-    <dimen name="lessonLabelWidth">30dp</dimen>
-    <dimen name="lessonNumberLabelWidth">10dp</dimen>
-    <dimen name="typeLabelWidth">20dp</dimen>
-    <dimen name="typeValueLabelWidth">50dp</dimen>
 
     <dimen name="addPageTextBoxHeight">70dp</dimen>
 
     <dimen name="addTermLabelWidth">80dp</dimen>
-    //SimilarTermsPage
-    <dimen name="titleTextSize">30sp</dimen>
+
 </resources>

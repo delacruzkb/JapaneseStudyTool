@@ -32,9 +32,9 @@ public class EditSingleTermDialogPage extends AppCompatActivity
     Button confirmEdit;
     Term originalTerm;
     Term editedTerm;
-    private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
-    private final String[] lessonSpec = new String[]{"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
-            "20","21","22","23"};
+    private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irr-verb","adjective","grammar","other"};
+    private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
+            "20","21","22","23","extra"};
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -44,7 +44,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
         DisplayMetrics dp = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dp);
         double factor = 0.8;
-        getWindow().setLayout((int)(dp.widthPixels),(int)(dp.heightPixels*factor));
+        getWindow().setLayout((dp.widthPixels),(int)(dp.heightPixels*factor));
 
         originalTerm = (Term) getIntent().getSerializableExtra("term");
         japaneseTextBox = findViewById(R.id.editHiraganaTextBox);
@@ -77,9 +77,9 @@ public class EditSingleTermDialogPage extends AppCompatActivity
             {
                 if(englishTextBox.getText().toString().length() ==0 || japaneseTextBox.getText().toString().length() ==0) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(confirmEdit.getContext());
-                    builder.setTitle("Error");
-                    builder.setMessage("Please make sure that the Japanese and English fields are not blank.");
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    builder.setTitle(getResources().getString(R.string.errorTitle));
+                    builder.setMessage(getResources().getString(R.string.fillEnglishAndJapanese));
+                    builder.setPositiveButton(getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
@@ -117,7 +117,13 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                 editedTerm.setEng(englishTextBox.getText().toString());
                 editedTerm.setKanji(kanjiTextBox.getText().toString());
                 editedTerm.setType(typeDropDownBar.getSelectedItem().toString());
-                editedTerm.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
+                if(lessonDropDownBar.getSelectedItem().toString().equalsIgnoreCase("extra")) {
+                    editedTerm.setLesson(0);
+                }
+                else
+                {
+                    editedTerm.setLesson(Integer.parseInt(lessonDropDownBar.getSelectedItem().toString()));
+                }
                 editedTerm.setReqKanji(reqKanjiCheckBox.isChecked());
                 ArrayList<Term> temp = new ArrayList<>();
                 temp.add(editedTerm);
