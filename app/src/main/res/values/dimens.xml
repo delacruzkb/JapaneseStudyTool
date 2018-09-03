@@ -16,8 +16,6 @@
     <dimen name="flashCardTextSize">40sp</dimen>
 
 
-    <dimen name="addPageTextBoxHeight">70dp</dimen>
 
-    <dimen name="addTermLabelWidth">80dp</dimen>
 
 </resources>
