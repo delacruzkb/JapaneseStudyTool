@@ -218,7 +218,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/buttonColor"
-                android:text="@string/cancelButtonText"
+                android:text="@string/cancelLabel"
                 android:textColor="@color/buttonTextColor" />
 
             <Button

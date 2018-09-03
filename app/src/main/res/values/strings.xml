@@ -54,27 +54,17 @@
     <string name="searchExactMatch">Search for exact match</string>
     <string name="searchSpecificAttributeLabel">Search by Attribute:</string>
     <string name="fillEnglishAndJapanese">Please make sure to fill in the Japanese and English fields</string>
+    <string name="searchEditableButtonText">Search</string>
 
+    //AddTermPage
     <string name="addJapaneseLabel">Enter Japanese:</string>
     <string name="addEnglishLabel">Enter English:</string>
     <string name="addKanjiLabel">Enter Kanji:</string>
     <string name="addTypeLabel">Select type:</string>
-    <string name="addTypeNoun">Noun</string>
-    <string name="addTypeVerb">Verb</string>
-    <string name="addTypeAdjective">Adjective</string>
-    <string name="addTypeGrammar">Grammar</string>
-    <string name="addTypeOther">Other</string>
-    <string name="addTypeSpecialLabel">Select verb-type:</string>
-    <string name="addRuVerb">ru</string>
-    <string name="addUVerb">u</string>
-    <string name="addIrregularVerb">irregular</string>
     <string name="addLessonLabel">Enter lesson(0 for extras):</string>
     <string name="addRequiredKanjiLabel">Required Kanji</string>
-    <string name="cancelButtonText">Cancel</string>
     <string name="addTermButton">Add New Term</string>
-    <string name="loadAllTermsLabel">Load full list(will take time)</string>
-    <string name="loadAllTermsButtonText">Load</string>
-    <string name="searchEditableButtonText">Search</string>
+
 
 
     //Similarities Dialog

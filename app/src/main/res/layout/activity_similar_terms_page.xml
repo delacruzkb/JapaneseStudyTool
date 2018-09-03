@@ -245,7 +245,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
-            android:text="@string/cancelButtonText"
+            android:text="@string/cancelLabel"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
