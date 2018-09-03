@@ -38,17 +38,6 @@ public class EditTermsMenuPage extends AppCompatActivity
 
         searchEditTextBox = findViewById(R.id.searchEditTextBox);
         searchEditTextBox.setVisibility(View.INVISIBLE);
-        searchEditTextBox.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if(keyCode == event.KEYCODE_ENTER|| keyCode == event.KEYCODE_DPAD_CENTER)
-                {
-                    //do nothing
-                    return true;
-                }
-                return false;
-            }
-        });
         specificDropDownBar = findViewById(R.id.specificDropDrown);
         specificDropDownBar.setVisibility(View.INVISIBLE);
         dropDownBar = findViewById(R.id.editSearchDropDownBar);
@@ -107,14 +96,14 @@ public class EditTermsMenuPage extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                String mode = dropDownBar.getSelectedItem().toString();
-                String value="";
+                final String mode = dropDownBar.getSelectedItem().toString();
+                String tempValue="";
                 boolean isFieldEmpty=false;
                 if(mode.equalsIgnoreCase("Japanese")|| mode.equalsIgnoreCase("English")
                         || mode.equalsIgnoreCase("Kanji"))
                 {
-                    value = searchEditTextBox.getText().toString();
-                    if(value.length() ==0)
+                    tempValue = searchEditTextBox.getText().toString();
+                    if(tempValue.length() ==0)
                     {
                         isFieldEmpty = true;
                     }
@@ -123,13 +112,14 @@ public class EditTermsMenuPage extends AppCompatActivity
                         || mode.equalsIgnoreCase("Lesson")
                                 || mode.equalsIgnoreCase("Req. Kanji"))
                 {
-                   value = specificDropDownBar.getSelectedItem().toString();
+                    tempValue = specificDropDownBar.getSelectedItem().toString();
 
                 }
-                if(value.equalsIgnoreCase("extra"))
+                if(tempValue.equalsIgnoreCase("extra"))
                 {
-                    value="0";
+                    tempValue="0";
                 }
+                final String value = tempValue;
                 if(isFieldEmpty)
                 {
                     AlertDialog.Builder builder = new AlertDialog.Builder(searchButton.getContext());
@@ -140,6 +130,29 @@ public class EditTermsMenuPage extends AppCompatActivity
                         public void onClick(DialogInterface dialog, int which) {
 
                             dialog.dismiss();
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+                else if(value.contains("\n"))
+                {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(searchButton.getContext());
+                    builder.setTitle(getResources().getString(R.string.warningTitle));
+                    builder.setMessage(getResources().getString(R.string.multiLineWarning));
+                    builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            LoadEditableTerms loadEditableTerms = new LoadEditableTerms(searchButton.getContext(),mode,value, searchExactSwitch.isChecked());
+                            loadEditableTerms.execute();
                         }
                     });
                     AlertDialog dialog = builder.create();

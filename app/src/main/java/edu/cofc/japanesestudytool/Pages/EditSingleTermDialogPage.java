@@ -88,6 +88,27 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 }
+                else if (englishTextBox.getText().toString().contains("\n") || japaneseTextBox.getText().toString().contains("\n")
+                        || kanjiTextBox.getText().toString().contains("\n"))
+                {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(englishTextBox.getContext());
+                    builder.setTitle(getResources().getString(R.string.warningTitle));
+                    builder.setMessage(getResources().getString(R.string.multiLineWarning));
+                    builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            promptThenAdd();
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
                 else
                 {
                     promptThenAdd();
@@ -100,15 +121,15 @@ public class EditSingleTermDialogPage extends AppCompatActivity
     private void promptThenAdd()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(confirmEdit.getContext());
-        builder.setTitle("Confirmation");
-        builder.setMessage("Are you sure you want to over-write this term?");
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.warningTitle));
+        builder.setMessage(getResources().getString(R.string.overwriteMessage));
+        builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
-        builder.setPositiveButton("Proceed", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which)
             {

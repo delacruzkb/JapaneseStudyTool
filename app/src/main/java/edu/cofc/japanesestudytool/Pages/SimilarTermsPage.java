@@ -66,18 +66,18 @@ public class SimilarTermsPage extends AppCompatActivity
             public void onClick(View v)
             {
                 AlertDialog.Builder warning = new AlertDialog.Builder(cancel.getContext());
-                warning.setTitle("Cancel");
-                warning.setMessage("Are you sure you want to cancel?");
-                warning.setPositiveButton("Go back to List", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                warning.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                warning.setTitle(getResources().getString(R.string.warningTitle));
+                warning.setMessage(getResources().getString(R.string.onBackPressedMessage));
+                warning.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         onBackPressed();
+                    }
+                });
+                warning.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
                     }
                 });
                 AlertDialog dialog = warning.create();
@@ -91,15 +91,15 @@ public class SimilarTermsPage extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder warning = new AlertDialog.Builder(cancel.getContext());
-                warning.setTitle("Cancel");
-                warning.setMessage("Are you sure you want to proceed?");
-                warning.setNegativeButton("Go back to List", new DialogInterface.OnClickListener() {
+                warning.setTitle(getResources().getString(R.string.warningTitle));
+                warning.setMessage(getResources().getString(R.string.addNewTermMessage));
+                warning.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
                 });
-                warning.setPositiveButton("Yes, Add the new Term.", new DialogInterface.OnClickListener() {
+                warning.setPositiveButton(getResources().getString(R.string.addNewTerm), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which)
                     {

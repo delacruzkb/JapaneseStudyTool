@@ -69,23 +69,32 @@ public class AddTermsPage extends AppCompatActivity
         boolean jpnsSupplied=!(jpnsTextBox.getText().toString() == null || jpnsTextBox.getText().toString().equalsIgnoreCase(""));
         if(engSupplied && jpnsSupplied)
         {
-            Term temp = new Term();
-            temp.setEng(engTextBox.getText().toString());
-            temp.setJpns(jpnsTextBox.getText().toString());
-            temp.setKanji(kanjiTextBox.getText().toString());
-            temp.setType(typeDropDownBar.getSelectedItem().toString());
-            if(lessonDropDownBar.getSelectedItem().toString().equalsIgnoreCase("extra"))
+            final Term temp = new Term();
+            if(engTextBox.getText().toString().contains("\n") || jpnsTextBox.getText().toString().contains("\n") ||
+                    kanjiTextBox.getText().toString().contains("\n"))
             {
-                temp.setLesson(0);
+                AlertDialog.Builder builder = new AlertDialog.Builder(engTextBox.getContext());
+                builder.setTitle(getResources().getString(R.string.warningTitle));
+                builder.setMessage(getResources().getString(R.string.multiLineWarning));
+                builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        addNewTerm(temp);
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
             else
             {
-                temp.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
+                addNewTerm(temp);
             }
-            temp.setReqKanji(reqKanjiCheckbox.isChecked());
-            resetFields();
-            AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);
-            addNewTerm.execute();
         }
         else
         {
@@ -133,5 +142,25 @@ public class AddTermsPage extends AppCompatActivity
         engTextBox.setText("");
         kanjiTextBox.setText("");
         reqKanjiCheckbox.setChecked(false);
+    }
+
+    private void addNewTerm(Term temp)
+    {
+        temp.setEng(engTextBox.getText().toString());
+        temp.setJpns(jpnsTextBox.getText().toString());
+        temp.setKanji(kanjiTextBox.getText().toString());
+        temp.setType(typeDropDownBar.getSelectedItem().toString());
+        if(lessonDropDownBar.getSelectedItem().toString().equalsIgnoreCase("extra"))
+        {
+            temp.setLesson(0);
+        }
+        else
+        {
+            temp.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
+        }
+        temp.setReqKanji(reqKanjiCheckbox.isChecked());
+        resetFields();
+        AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);
+        addNewTerm.execute();
     }
 }

@@ -13,6 +13,7 @@
     <string name="noTermsFound">No Term(s) found.</string>
     <string name="okLabel">OK</string>
     <string name="emptyStringMessage">Please do not leave any fields blank</string>
+    <string name="multiLineWarning">There were multiple lines detected.</string>
 
 
     //HomePage
@@ -55,6 +56,7 @@
     <string name="searchSpecificAttributeLabel">Search by Attribute:</string>
     <string name="fillEnglishAndJapanese">Please make sure to fill in the Japanese and English fields</string>
     <string name="searchEditableButtonText">Search</string>
+    <string name="overwriteMessage">Are you sure you want to over-write this term?</string>
 
     //AddTermPage
     <string name="addJapaneseLabel">Enter Japanese:</string>
@@ -72,6 +74,8 @@
     <string name="editButtonText">Edit</string>
     <string name="similaritiesTitle">Similarities Found</string>
     <string name="newTermLabel">New Term</string>
-
+    <string name="returnToList">Return to list</string>
+    <string name="addNewTermMessage">Would you like to add this term into the database?</string>
+    <string name="addNewTerm">Add New Term</string>
 
 </resources>
