@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-//TODO: configure refresh after edit
 public class EditTermsPage extends AppCompatActivity
 {
     ListView editTermsListView;

@@ -20,9 +20,9 @@
     <EditText
         android:id="@+id/addJapaneseTextBox"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/addPageTextBoxHeight"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:ems="10"
-        android:inputType="textMultiLine"
         android:textAlignment="viewStart"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize" />
@@ -44,9 +44,9 @@
     <EditText
         android:id="@+id/addEnglishTextBox"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/addPageTextBoxHeight"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:ems="10"
-        android:inputType="textMultiLine"
         android:textAlignment="viewStart"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize" />
@@ -68,9 +68,9 @@
     <EditText
         android:id="@+id/addKanjiTextBox"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/addPageTextBoxHeight"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:ems="10"
-        android:inputType="textMultiLine"
         android:textAlignment="viewStart"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize" />

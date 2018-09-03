@@ -25,8 +25,8 @@ public class AddTermsPage extends AppCompatActivity
     Spinner typeDropDownBar;
     Spinner lessonDropDownBar;
     private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
-    private final String[] lessonSpec = new String[]{"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
-            "20","21","22","23"};
+    private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
+            "20","21","22","23","extra"};
     CheckBox reqKanjiCheckbox;
     Button addTermButton;
 
@@ -74,7 +74,14 @@ public class AddTermsPage extends AppCompatActivity
             temp.setJpns(jpnsTextBox.getText().toString());
             temp.setKanji(kanjiTextBox.getText().toString());
             temp.setType(typeDropDownBar.getSelectedItem().toString());
-            temp.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
+            if(lessonDropDownBar.getSelectedItem().toString().equalsIgnoreCase("extra"))
+            {
+                temp.setLesson(0);
+            }
+            else
+            {
+                temp.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
+            }
             temp.setReqKanji(reqKanjiCheckbox.isChecked());
             resetFields();
             AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);
@@ -82,22 +89,13 @@ public class AddTermsPage extends AppCompatActivity
         }
         else
         {
-            String message="";
-            if(!engSupplied)
-            {
-                message+= "English\n";
-            }
-            if(!jpnsSupplied)
-            {
-                message+="Japanese\n";
-            }
             AlertDialog.Builder builder = new AlertDialog.Builder(addTermButton.getContext());
-            builder.setTitle("ERROR");
-            builder.setMessage("Please fix the following fields\n"+message);
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            builder.setTitle(getResources().getString(R.string.errorTitle));
+            builder.setMessage(getResources().getString(R.string.fillEnglishAndJapanese));
+            builder.setPositiveButton(getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
+                    dialog.dismiss();
                 }
             });
             AlertDialog dialog = builder.create();
@@ -107,7 +105,6 @@ public class AddTermsPage extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         AlertDialog.Builder builder = new AlertDialog.Builder(jpnsTextBox.getContext());
         builder.setTitle("Warning");
         builder.setMessage("Return to the menu??");
