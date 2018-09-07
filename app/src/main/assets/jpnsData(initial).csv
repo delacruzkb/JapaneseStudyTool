@@ -82,9 +82,9 @@ XはYです,X is Y,null,grammar,1,null
 はたち,20 Years old,null,other,1,null
 よろしくおねがいします,Nice to meet you,null,other,1,null
 たかい,Expensive / High,高い,adjective,2,null
-～ね／～よ,""". . . Right?"" / "". . . I tell you"" (Authoritative)",null,grammar,2,null
+～ね／～よ,. . . Right? / . . . I tell you (Authoritative),null,grammar,2,null
 Noun じゃないです,Negate a statement,null,grammar,2,null
-Noun も,"(Noun) too. (Used like ""is also"")",null,grammar,2,null
+Noun も,(Noun) too. (Used like: is also),null,grammar,2,null
 ここ／そこ／あそこ／どこ,Here/There/Over there/Where,null,grammar,2,null
 この／その／あの／どの ＋ Noun,This/That/Which (Noun),null,grammar,2,null
 これ／それ／あれ／どれ,This/That/Which thing,null,grammar,2,null
@@ -271,7 +271,7 @@ XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 たくさん,Expression of a large quantity,null,grammar,4,null
 でした／じゃなかったです,Past tense of です,null,grammar,4,null
 ではありませんでした,Past tense of です (more likely to be seen in writing),null,grammar,4,null
-と,"Connect two nouns / ""together with""",null,grammar,4,null
+と,Connect two nouns / together with,null,grammar,4,null
 ました／ませんでした,Past tense of verbs,null,grammar,4,null
 も,Two or more people performing the same activity,null,grammar,4,null
 一時間,Duration of an activity,null,grammar,4,null
@@ -449,7 +449,7 @@ Good-looking (conjugates like いい),Good-looking,null,adjective,5,null
 むずかしい,Difficult,難しい,adjective,5,null
 やさしい,Easy (problem) / Kind (person),null,adjective,5,null
 やすい,Inexpensive / Cheap (thing),安い,adjective,5,null
-～ましょう／～ましょうか,"""Let's . . ."" / ""Let's . . . ?""",null,grammar,5,null
+～ましょう／～ましょうか,Let's . . . / Let's . . . ?,null,grammar,5,null
 さむい➞さむいです,Adjective conjugation (affirmative),null,grammar,5,null
 さむい➞さむかったです,Past-tense adjective conjugation (affirmative),null,grammar,5,null
 さむい➞さむくないです／さむくありません,Adjective conjugation (negative),null,grammar,5,null
@@ -547,11 +547,11 @@ Good-looking (conjugates like いい),Good-looking,null,adjective,5,null
 (Destination)(に／へ)　いく,To go,(Destination)(に／へ)　行く,u-verb,5,kanji
 のむ,To drink,飲む,u-verb,5,kanji
 ～から,Explains the reason,null,grammar,6,null
-～ましょうか,"""Let me do . . ."" (offering asistance)",null,grammar,6,null
-とる➞とって,"(Te-form) forming a sentence that describes two events or activities. (""I did this and did that."")",null,grammar,6,null
-とる➞とってはいけません,"(Te-form) stating that something is forbidden (You must not . . ."")",null,grammar,6,null
-みる➞みてもいいです（か／よ）,"(Te-form) giving and asking for permission (""You may . . . / May I . . .?"")",null,grammar,6,null
-よむ➞よんでください,"(Te-form) making requests ("". . .、please."")",null,grammar,6,null
+～ましょうか,Let me do . . . (offering asistance),null,grammar,6,null
+とる➞とって,(Te-form) forming a sentence that describes two events or activities. (I did this and did that.),null,grammar,6,null
+とる➞とってはいけません,(Te-form) stating that something is forbidden (You must not . . .),null,grammar,6,null
+みる➞みてもいいです（か／よ）,(Te-form) giving and asking for permission (You may . . . / May I . . .?),null,grammar,6,null
+よむ➞よんでください,(Te-form) making requests (. . .、please.),null,grammar,6,null
 （～を）つれてくる,To bring (a person),（～を）連れてくる,irr-verb,6,null
 （～を）もってくる,To bring (a thing),（～を）持ってくる,irr-verb,6,null
 CD（シーディー）,CD,null,noun,6,null
@@ -1445,7 +1445,7 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 つごうがわるい,Inconvenient / To have a scheduling conflict,都合が悪い,adjective,12,null
 わるい,Bad,悪い,adjective,12,null
 （Present tense short form)～ほうがいいです,Giving advice (negative),null,grammar,12,null
-（Stem of masu form)～すぎる,"""Too much"" or ""Too Excess""",null,grammar,12,null
+（Stem of masu form)～すぎる,Too much / Too Excess,null,grammar,12,null
 （Ta form)～ほうがいいです,Giving advice (affirmative),null,grammar,12,null
 ～でしょう,Make a guess or prediction ( follows verbs and い-adjectives),null,grammar,12,null
 ～ないといけません,Say something is necessary to do,null,grammar,12,null
@@ -1456,7 +1456,7 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 ～ので,Give a reason for the situation described (formal),null,grammar,12,null
 (Short-form)～んです／～んだ,Explination mode of speech,null,grammar,12,null
 (Short-form)～んですか／～の,Asking for an explination,null,grammar,12,null
-たべなきゃ／たべなくちゃ／たべないと,"Say something is necessary to do ( in casual speech leaving out the ""いけません"")",null,grammar,12,null
+たべなきゃ／たべなくちゃ／たべないと,Say something is necessary to do ( in casual speech leaving out the -いけません),null,grammar,12,null
 きんちょうする,To get nervous,緊張する,irr-verb,12,null
 しんぱいする,To worry,心配する,irr-verb,12,null
 あし,Leg / Foot,足,noun,12,null
@@ -1600,7 +1600,7 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 むかしはなし,Old tale,昔話,noun,12,kanji
 れんきゅう,Consecutive holidays,連休,noun,12,kanji
 ろうどう,Labor,労働,noun,12,kanji
-しようちゅう,"""Occupied""",使用中,other,12,kanji
+しようちゅう,Occupied,使用中,other,12,kanji
 ときどき,Sometimes,時々,other,12,kanji
 ともばたらき,Both Husband and wife working,共働き,other,12,kanji
 べつに　＋Negative,Nothing in particular,別に　＋Negative,other,12,kanji
@@ -2247,7 +2247,7 @@ Xがほうしい,I want (x),null,grammar,14,null
 （Noun)(の）～そうです,Express the idea that something or somebody resembbles the thing or the person described by the noun,null,grammar,17,null
 （Short form／だFor Noun/なAdjectives)～そうです,A 'hearsay report',null,grammar,17,null
 （Short-Form）～みたいです,Express the idea that something or somebody resembbles the thing or the person described by the noun,null,grammar,17,null
-（Short-FormVerb）～そうです,"Express the idea tha something ""appears to be the case""",,grammar,17,null
+（Short-FormVerb）～そうです,Express the idea tha something appears to be the case,,grammar,17,null
 （Ta-form）～ら,Conditional statement,null,grammar,17,null
 （Te-Form）～から,Describe an even after which another thing happens,null,grammar,17,null
 （Verb-Short-Form）～まえに,Describe the event before which something happens,null,grammar,17,null
@@ -2304,7 +2304,7 @@ Xがほうしい,I want (x),null,grammar,14,null
 しゅうっぱつ,depature,出発,noun,17,kanji
 しゅご,subject of a sentence,主語,noun,17,kanji
 しゅしょう,prime minister,首相,noun,17,null
-しゅふ,"""House husband""",主夫,noun,17,null
+しゅふ,House husband (made up),主夫,noun,17,null
 しゅふ,housewife,主婦,noun,17,kanji
 ショッピングモール,shopping mall,null,noun,17,null
 しんこん,newlywed,新婚,noun,17,kanji
