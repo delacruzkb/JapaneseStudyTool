@@ -2243,7 +2243,7 @@ Xがほうしい,I want (x),null,grammar,14,null
 じょうひん（な）,Elegant,上品（な）,adjective,17,kanji
 すくない,a little / a few,少ない,adjective,17,null
 つよい,strong,強い,adjective,17,null
-"（Nai-form, Withoutい）～くてもいいです／～なくていいです",Describe what you do not need to do,null,grammar,17,null
+（Nai-form、 Withoutい）～くてもいいです／～なくていいです,Describe what you do not need to do,null,grammar,17,null
 （Noun)(の）～そうです,Express the idea that something or somebody resembbles the thing or the person described by the noun,null,grammar,17,null
 （Short form／だFor Noun/なAdjectives)～そうです,A 'hearsay report',null,grammar,17,null
 （Short-Form）～みたいです,Express the idea that something or somebody resembbles the thing or the person described by the noun,null,grammar,17,null
@@ -2376,7 +2376,7 @@ Xがほうしい,I want (x),null,grammar,14,null
 ずいぶん,very,null,other,17,null
 そうか,I see. (casual),null,other,17,null
 そらないでください,(Barber/Beauty Salon) please don't shave,null,other,17,null
-それに,"moreover,...",null,other,17,null
+それに,moreover、...,null,other,17,null
 たとえば,for example,例えば,other,17,null
 ボブ・マーリーみたいなかみがたにしたいんですが,(Barber/Beauty Salon) I want my hair to be like bob marley's,ボブﾞ・マーリーみたいな髪形にしたいんですが,other,17,null
 まえ,before . . .,前,other,17,null
