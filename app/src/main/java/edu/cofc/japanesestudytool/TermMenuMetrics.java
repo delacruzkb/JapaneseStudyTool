@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class TermMenuMetrics implements Serializable
 {
-    boolean allTerms,JapaneseFirst,Kanji,LessonKanjiOnly,KanjiFirst;
+    boolean allTerms,japaneseFirst,kanji,lessonKanjiOnly,kanjiFirst, kanjiOnly;
     int[] lessons;
     int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
     String mode;
@@ -21,10 +21,11 @@ public class TermMenuMetrics implements Serializable
     public TermMenuMetrics()
     {
         allTerms = false;
-        JapaneseFirst = false;
-        Kanji = false;
-        LessonKanjiOnly = false;
-        KanjiFirst = false;
+        japaneseFirst = false;
+        kanji = false;
+        lessonKanjiOnly = false;
+        kanjiFirst = false;
+        kanjiOnly = false;
         lessons=null;
         nounCount =1;
         verbCount=1;
@@ -43,35 +44,43 @@ public class TermMenuMetrics implements Serializable
     }
 
     public boolean isJapaneseFirst() {
-        return JapaneseFirst;
+        return japaneseFirst;
     }
 
-    public void setJapaneseFirst(boolean JapaneseFirst) {
-        this.JapaneseFirst = JapaneseFirst;
+    public void setJapaneseFirst(boolean japaneseFirst) {
+        this.japaneseFirst = japaneseFirst;
     }
 
     public boolean isKanji() {
-        return Kanji;
+        return kanji;
     }
 
-    public void setKanji(boolean Kanji) {
-        this.Kanji = Kanji;
+    public void setKanji(boolean kanji) {
+        this.kanji = kanji;
     }
 
     public boolean isLessonKanjiOnly() {
-        return LessonKanjiOnly;
+        return lessonKanjiOnly;
     }
 
-    public void setLessonKanjiOnly(boolean LessonKanjiOnly) {
-        this.LessonKanjiOnly = LessonKanjiOnly;
+    public void setLessonKanjiOnly(boolean lessonKanjiOnly) {
+        this.lessonKanjiOnly = lessonKanjiOnly;
     }
 
     public boolean isKanjiFirst() {
-        return KanjiFirst;
+        return kanjiFirst;
     }
 
-    public void setKanjiFirst(boolean KanjiFirst) {
-        this.KanjiFirst = KanjiFirst;
+    public void setKanjiFirst(boolean kanjiFirst) {
+        this.kanjiFirst = kanjiFirst;
+    }
+
+    public boolean isKanjiOnly() {
+        return kanjiOnly;
+    }
+
+    public void setKanjiOnly(boolean kanjiOnly) {
+        this.kanjiOnly = kanjiOnly;
     }
 
     public int[] getLessons() {

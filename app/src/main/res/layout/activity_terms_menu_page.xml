@@ -277,6 +277,16 @@
         android:theme="@style/SwitchTheme" />
 
     <Switch
+        android:id="@+id/kanjiOnlySwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:splitTrack="false"
+        android:text="@string/kanjiOnlyToggle"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
+    <Switch
         android:id="@+id/lessonKanjiSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -301,13 +311,32 @@
         android:layout_height="@dimen/dividerHeight"
         android:background="@color/dividerColor" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lessonSelectionText"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lessonSelectionText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <CheckBox
+            android:id="@+id/allLessonsCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:checked="true"
+            android:duplicateParentState="false"
+            android:text="All"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
 
     <TableLayout
         android:id="@+id/lessons"
@@ -605,17 +634,6 @@
         </TableRow>
 
     </TableLayout>
-
-    <CheckBox
-        android:id="@+id/allLessonsCheckBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:buttonTint="@color/checkBoxColor"
-        android:checked="true"
-        android:duplicateParentState="false"
-        android:text="All"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
 
     <View
         android:id="@+id/divider13"

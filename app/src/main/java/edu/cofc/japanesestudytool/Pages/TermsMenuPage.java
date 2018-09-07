@@ -25,7 +25,7 @@ public class TermsMenuPage extends AppCompatActivity
     private Button otherCountDecreaseButton, otherCountIncreaseButton;
     private Button confirmButton;
 
-    private Switch displayLanguageToggle,kanjiToggle, lessonKanjiToggle,displayKanjiToggle;
+    private Switch displayLanguageToggle,kanjiToggle, lessonKanjiToggle,displayKanjiToggle, kanjiOnlyToggle;
 
     private CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6,lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
     private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23;
@@ -76,8 +76,11 @@ public class TermsMenuPage extends AppCompatActivity
         kanjiToggle = findViewById(R.id.kanjiSwitch);
         lessonKanjiToggle = findViewById(R.id.lessonKanjiSwitch);
         displayKanjiToggle= findViewById(R.id.displayKanjiSwitch);
+        kanjiOnlyToggle = findViewById(R.id.kanjiOnlySwitch);
         lessonKanjiToggle.setVisibility(View.INVISIBLE);
         displayKanjiToggle.setVisibility(View.INVISIBLE);
+        kanjiOnlyToggle.setVisibility(View.INVISIBLE);
+
 
         //Instantiate checkboxes
         lesson1 = findViewById(R.id.lessonCheckBox1);
@@ -281,6 +284,27 @@ public class TermsMenuPage extends AppCompatActivity
 
     private void setSwitchOnClickListener()
     {
+        kanjiToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!kanjiToggle.isChecked())
+                {
+                    lessonKanjiToggle.setChecked(false);
+                    displayKanjiToggle.setChecked(false);
+                    kanjiOnlyToggle.setChecked(false);
+                    kanjiOnlyToggle.setVisibility(View.INVISIBLE);
+                    lessonKanjiToggle.setVisibility(View.INVISIBLE);
+                    displayKanjiToggle.setVisibility(View.INVISIBLE);
+                }
+                else
+                {
+                    lessonKanjiToggle.setVisibility(View.VISIBLE);
+                    displayKanjiToggle.setVisibility(View.VISIBLE);
+                    kanjiOnlyToggle.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
         displayLanguageToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -290,32 +314,18 @@ public class TermsMenuPage extends AppCompatActivity
                 }
             }
         });
-        kanjiToggle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!kanjiToggle.isChecked())
-                {
-                    lessonKanjiToggle.setChecked(false);
-                    displayKanjiToggle.setChecked(false);
-                    lessonKanjiToggle.setVisibility(View.INVISIBLE);
-                    displayKanjiToggle.setVisibility(View.INVISIBLE);
-                }
-                else
-                {
-                    lessonKanjiToggle.setVisibility(View.VISIBLE);
-                    displayKanjiToggle.setVisibility(View.VISIBLE);
-                }
-            }
-        });
+
         displayKanjiToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!displayLanguageToggle.isChecked())
+                if(!displayLanguageToggle.isChecked()&& displayKanjiToggle.isChecked())
                 {
-                    displayKanjiToggle.setChecked(false);
+                    displayLanguageToggle.setChecked(true);
+                    displayKanjiToggle.setChecked(true);
                 }
             }
         });
+
     }
 
     private void setCheckBoxOnClickListener()
@@ -403,6 +413,7 @@ public class TermsMenuPage extends AppCompatActivity
                 metrics.setKanji(kanjiToggle.isChecked());
                 metrics.setLessonKanjiOnly(lessonKanjiToggle.isChecked());
                 metrics.setKanjiFirst(displayKanjiToggle.isChecked());
+                metrics.setKanjiOnly(kanjiOnlyToggle.isChecked());
                 metrics.setAllTerms(allLessons.isChecked());
                 //Gather all lessons selected
                 int[] lessons=null;

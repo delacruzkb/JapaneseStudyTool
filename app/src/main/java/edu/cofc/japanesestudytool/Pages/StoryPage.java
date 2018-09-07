@@ -28,7 +28,7 @@ public class StoryPage extends AppCompatActivity
     private WebView browser;
     private ListView termListView;
     private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
-    private boolean useJapaneseFirst, useKanji,useLessonKanjiOnly, useKanjiFirst;
+    private boolean useJapaneseFirst, useKanji,useLessonKanjiOnly, useKanjiFirst, useKanjiOnly;
     private TermMenuMetrics metrics;
 
     @Override
@@ -123,7 +123,7 @@ public class StoryPage extends AppCompatActivity
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         //populate
-        TermListAdapter termListAdapter = new TermListAdapter(this.getApplicationContext(),terms,useJapaneseFirst,useKanji,useLessonKanjiOnly,useKanjiFirst);
+        TermListAdapter termListAdapter = new TermListAdapter(this.getApplicationContext(),terms,metrics);
         termListView.setAdapter(termListAdapter);
     }
 
@@ -140,6 +140,8 @@ public class StoryPage extends AppCompatActivity
         useKanji = metrics.isKanji();
         useLessonKanjiOnly = metrics.isLessonKanjiOnly();
         useKanjiFirst = metrics.isKanjiFirst();
+        useKanjiOnly = metrics.isKanjiOnly();
+
     }
     @Override
     public void onBackPressed() {

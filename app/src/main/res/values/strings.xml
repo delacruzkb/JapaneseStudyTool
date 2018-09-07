@@ -33,6 +33,7 @@
     <string name="kanjiToggleText">Kanji</string>
     <string name="lessonKanjiOnlyToggleText">Lesson Kanji Only</string>
     <string name="displayKanjiToggle">Show Kanji First</string>
+    <string name="kanjiOnlyToggle">Kanji Only</string>
     <string name="lessonSelectionText">Include Lessons:</string>
     <string name="submitButtonText">Confirm</string>
 

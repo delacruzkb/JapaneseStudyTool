@@ -28,6 +28,11 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE jpns LIKE :japanese OR eng LIKE :english")
     List<Term> getAllMatchedTerms(String japanese, String english);
 
+    @Query("SELECT* FROM Term WHERE kanji NOT LIKE 'null' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getKanjiOnly(String type, int limit);
+
+    @Query("SELECT* FROM Term WHERE kanji NOT LIKE 'null' and type LIKE '%' || :type || '%' and lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getKanjiOnlyFromLessons(String type, int[] lesson, int limit);
 
     @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%' ORDER BY jpns")
     List<Term> searchJpns(String japanese);

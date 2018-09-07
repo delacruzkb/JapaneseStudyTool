@@ -16,19 +16,17 @@ public class TermListAdapter extends BaseAdapter
     private Context context;
     private LayoutInflater mLayoutInflater;
     private ArrayList<Term> data;
-    private boolean showJapaneseFirst;
-    private boolean useKanji;
-    private boolean lessonKanjiOnly;
-    private boolean showKanjiFirst;
-    public TermListAdapter(Context context, ArrayList<Term> data, boolean showJapaneseFirst, boolean useKanji, boolean lessonKanjiOnly,boolean showKanjiFirst)
+    private boolean showJapaneseFirst,useKanji,lessonKanjiOnly,showKanjiFirst, useKanjiOnly;
+    public TermListAdapter(Context context, ArrayList<Term> data, TermMenuMetrics metrics)
     {
         this.context = context;
         this.data = data;
         mLayoutInflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.showJapaneseFirst = showJapaneseFirst;
-        this.useKanji = useKanji;
-        this.lessonKanjiOnly = lessonKanjiOnly;
-        this.showKanjiFirst = showKanjiFirst;
+        showJapaneseFirst = metrics.isJapaneseFirst();
+        this.useKanji = metrics.isKanji();
+        this.lessonKanjiOnly = metrics.isLessonKanjiOnly();
+        showKanjiFirst = metrics.isKanjiFirst();
+        useKanjiOnly = metrics.isKanjiOnly();
     }
     @Override
     public int getCount()
