@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import edu.cofc.japanesestudytool.Pages.FlashCardPage;
 import edu.cofc.japanesestudytool.Pages.HomePage;
@@ -67,6 +68,10 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             intent.putExtra("adjectiveList",adjectiveList);
             intent.putExtra("grammarList",grammarList);
             intent.putExtra("otherList",otherList);
+            if(termList!=null)
+            {
+                Collections.shuffle(termList);
+            }
             intent.putExtra("termList",termList);
             mContext.startActivity(intent);
         }
