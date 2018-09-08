@@ -86,11 +86,23 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         {
             if(metrics.isKanjiOnly())
             {
-                nounList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("noun", metrics.getNounCount());
-                verbList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("verb", metrics.getVerbCount());
-                adjectiveList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("adjective", metrics.getAdjectiveCount());
-                grammarList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("grammar", metrics.getGrammarCount());
-                otherList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("other", metrics.getOtherCount());
+                if(metrics.isLessonKanjiOnly())
+                {
+                    nounList = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly("noun", metrics.getNounCount());
+                    verbList = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly("verb", metrics.getVerbCount());
+                    adjectiveList = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly("adjective", metrics.getAdjectiveCount());
+                    grammarList = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly("grammar", metrics.getGrammarCount());
+                    otherList = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly("other", metrics.getOtherCount());
+                }
+                else
+                {
+                    nounList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("noun", metrics.getNounCount());
+                    verbList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("verb", metrics.getVerbCount());
+                    adjectiveList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("adjective", metrics.getAdjectiveCount());
+                    grammarList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("grammar", metrics.getGrammarCount());
+                    otherList = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly("other", metrics.getOtherCount());
+                }
+
             }
             else
             {
@@ -130,11 +142,23 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             int[] lessons = metrics.getLessons();
             if(metrics.isKanjiOnly())
             {
-                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("noun",lessons,metrics.getNounCount());
-                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("verb",lessons,metrics.getVerbCount());
-                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("adjective",lessons,metrics.getAdjectiveCount());
-                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("grammar",lessons,metrics.getGrammarCount());
-                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("other",lessons,metrics.getOtherCount());
+                if(metrics.isLessonKanjiOnly())
+                {
+                    nounList=   (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("noun",lessons,metrics.getNounCount());
+                    verbList=   (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("verb",lessons,metrics.getVerbCount());
+                    adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+                    grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("grammar",lessons,metrics.getGrammarCount());
+                    otherList=  (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("other",lessons,metrics.getOtherCount());
+                }
+                else
+                {
+                    nounList=   (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("noun",lessons,metrics.getNounCount());
+                    verbList=   (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("verb",lessons,metrics.getVerbCount());
+                    adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+                    grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("grammar",lessons,metrics.getGrammarCount());
+                    otherList=  (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("other",lessons,metrics.getOtherCount());
+                }
+
             }
             else
             {
