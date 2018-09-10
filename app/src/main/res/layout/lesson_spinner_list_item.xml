@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/backgroundColor"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -11,11 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:buttonTint="@color/checkBoxColor"
         android:checked="false"
         android:duplicateParentState="false"
-        android:text="lesson#"
-        android:textColor="@color/textColor"
+        android:text="@string/lessonSpinnerLabel"
+        android:textColor="@android:color/black"
         android:textSize="@dimen/textSize" />
 
 </LinearLayout>

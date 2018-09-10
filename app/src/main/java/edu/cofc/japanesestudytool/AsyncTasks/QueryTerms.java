@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import edu.cofc.japanesestudytool.Pages.FlashCardPage;
@@ -219,7 +220,12 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         Collections.shuffle(rtnval);
         if(rtnval.size()>count)
         {
-            rtnval = (ArrayList<Term>) rtnval.subList(0, count);
+            ArrayList<Term> temp = new ArrayList<>();
+            for(int i =0; i<count;i++)
+            {
+                temp.add(rtnval.get(i));
+            }
+            rtnval=temp;
         }
 
         return rtnval;
@@ -244,7 +250,12 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         Collections.shuffle(rtnval);
         if(rtnval.size()>count)
         {
-            rtnval = (ArrayList<Term>) rtnval.subList(0, count);
+            ArrayList<Term> temp = new ArrayList<>();
+            for(int i =0; i<count;i++)
+            {
+                temp.add(rtnval.get(i));
+            }
+            rtnval=temp;
         }
 
         return rtnval;
@@ -268,7 +279,12 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         Collections.shuffle(rtnval);
         if(rtnval.size()>count)
         {
-            rtnval = (ArrayList<Term>) rtnval.subList(0, count);
+            ArrayList<Term> temp = new ArrayList<>();
+            for(int i =0; i<count;i++)
+            {
+                temp.add(rtnval.get(i));
+            }
+            rtnval=temp;
         }
         return rtnval;
     }

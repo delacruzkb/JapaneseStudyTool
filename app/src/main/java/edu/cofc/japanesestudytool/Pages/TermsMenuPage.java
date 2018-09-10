@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 
+import java.util.ArrayList;
+
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
@@ -34,9 +36,8 @@ public class TermsMenuPage extends AppCompatActivity
     private String whichMode;
     private final int minCountLimit=0;
     private final int maxCountLimit=100;
-    private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
-            "20","21","22","23","extra"};
 
+    private CheckBoxDropDownSpinnerAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -90,8 +91,10 @@ public class TermsMenuPage extends AppCompatActivity
 
         //Instantiate dropdown checkboxes
         lessonDropDown = findViewById(R.id.termLessonsCheckDropDown);
-        CheckBoxDropDownSpinnerAdapter adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext(),0,lessonSpec);
+        adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext());
         lessonDropDown.setAdapter(adapter);
+        lessonDropDown.setSelection(0);
+        lessonDropDown.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -322,6 +325,7 @@ public class TermsMenuPage extends AppCompatActivity
                 if(allLessons.isChecked())
                 {
                     lessonDropDown.setVisibility(View.INVISIBLE);
+                    adapter.refreshList();
                 }
                 else
                 {
@@ -354,7 +358,7 @@ public class TermsMenuPage extends AppCompatActivity
                 int[] lessons=null;
                 if(!allLessons.isChecked())
                 {
-                    //TODO:Figure out Lessons
+                    lessons = adapter.getLessonsArray();
                 }
                 metrics.setLessons(lessons);
                 QueryTerms queryTerms = new QueryTerms(metrics, confirmButton.getContext());

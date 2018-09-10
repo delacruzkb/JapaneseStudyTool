@@ -14,6 +14,7 @@
     <string name="okLabel">OK</string>
     <string name="emptyStringMessage">Please do not leave any fields blank</string>
     <string name="multiLineWarning">There were multiple lines detected.</string>
+    <string name="lessonSpinnerLabel">Custom...</string>
 
 
     //HomePage
