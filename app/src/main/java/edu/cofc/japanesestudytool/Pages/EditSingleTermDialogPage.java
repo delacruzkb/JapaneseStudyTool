@@ -19,7 +19,7 @@ import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
-
+//TODO: Configure Spinner Checkbox
 public class EditSingleTermDialogPage extends AppCompatActivity
 {
     EditText japaneseTextBox;
@@ -60,8 +60,10 @@ public class EditSingleTermDialogPage extends AppCompatActivity
         lessonDropDownBar = findViewById(R.id.editLessonDropDownBar);
         adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,lessonSpec);
         lessonDropDownBar.setAdapter(adapter);
+        /*
         Integer temp = new Integer(originalTerm.getLesson());
         lessonDropDownBar.setSelection(adapter.getPosition(temp.toString()));
+        //*/
         reqKanjiCheckBox = findViewById(R.id.editReqKanjiCheckBox);
         cancelEdit = findViewById(R.id.cancelEditTermButton);
         cancelEdit.setOnClickListener(new View.OnClickListener() {
@@ -138,6 +140,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                 editedTerm.setEng(englishTextBox.getText().toString());
                 editedTerm.setKanji(kanjiTextBox.getText().toString());
                 editedTerm.setType(typeDropDownBar.getSelectedItem().toString());
+                /*
                 if(lessonDropDownBar.getSelectedItem().toString().equalsIgnoreCase("extra")) {
                     editedTerm.setLesson(0);
                 }
@@ -145,6 +148,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                 {
                     editedTerm.setLesson(Integer.parseInt(lessonDropDownBar.getSelectedItem().toString()));
                 }
+                //*/
                 editedTerm.setReqKanji(reqKanjiCheckBox.isChecked());
                 ArrayList<Term> temp = new ArrayList<>();
                 temp.add(editedTerm);

@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import edu.cofc.japanesestudytool.AddTermListAdapter;
+import edu.cofc.japanesestudytool.Adapters.AddTermListAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
@@ -121,8 +121,7 @@ public class SimilarTermsPage extends AppCompatActivity
         newJpnsTextBox.setText(term.getJpns());
         newKanjiTextBox.setText(term.getKanji());
         newTypeTextBox.setText(term.getType());
-        Integer tempInt = new Integer(term.getLesson());
-        newLessonTextBox.setText(tempInt.toString());
+        newLessonTextBox.setText(term.getLessonString());
         if(!term.isReqKanji())
         {
             newReqKanjiTextBox.setVisibility(View.INVISIBLE);

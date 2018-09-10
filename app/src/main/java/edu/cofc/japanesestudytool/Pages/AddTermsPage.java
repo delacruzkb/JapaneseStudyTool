@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+//TODO: Configure Spinner Checkbox
 
 public class AddTermsPage extends AppCompatActivity
 {
@@ -150,6 +151,7 @@ public class AddTermsPage extends AppCompatActivity
         temp.setJpns(jpnsTextBox.getText().toString());
         temp.setKanji(kanjiTextBox.getText().toString());
         temp.setType(typeDropDownBar.getSelectedItem().toString());
+        /*
         if(lessonDropDownBar.getSelectedItem().toString().equalsIgnoreCase("extra"))
         {
             temp.setLesson(0);
@@ -158,6 +160,7 @@ public class AddTermsPage extends AppCompatActivity
         {
             temp.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
         }
+        //*/
         temp.setReqKanji(reqKanjiCheckbox.isChecked());
         resetFields();
         AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);

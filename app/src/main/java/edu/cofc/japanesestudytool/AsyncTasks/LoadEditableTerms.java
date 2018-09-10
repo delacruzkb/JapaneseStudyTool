@@ -21,7 +21,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
 
     String english;
     String kanji;
-    int lesson;
+    String lesson;
     String termType;
     boolean reqKanji;
     boolean isExact;
@@ -51,7 +51,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else  if(mode.equalsIgnoreCase("Lesson"))
         {
-            lesson = Integer.valueOf(value);
+            lesson = value;
         }
         else if(mode.equalsIgnoreCase("Req. Kanji"))
         {

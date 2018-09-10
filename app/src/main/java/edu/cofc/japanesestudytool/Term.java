@@ -2,20 +2,22 @@ package edu.cofc.japanesestudytool;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
 import java.io.Serializable;
 
 
 @Entity
 public class Term implements Serializable
 {
-    @PrimaryKey (autoGenerate = true)
-    int id;
+    @PrimaryKey @NonNull
+    String id;
 
     private String jpns;
     private String eng;
     private String kanji;
     private String type;
-    private int lesson;
+    private String lesson;
     private boolean reqKanji;
     private boolean checked;
 
@@ -25,17 +27,18 @@ public class Term implements Serializable
         eng= "ア";
         kanji = "a";
         type = "u-verb";
-        lesson = 0;
+        lesson="";
         reqKanji=false;
         checked = false;
+        setId(jpns+eng);
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id = id.toLowerCase();
     }
 
     public String getJpns() {
@@ -43,7 +46,8 @@ public class Term implements Serializable
     }
 
     public void setJpns(String jpns) {
-        this.jpns = jpns.toLowerCase();
+        this.jpns = jpns;
+        setId(jpns+eng);
     }
 
     public String getEng() {
@@ -51,7 +55,8 @@ public class Term implements Serializable
     }
 
     public void setEng(String eng) {
-        this.eng = eng.toLowerCase();
+        this.eng = eng;
+        setId(jpns+eng);
     }
 
     public String getKanji() {
@@ -71,12 +76,42 @@ public class Term implements Serializable
     }
 
 
-    public int getLesson() {
+    public String getLesson() {
         return lesson;
     }
 
-    public void setLesson(int lesson) {
+
+    public void setLesson(String lesson)
+    {
         this.lesson = lesson;
+    }
+    public void setLesson(int position, int value)
+    {
+        int[] convertedLesson = fromStringToArray(lesson);
+        convertedLesson[position] = value;
+        setLesson(fromArrayToString(convertedLesson));
+        System.out.println("woop");
+    }
+    public String getLessonString()
+    {
+        int[] lessons = fromStringToArray(lesson);
+        String rtnval="";
+        for(int i=0; i<lessons.length; i++)
+        {
+            if(lessons[i]>=0)
+            {
+                if(i==0)
+                {
+                    rtnval= rtnval+"extra,";
+                }
+                else {
+                    rtnval = rtnval + lessons[i] + ",";
+                }
+            }
+        }
+        //remove last ","
+        rtnval = rtnval.substring(0,rtnval.length()-1);
+        return rtnval;
     }
 
     public boolean isReqKanji() {
@@ -110,10 +145,7 @@ public class Term implements Serializable
     {
         boolean rtnval = false;
         Term otherTerm = (Term)term;
-        if(this.getJpns().equalsIgnoreCase(otherTerm.getJpns())&&
-                this.getEng().equals(otherTerm.getEng())&&
-                this.getKanji().equals(otherTerm.getKanji()) &&
-                ( this.getLesson() == otherTerm.getLesson() ))
+        if(this.getId().equals(otherTerm.getId()))
         {
             rtnval = true;
         }
@@ -122,6 +154,41 @@ public class Term implements Serializable
 
     }
 
+    public static int[] fromStringToArray(String value)
+    {
+        int[] lessons = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
+        for(int i=0;i<lessons.length;i++)
+        {
+            String letter = getLessonChar(i);
+            if(value.contains(letter))
+            {
+                lessons[i]=i;
+            }
+        }
+        return lessons;
+    }
 
+    public static String fromArrayToString(int[] value)
+    {
+        String lessonString="";
+
+        for (int i=0; i< value.length;i++)
+        {
+            if(value[i]>=0)
+            {
+                lessonString= lessonString + getLessonChar(i);
+            }
+        }
+
+        return lessonString;
+    }
+
+    public static String getLessonChar(int lesson)
+    {
+        String rtnval="";
+        int letterOffset= 'a';
+        rtnval=String.valueOf(Character.toChars(letterOffset+lesson));
+        return rtnval;
+    }
 
 }

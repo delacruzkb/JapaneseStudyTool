@@ -15,15 +15,18 @@ public interface TermDAO
 {
     @Insert (onConflict = OnConflictStrategy.REPLACE)
     void insertTerm(Term term);
+
     @Query("SELECT * FROM Term ORDER BY jpns")
     List<Term> getAllTerms();
 
+    @Query("SELECT * FROM Term WHERE id LIKE :id")
+    Term getTermById(String id);
 
     @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypes(String type, int limit);
 
-    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getAllTypeFromLessons(String type, int[] lesson, int limit);
+    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTypeFromLessons(String type, String lesson, int limit);
 
     @Query("SELECT* FROM Term WHERE jpns LIKE :japanese OR eng LIKE :english")
     List<Term> getAllMatchedTerms(String japanese, String english);
@@ -31,14 +34,14 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE kanji NOT LIKE 'null' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
     List<Term> getKanjiOnly(String type, int limit);
 
-    @Query("SELECT* FROM Term WHERE kanji NOT LIKE 'null' and type LIKE '%' || :type || '%' and lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getKanjiOnlyFromLessons(String type, int[] lesson, int limit);
+    @Query("SELECT* FROM Term WHERE kanji NOT LIKE 'null' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getKanjiOnlyFromLessons(String type, String lesson, int limit);
 
     @Query("SELECT* FROM Term WHERE reqKanji = 1 and kanji NOT LIKE 'null' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
     List<Term> getLessonKanjiOnly(String type, int limit);
 
-    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE 'null' and type LIKE '%' || :type || '%' and lesson IN(:lesson) ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getLessonKanjiOnlyFromLessons(String type, int[] lesson, int limit);
+    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE 'null' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getLessonKanjiOnlyFromLessons(String type, String lesson, int limit);
 
     @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%' ORDER BY jpns")
     List<Term> searchJpns(String japanese);
@@ -64,14 +67,14 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji ORDER BY jpns")
     List<Term> searchReqKanji(boolean reqKanji);
 
-    @Query("SELECT* FROM Term WHERE lesson = :lesson ORDER BY jpns")
-    List<Term> searchLesson(int lesson);
+    @Query("SELECT* FROM Term WHERE lesson LIKE '%' || :lesson || '%'  ORDER BY jpns")
+    List<Term> searchLesson(String lesson);
 
 
 
     //Delete everything
     @Query("DELETE FROM Term")
-    public void deleteAllTerms();
+    void deleteAllTerms();
 
 
     @Delete

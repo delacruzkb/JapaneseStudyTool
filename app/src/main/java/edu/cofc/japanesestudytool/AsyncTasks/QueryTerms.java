@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 import edu.cofc.japanesestudytool.Pages.FlashCardPage;
 import edu.cofc.japanesestudytool.Pages.HomePage;
@@ -144,29 +146,29 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             {
                 if(metrics.isLessonKanjiOnly())
                 {
-                    nounList=   (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("noun",lessons,metrics.getNounCount());
-                    verbList=   (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("verb",lessons,metrics.getVerbCount());
-                    adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("adjective",lessons,metrics.getAdjectiveCount());
-                    grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("grammar",lessons,metrics.getGrammarCount());
-                    otherList=  (ArrayList<Term>)   termDatabase.termDAO().getLessonKanjiOnlyFromLessons("other",lessons,metrics.getOtherCount());
+                    nounList=   loadLessonKanjiOnlyFromLessons("noun",lessons,metrics.getNounCount());
+                    verbList=   loadLessonKanjiOnlyFromLessons("verb",lessons,metrics.getVerbCount());
+                    adjectiveList=  loadLessonKanjiOnlyFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+                    grammarList=    loadLessonKanjiOnlyFromLessons("grammar",lessons,metrics.getGrammarCount());
+                    otherList=  loadLessonKanjiOnlyFromLessons("other",lessons,metrics.getOtherCount());
                 }
                 else
                 {
-                    nounList=   (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("noun",lessons,metrics.getNounCount());
-                    verbList=   (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("verb",lessons,metrics.getVerbCount());
-                    adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("adjective",lessons,metrics.getAdjectiveCount());
-                    grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("grammar",lessons,metrics.getGrammarCount());
-                    otherList=  (ArrayList<Term>)   termDatabase.termDAO().getKanjiOnlyFromLessons("other",lessons,metrics.getOtherCount());
+                    nounList=   loadKanjiOnlyFromLessons("noun",lessons,metrics.getNounCount());
+                    verbList=   loadKanjiOnlyFromLessons("verb",lessons,metrics.getVerbCount());
+                    adjectiveList=  loadKanjiOnlyFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+                    grammarList=    loadKanjiOnlyFromLessons("grammar",lessons,metrics.getGrammarCount());
+                    otherList=  loadKanjiOnlyFromLessons("other",lessons,metrics.getOtherCount());
                 }
 
             }
             else
             {
-                nounList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("noun",lessons,metrics.getNounCount());
-                verbList=   (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("verb",lessons,metrics.getVerbCount());
-                adjectiveList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("adjective",lessons,metrics.getAdjectiveCount());
-                grammarList=    (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("grammar",lessons,metrics.getGrammarCount());
-                otherList=  (ArrayList<Term>)   termDatabase.termDAO().getAllTypeFromLessons("other",lessons,metrics.getOtherCount());
+                nounList=   loadAllTypeFromLessons("noun",lessons,metrics.getNounCount());
+                verbList=   loadAllTypeFromLessons("verb",lessons,metrics.getVerbCount());
+                adjectiveList=  loadAllTypeFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+                grammarList=    loadAllTypeFromLessons("grammar",lessons,metrics.getGrammarCount());
+                otherList=  loadAllTypeFromLessons("other",lessons,metrics.getOtherCount());
             }
             if(metrics.getMode().equalsIgnoreCase("flashcard"))
             {
@@ -196,6 +198,79 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         }
 
         return null;
+    }
+
+    private ArrayList<Term> loadLessonKanjiOnlyFromLessons(String type, int[] lessons, int count)
+    {
+        Set<Term> termHashTable = new HashSet<>();
+        ArrayList<Term> rtnval=new ArrayList<>();
+
+        //Fill the set with terms
+        for(int i=0;i<lessons.length;i++ )
+        {
+            ArrayList<Term> temp = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnlyFromLessons(type,Term.getLessonChar(lessons[i]),count);
+            termHashTable.addAll(temp);
+        }
+
+
+        //Add all terms in the set to the array list
+        rtnval.addAll(termHashTable);
+        //Randomize order and truncate to fit use
+        Collections.shuffle(rtnval);
+        if(rtnval.size()>count)
+        {
+            rtnval = (ArrayList<Term>) rtnval.subList(0, count);
+        }
+
+        return rtnval;
+    }
+
+    private ArrayList<Term> loadKanjiOnlyFromLessons(String type, int[] lessons, int count)
+    {
+        Set<Term> termHashTable = new HashSet<>();
+        ArrayList<Term> rtnval=new ArrayList<>();
+
+        //Fill the set with terms
+        for(int i=0;i<lessons.length;i++ )
+        {
+            ArrayList<Term> temp = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLessons(type,Term.getLessonChar(lessons[i]),count);
+            termHashTable.addAll(temp);
+        }
+
+
+        //Add all terms in the set to the array list
+        rtnval.addAll(termHashTable);
+        //Randomize order and truncate to fit use
+        Collections.shuffle(rtnval);
+        if(rtnval.size()>count)
+        {
+            rtnval = (ArrayList<Term>) rtnval.subList(0, count);
+        }
+
+        return rtnval;
+    }
+    private ArrayList<Term> loadAllTypeFromLessons(String type, int[] lessons, int count)
+    {
+        Set<Term> termHashTable = new HashSet<>();
+        ArrayList<Term> rtnval=new ArrayList<>();
+
+        //Fill the set with terms
+        for(int i=0;i<lessons.length;i++ )
+        {
+            ArrayList<Term> temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLessons(type,Term.getLessonChar(lessons[i]),count);
+            termHashTable.addAll(temp);
+        }
+
+
+        //Add all terms in the set to the array list
+        rtnval.addAll(termHashTable);
+        //Randomize order and truncate to fit use
+        Collections.shuffle(rtnval);
+        if(rtnval.size()>count)
+        {
+            rtnval = (ArrayList<Term>) rtnval.subList(0, count);
+        }
+        return rtnval;
     }
 
 

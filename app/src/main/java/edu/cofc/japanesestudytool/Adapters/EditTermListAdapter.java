@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Adapters;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
 import edu.cofc.japanesestudytool.Pages.EditSingleTermDialogPage;
+import edu.cofc.japanesestudytool.R;
+import edu.cofc.japanesestudytool.Term;
 
 public class EditTermListAdapter extends BaseAdapter
 {
@@ -60,8 +62,7 @@ public class EditTermListAdapter extends BaseAdapter
         kanji.setEnabled(false);
         kanji.setText(term.getKanji());
         TextView lesson = rowView.findViewById(R.id.searchLessonTextBox);
-        Integer tempInt = new Integer(term.getLesson());
-        lesson.setText(tempInt.toString());
+        lesson.setText(term.getLessonString());
         TextView type = rowView.findViewById(R.id.searchTypeTextBox);
         type.setText(term.getType());
         TextView reqKanji = rowView.findViewById(R.id.searchReqKanjiTextBox);

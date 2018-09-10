@@ -1,6 +1,6 @@
 package edu.cofc.japanesestudytool.Pages;
 
-import edu.cofc.japanesestudytool.EditTermListAdapter;
+import edu.cofc.japanesestudytool.Adapters.EditTermListAdapter;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 

@@ -49,13 +49,36 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
             while( (line = reader.readLine()) !=null)
             {
                 String[] termData = line.split(",");
+
                 Term term = new Term();
                 term.setJpns(termData[0]);
                 term.setEng(termData[1]);
                 term.setKanji(termData[2]);
                 term.setType(termData[3]);
-                term.setLesson(Integer.parseInt(termData[4]));
+                term.setLesson(Integer.parseInt(termData[4]),Integer.parseInt(termData[4]));
                 term.setReqKanji(termData[5]);
+
+                if(listOfTerms.contains(term)) // no duplicates
+                {
+                    Term duplicate = listOfTerms.get(listOfTerms.indexOf(term));
+                    //updates all possible fields
+
+                    // don't touch kanji if null
+                    if(!termData[3].equalsIgnoreCase("null"))
+                    {
+                        duplicate.setKanji(termData[2]);
+                    }
+
+                    duplicate.setLesson(Integer.parseInt(termData[4]),Integer.parseInt(termData[4]));
+
+                    //don't touch reqKanji if already true
+                    if(!duplicate.isReqKanji())
+                    {
+                        duplicate.setReqKanji(termData[5]);
+                    }
+
+                    term = duplicate;
+                }
                 listOfTerms.add(term);
             }
 
@@ -68,7 +91,6 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
         {
             termDatabase.termDAO().insertTerm(listOfTerms.get(i));
         }
-        System.out.println("done:");
         return null;
     }
 }
