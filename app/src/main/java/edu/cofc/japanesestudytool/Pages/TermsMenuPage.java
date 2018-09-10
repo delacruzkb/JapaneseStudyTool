@@ -363,7 +363,6 @@ public class TermsMenuPage extends AppCompatActivity
                 metrics.setLessons(lessons);
                 QueryTerms queryTerms = new QueryTerms(metrics, confirmButton.getContext());
                 queryTerms.execute();
-
             }
         });
     }
