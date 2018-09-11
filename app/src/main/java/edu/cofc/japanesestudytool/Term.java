@@ -75,12 +75,6 @@ public class Term implements Serializable
         this.type = type.toLowerCase();
     }
 
-
-    public String getLesson() {
-        return lesson;
-    }
-
-
     public void setLesson(String lesson)
     {
         this.lesson = lesson;
@@ -93,7 +87,17 @@ public class Term implements Serializable
         setLesson(fromArrayToString(convertedLesson));
         System.out.println("woop");
     }
-    public String getLessonString()
+
+    public void setLesson(int[] newLesson)
+    {
+        lesson = fromArrayToString(newLesson );
+    }
+
+    public String getLesson() {
+        return lesson;
+    }
+
+    public String getNumberedLessonString()
     {
         int[] lessons = fromStringToArray(lesson);
         String rtnval="";
@@ -113,6 +117,11 @@ public class Term implements Serializable
         //remove last ","
         rtnval = rtnval.substring(0,rtnval.length()-1);
         return rtnval;
+    }
+
+    public int[] getLessonArray()
+    {
+        return fromStringToArray(lesson);
     }
 
     public boolean isReqKanji() {
@@ -155,7 +164,7 @@ public class Term implements Serializable
 
     }
 
-    public static int[] fromStringToArray(String value)
+    private int[] fromStringToArray(String value)
     {
         int[] lessons = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
         for(int i=0;i<lessons.length;i++)
@@ -169,7 +178,7 @@ public class Term implements Serializable
         return lessons;
     }
 
-    public static String fromArrayToString(int[] value)
+    private String fromArrayToString(int[] value)
     {
         String lessonString="";
 

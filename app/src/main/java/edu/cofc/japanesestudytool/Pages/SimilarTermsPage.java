@@ -121,7 +121,7 @@ public class SimilarTermsPage extends AppCompatActivity
         newJpnsTextBox.setText(term.getJpns());
         newKanjiTextBox.setText(term.getKanji());
         newTypeTextBox.setText(term.getType());
-        newLessonTextBox.setText(term.getLessonString());
+        newLessonTextBox.setText(term.getNumberedLessonString());
         if(!term.isReqKanji())
         {
             newReqKanjiTextBox.setVisibility(View.INVISIBLE);

@@ -20,7 +20,6 @@ import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
-//TODO: Configure Spinner Checkbox
 public class EditSingleTermDialogPage extends AppCompatActivity
 {
     EditText japaneseTextBox;
@@ -60,7 +59,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
 
         lessonDropDownBar = findViewById(R.id.editLessonDropDownBar);
         adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext());
-        adapter.setCheckedFromArray(Term.fromStringToArray(originalTerm.getLesson()));
+        adapter.setCheckedFromArray(originalTerm.getLessonArray());
         lessonDropDownBar.setAdapter(adapter);
 
         reqKanjiCheckBox = findViewById(R.id.editReqKanjiCheckBox);
@@ -139,7 +138,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                 editedTerm.setEng(englishTextBox.getText().toString());
                 editedTerm.setKanji(kanjiTextBox.getText().toString());
                 editedTerm.setType(typeDropDownBar.getSelectedItem().toString());
-                editedTerm.setLesson(Term.fromArrayToString(adapter.getLessonsArray()));
+                editedTerm.setLesson(adapter.getLessonsArray());
                 editedTerm.setReqKanji(reqKanjiCheckBox.isChecked());
                 ArrayList<Term> temp = new ArrayList<>();
                 temp.add(editedTerm);
