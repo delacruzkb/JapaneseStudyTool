@@ -10,19 +10,14 @@
     tools:context=".Pages.SimilarTermsPage">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/newTermLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/similaritiesTitle"
+        android:paddingHorizontal="@dimen/dividerHeight"
+        android:text="@string/newTermLabel"
         android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize" />
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
 
     <View
         android:id="@+id/divider17"
@@ -33,19 +28,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.1"
         android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/newTermLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1.1"
-            android:paddingHorizontal="@dimen/dividerHeight"
-            android:text="@string/newTermLabel"
-            android:textAlignment="center"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/textSize" />
 
         <View
             android:id="@+id/divider20"
@@ -54,9 +37,9 @@
             android:background="@color/dividerColor" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".5"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <LinearLayout
@@ -161,7 +144,7 @@
                     android:id="@+id/textView10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.25"
+                    android:layout_weight="2.5"
                     android:text="@string/lessonLabel"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
@@ -170,44 +153,66 @@
                     android:id="@+id/newTermLessonTextBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.25"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider33"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerHeight"
+                android:background="@color/dividerColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.25"
+                    android:layout_weight="1"
                     android:text="@string/typeLabel"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
 
                 <TextView
                     android:id="@+id/newTermTypeTextBox"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <View
+                    android:id="@+id/divider34"
+                    android:layout_width="@dimen/dividerHeight"
+                    android:layout_height="match_parent"
+                    android:background="@color/dividerColor" />
+
+                <TextView
+                    android:id="@+id/newTermReqKanjiTextBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/addRequiredKanjiLabel"
+                    android:textAlignment="center"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
             </LinearLayout>
 
-            <View
-                android:id="@+id/divider27"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dividerHeight"
-                android:background="@color/dividerColor" />
-
-            <TextView
-                android:id="@+id/newTermReqKanjiTextBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/addRequiredKanjiLabel"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
-
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider38"
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:background="@color/dividerColor" />
+
     </LinearLayout>
 
     <View
@@ -215,6 +220,21 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dividerHeight"
         android:background="@color/dividerColor" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/similaritiesTitle"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize" />
 
     <View
         android:id="@+id/divider22"
@@ -225,7 +245,7 @@
     <ListView
         android:id="@+id/similarTermListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1" />
 
     <View

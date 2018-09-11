@@ -8,6 +8,9 @@ import android.os.AsyncTask;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 import edu.cofc.japanesestudytool.EditTermsMetrics;
 import edu.cofc.japanesestudytool.Pages.EditTermsPage;
@@ -21,7 +24,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
 
     String english;
     String kanji;
-    int lesson;
+    String lesson;
     String termType;
     boolean reqKanji;
     boolean isExact;
@@ -51,7 +54,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else  if(mode.equalsIgnoreCase("Lesson"))
         {
-            lesson = Integer.valueOf(value);
+            lesson = Term.getLessonChar(Integer.parseInt(value));
         }
         else if(mode.equalsIgnoreCase("Req. Kanji"))
         {
@@ -117,6 +120,7 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         else  if(mode.equalsIgnoreCase("Lesson"))
         {
             returnValue = (ArrayList<Term>) termDatabase.termDAO().searchLesson(lesson);
+            return returnValue;
         }
         else if(mode.equalsIgnoreCase("Req. Kanji"))
         {

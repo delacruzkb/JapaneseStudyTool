@@ -14,6 +14,8 @@
     <string name="okLabel">OK</string>
     <string name="emptyStringMessage">Please do not leave any fields blank</string>
     <string name="multiLineWarning">There were multiple lines detected.</string>
+    <string name="lessonSpinnerLabel">Custom...</string>
+    <string name="fillReqFields">Please make sure to fill in the Japanese, English, and Lesson fields</string>
 
 
     //HomePage
@@ -38,14 +40,14 @@
     <string name="submitButtonText">Confirm</string>
 
     //StoryPage
-    <string name="nounListingLabel">Noun(s):</string>
-    <string name="verbListingLabel">Verb(s):</string>
-    <string name="adjectiveListingLabel">Adjective(s):</string>
-    <string name="grammarListingLabel">Grammar point(s):</string>
-    <string name="otherListingLabel">Other(s):</string>
+    <string name="nounListingLabel">Noun(s)</string>
+    <string name="verbListingLabel">Verb(s)</string>
+    <string name="adjectiveListingLabel">Adjectives(s)</string>
+    <string name="grammarListingLabel">Grammar Point(s)</string>
+    <string name="otherListingLabel">Other(s)</string>
 
     //FlashCardPage
-    <string name="lessonLabel">Lesson: </string>
+    <string name="lessonLabel">Lesson(s): </string>
     <string name="typeLabel">Type: </string>
     <string name="reqKanjiLabel">Req. Kanji</string>
     <string name="previousTermLabel">Prev</string>
@@ -55,7 +57,6 @@
     <string name="deleteFromDatabaseWarning">You are about to delete this term from the database.</string>
     <string name="searchExactMatch">Search for exact match</string>
     <string name="searchSpecificAttributeLabel">Search by Attribute:</string>
-    <string name="fillEnglishAndJapanese">Please make sure to fill in the Japanese and English fields</string>
     <string name="searchEditableButtonText">Search</string>
     <string name="overwriteMessage">Are you sure you want to over-write this term?</string>
 
@@ -64,7 +65,7 @@
     <string name="addEnglishLabel">Enter English:</string>
     <string name="addKanjiLabel">Enter Kanji:</string>
     <string name="addTypeLabel">Select type:</string>
-    <string name="addLessonLabel">Enter lesson(0 for extras):</string>
+    <string name="addLessonLabel">Select lesson(s):</string>
     <string name="addRequiredKanjiLabel">Required Kanji</string>
     <string name="addTermButton">Add New Term</string>
 

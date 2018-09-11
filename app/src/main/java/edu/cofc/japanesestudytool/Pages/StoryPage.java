@@ -2,17 +2,15 @@ package edu.cofc.japanesestudytool.Pages;
 
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.TermListAdapter;
+import edu.cofc.japanesestudytool.Adapters.TermListAdapter;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;

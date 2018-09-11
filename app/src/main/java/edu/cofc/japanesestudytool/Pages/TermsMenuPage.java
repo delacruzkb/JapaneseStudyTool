@@ -9,8 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Switch;
 
+import java.util.ArrayList;
+
+import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
@@ -27,13 +31,13 @@ public class TermsMenuPage extends AppCompatActivity
 
     private Switch displayLanguageToggle,kanjiToggle, lessonKanjiToggle,displayKanjiToggle, kanjiOnlyToggle;
 
-    private CheckBox lesson1, lesson2, lesson3, lesson4, lesson5,lesson6,lesson7, lesson8, lesson9, lesson10, lesson11, lesson12;
-    private CheckBox lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23;
-    private CheckBox allLessons, extraTerms;
+    private Spinner lessonDropDown;
+    private CheckBox allLessons;
     private String whichMode;
     private final int minCountLimit=0;
-    private final int maxCountLimit=50;
+    private final int maxCountLimit=100;
 
+    private CheckBoxDropDownSpinnerAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -83,31 +87,14 @@ public class TermsMenuPage extends AppCompatActivity
 
 
         //Instantiate checkboxes
-        lesson1 = findViewById(R.id.lessonCheckBox1);
-        lesson2 = findViewById(R.id.lessonCheckBox2);
-        lesson3 = findViewById(R.id.lessonCheckBox3);
-        lesson4 = findViewById(R.id.lessonCheckBox4);
-        lesson5 = findViewById(R.id.lessonCheckBox5);
-        lesson6 = findViewById(R.id.lessonCheckBox6);
-        lesson7 = findViewById(R.id.lessonCheckBox7);
-        lesson8 = findViewById(R.id.lessonCheckBox8);
-        lesson9 = findViewById(R.id.lessonCheckBox9);
-        lesson10 = findViewById(R.id.lessonCheckBox10);
-        lesson11 = findViewById(R.id.lessonCheckBox11);
-        lesson12 = findViewById(R.id.lessonCheckBox12);
-        lesson13 = findViewById(R.id.lessonCheckBox13);
-        lesson14 = findViewById(R.id.lessonCheckBox14);
-        lesson15 = findViewById(R.id.lessonCheckBox15);
-        lesson16 = findViewById(R.id.lessonCheckBox16);
-        lesson17 = findViewById(R.id.lessonCheckBox17);
-        lesson18 = findViewById(R.id.lessonCheckBox18);
-        lesson19 = findViewById(R.id.lessonCheckBox19);
-        lesson20 = findViewById(R.id.lessonCheckBox20);
-        lesson21 = findViewById(R.id.lessonCheckBox21);
-        lesson22 = findViewById(R.id.lessonCheckBox22);
-        lesson23 = findViewById(R.id.lessonCheckBox23);
         allLessons = findViewById(R.id.allLessonsCheckBox);
-        extraTerms = findViewById(R.id.extraTerms);
+
+        //Instantiate dropdown checkboxes
+        lessonDropDown = findViewById(R.id.termLessonsCheckDropDown);
+        adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext());
+        lessonDropDown.setAdapter(adapter);
+        lessonDropDown.setSelection(0);
+        lessonDropDown.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -330,36 +317,6 @@ public class TermsMenuPage extends AppCompatActivity
 
     private void setCheckBoxOnClickListener()
     {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allLessons.setChecked(false);
-            }
-        };
-        lesson1.setOnClickListener(listener);
-        lesson2.setOnClickListener(listener);
-        lesson3.setOnClickListener(listener);
-        lesson4.setOnClickListener(listener);
-        lesson5.setOnClickListener(listener);
-        lesson6.setOnClickListener(listener);
-        lesson7.setOnClickListener(listener);
-        lesson8.setOnClickListener(listener);
-        lesson9.setOnClickListener(listener);
-        lesson10.setOnClickListener(listener);
-        lesson11.setOnClickListener(listener);
-        lesson12.setOnClickListener(listener);
-        lesson13.setOnClickListener(listener);
-        lesson14.setOnClickListener(listener);
-        lesson15.setOnClickListener(listener);
-        lesson16.setOnClickListener(listener);
-        lesson17.setOnClickListener(listener);
-        lesson18.setOnClickListener(listener);
-        lesson19.setOnClickListener(listener);
-        lesson20.setOnClickListener(listener);
-        lesson21.setOnClickListener(listener);
-        lesson22.setOnClickListener(listener);
-        lesson23.setOnClickListener(listener);
-        extraTerms.setOnClickListener(listener);
 
         allLessons.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -367,30 +324,12 @@ public class TermsMenuPage extends AppCompatActivity
             {
                 if(allLessons.isChecked())
                 {
-                    lesson1.setChecked(false);
-                    lesson2.setChecked(false);
-                    lesson3.setChecked(false);
-                    lesson4.setChecked(false);
-                    lesson5.setChecked(false);
-                    lesson6.setChecked(false);
-                    lesson7.setChecked(false);
-                    lesson8.setChecked(false);
-                    lesson9.setChecked(false);
-                    lesson10.setChecked(false);
-                    lesson11.setChecked(false);
-                    lesson12.setChecked(false);
-                    lesson13.setChecked(false);
-                    lesson14.setChecked(false);
-                    lesson15.setChecked(false);
-                    lesson16.setChecked(false);
-                    lesson17.setChecked(false);
-                    lesson18.setChecked(false);
-                    lesson19.setChecked(false);
-                    lesson20.setChecked(false);
-                    lesson21.setChecked(false);
-                    lesson22.setChecked(false);
-                    lesson23.setChecked(false);
-                    extraTerms.setChecked(false);
+                    lessonDropDown.setVisibility(View.INVISIBLE);
+                    adapter.refreshList();
+                }
+                else
+                {
+                    lessonDropDown.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -419,58 +358,11 @@ public class TermsMenuPage extends AppCompatActivity
                 int[] lessons=null;
                 if(!allLessons.isChecked())
                 {
-                    //Gather Status of all checkboxes
-                    boolean[] temp = new boolean[24];
-                    temp[0]= lesson1.isChecked();
-                    temp[1]= lesson2.isChecked();
-                    temp[2]= lesson3.isChecked();
-                    temp[3]= lesson4.isChecked();
-                    temp[4]= lesson5.isChecked();
-                    temp[5]= lesson6.isChecked();
-                    temp[6]= lesson7.isChecked();
-                    temp[7]= lesson8.isChecked();
-                    temp[8]= lesson9.isChecked();
-                    temp[9]= lesson10.isChecked();
-                    temp[10]= lesson11.isChecked();
-                    temp[11]= lesson12.isChecked();
-                    temp[12]= lesson13.isChecked();
-                    temp[13]= lesson14.isChecked();
-                    temp[14]= lesson15.isChecked();
-                    temp[15]= lesson16.isChecked();
-                    temp[16]= lesson17.isChecked();
-                    temp[17]= lesson18.isChecked();
-                    temp[18]= lesson19.isChecked();
-                    temp[19]= lesson20.isChecked();
-                    temp[20]= lesson21.isChecked();
-                    temp[21]= lesson22.isChecked();
-                    temp[22]= lesson23.isChecked();
-                    temp[23] = extraTerms.isChecked();
-
-                    //Count how many lessons are selected
-                    int lessonCounter=0;
-                    for(int i = 0; i<temp.length; i++)
-                    {
-                        if(temp[i])
-                        {
-                            lessonCounter++;
-                        }
-                    }
-                    //Make a new array only containing the selected lessons
-                    lessons = new int[lessonCounter];
-                    int placeCounter= 0;
-                    for(int i = 0; i<temp.length; i++)
-                    {
-                        if(temp[i])
-                        {
-                            lessons[placeCounter] = i+1;
-                            placeCounter++;
-                        }
-                    }
+                    lessons = adapter.getLessonsArray();
                 }
                 metrics.setLessons(lessons);
                 QueryTerms queryTerms = new QueryTerms(metrics, confirmButton.getContext());
                 queryTerms.execute();
-
             }
         });
     }

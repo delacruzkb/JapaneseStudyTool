@@ -21,8 +21,8 @@ import java.util.Collections;
 public class FlashCardPage extends AppCompatActivity
 {
     private ArrayList<Term> termList;
-    private TextView lessonNumberLabel, typeValueLabel, reqKanjiLabel, cardCountLabel;
-    private EditText flashCard;
+    private TextView  typeValueLabel, reqKanjiLabel, cardCountLabel;
+    private EditText lessonNumberLabel,flashCard;
     private Button flipEng, flipJpns, flipKanji, prevCard,nextCard;
     private boolean useJapaneseFirst;
     private boolean useKanji;
@@ -45,6 +45,7 @@ public class FlashCardPage extends AppCompatActivity
     {
         currentCardNumber=0;
         lessonNumberLabel = findViewById(R.id.lessonNumberLabel);
+        lessonNumberLabel.setEnabled(false);
         typeValueLabel = findViewById(R.id.typeValueLabel);
         reqKanjiLabel = findViewById(R.id.reqKanjiLabel);
         flashCard = findViewById(R.id.flashCard);
@@ -112,36 +113,39 @@ public class FlashCardPage extends AppCompatActivity
 
     }
 
-    private void loadFlipCard(Term term) {
-        lessonNumberLabel.setText(new Integer(term.getLesson()).toString());
+    private void loadFlipCard(Term term)
+    {
+        lessonNumberLabel.setText(term.getLessonString());
         typeValueLabel.setText(term.getType());
         reqKanjiLabel.setVisibility(View.INVISIBLE);
         flipKanji.setVisibility(View.VISIBLE);
-        if(!useKanji)
-        {
-            flipKanji.setVisibility(View.INVISIBLE);
-        }
+
+        //Decide what to use
         if(useJapaneseFirst)
         {
             flashCard.setText(term.getJpns());
-            if(useKanjiFirst)
-            {
-                flashCard.setText(term.getKanji());
-                if(term.isReqKanji())
-                {
-                    reqKanjiLabel.setVisibility(View.VISIBLE);
-                }
-                if(useLessonKanjiOnly&& !term.isReqKanji())
-                {
-                    flashCard.setText(term.getJpns());
-                    flipKanji.setVisibility(View.INVISIBLE);
-                }
-            }
         }
         else
         {
             flashCard.setText(term.getEng());
         }
+        //Hide Kanji Flip if: null value, don't use kanji, not required kanji when asked
+        if(term.getKanji().equalsIgnoreCase("null") || !useKanji || (useLessonKanjiOnly &&!term.isReqKanji()))
+        {
+            flipKanji.setVisibility(View.INVISIBLE);
+        }
+
+        //If kanji must be first AND if it is available
+        if(useKanjiFirst && flipKanji.getVisibility()==View.VISIBLE)
+        {
+            flashCard.setText(term.getKanji());
+        }
+
+        if(term.isReqKanji())
+        {
+            reqKanjiLabel.setVisibility(View.VISIBLE);
+        }
+
         cardCountLabel.setText((currentCardNumber+1) +"/"+ cardCount);
 
     }

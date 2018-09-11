@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+
+import edu.cofc.japanesestudytool.R;
+import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 public class TermListAdapter extends BaseAdapter
 {
