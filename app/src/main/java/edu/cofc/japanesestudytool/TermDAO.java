@@ -25,11 +25,9 @@ public interface TermDAO
     @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypes(String type, int limit);
 
+    //QueryTerms || query requested terms based on metrics
     @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypeFromLessons(String type, String lesson, int limit);
-
-    @Query("SELECT* FROM Term WHERE jpns LIKE :japanese OR eng LIKE :english")
-    List<Term> getAllMatchedTerms(String japanese, String english);
 
     @Query("SELECT* FROM Term WHERE kanji NOT LIKE 'null' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
     List<Term> getKanjiOnly(String type, int limit);
@@ -43,6 +41,13 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE 'null' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
     List<Term> getLessonKanjiOnlyFromLessons(String type, String lesson, int limit);
 
+
+    //AddNewTerm || ued to find similarities
+    @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%'OR eng LIKE '%' || :english|| '%'")
+    List<Term> searchSimilarTerms(String japanese, String english);
+
+
+    //LoadEditableTerms || used to search for a tem
     @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%' ORDER BY jpns")
     List<Term> searchJpns(String japanese);
 
@@ -67,6 +72,7 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji ORDER BY jpns")
     List<Term> searchReqKanji(boolean reqKanji);
 
+    //TODO:fix
     @Query("SELECT* FROM Term WHERE lesson LIKE '%' || :lesson || '%'  ORDER BY jpns")
     List<Term> searchLesson(String lesson);
 

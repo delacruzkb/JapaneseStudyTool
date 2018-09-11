@@ -45,7 +45,7 @@ public class AddNewTerm extends AsyncTask<Void,Void,ArrayList<Term>>
     @Override
     protected ArrayList<Term> doInBackground(Void... voids)
     {
-        ArrayList<Term> similarTerms= (ArrayList<Term>) termDatabase.termDAO().getAllMatchedTerms(mTerm.getJpns(),mTerm.getEng());
+        ArrayList<Term> similarTerms= (ArrayList<Term>) termDatabase.termDAO().searchSimilarTerms(mTerm.getJpns(),mTerm.getEng());
         return similarTerms;
     }
 }

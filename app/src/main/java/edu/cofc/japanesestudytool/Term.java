@@ -176,7 +176,7 @@ public class Term implements Serializable
         {
             if(value[i]>=0)
             {
-                lessonString= lessonString + getLessonChar(i);
+                lessonString= lessonString + getLessonChar(value[i]);
             }
         }
 

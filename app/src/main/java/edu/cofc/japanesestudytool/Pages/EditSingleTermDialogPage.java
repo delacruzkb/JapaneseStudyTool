@@ -80,7 +80,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                 if(englishTextBox.getText().toString().length() ==0 || japaneseTextBox.getText().toString().length() ==0) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(confirmEdit.getContext());
                     builder.setTitle(getResources().getString(R.string.errorTitle));
-                    builder.setMessage(getResources().getString(R.string.fillEnglishAndJapanese));
+                    builder.setMessage(getResources().getString(R.string.fillReqFields));
                     builder.setPositiveButton(getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

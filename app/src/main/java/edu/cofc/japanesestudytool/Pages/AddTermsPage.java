@@ -1,5 +1,6 @@
 package edu.cofc.japanesestudytool.Pages;
 
+import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.AddNewTerm;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
@@ -24,12 +25,11 @@ public class AddTermsPage extends AppCompatActivity
     EditText engTextBox;
     EditText kanjiTextBox;
     Spinner typeDropDownBar;
-    Spinner lessonDropDownBar;
+    Spinner lessonDropDown;
     private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
-    private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
-            "20","21","22","23","extra"};
     CheckBox reqKanjiCheckbox;
     Button addTermButton;
+    private CheckBoxDropDownSpinnerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -46,11 +46,14 @@ public class AddTermsPage extends AppCompatActivity
         kanjiTextBox = findViewById(R.id.addKanjiTextBox);
 
         typeDropDownBar = findViewById(R.id.addTypeDropDownBar);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,typeSpecs);
-        typeDropDownBar.setAdapter(adapter);
-        lessonDropDownBar = findViewById(R.id.addLessonDropDownBar);
-        adapter =  new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,lessonSpec);
-        lessonDropDownBar.setAdapter(adapter);
+        ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,typeSpecs);
+        typeDropDownBar.setAdapter(tempAdapter);
+
+        lessonDropDown = findViewById(R.id.addLessonDropDownBar);
+        adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext());
+        lessonDropDown.setAdapter(adapter);
+        lessonDropDown.setSelection(0);
+
         reqKanjiCheckbox = findViewById(R.id.addReqKanjiCheckBox);
         addTermButton = findViewById(R.id.addNewTermButton);
         addTermButton.setOnClickListener(new View.OnClickListener()
@@ -68,7 +71,8 @@ public class AddTermsPage extends AppCompatActivity
     {
         boolean engSupplied =!(engTextBox.getText().toString() == null || engTextBox.getText().toString().equalsIgnoreCase(""));
         boolean jpnsSupplied=!(jpnsTextBox.getText().toString() == null || jpnsTextBox.getText().toString().equalsIgnoreCase(""));
-        if(engSupplied && jpnsSupplied)
+        boolean lessonSupplied = !(adapter.getLessonsArray().length==0);
+        if(engSupplied && jpnsSupplied && lessonSupplied)
         {
             final Term temp = new Term();
             if(engTextBox.getText().toString().contains("\n") || jpnsTextBox.getText().toString().contains("\n") ||
@@ -101,7 +105,7 @@ public class AddTermsPage extends AppCompatActivity
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(addTermButton.getContext());
             builder.setTitle(getResources().getString(R.string.errorTitle));
-            builder.setMessage(getResources().getString(R.string.fillEnglishAndJapanese));
+            builder.setMessage(getResources().getString(R.string.fillReqFields));
             builder.setPositiveButton(getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -142,6 +146,7 @@ public class AddTermsPage extends AppCompatActivity
         jpnsTextBox.setText("");
         engTextBox.setText("");
         kanjiTextBox.setText("");
+        adapter.refreshList();
         reqKanjiCheckbox.setChecked(false);
     }
 
@@ -151,16 +156,7 @@ public class AddTermsPage extends AppCompatActivity
         temp.setJpns(jpnsTextBox.getText().toString());
         temp.setKanji(kanjiTextBox.getText().toString());
         temp.setType(typeDropDownBar.getSelectedItem().toString());
-        /*
-        if(lessonDropDownBar.getSelectedItem().toString().equalsIgnoreCase("extra"))
-        {
-            temp.setLesson(0);
-        }
-        else
-        {
-            temp.setLesson(Integer.valueOf(lessonDropDownBar.getSelectedItem().toString()));
-        }
-        //*/
+        temp.setLesson(Term.fromArrayToString(adapter.getLessonsArray()));
         temp.setReqKanji(reqKanjiCheckbox.isChecked());
         resetFields();
         AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);
