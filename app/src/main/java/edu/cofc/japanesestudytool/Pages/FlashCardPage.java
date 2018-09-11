@@ -115,7 +115,7 @@ public class FlashCardPage extends AppCompatActivity
 
     private void loadFlipCard(Term term)
     {
-        lessonNumberLabel.setText(term.getLessonString());
+        lessonNumberLabel.setText(term.getNumberedLessonString());
         typeValueLabel.setText(term.getType());
         reqKanjiLabel.setVisibility(View.INVISIBLE);
         flipKanji.setVisibility(View.VISIBLE);

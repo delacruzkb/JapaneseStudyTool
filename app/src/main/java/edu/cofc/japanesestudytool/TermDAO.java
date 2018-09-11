@@ -72,11 +72,8 @@ public interface TermDAO
     @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji ORDER BY jpns")
     List<Term> searchReqKanji(boolean reqKanji);
 
-    //TODO:fix
     @Query("SELECT* FROM Term WHERE lesson LIKE '%' || :lesson || '%'  ORDER BY jpns")
     List<Term> searchLesson(String lesson);
-
-
 
     //Delete everything
     @Query("DELETE FROM Term")
