@@ -85,6 +85,7 @@ public class Term implements Serializable
     {
         this.lesson = lesson;
     }
+
     public void setLesson(int position, int value)
     {
         int[] convertedLesson = fromStringToArray(lesson);

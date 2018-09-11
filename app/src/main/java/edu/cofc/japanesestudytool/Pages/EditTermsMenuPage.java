@@ -110,7 +110,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                 }
                 else if(mode.equalsIgnoreCase("Type")
                         || mode.equalsIgnoreCase("Lesson")
-                                || mode.equalsIgnoreCase("Req. Kanji"))
+                        || mode.equalsIgnoreCase("Req. Kanji"))
                 {
                     tempValue = specificDropDownBar.getSelectedItem().toString();
 
