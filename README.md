@@ -23,8 +23,15 @@ Add Term:
 Edit Term:
 + search for a term to edit based on certain fields
 
+Stroke practice:
++ Practice the strokes for kanji
+
 Load initial terms:
 + Loads a set of terms based on our textbook and other expressions the professor has mentioned off-hand
 
-Drawing code:
+
+
+
+Drawing code provided by:
+
 https://code.tutsplus.com/tutorials/android-sdk-create-a-drawing-app-interface-creation--mobile-19021
