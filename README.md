@@ -32,6 +32,6 @@ Load initial terms:
 
 
 
-Drawing code provided by:
+Foundations of Drawing code provided by:
 
 https://code.tutsplus.com/tutorials/android-sdk-create-a-drawing-app-interface-creation--mobile-19021
