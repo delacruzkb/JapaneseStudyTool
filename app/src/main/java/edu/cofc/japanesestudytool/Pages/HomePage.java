@@ -16,11 +16,7 @@ import edu.cofc.japanesestudytool.TermDatabase;
 
 public class HomePage extends AppCompatActivity
 {
-    private Button storyButton;
-    private Button flashCardButton;
-    private Button addTermsButton;
-    private Button editTermsButton;
-    private Button loadDataButton;
+    private Button storyButton, flashCardButton, addTermsButton,editTermsButton,strokePracticeButton,loadDataButton;
     private TermDatabase termDatabase;
     private ProgressBar spinner;
 
@@ -54,7 +50,15 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-
+        strokePracticeButton = findViewById(R.id.strokePractice);
+        strokePracticeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(editTermsButton.getContext(),TermsMenuPage.class);
+                intent.putExtra("mode","kanjiwriting");
+                startActivity(intent);
+            }
+        });
         addTermsButton = findViewById(R.id.addTermsButton);
         addTermsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +78,7 @@ public class HomePage extends AppCompatActivity
             }
         });
 
-        //
+
         loadDataButton = findViewById(R.id.loadDataButton);
         loadDataButton.setOnClickListener(new View.OnClickListener() {
             @Override

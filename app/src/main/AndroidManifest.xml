@@ -11,24 +11,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pages.HomePage">
+        <activity android:name=".Pages.HomePage"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pages.TermsMenuPage" />
-        <activity android:name=".Pages.AddTermsPage" />
-        <activity android:name=".Pages.EditTermsPage" />
-        <activity android:name=".Pages.FlashCardPage" />
-        <activity android:name=".Pages.StoryPage"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Pages.TermsMenuPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.AddTermsPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.EditTermsPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.FlashCardPage"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".Pages.SimilarTermsPage" />
-        <activity android:name=".Pages.EditTermsMenuPage" />
-        <activity android:name=".Pages.EditSingleTermDialogPage"
-            android:theme="@style/AppTheme.customPopUpTheme"></activity>
+            android:name=".Pages.StoryPage"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.SimilarTermsPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.EditTermsMenuPage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Pages.EditSingleTermDialogPage"
+            android:theme="@style/AppTheme.customPopUpTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.KanjiWritingPage"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

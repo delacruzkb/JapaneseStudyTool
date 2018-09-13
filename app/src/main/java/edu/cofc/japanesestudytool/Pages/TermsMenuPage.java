@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
 
@@ -51,6 +52,10 @@ public class TermsMenuPage extends AppCompatActivity
         setConfirmButtonOnClickListener();
         setSwitchOnClickListener();
         setCheckBoxOnClickListener();
+        if(whichMode.equalsIgnoreCase("kanjiwriting"))
+        {
+            adjustViewsForKanjiWriting();
+        }
     }
 
     private void initializeViews()
@@ -335,6 +340,20 @@ public class TermsMenuPage extends AppCompatActivity
         });
     }
 
+    private void adjustViewsForKanjiWriting()
+    {
+        LinearLayout layout = findViewById(R.id.grammarCountLayout);
+        grammarCountText.setText("0");
+        layout.setVisibility(View.GONE);
+        kanjiToggle.setVisibility(View.GONE);
+        kanjiOnlyToggle.setVisibility(View.GONE);
+        displayKanjiToggle.setVisibility(View.GONE);
+
+
+        displayLanguageToggle.setText(getResources().getString(R.string.displayHintLanguage));
+        lessonKanjiToggle.setVisibility(View.VISIBLE);
+        kanjiOnlyToggle.setChecked(true);
+    }
     private void setConfirmButtonOnClickListener()
     {
         confirmButton.setOnClickListener(new View.OnClickListener() {

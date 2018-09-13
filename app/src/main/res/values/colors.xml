@@ -12,4 +12,7 @@
     <color name="switchOffColor">#6f6f6f</color>
     <color name="switchOnColor">#148E13</color>
     <color name="checkBoxColor">#307aaf</color>
+
+    <color name="brushColor">#d9d9d9</color>
+    <color name="canvasColor">#262626</color>
 </resources>
