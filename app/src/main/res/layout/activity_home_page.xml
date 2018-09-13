@@ -19,6 +19,17 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/strokePractice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/kanjiWritingLabel"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
         android:id="@+id/flashCardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,23 +41,23 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/addTermsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/buttonColor"
-        android:text="@string/addTermsLabel"
-        android:textColor="@color/buttonTextColor"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <Button
         android:id="@+id/editTermsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/editTermsLabel"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addTermsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/addTermsLabel"
         android:textColor="@color/buttonTextColor"
         android:textSize="18sp"
         android:textStyle="bold" />

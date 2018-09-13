@@ -10,6 +10,7 @@
     tools:context=".Pages.TermsMenuPage">
 
     <LinearLayout
+        android:id="@+id/nountCountLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
         android:orientation="horizontal">
@@ -58,6 +59,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/adjectiveCountLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
         android:orientation="horizontal">
@@ -106,6 +108,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/verbCountLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
         android:orientation="horizontal">
@@ -154,6 +157,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/grammarCountLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
         android:orientation="horizontal">
@@ -202,6 +206,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/otherCountLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
         android:orientation="horizontal">
@@ -312,6 +317,7 @@
         android:background="@color/dividerColor" />
 
     <LinearLayout
+        android:id="@+id/lessonSelection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

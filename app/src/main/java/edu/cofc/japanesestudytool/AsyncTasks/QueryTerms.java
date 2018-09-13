@@ -15,6 +15,7 @@ import java.util.Set;
 
 import edu.cofc.japanesestudytool.Pages.FlashCardPage;
 import edu.cofc.japanesestudytool.Pages.HomePage;
+import edu.cofc.japanesestudytool.Pages.KanjiWritingPage;
 import edu.cofc.japanesestudytool.Pages.StoryPage;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
@@ -37,9 +38,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
     @Override
     protected void onPostExecute(Void voids)
     {
-        if((nounList.size() == 0 && adjectiveList.size()==0
-                && verbList.size()==0 && grammarList.size() ==0
-                && otherList.size()==0))
+        if(termList.size()==0)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
             builder.setTitle(mContext.getResources().getString(R.string.errorTitle));
@@ -63,7 +62,10 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             if(metrics.getMode().equalsIgnoreCase("flashcard"))
             {
                 intent = new Intent(mContext, FlashCardPage.class);
-
+            }
+            if(metrics.getMode().equalsIgnoreCase("kanjiwriting"))
+            {
+                intent= new Intent(mContext, KanjiWritingPage.class);
             }
             intent.putExtra("metrics",metrics);
             intent.putExtra("nounList",nounList);
@@ -71,10 +73,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             intent.putExtra("adjectiveList",adjectiveList);
             intent.putExtra("grammarList",grammarList);
             intent.putExtra("otherList",otherList);
-            if(termList!=null)
-            {
-                Collections.shuffle(termList);
-            }
+            Collections.shuffle(termList);
             intent.putExtra("termList",termList);
             mContext.startActivity(intent);
         }
@@ -115,29 +114,26 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
                 grammarList = (ArrayList<Term>) termDatabase.termDAO().getAllTypes("grammar", metrics.getGrammarCount());
                 otherList = (ArrayList<Term>) termDatabase.termDAO().getAllTypes("other", metrics.getOtherCount());
             }
-            if(metrics.getMode().equalsIgnoreCase("flashcard"))
+            termList= new ArrayList<>();
+            if(nounList !=null)
             {
-                termList= new ArrayList<>();
-                if(nounList !=null)
-                {
-                    termList.addAll(nounList);
-                }
-                if(verbList !=null)
-                {
-                    termList.addAll(verbList);
-                }
-                if(adjectiveList !=null)
-                {
-                    termList.addAll(adjectiveList);
-                }
-                if(grammarList !=null)
-                {
-                    termList.addAll(grammarList);
-                }
-                if(otherList !=null)
-                {
-                    termList.addAll(otherList);
-                }
+                termList.addAll(nounList);
+            }
+            if(verbList !=null)
+            {
+                termList.addAll(verbList);
+            }
+            if(adjectiveList !=null)
+            {
+                termList.addAll(adjectiveList);
+            }
+            if(grammarList !=null)
+            {
+                termList.addAll(grammarList);
+            }
+            if(otherList !=null)
+            {
+                termList.addAll(otherList);
             }
         }
         else
@@ -148,34 +144,28 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             adjectiveList=  loadFromLessons("adjective",lessons,metrics.getAdjectiveCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
             grammarList=    loadFromLessons("grammar",lessons,metrics.getGrammarCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
             otherList=  loadFromLessons("other",lessons,metrics.getOtherCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
-
-            if(metrics.getMode().equalsIgnoreCase("flashcard"))
+            termList= new ArrayList<>();
+            if(nounList !=null)
             {
-                termList= new ArrayList<>();
-                if(nounList !=null)
-                {
-                    termList.addAll(nounList);
-                }
-                if(verbList !=null)
-                {
-                    termList.addAll(verbList);
-                }
-                if(adjectiveList !=null)
-                {
-                    termList.addAll(adjectiveList);
-                }
-                if(grammarList !=null)
-                {
-                    termList.addAll(grammarList);
-                }
-                if(otherList !=null)
-                {
-                    termList.addAll(otherList);
-                }
+                termList.addAll(nounList);
             }
-
+            if(verbList !=null)
+            {
+                termList.addAll(verbList);
+            }
+            if(adjectiveList !=null)
+            {
+                termList.addAll(adjectiveList);
+            }
+            if(grammarList !=null)
+            {
+                termList.addAll(grammarList);
+            }
+            if(otherList !=null)
+            {
+                termList.addAll(otherList);
+            }
         }
-
         return null;
     }
 

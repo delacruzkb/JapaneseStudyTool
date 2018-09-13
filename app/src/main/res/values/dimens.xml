@@ -15,7 +15,13 @@
     //FlashCardPage
     <dimen name="flashCardTextSize">40sp</dimen>
 
-
+    //KanjiWritingPage
+    <dimen name="small_brush">15dp</dimen>
+    <integer name="small_size">5</integer>
+    <dimen name="medium_brush">20dp</dimen>
+    <integer name="medium_size">10</integer>
+    <dimen name="large_brush">30dp</dimen>
+    <integer name="large_size">15</integer>
 
 
 </resources>
