@@ -169,6 +169,12 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         return null;
     }
 
+    private ArrayList<Term> loadTerms(String type, int count)
+    {
+        ArrayList<Term> rtnval = new ArrayList<>();
+
+        return rtnval;
+    }
     private ArrayList<Term> loadFromLessons(String type, int[] lessons, int count)
     {
         Set<Term> termHashTable = new HashSet<>();
@@ -189,6 +195,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
                 for(int i=0;i<lessons.length;i++ )
                 {
                     temp = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLessons(type,Term.getLessonChar(lessons[i]),count);
+                    termHashTable.addAll(temp);
                 }
             }
         }
@@ -197,10 +204,9 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             for(int i=0;i<lessons.length;i++ )
             {
                 temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLessons(type,Term.getLessonChar(lessons[i]),count);
+                termHashTable.addAll(temp);
             }
         }
-        //remove duplicates
-        termHashTable.addAll(temp);
         //Add all terms in the set to the array list
         rtnval.addAll(termHashTable);
         //Randomize order and truncate to fit use
