@@ -88,7 +88,7 @@ public class TermsMenuPage extends AppCompatActivity
         showLessonKanjiOnlySwitch = findViewById(R.id.showLessonKanjiOnlySwitch);
         useKanjiOnlySwitch = findViewById(R.id.useKanjiOnlySwitch);
         useLessonKanjiOnlySwitch = findViewById(R.id.useLessonKanjiOnlySwitch);
-        showJpnsFirstSwitch.setVisibility(View.GONE);
+        showKanjiFirstSwitch.setVisibility(View.GONE);
         showLessonKanjiOnlySwitch.setVisibility(View.GONE);
         useKanjiOnlySwitch.setVisibility(View.GONE);
         useLessonKanjiOnlySwitch.setVisibility(View.GONE);
@@ -312,6 +312,16 @@ public class TermsMenuPage extends AppCompatActivity
                 else
                 {
                     useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        showJpnsFirstSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!showJpnsFirstSwitch.isChecked())
+                {
+                    showKanjiFirstSwitch.setChecked(false);
                 }
             }
         });
