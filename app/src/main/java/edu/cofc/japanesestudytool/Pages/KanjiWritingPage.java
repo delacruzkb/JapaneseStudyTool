@@ -38,7 +38,7 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kanji_writing_page);
-        useJapaneseHint =( (TermMenuMetrics) getIntent().getSerializableExtra("metrics")).isJapaneseFirst();
+        useJapaneseHint =( (TermMenuMetrics) getIntent().getSerializableExtra("metrics")).showJpnsFirst();
         termList = (ArrayList<Term>)getIntent().getSerializableExtra("termList");
 
         smallBrush = getResources().getInteger(R.integer.small_size);

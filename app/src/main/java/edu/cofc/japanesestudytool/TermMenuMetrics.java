@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 public class TermMenuMetrics implements Serializable
 {
-    boolean allTerms,japaneseFirst,kanji,lessonKanjiOnly,kanjiFirst, kanjiOnly;
+    boolean allTerms,showJpnsFirst, showKanji, showKanjiFirst,
+            showLessonKanjiOnly, useKanjiOnly,useLessonKanjiOnly;
     int[] lessons;
     int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
     String mode;
@@ -21,11 +22,12 @@ public class TermMenuMetrics implements Serializable
     public TermMenuMetrics()
     {
         allTerms = false;
-        japaneseFirst = false;
-        kanji = false;
-        lessonKanjiOnly = false;
-        kanjiFirst = false;
-        kanjiOnly = false;
+        showJpnsFirst=false;
+        showKanji=false;
+        showKanjiFirst=false;
+        showLessonKanjiOnly=false;
+        useKanjiOnly=false;
+        useLessonKanjiOnly = false;
         lessons=null;
         nounCount =1;
         verbCount=1;
@@ -43,44 +45,52 @@ public class TermMenuMetrics implements Serializable
         this.allTerms = allTerms;
     }
 
-    public boolean isJapaneseFirst() {
-        return japaneseFirst;
+    public boolean showJpnsFirst() {
+        return showJpnsFirst;
     }
 
-    public void setJapaneseFirst(boolean japaneseFirst) {
-        this.japaneseFirst = japaneseFirst;
+    public void setShowJpnsFirst(boolean showJpnsFirst) {
+        this.showJpnsFirst = showJpnsFirst;
     }
 
-    public boolean isKanji() {
-        return kanji;
+    public boolean showKanji() {
+        return showKanji;
     }
 
-    public void setKanji(boolean kanji) {
-        this.kanji = kanji;
+    public void setShowKanji(boolean showKanji) {
+        this.showKanji = showKanji;
     }
 
-    public boolean isLessonKanjiOnly() {
-        return lessonKanjiOnly;
+    public boolean showKanjiFirst() {
+        return showKanjiFirst;
     }
 
-    public void setLessonKanjiOnly(boolean lessonKanjiOnly) {
-        this.lessonKanjiOnly = lessonKanjiOnly;
+    public void setShowKanjiFirst(boolean showKanjiFirst) {
+        this.showKanjiFirst = showKanjiFirst;
     }
 
-    public boolean isKanjiFirst() {
-        return kanjiFirst;
+    public boolean showLessonKanjiOnly() {
+        return showLessonKanjiOnly;
     }
 
-    public void setKanjiFirst(boolean kanjiFirst) {
-        this.kanjiFirst = kanjiFirst;
+    public void setShowLessonKanjiOnly(boolean showLessonKanjiOnly) {
+        this.showLessonKanjiOnly = showLessonKanjiOnly;
     }
 
-    public boolean isKanjiOnly() {
-        return kanjiOnly;
+    public boolean useKanjiOnly() {
+        return useKanjiOnly;
     }
 
-    public void setKanjiOnly(boolean kanjiOnly) {
-        this.kanjiOnly = kanjiOnly;
+    public void setUseKanjiOnly(boolean useKanjiOnly) {
+        this.useKanjiOnly = useKanjiOnly;
+    }
+
+    public boolean useLessonKanjiOnly() {
+        return useLessonKanjiOnly;
+    }
+
+    public void setUseLessonKanjiOnly(boolean useLessonKanjiOnly) {
+        this.useLessonKanjiOnly = useLessonKanjiOnly;
     }
 
     public int[] getLessons() {
@@ -130,5 +140,4 @@ public class TermMenuMetrics implements Serializable
     public void setGrammarCount(int grammarCount) {
         this.grammarCount = grammarCount;
     }
-
 }

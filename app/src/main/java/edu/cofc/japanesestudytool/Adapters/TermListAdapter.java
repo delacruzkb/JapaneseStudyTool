@@ -20,17 +20,16 @@ public class TermListAdapter extends BaseAdapter
     private Context context;
     private LayoutInflater mLayoutInflater;
     private ArrayList<Term> data;
-    private boolean showJapaneseFirst,useKanji,lessonKanjiOnly,showKanjiFirst, useKanjiOnly;
+    private boolean showJapaneseFirst, showKanji, showKanjiFirst, showLessonKanjiOnly;
     public TermListAdapter(Context context, ArrayList<Term> data, TermMenuMetrics metrics)
     {
         this.context = context;
         this.data = data;
         mLayoutInflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        showJapaneseFirst = metrics.isJapaneseFirst();
-        this.useKanji = metrics.isKanji();
-        this.lessonKanjiOnly = metrics.isLessonKanjiOnly();
-        showKanjiFirst = metrics.isKanjiFirst();
-        useKanjiOnly = metrics.isKanjiOnly();
+        showJapaneseFirst = metrics.showJpnsFirst();
+        showKanji = metrics.showKanji();
+        showKanjiFirst = metrics.showKanjiFirst();
+        showLessonKanjiOnly = metrics.showLessonKanjiOnly();
     }
     @Override
     public int getCount()
@@ -97,7 +96,7 @@ public class TermListAdapter extends BaseAdapter
         {
             toKanji.setVisibility(View.INVISIBLE);
         }
-        if(!useKanji)
+        if(!showKanji)
         {
             toKanji.setVisibility(View.INVISIBLE);
         }
@@ -115,7 +114,7 @@ public class TermListAdapter extends BaseAdapter
                 {
                     termText.setText(term.getKanji() + "(" + term.getType() + ")");
                 }
-                if(lessonKanjiOnly&& !term.isReqKanji())
+                if(showLessonKanjiOnly&& !term.isReqKanji())
                 {
                     termText.setText(term.getJpns());
                     if(term.getType().contains("verb"))

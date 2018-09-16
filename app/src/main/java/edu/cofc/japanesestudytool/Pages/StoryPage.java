@@ -26,7 +26,6 @@ public class StoryPage extends AppCompatActivity
     private WebView browser;
     private ListView termListView;
     private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
-    private boolean useJapaneseFirst, useKanji,useLessonKanjiOnly, useKanjiFirst, useKanjiOnly;
     private TermMenuMetrics metrics;
 
     @Override
@@ -134,11 +133,6 @@ public class StoryPage extends AppCompatActivity
         grammarList=(ArrayList<Term>) intent.getSerializableExtra("grammarList");
         otherList=(ArrayList<Term>) intent.getSerializableExtra("otherList");
 
-        useJapaneseFirst= metrics.isJapaneseFirst();
-        useKanji = metrics.isKanji();
-        useLessonKanjiOnly = metrics.isLessonKanjiOnly();
-        useKanjiFirst = metrics.isKanjiFirst();
-        useKanjiOnly = metrics.isKanjiOnly();
 
     }
     @Override

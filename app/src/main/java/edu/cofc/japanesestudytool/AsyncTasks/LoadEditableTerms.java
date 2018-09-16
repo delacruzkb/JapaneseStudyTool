@@ -5,14 +5,9 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
 
-import edu.cofc.japanesestudytool.EditTermsMetrics;
 import edu.cofc.japanesestudytool.Pages.EditTermsPage;
 import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermDatabase;

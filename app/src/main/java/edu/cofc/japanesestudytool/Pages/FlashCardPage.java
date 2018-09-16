@@ -24,10 +24,7 @@ public class FlashCardPage extends AppCompatActivity
     private TextView  typeValueLabel, reqKanjiLabel, cardCountLabel;
     private EditText lessonNumberLabel,flashCard;
     private Button flipEng, flipJpns, flipKanji, prevCard,nextCard;
-    private boolean useJapaneseFirst;
-    private boolean useKanji;
-    private boolean useLessonKanjiOnly;
-    private boolean useKanjiFirst;
+    private boolean showJapaneseFirst, showKanji, showKanjiFirst, showLessonKanjiOnly;
     private int currentCardNumber;
     private int cardCount;
     private TermMenuMetrics metrics;
@@ -121,7 +118,7 @@ public class FlashCardPage extends AppCompatActivity
         flipKanji.setVisibility(View.VISIBLE);
 
         //Decide what to use
-        if(useJapaneseFirst)
+        if(showJapaneseFirst)
         {
             flashCard.setText(term.getJpns());
         }
@@ -130,13 +127,13 @@ public class FlashCardPage extends AppCompatActivity
             flashCard.setText(term.getEng());
         }
         //Hide Kanji Flip if: null value, don't use kanji, not required kanji when asked
-        if(term.getKanji().equalsIgnoreCase("null") || !useKanji || (useLessonKanjiOnly &&!term.isReqKanji()))
+        if(term.getKanji().equalsIgnoreCase("null") || !showKanji || (showLessonKanjiOnly &&!term.isReqKanji()))
         {
             flipKanji.setVisibility(View.INVISIBLE);
         }
 
         //If kanji must be first AND if it is available
-        if(useKanjiFirst && flipKanji.getVisibility()==View.VISIBLE)
+        if(showKanjiFirst && flipKanji.getVisibility()==View.VISIBLE)
         {
             flashCard.setText(term.getKanji());
         }
@@ -177,10 +174,10 @@ public class FlashCardPage extends AppCompatActivity
     {
         metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");
         termList= (ArrayList<Term>) intent.getSerializableExtra("termList");
-        useJapaneseFirst= metrics.isJapaneseFirst();
-        useKanji = metrics.isKanji();
-        useLessonKanjiOnly = metrics.isLessonKanjiOnly();
-        useKanjiFirst = metrics.isKanjiFirst();
+        showJapaneseFirst= metrics.showJpnsFirst();
+        showKanji = metrics.showKanji();
+        showLessonKanjiOnly = metrics.showLessonKanjiOnly();
+        showKanjiFirst = metrics.showKanjiFirst();
         cardCount=termList.size();
         currentCardNumber=0;
         loadFlipCard(termList.get(0));

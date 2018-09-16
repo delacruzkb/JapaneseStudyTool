@@ -261,51 +261,60 @@
         android:background="@color/dividerColor" />
 
     <Switch
-        android:id="@+id/displayLanguageSwitch"
+        android:id="@+id/showJpnsFirstSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="true"
         android:splitTrack="false"
-        android:text="@string/displayLanguageText"
+        android:text="@string/showJpnsFirstText"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize"
         android:theme="@style/SwitchTheme" />
 
     <Switch
-        android:id="@+id/kanjiSwitch"
+        android:id="@+id/showKanjiSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:splitTrack="false"
-        android:text="@string/kanjiToggleText"
+        android:text="@string/showKanjiText"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize"
         android:theme="@style/SwitchTheme" />
 
     <Switch
-        android:id="@+id/kanjiOnlySwitch"
+        android:id="@+id/showKanjiFirstSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:splitTrack="false"
-        android:text="@string/kanjiOnlyToggle"
+        android:text="@string/showKanjiFirst"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize"
         android:theme="@style/SwitchTheme" />
 
     <Switch
-        android:id="@+id/lessonKanjiSwitch"
+        android:id="@+id/showLessonKanjiOnlySwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lessonKanjiOnlyToggleText"
+        android:text="@string/showLessonKanjiOnlyText"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize"
         android:theme="@style/SwitchTheme" />
 
     <Switch
-        android:id="@+id/displayKanjiSwitch"
+        android:id="@+id/useKanjiOnlySwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:splitTrack="false"
-        android:text="@string/displayKanjiToggle"
+        android:text="@string/useKanjiOnly"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
+    <Switch
+        android:id="@+id/useLessonKanjiOnlySwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:splitTrack="false"
+        android:text="@string/useLessonKanjiOnly"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize"
         android:theme="@style/SwitchTheme" />

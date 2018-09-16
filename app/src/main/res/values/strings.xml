@@ -31,12 +31,15 @@
     <string name="otherTermLabel"># of Other terms and phrases</string>
     <string name="grammarLabel"># of Grammar points</string>
     <string name="initialCount">0</string>
-    <string name="displayLanguageText">Show Japanese First</string>
     <string name="displayHintLanguage">Use Hiragana as hint</string>
-    <string name="kanjiToggleText">Kanji</string>
-    <string name="lessonKanjiOnlyToggleText">Lesson Kanji Only</string>
-    <string name="displayKanjiToggle">Show Kanji First</string>
-    <string name="kanjiOnlyToggle">Kanji Only</string>
+
+    <string name="showJpnsFirstText">Show Japanese First</string>
+    <string name="showKanjiText">Show Kanji</string>
+    <string name="showLessonKanjiOnlyText">Show Lesson Kanji Only</string>
+    <string name="showKanjiFirst">Show Kanji First</string>
+    <string name="useKanjiOnly">Use Kanji Only</string>
+    <string name="useLessonKanjiOnly">Use Lesson Kanji Only</string>
+
     <string name="lessonSelectionText">Include Lessons:</string>
     <string name="submitButtonText">Confirm</string>
 

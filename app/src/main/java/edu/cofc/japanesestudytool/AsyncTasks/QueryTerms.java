@@ -86,9 +86,9 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
 
         if(metrics.isAllTerms())
         {
-            if(metrics.isKanjiOnly())
+            if(metrics.useKanjiOnly())
             {
-                if(metrics.isLessonKanjiOnly())
+                if(metrics.useLessonKanjiOnly())
                 {
                     nounList = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly("noun", metrics.getNounCount());
                     verbList = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly("verb", metrics.getVerbCount());
@@ -139,11 +139,11 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         else
         {
             int[] lessons = metrics.getLessons();
-            nounList=   loadFromLessons("noun",lessons,metrics.getNounCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
-            verbList=   loadFromLessons("verb",lessons,metrics.getVerbCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
-            adjectiveList=  loadFromLessons("adjective",lessons,metrics.getAdjectiveCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
-            grammarList=    loadFromLessons("grammar",lessons,metrics.getGrammarCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
-            otherList=  loadFromLessons("other",lessons,metrics.getOtherCount(),metrics.isKanjiOnly(),metrics.isLessonKanjiOnly());
+            nounList=   loadFromLessons("noun",lessons,metrics.getNounCount());
+            verbList=   loadFromLessons("verb",lessons,metrics.getVerbCount());
+            adjectiveList=  loadFromLessons("adjective",lessons,metrics.getAdjectiveCount());
+            grammarList=    loadFromLessons("grammar",lessons,metrics.getGrammarCount());
+            otherList=  loadFromLessons("other",lessons,metrics.getOtherCount());
             termList= new ArrayList<>();
             if(nounList !=null)
             {
@@ -169,14 +169,14 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         return null;
     }
 
-    private ArrayList<Term> loadFromLessons(String type, int[] lessons, int count, boolean isKanjiOnly, boolean isLessonKanjiOnly)
+    private ArrayList<Term> loadFromLessons(String type, int[] lessons, int count)
     {
         Set<Term> termHashTable = new HashSet<>();
         ArrayList<Term> rtnval=new ArrayList<>();
         ArrayList<Term> temp=new ArrayList<>();
-        if(metrics.isKanjiOnly())
+        if(metrics.useKanjiOnly())
         {
-            if(metrics.isLessonKanjiOnly())
+            if(metrics.useLessonKanjiOnly())
             {
                 for(int i=0;i<lessons.length;i++ )
                 {
