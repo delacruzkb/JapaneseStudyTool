@@ -308,10 +308,13 @@ public class TermsMenuPage extends AppCompatActivity
                 {
                     useLessonKanjiOnlySwitch.setVisibility(View.GONE);
                     useLessonKanjiOnlySwitch.setChecked(false);
+                    showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
                 }
                 else
                 {
                     useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
+                    showLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
+                    showLessonKanjiOnlySwitch.setChecked(false);
                 }
             }
         });
