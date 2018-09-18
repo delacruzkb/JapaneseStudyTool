@@ -130,6 +130,74 @@ public class TermsMenuPage extends AppCompatActivity
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putBoolean("showJpnsFirstSwitch", showJpnsFirstSwitch.isChecked());
+        savedInstanceState.putBoolean("showKanjiSwitch", showKanjiSwitch.isChecked());
+        savedInstanceState.putBoolean("showKanjiFirstSwitch", showKanjiFirstSwitch.isChecked());
+        savedInstanceState.putBoolean("showLessonKanjiOnlySwitch", showLessonKanjiOnlySwitch.isChecked());
+        savedInstanceState.putBoolean("useKanjiOnlySwitch", useKanjiOnlySwitch.isChecked());
+        savedInstanceState.putBoolean("useLessonKanjiOnlySwitch", useLessonKanjiOnlySwitch.isChecked());
+        savedInstanceState.putBoolean("allLessons",allLessons.isChecked());
+        savedInstanceState.putIntArray("lessonDropDownAdapter",adapter.getLessonsArray());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        showJpnsFirstSwitch.setChecked(savedInstanceState.getBoolean("showJpnsFirstSwitch"));
+        showKanjiSwitch.setChecked(savedInstanceState.getBoolean("showKanjiSwitch"));
+        if(showKanjiSwitch.isChecked())
+        {
+            showKanjiFirstSwitch.setVisibility(View.VISIBLE);
+            showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
+            useKanjiOnlySwitch.setVisibility(View.VISIBLE);
+
+            showKanjiFirstSwitch.setChecked(savedInstanceState.getBoolean("showKanjiFirstSwitch"));
+            showLessonKanjiOnlySwitch.setChecked(savedInstanceState.getBoolean("showLessonKanjiOnlySwitch"));
+            useKanjiOnlySwitch.setChecked(savedInstanceState.getBoolean("useKanjiOnlySwitch"));
+            if(useKanjiOnlySwitch.isChecked())
+            {
+                useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
+                showLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
+                showLessonKanjiOnlySwitch.setChecked(savedInstanceState.getBoolean("showLessonKanjiOnlySwitch"));
+            }
+            else
+            {
+                useLessonKanjiOnlySwitch.setVisibility(View.GONE);
+                useLessonKanjiOnlySwitch.setChecked(false);
+            }
+        }
+        else
+        {
+            showKanjiFirstSwitch.setVisibility(View.GONE);
+            showLessonKanjiOnlySwitch.setVisibility(View.GONE);
+            useKanjiOnlySwitch.setVisibility(View.GONE);
+            useLessonKanjiOnlySwitch.setVisibility(View.GONE);
+            showKanjiFirstSwitch.setChecked(false);
+            showLessonKanjiOnlySwitch.setChecked(false);
+            useKanjiOnlySwitch.setChecked(false);
+            useLessonKanjiOnlySwitch.setChecked(false);
+        }
+
+        allLessons.setChecked(savedInstanceState.getBoolean("allLessons"));
+        if(allLessons.isChecked())
+        {
+            lessonDropDown.setVisibility(View.INVISIBLE);
+            adapter.refreshList();
+        }
+        else
+        {
+            lessonDropDown.setVisibility(View.VISIBLE);
+            adapter.setCheckedFromArray(savedInstanceState.getIntArray("lessonDropDownAdapter"));
+            lessonDropDown.setAdapter(adapter);
+        }
+    }
+
     private void setCountButtonOnClickListeners()
     {
         nounCountDecreaseButton.setOnClickListener(new View.OnClickListener()

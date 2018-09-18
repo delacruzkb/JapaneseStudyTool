@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Pages.TermsMenuPage">
+
+    <LinearLayout
+        android:id="@+id/firstRowCountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/nountCountLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nounCountLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/nounLabel"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/nounCountDecreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="-"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/nounCountInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/initialCount"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/nounCountIncreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="+"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+        <Space
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:id="@+id/adjectiveCountLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/adjectiveCountLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="@string/adjectiveLabel"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/adjectiveCountDecreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="-"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/adjectiveCountInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/initialCount"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/adjectiveCountIncreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="+"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondRowCountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/verbCountLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/verbCountLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/verbLabel"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/verbCountDecreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="-"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/verbCountInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/initialCount"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/verbCountIncreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="+"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/grammarCountLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/grammarCountLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="@string/grammarLabel"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/grammarCountDecreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="-"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/grammarCountInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/initialCount"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/grammarCountIncreaseButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="+"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otherCountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/otherCountLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6.5"
+            android:gravity="center_vertical"
+            android:text="@string/otherTermLabel"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/otherCountDecreaseButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:text="-"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+
+        <EditText
+            android:id="@+id/otherCountInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/initialCount"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/otherCountIncreaseButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:text="+"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/showJpnsFirstSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:splitTrack="false"
+            android:text="@string/showJpnsFirstText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize"
+            android:theme="@style/SwitchTheme" />
+
+        <Switch
+            android:id="@+id/showKanjiSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:splitTrack="false"
+            android:text="@string/showKanjiText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize"
+            android:theme="@style/SwitchTheme" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/showKanjiFirstSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:splitTrack="false"
+            android:text="@string/showKanjiFirst"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize"
+            android:theme="@style/SwitchTheme" />
+
+        <Switch
+            android:id="@+id/showLessonKanjiOnlySwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/showLessonKanjiOnlyText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize"
+            android:theme="@style/SwitchTheme" />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/useKanjiOnlySwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:splitTrack="false"
+        android:text="@string/useKanjiOnly"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
+    <Switch
+        android:id="@+id/useLessonKanjiOnlySwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:splitTrack="false"
+        android:text="@string/useLessonKanjiOnly"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <LinearLayout
+        android:id="@+id/lessonSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lessonSelectionText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <CheckBox
+            android:id="@+id/allLessonsCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/checkBoxColor"
+            android:checked="true"
+            android:duplicateParentState="false"
+            android:text="All"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Spinner
+            android:id="@+id/termLessonsCheckDropDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown"
+            android:backgroundTint="@color/buttonColor"
+            android:backgroundTintMode="multiply"
+            android:spinnerMode="dialog" />
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:background="@color/dividerColor" />
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/submitButtonText"
+            android:textColor="@color/buttonTextColor" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

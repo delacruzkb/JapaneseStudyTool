@@ -114,10 +114,7 @@ public class CheckBoxDropDownSpinnerAdapter extends BaseAdapter
         refreshList();
         for(int i =0; i<lessons.length; i++)
         {
-            if(lessons[i]>=0)
-            {
-                checkboxes.set(i+1,true);
-            }
+            checkboxes.set(lessons[i]+1,true);
         }
     }
 }
