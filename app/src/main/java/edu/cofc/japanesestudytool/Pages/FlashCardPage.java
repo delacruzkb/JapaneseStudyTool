@@ -185,6 +185,7 @@ public class FlashCardPage extends AppCompatActivity
     {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putInt("currentCardNumber",currentCardNumber);
+        savedInstanceState.putString("currentCard",flashCard.getText().toString());
     }
 
         @Override
@@ -193,6 +194,25 @@ public class FlashCardPage extends AppCompatActivity
         super.onRestoreInstanceState(savedInstanceState);
         currentCardNumber = savedInstanceState.getInt("currentCardNumber");
         loadFlipCard(termList.get(currentCardNumber));
+        flashCard.setText(savedInstanceState.getString("currentCard"));
+        if(termList.size()!=1)
+        {
+            if(currentCardNumber==0)
+            {
+                prevCard.setVisibility(View.INVISIBLE);
+                nextCard.setVisibility(View.VISIBLE);
+            }
+            else if(currentCardNumber==termList.size()-1)
+            {
+                prevCard.setVisibility(View.VISIBLE);
+                nextCard.setVisibility(View.INVISIBLE);
+            }
+            else
+            {
+                prevCard.setVisibility(View.VISIBLE);
+                nextCard.setVisibility(View.VISIBLE);
+            }
+        }
     }
 
     private void gatherInformation(Intent intent)
