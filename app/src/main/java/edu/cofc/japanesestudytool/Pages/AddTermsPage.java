@@ -16,8 +16,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
-
 public class AddTermsPage extends AppCompatActivity
 {
     EditText jpnsTextBox;
@@ -36,6 +34,23 @@ public class AddTermsPage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_terms_page);
         instantiateViews();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putIntArray("lessonDropDownAdapter",adapter.getLessonsArray());
+        savedInstanceState.putInt("type",typeDropDownBar.getSelectedItemPosition());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        typeDropDownBar.setSelection(savedInstanceState.getInt("type"));
+        adapter.setCheckedFromArray(savedInstanceState.getIntArray("lessonDropDownAdapter"));
+        lessonDropDown.setAdapter(adapter);
     }
 
     private void instantiateViews()

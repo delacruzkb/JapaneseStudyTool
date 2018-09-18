@@ -135,6 +135,7 @@ public class SimilarTermsPage extends AppCompatActivity
                 dialog.show();
             }
         });
+
     }
     private void loadNewTermOntoDisplay(Term term)
     {
@@ -146,5 +147,21 @@ public class SimilarTermsPage extends AppCompatActivity
         {
             newReqKanjiTextBox.setVisibility(View.INVISIBLE);
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("styleLabel",writingStyleLabel.getText().toString());
+        savedInstanceState.putString("styleTextBox",writingStyleTextBox.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        writingStyleLabel.setText(savedInstanceState.getString("styleLabel"));
+        writingStyleTextBox.setText(savedInstanceState.getString("styleTextBox"));
     }
 }

@@ -188,7 +188,7 @@ public class FlashCardPage extends AppCompatActivity
         savedInstanceState.putString("currentCard",flashCard.getText().toString());
     }
 
-        @Override
+    @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState)
     {
         super.onRestoreInstanceState(savedInstanceState);
