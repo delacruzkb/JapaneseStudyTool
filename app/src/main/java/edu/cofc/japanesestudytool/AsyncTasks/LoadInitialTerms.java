@@ -64,7 +64,7 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                     //updates all possible fields
 
                     // don't touch kanji if null
-                    if(!termData[3].equalsIgnoreCase("null"))
+                    if(!termData[2].equalsIgnoreCase(""))
                     {
                         duplicate.setKanji(termData[2]);
                     }

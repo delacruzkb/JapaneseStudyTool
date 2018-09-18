@@ -63,12 +63,11 @@ public class Term implements Serializable
         return kanji;
     }
 
-    //TODO:account for new blank handling
     public void setKanji(String kanji)
     {
         if(kanji == null || kanji.equalsIgnoreCase("null"))
         {
-            kanji="";
+            this.kanji="";
         }
         else
         {

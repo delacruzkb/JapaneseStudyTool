@@ -92,7 +92,7 @@ public class TermListAdapter extends BaseAdapter
                 }
             }
         });
-        if( (term.getKanji()==null) || (term.getKanji().equalsIgnoreCase("NULL")))
+        if( (term.getKanji()==null) || (term.getKanji().equalsIgnoreCase("")))
         {
             toKanji.setVisibility(View.INVISIBLE);
         }
