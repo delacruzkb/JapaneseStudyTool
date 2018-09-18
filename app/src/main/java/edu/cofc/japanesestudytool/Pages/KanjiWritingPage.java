@@ -92,6 +92,34 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("currentCardNumber",currentCardNumber);
+        savedInstanceState.putInt("engHint",engHintText.getVisibility());
+        savedInstanceState.putInt("jpnsHint",jpnsHintText.getVisibility());
+        savedInstanceState.putInt("kanjiHint",kanjiText.getVisibility());
+        savedInstanceState.putInt("engHintBtn",showEngHintButton.getVisibility());
+        savedInstanceState.putInt("jpnsHintBtn",showJpnsHintButton.getVisibility());
+        savedInstanceState.putInt("kanjiHintBtn",showKanjiButton.getVisibility());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        loadKanji(termList.get(currentCardNumber));
+        currentCardNumber = savedInstanceState.getInt("currentCardNumber");
+        engHintText.setVisibility(savedInstanceState.getInt("engHint"));
+        jpnsHintText.setVisibility(savedInstanceState.getInt("jpnsHintText"));
+        kanjiText.setVisibility(savedInstanceState.getInt("kanjiHintText"));
+        showEngHintButton.setVisibility(savedInstanceState.getInt("engHintBtn"));
+        showJpnsHintButton.setVisibility(savedInstanceState.getInt("jpnsHintBtn"));
+        showKanjiButton.setVisibility(savedInstanceState.getInt("kanjiHintBtn"));
+    }
+
+
     private void loadKanji(Term term)
     {
         if(useJapaneseHint)

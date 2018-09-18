@@ -38,6 +38,7 @@ public class StoryPage extends AppCompatActivity
 
         //Gather information and store them into the array lists
         gatherInformation(getIntent());
+
     }
 
     private void initializeViews()
@@ -91,22 +92,20 @@ public class StoryPage extends AppCompatActivity
 
         termListView = findViewById(R.id.termListView);
 
-        browser = (WebView) findViewById(R.id.googleTranslate);
+        browser = findViewById(R.id.googleTranslate);
         browser.setWebViewClient(new WebViewClient());
-        browser.loadUrl("https://translate.google.com/#ja/en");
+
+
         browser.getSettings().setJavaScriptEnabled(true);
         browser.getSettings().setLoadWithOverviewMode(true);
         browser.getSettings().setUseWideViewPort(true);
-
         browser.getSettings().setSupportZoom(true);
         browser.getSettings().setBuiltInZoomControls(true);
         browser.getSettings().setDisplayZoomControls(false);
-
         browser.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         browser.setScrollbarFadingEnabled(false);
+        browser.loadUrl("https://translate.google.com/#ja/en");
     }
-
-
 
     private void rePopulateListView(ArrayList<Term> terms)
     {
@@ -157,4 +156,5 @@ public class StoryPage extends AppCompatActivity
         dialog.show();
 
     }
+
 }
