@@ -11,6 +11,7 @@ import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 import android.content.Intent;
 import android.text.method.ScrollingMovementMethod;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -143,6 +144,15 @@ public class FlashCardPage extends AppCompatActivity
             reqKanjiLabel.setVisibility(View.VISIBLE);
         }
 
+        if(term.getType().equalsIgnoreCase("grammar"))
+        {
+            flashCard.setTextSize(TypedValue.COMPLEX_UNIT_DIP,getResources().getInteger(R.integer.flashCardGrammarTextSize));
+        }
+        else
+        {
+            flashCard.setTextSize(TypedValue.COMPLEX_UNIT_DIP,getResources().getInteger(R.integer.flashCardAllTextSize));
+        }
+
         cardCountLabel.setText((currentCardNumber+1) +"/"+ cardCount);
 
     }
@@ -168,6 +178,21 @@ public class FlashCardPage extends AppCompatActivity
         AlertDialog dialog = builder.create();
         dialog.show();
 
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("currentCardNumber",currentCardNumber);
+    }
+
+        @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        currentCardNumber = savedInstanceState.getInt("currentCardNumber");
+        loadFlipCard(termList.get(currentCardNumber));
     }
 
     private void gatherInformation(Intent intent)

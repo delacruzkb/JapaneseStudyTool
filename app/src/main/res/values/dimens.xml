@@ -13,7 +13,9 @@
     <dimen name="termListItemHeight">125dp</dimen>
 
     //FlashCardPage
-    <dimen name="flashCardTextSize">40sp</dimen>
+    <dimen name="flashCardTextSize">30sp</dimen>
+    <integer name="flashCardAllTextSize">30</integer>
+    <integer name="flashCardGrammarTextSize">20</integer>
 
     //KanjiWritingPage
     <dimen name="very_small_brush">2dp</dimen>

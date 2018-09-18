@@ -23,8 +23,7 @@
         <activity android:name=".Pages.AddTermsPage"/>
         <activity android:name=".Pages.EditTermsPage"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Pages.FlashCardPage"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.FlashCardPage"/>
         <activity
             android:name=".Pages.StoryPage"
             android:windowSoftInputMode="adjustPan"/>
