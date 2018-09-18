@@ -107,7 +107,7 @@ public class TermListAdapter extends BaseAdapter
             {
                 termText.setText(term.getJpns() + "(" + term.getType() + ")");
             }
-            if(showKanjiFirst)
+            if(showKanjiFirst && toKanji.getVisibility() == View.VISIBLE)
             {
                 termText.setText(term.getKanji());
                 if(term.getType().contains("verb"))
