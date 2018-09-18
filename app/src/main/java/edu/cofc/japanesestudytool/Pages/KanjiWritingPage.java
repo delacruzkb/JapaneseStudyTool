@@ -97,26 +97,75 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
     {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putInt("currentCardNumber",currentCardNumber);
-        savedInstanceState.putInt("engHint",engHintText.getVisibility());
-        savedInstanceState.putInt("jpnsHint",jpnsHintText.getVisibility());
-        savedInstanceState.putInt("kanjiHint",kanjiText.getVisibility());
-        savedInstanceState.putInt("engHintBtn",showEngHintButton.getVisibility());
-        savedInstanceState.putInt("jpnsHintBtn",showJpnsHintButton.getVisibility());
-        savedInstanceState.putInt("kanjiHintBtn",showKanjiButton.getVisibility());
+        savedInstanceState.putBoolean("showEngBtn", showEngHintButton.getVisibility()==View.VISIBLE);
+        savedInstanceState.putBoolean("showJpnsBtn", showJpnsHintButton.getVisibility()==View.VISIBLE);
+        savedInstanceState.putBoolean("showKanjiBtn", showKanjiButton.getVisibility()==View.VISIBLE);
+
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState)
     {
         super.onRestoreInstanceState(savedInstanceState);
-        loadKanji(termList.get(currentCardNumber));
+
         currentCardNumber = savedInstanceState.getInt("currentCardNumber");
-        engHintText.setVisibility(savedInstanceState.getInt("engHint"));
-        jpnsHintText.setVisibility(savedInstanceState.getInt("jpnsHintText"));
-        kanjiText.setVisibility(savedInstanceState.getInt("kanjiHintText"));
-        showEngHintButton.setVisibility(savedInstanceState.getInt("engHintBtn"));
-        showJpnsHintButton.setVisibility(savedInstanceState.getInt("jpnsHintBtn"));
-        showKanjiButton.setVisibility(savedInstanceState.getInt("kanjiHintBtn"));
+        boolean showEngBtn= savedInstanceState.getBoolean("showEngBtn");
+        boolean showJpnsBtn= savedInstanceState.getBoolean("showJpnsBtn");
+        boolean showKanjiBtn = savedInstanceState.getBoolean("showKanjiBtn");
+        loadKanji(termList.get(currentCardNumber));
+
+
+        if(termList.size()!=1)
+        {
+            if(currentCardNumber==0)
+            {
+                prevButton.setVisibility(View.INVISIBLE);
+                nextButton.setVisibility(View.VISIBLE);
+            }
+            else if(currentCardNumber==termList.size()-1)
+            {
+                prevButton.setVisibility(View.VISIBLE);
+                nextButton.setVisibility(View.INVISIBLE);
+            }
+            else
+            {
+                prevButton.setVisibility(View.VISIBLE);
+                nextButton.setVisibility(View.VISIBLE);
+            }
+        }
+
+
+        if(showEngBtn)
+        {
+            engHintText.setVisibility(View.INVISIBLE);
+            showEngHintButton.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            engHintText.setVisibility(View.VISIBLE);
+            showEngHintButton.setVisibility(View.INVISIBLE);
+        }
+        if(showJpnsBtn)
+        {
+            jpnsHintText.setVisibility(View.INVISIBLE);
+            showJpnsHintButton.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            jpnsHintText.setVisibility(View.VISIBLE);
+            showJpnsHintButton.setVisibility(View.INVISIBLE);
+        }
+        if(showKanjiBtn)
+        {
+            kanjiText.setVisibility(View.INVISIBLE);
+            showKanjiButton.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            kanjiText.setVisibility(View.VISIBLE);
+            showKanjiButton.setVisibility(View.INVISIBLE);
+        }
+
     }
 
 
