@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".Pages.KanjiWritingPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/new_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:src="@android:drawable/ic_menu_delete" />
+
+        <ImageButton
+            android:id="@+id/erase_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:src="@drawable/erase" />
+
+        <ImageButton
+            android:id="@+id/draw_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:src="@drawable/write" />
+
+    </LinearLayout>
+
+    <edu.cofc.japanesestudytool.DrawingView
+        android:id="@+id/drawing"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="@color/canvasColor" />
+
+    <View
+        android:id="@+id/divider41"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <LinearLayout
+        android:id="@+id/englishHintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/engHintLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/toEnglishText"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <EditText
+            android:id="@+id/engHintTextBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/showEngHintButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_menu_view"
+            android:backgroundTint="@color/buttonColor"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+
+        <View
+            android:id="@+id/divider44"
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:id="@+id/jpnsHintLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/toJapaneseText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <EditText
+            android:id="@+id/jpnsHintTextBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/showJpnsHintButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_menu_view"
+            android:backgroundTint="@color/buttonColor"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider45"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <LinearLayout
+        android:id="@+id/kanjiHintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/kanjiLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/toKanjiText"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <EditText
+            android:id="@+id/kanjiCopyTextBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/showKanjiButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_menu_view"
+            android:backgroundTint="@color/buttonColor"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider43"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/prevKanjiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/previousTermLabel"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/kanjiCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/nextKanjiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/nextTermLabel"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+
+</LinearLayout>

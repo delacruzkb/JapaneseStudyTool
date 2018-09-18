@@ -6,33 +6,152 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/small_brush"
-        android:layout_width="@dimen/small_brush"
-        android:layout_height="@dimen/small_brush"
-        android:background="@drawable/circle"
-        android:backgroundTint="@color/brushColor" />
+    <LinearLayout
+        android:id="@+id/very_small_brush_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|clip_horizontal"
+        android:orientation="horizontal">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight" />
+        <TextView
+            android:id="@+id/very_small_brush_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verySmallStrokeSize"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
 
-    <Button
-        android:id="@+id/medium_brush"
-        android:layout_width="@dimen/medium_brush"
-        android:layout_height="@dimen/medium_brush"
-        android:background="@drawable/circle"
-        android:backgroundTint="@color/brushColor" />
+        <Space
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight" />
+        <Button
+            android:id="@+id/very_small_brush"
+            android:layout_width="@dimen/very_small_brush"
+            android:layout_height="@dimen/very_small_brush"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/brushColor" />
 
-    <Button
-        android:id="@+id/large_brush"
-        android:layout_width="@dimen/large_brush"
-        android:layout_height="@dimen/large_brush"
-        android:background="@drawable/circle"
-        android:backgroundTint="@color/brushColor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/small_brush_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/small_brush_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smallStrokeSize"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Space
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/small_brush"
+            android:layout_width="@dimen/small_brush"
+            android:layout_height="@dimen/small_brush"
+            android:layout_weight="1"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/brushColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/medium_brush_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/medium_brush_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mediumStrokeSize"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Space
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/medium_brush"
+            android:layout_width="@dimen/medium_brush"
+            android:layout_height="@dimen/medium_brush"
+            android:layout_weight="1"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/brushColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/large_brush_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/large_brush_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/largeStrokeSize"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Space
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/large_brush"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_weight="1"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/brushColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/very_large_brush_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/very_large_brush_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/veryLargeStrokeSize"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <Space
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/very_large_brush"
+            android:layout_width="@dimen/very_large_brush"
+            android:layout_height="@dimen/very_large_brush"
+            android:layout_weight="1"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/brushColor" />
+
+    </LinearLayout>
 
 </LinearLayout>

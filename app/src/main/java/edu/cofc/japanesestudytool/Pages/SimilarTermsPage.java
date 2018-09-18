@@ -21,13 +21,11 @@ import edu.cofc.japanesestudytool.Term;
 public class SimilarTermsPage extends AppCompatActivity
 {
     ListView similarTermsList;
-    Button cancel;
-    Button addNewTerm;
+    Button toJpns,toEng,toKanji,cancel,addNewTerm;
     ArrayList<Term> similarTerms;
     Term newTerm;
-    EditText newEngTextBox;
-    EditText newJpnsTextBox;
-    EditText newKanjiTextBox;
+    EditText writingStyleTextBox;
+    TextView writingStyleLabel;
     TextView newLessonTextBox;
     TextView newTypeTextBox;
     TextView newReqKanjiTextBox;
@@ -47,18 +45,41 @@ public class SimilarTermsPage extends AppCompatActivity
 
     private void instantiateViews()
     {
-        newEngTextBox = findViewById(R.id.newTermEnglishTextBox);
-        newEngTextBox.setEnabled(false);
-        newJpnsTextBox = findViewById(R.id.newTermHiraganaTextBox);
-        newJpnsTextBox.setEnabled(false);
-        newKanjiTextBox = findViewById(R.id.newTermKanjiTextBox);
-        newKanjiTextBox.setEnabled(false);
+        writingStyleLabel = findViewById(R.id.writingStyleLabel);
+        writingStyleTextBox = findViewById(R.id.writingStyleTextBox);
+        writingStyleTextBox.setEnabled(false);
         newLessonTextBox = findViewById(R.id.newTermLessonTextBox);
         newTypeTextBox = findViewById(R.id.newTermTypeTextBox);
         newReqKanjiTextBox = findViewById(R.id.newTermReqKanjiTextBox);
         similarTermsList = findViewById(R.id.similarTermListView);
         AddTermListAdapter addTermListAdapter = new AddTermListAdapter(similarTerms,this);
         similarTermsList.setAdapter(addTermListAdapter);
+
+        toJpns = findViewById(R.id.toJpnsNewTerm);
+        toJpns.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writingStyleLabel.setText(getResources().getString(R.string.toJapaneseText));
+                writingStyleTextBox.setText(newTerm.getJpns());
+            }
+        });
+        toEng = findViewById(R.id.toEngNewTerm);
+        toEng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writingStyleLabel.setText(getResources().getString(R.string.toEnglishText));
+                writingStyleTextBox.setText(newTerm.getEng());
+            }
+        });
+        toKanji = findViewById(R.id.toKanjiNewTerm);
+        toKanji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writingStyleLabel.setText(getResources().getString(R.string.toKanjiText));
+                writingStyleTextBox.setText(newTerm.getKanji());
+            }
+        });
+
         cancel = findViewById(R.id.cancelNewTermButton);
         cancel.setOnClickListener(new View.OnClickListener()
         {
@@ -117,9 +138,8 @@ public class SimilarTermsPage extends AppCompatActivity
     }
     private void loadNewTermOntoDisplay(Term term)
     {
-        newEngTextBox.setText(term.getEng());
-        newJpnsTextBox.setText(term.getJpns());
-        newKanjiTextBox.setText(term.getKanji());
+        writingStyleLabel.setText(getResources().getString(R.string.toJapaneseText));
+        writingStyleTextBox.setText(term.getJpns());
         newTypeTextBox.setText(term.getType());
         newLessonTextBox.setText(term.getNumberedLessonString());
         if(!term.isReqKanji())

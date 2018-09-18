@@ -10,12 +10,14 @@ import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.app.Dialog;
 import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,9 +25,7 @@ import java.util.ArrayList;
 public class KanjiWritingPage extends AppCompatActivity implements View.OnClickListener
 {
     private DrawingView drawView;
-    private float smallBrush;
-    private float mediumBrush;
-    private float largeBrush;
+    private float verySmallBrush,smallBrush,mediumBrush,largeBrush,veryLargeBrush;
     private ImageButton drawBtn, eraseBtn, newBtn;
     private EditText engHintText,jpnsHintText,kanjiText;
     private TextView kanjiCounter;
@@ -41,9 +41,11 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
         useJapaneseHint =( (TermMenuMetrics) getIntent().getSerializableExtra("metrics")).showJpnsFirst();
         termList = (ArrayList<Term>)getIntent().getSerializableExtra("termList");
 
+        verySmallBrush = getResources().getInteger(R.integer.very_small_size);
         smallBrush = getResources().getInteger(R.integer.small_size);
         mediumBrush=getResources().getInteger(R.integer.medium_size);
         largeBrush=getResources().getInteger(R.integer.large_size);
+        veryLargeBrush = getResources().getInteger(R.integer.very_large_size);
         drawView = findViewById(R.id.drawing);
         drawBtn = findViewById(R.id.draw_btn);
         drawBtn.setOnClickListener(this);
@@ -122,7 +124,17 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
             final Dialog brushDialog = new Dialog(this);
             brushDialog.setTitle("Brush size:");
             brushDialog.setContentView(R.layout.brush_chooser);
-            Button smallBtn = brushDialog.findViewById(R.id.small_brush);
+            LinearLayout verySmallBtn = brushDialog.findViewById(R.id.very_small_brush_layout);
+            verySmallBtn.setOnClickListener(new OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    drawView.setBrushSize(verySmallBrush);
+                    drawView.setLastBrushSize(verySmallBrush);
+                    drawView.setErase(false);
+                    brushDialog.dismiss();
+                }
+            });
+            LinearLayout smallBtn = brushDialog.findViewById(R.id.small_brush_layout);
             smallBtn.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
@@ -132,7 +144,7 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
                     brushDialog.dismiss();
                 }
             });
-            Button mediumBtn = brushDialog.findViewById(R.id.medium_brush);
+            LinearLayout mediumBtn = brushDialog.findViewById(R.id.medium_brush_layout);
             mediumBtn.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
@@ -143,12 +155,22 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
                 }
             });
 
-            Button largeBtn = brushDialog.findViewById(R.id.large_brush);
+            LinearLayout largeBtn = brushDialog.findViewById(R.id.large_brush_layout);
             largeBtn.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     drawView.setBrushSize(largeBrush);
                     drawView.setLastBrushSize(largeBrush);
+                    drawView.setErase(false);
+                    brushDialog.dismiss();
+                }
+            });
+            LinearLayout veryLargeBtn = brushDialog.findViewById(R.id.very_large_brush_layout);
+            veryLargeBtn.setOnClickListener(new OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    drawView.setBrushSize(veryLargeBrush);
+                    drawView.setLastBrushSize(veryLargeBrush);
                     drawView.setErase(false);
                     brushDialog.dismiss();
                 }
@@ -160,30 +182,49 @@ public class KanjiWritingPage extends AppCompatActivity implements View.OnClickL
             final Dialog brushDialog = new Dialog(this);
             brushDialog.setTitle("Eraser size:");
             brushDialog.setContentView(R.layout.brush_chooser);
-            Button smallBtn = brushDialog.findViewById(R.id.small_brush);
+            LinearLayout verySmallBtn = brushDialog.findViewById(R.id.very_small_brush_layout);
+            verySmallBtn.setOnClickListener(new OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    drawView.setBrushSize(verySmallBrush);
+                    drawView.setErase(true);
+                    brushDialog.dismiss();
+                }
+            });
+            LinearLayout smallBtn = brushDialog.findViewById(R.id.small_brush_layout);
             smallBtn.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    drawView.setErase(true);
                     drawView.setBrushSize(smallBrush);
+                    drawView.setErase(true);
                     brushDialog.dismiss();
                 }
             });
-            Button mediumBtn = brushDialog.findViewById(R.id.medium_brush);
+            LinearLayout mediumBtn = brushDialog.findViewById(R.id.medium_brush_layout);
             mediumBtn.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    drawView.setErase(true);
                     drawView.setBrushSize(mediumBrush);
+                    drawView.setErase(true);
                     brushDialog.dismiss();
                 }
             });
-            Button largeBtn = brushDialog.findViewById(R.id.large_brush);
+
+            LinearLayout largeBtn = brushDialog.findViewById(R.id.large_brush_layout);
             largeBtn.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    drawView.setErase(true);
                     drawView.setBrushSize(largeBrush);
+                    drawView.setErase(true);
+                    brushDialog.dismiss();
+                }
+            });
+            LinearLayout veryLargeBtn = brushDialog.findViewById(R.id.very_large_brush_layout);
+            veryLargeBtn.setOnClickListener(new OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    drawView.setBrushSize(veryLargeBrush);
+                    drawView.setErase(true);
                     brushDialog.dismiss();
                 }
             });

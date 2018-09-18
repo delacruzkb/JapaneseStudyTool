@@ -46,8 +46,9 @@
     //StoryPage
     <string name="nounListingLabel">Noun(s)</string>
     <string name="verbListingLabel">Verb(s)</string>
-    <string name="adjectiveListingLabel">Adjectives(s)</string>
-    <string name="grammarListingLabel">Grammar Point(s)</string>
+    <string name="adjectiveListingLabel">Adj.(s)</string>
+
+    <string name="grammarListingLabel">Grammar</string>
     <string name="otherListingLabel">Other(s)</string>
 
     //FlashCardPage
@@ -71,7 +72,7 @@
     <string name="addTypeLabel">Select type:</string>
     <string name="addLessonLabel">Select lesson(s):</string>
     <string name="addRequiredKanjiLabel">Required Kanji</string>
-    <string name="addTermButton">Add New Term</string>
+    <string name="addTermButton">Add</string>
 
 
     //Similarities Dialog
@@ -88,5 +89,10 @@
     <string name="showLabel">Show</string>
     <string name="eraseAllTitle">Start Fresh</string>
     <string name="eraseAllMessage">Erase current drawing?</string>
+    <string name="verySmallStrokeSize">Very Small</string>
+    <string name="smallStrokeSize">Small</string>
+    <string name="mediumStrokeSize">Medium</string>
+    <string name="largeStrokeSize">Large</string>
+    <string name="veryLargeStrokeSize">Very Large</string>
 
 </resources>

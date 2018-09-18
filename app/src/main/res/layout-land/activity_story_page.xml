@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".Pages.StoryPage">
+
+    <WebView
+        android:id="@+id/googleTranslate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </WebView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/nounListButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/buttonColor"
+                    android:text="@string/nounListingLabel"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/textSize" />
+
+                <Button
+                    android:id="@+id/verbListButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/buttonColor"
+                    android:text="@string/verbListingLabel"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/adjectiveListButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonColor"
+                    android:text="@string/adjectiveListingLabel"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/textSize" />
+
+                <Button
+                    android:id="@+id/otherListButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonColor"
+                    android:text="@string/otherListingLabel"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <Button
+                android:id="@+id/grammarlistButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/buttonColor"
+                android:text="@string/grammarListingLabel"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/termListView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+
+</LinearLayout>
