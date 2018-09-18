@@ -37,6 +37,7 @@ public class TermsMenuPage extends AppCompatActivity
     private CheckBox allLessons;
     private String whichMode;
     private final int minCountLimit=0;
+    private final int maxNounCountLimit=200;
     private final int maxCountLimit=100;
 
     private CheckBoxDropDownSpinnerAdapter adapter;
@@ -151,7 +152,7 @@ public class TermsMenuPage extends AppCompatActivity
             {
                 makeCountsValid();
                 int count = Integer.parseInt(nounCountText.getText().toString());
-                if(count < maxCountLimit)
+                if(count < maxNounCountLimit)
                 {
                     nounCountText.setText((count+1) + "");
                 }
@@ -362,6 +363,7 @@ public class TermsMenuPage extends AppCompatActivity
         showLessonKanjiOnlySwitch.setVisibility(View.GONE);
         useKanjiOnlySwitch.setChecked(true);
         useKanjiOnlySwitch.setVisibility(View.GONE);
+        useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
     }
     private void setConfirmButtonOnClickListener()
     {
@@ -405,11 +407,11 @@ public class TermsMenuPage extends AppCompatActivity
         }
         else if(nounCountText.getText().toString().length() >6)
         {
-            nounCountText.setText(Integer.toString(maxCountLimit));
+            nounCountText.setText(Integer.toString(maxNounCountLimit));
         }
         else if(Integer.parseInt(nounCountText.getText().toString()) >maxCountLimit)
         {
-            nounCountText.setText(Integer.toString(maxCountLimit));
+            nounCountText.setText(Integer.toString(maxNounCountLimit));
         }
 
         if((adjectiveCountText.getText().toString().equalsIgnoreCase("")))
