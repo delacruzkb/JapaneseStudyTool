@@ -117,6 +117,20 @@ public class EditSingleTermDialogPage extends AppCompatActivity
         });
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putIntArray("lessons",adapter.getLessonsArray());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        adapter.setCheckedFromArray(savedInstanceState.getIntArray("lessons"));
+        //TODO:figure out how to set
+    }
 
     private void promptThenAdd()
     {

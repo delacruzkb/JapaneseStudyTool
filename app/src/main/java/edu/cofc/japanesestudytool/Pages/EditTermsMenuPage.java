@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.Switch;
 
 import edu.cofc.japanesestudytool.AsyncTasks.LoadEditableTerms;
@@ -165,6 +167,21 @@ public class EditTermsMenuPage extends AppCompatActivity
 
             }
         });
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("text",searchEditTextBox.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        searchEditTextBox.setText(savedInstanceState.getString("text"));
+        //TODO:figure out how to set spec
     }
 
     @Override

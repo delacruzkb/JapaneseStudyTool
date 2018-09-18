@@ -21,19 +21,16 @@
         <activity android:name=".Pages.TermsMenuPage"/>
         <activity android:name=".Pages.AddTermsPage"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".Pages.EditTermsPage"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.EditTermsPage" />
         <activity android:name=".Pages.FlashCardPage"/>
         <activity
             android:name=".Pages.StoryPage"
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".Pages.SimilarTermsPage" />
-        <activity android:name=".Pages.EditTermsMenuPage"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.EditTermsMenuPage" />
         <activity
             android:name=".Pages.EditSingleTermDialogPage"
-            android:theme="@style/AppTheme.customPopUpTheme"
-            android:screenOrientation="portrait"/>
+            android:theme="@style/AppTheme.customPopUpTheme" />
         <activity android:name=".Pages.KanjiWritingPage"></activity>
     </application>
 
