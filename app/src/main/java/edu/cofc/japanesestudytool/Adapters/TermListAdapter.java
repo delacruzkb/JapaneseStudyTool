@@ -20,14 +20,13 @@ public class TermListAdapter extends BaseAdapter
     private Context context;
     private LayoutInflater mLayoutInflater;
     private ArrayList<Term> data;
-    private boolean showJapaneseFirst, showKanji, showKanjiFirst, showLessonKanjiOnly;
+    private boolean showJapaneseFirst, showKanjiFirst, showLessonKanjiOnly;
     public TermListAdapter(Context context, ArrayList<Term> data, TermMenuMetrics metrics)
     {
         this.context = context;
         this.data = data;
         mLayoutInflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         showJapaneseFirst = metrics.showJpnsFirst();
-        showKanji = metrics.showKanji();
         showKanjiFirst = metrics.showKanjiFirst();
         showLessonKanjiOnly = metrics.showLessonKanjiOnly();
     }
@@ -93,10 +92,6 @@ public class TermListAdapter extends BaseAdapter
             }
         });
         if( (term.getKanji()==null) || (term.getKanji().equalsIgnoreCase("")))
-        {
-            toKanji.setVisibility(View.INVISIBLE);
-        }
-        if(!showKanji)
         {
             toKanji.setVisibility(View.INVISIBLE);
         }
