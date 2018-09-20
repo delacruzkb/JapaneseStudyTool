@@ -30,7 +30,7 @@ public class TermsMenuPage extends AppCompatActivity
     private Button otherCountDecreaseButton, otherCountIncreaseButton;
     private Button confirmButton;
 
-    private Switch showJpnsFirstSwitch, showKanjiSwitch, showKanjiFirstSwitch,
+    private Switch showJpnsFirstSwitch, showKanjiFirstSwitch,
             showLessonKanjiOnlySwitch, useKanjiOnlySwitch,useLessonKanjiOnlySwitch;
 
     private Spinner lessonDropDown;
@@ -84,14 +84,10 @@ public class TermsMenuPage extends AppCompatActivity
 
         //Instantiate switches
         showJpnsFirstSwitch = findViewById(R.id.showJpnsFirstSwitch);
-        showKanjiSwitch = findViewById(R.id.showKanjiSwitch);
         showKanjiFirstSwitch = findViewById(R.id.showKanjiFirstSwitch);
         showLessonKanjiOnlySwitch = findViewById(R.id.showLessonKanjiOnlySwitch);
         useKanjiOnlySwitch = findViewById(R.id.useKanjiOnlySwitch);
         useLessonKanjiOnlySwitch = findViewById(R.id.useLessonKanjiOnlySwitch);
-        showKanjiFirstSwitch.setVisibility(View.GONE);
-        showLessonKanjiOnlySwitch.setVisibility(View.GONE);
-        useKanjiOnlySwitch.setVisibility(View.GONE);
         useLessonKanjiOnlySwitch.setVisibility(View.GONE);
 
         //Instantiate checkboxes
@@ -135,10 +131,6 @@ public class TermsMenuPage extends AppCompatActivity
     public void onSaveInstanceState(Bundle savedInstanceState)
     {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putBoolean("showJpnsFirstSwitch", showJpnsFirstSwitch.isChecked());
-        savedInstanceState.putBoolean("showKanjiSwitch", showKanjiSwitch.isChecked());
-        savedInstanceState.putBoolean("showKanjiFirstSwitch", showKanjiFirstSwitch.isChecked());
-        savedInstanceState.putBoolean("showLessonKanjiOnlySwitch", showLessonKanjiOnlySwitch.isChecked());
         savedInstanceState.putBoolean("useKanjiOnlySwitch", useKanjiOnlySwitch.isChecked());
         savedInstanceState.putBoolean("useLessonKanjiOnlySwitch", useLessonKanjiOnlySwitch.isChecked());
         savedInstanceState.putBoolean("allLessons",allLessons.isChecked());
@@ -150,37 +142,15 @@ public class TermsMenuPage extends AppCompatActivity
     {
         super.onRestoreInstanceState(savedInstanceState);
         showJpnsFirstSwitch.setChecked(savedInstanceState.getBoolean("showJpnsFirstSwitch"));
-        showKanjiSwitch.setChecked(savedInstanceState.getBoolean("showKanjiSwitch"));
-        if(showKanjiSwitch.isChecked())
+        if(useKanjiOnlySwitch.isChecked())
         {
-            showKanjiFirstSwitch.setVisibility(View.VISIBLE);
-            showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
-            useKanjiOnlySwitch.setVisibility(View.VISIBLE);
-
-            showKanjiFirstSwitch.setChecked(savedInstanceState.getBoolean("showKanjiFirstSwitch"));
+            useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
+            showLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
             showLessonKanjiOnlySwitch.setChecked(savedInstanceState.getBoolean("showLessonKanjiOnlySwitch"));
-            useKanjiOnlySwitch.setChecked(savedInstanceState.getBoolean("useKanjiOnlySwitch"));
-            if(useKanjiOnlySwitch.isChecked())
-            {
-                useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
-                showLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
-                showLessonKanjiOnlySwitch.setChecked(savedInstanceState.getBoolean("showLessonKanjiOnlySwitch"));
-            }
-            else
-            {
-                useLessonKanjiOnlySwitch.setVisibility(View.GONE);
-                useLessonKanjiOnlySwitch.setChecked(false);
-            }
         }
         else
         {
-            showKanjiFirstSwitch.setVisibility(View.GONE);
-            showLessonKanjiOnlySwitch.setVisibility(View.GONE);
-            useKanjiOnlySwitch.setVisibility(View.GONE);
             useLessonKanjiOnlySwitch.setVisibility(View.GONE);
-            showKanjiFirstSwitch.setChecked(false);
-            showLessonKanjiOnlySwitch.setChecked(false);
-            useKanjiOnlySwitch.setChecked(false);
             useLessonKanjiOnlySwitch.setChecked(false);
         }
 
@@ -347,28 +317,6 @@ public class TermsMenuPage extends AppCompatActivity
 
     private void setSwitchOnClickListener()
     {
-        showKanjiSwitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!showKanjiSwitch.isChecked())
-                {
-                    showKanjiFirstSwitch.setVisibility(View.GONE);
-                    showLessonKanjiOnlySwitch.setVisibility(View.GONE);
-                    useKanjiOnlySwitch.setVisibility(View.GONE);
-                    useLessonKanjiOnlySwitch.setVisibility(View.GONE);
-                    showKanjiFirstSwitch.setChecked(false);
-                    showLessonKanjiOnlySwitch.setChecked(false);
-                    useKanjiOnlySwitch.setChecked(false);
-                    useLessonKanjiOnlySwitch.setChecked(false);
-                }
-                else
-                {
-                    showKanjiFirstSwitch.setVisibility(View.VISIBLE);
-                    showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
-                    useKanjiOnlySwitch.setVisibility(View.VISIBLE);
-                }
-            }
-        });
 
         useKanjiOnlySwitch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -426,7 +374,6 @@ public class TermsMenuPage extends AppCompatActivity
         grammarCountText.setText("0");
         layout.setVisibility(View.GONE);
 
-        showKanjiSwitch.setVisibility(View.GONE);
         showKanjiFirstSwitch.setVisibility(View.GONE);
         showLessonKanjiOnlySwitch.setVisibility(View.GONE);
         useKanjiOnlySwitch.setChecked(true);
@@ -448,7 +395,6 @@ public class TermsMenuPage extends AppCompatActivity
                 metrics.setOtherCount(Integer.parseInt(otherCountText.getText().toString()));
 
                 metrics.setShowJpnsFirst(showJpnsFirstSwitch.isChecked());
-                metrics.setShowKanji(showKanjiSwitch.isChecked());
                 metrics.setShowKanjiFirst(showKanjiFirstSwitch.isChecked());
                 metrics.setShowLessonKanjiOnly(showLessonKanjiOnlySwitch.isChecked());
                 metrics.setUseKanjiOnly(useKanjiOnlySwitch.isChecked());

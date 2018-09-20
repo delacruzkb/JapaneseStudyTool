@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class TermMenuMetrics implements Serializable
 {
-    private boolean allTerms,showJpnsFirst, showKanji, showKanjiFirst,
+    private boolean allTerms,showJpnsFirst, showKanjiFirst,
             showLessonKanjiOnly, useKanjiOnly,useLessonKanjiOnly;
     private int[] lessons;
     private int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
@@ -23,7 +23,6 @@ public class TermMenuMetrics implements Serializable
     {
         allTerms = false;
         showJpnsFirst=false;
-        showKanji=false;
         showKanjiFirst=false;
         showLessonKanjiOnly=false;
         useKanjiOnly=false;
@@ -51,14 +50,6 @@ public class TermMenuMetrics implements Serializable
 
     public void setShowJpnsFirst(boolean showJpnsFirst) {
         this.showJpnsFirst = showJpnsFirst;
-    }
-
-    public boolean showKanji() {
-        return showKanji;
-    }
-
-    public void setShowKanji(boolean showKanji) {
-        this.showKanji = showKanji;
     }
 
     public boolean showKanjiFirst() {

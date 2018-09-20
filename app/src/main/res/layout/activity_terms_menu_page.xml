@@ -271,16 +271,6 @@
         android:theme="@style/SwitchTheme" />
 
     <Switch
-        android:id="@+id/showKanjiSwitch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:splitTrack="false"
-        android:text="@string/showKanjiText"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize"
-        android:theme="@style/SwitchTheme" />
-
-    <Switch
         android:id="@+id/showKanjiFirstSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -329,6 +319,7 @@
         android:id="@+id/lessonSelection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <TextView

@@ -306,12 +306,12 @@
             android:theme="@style/SwitchTheme" />
 
         <Switch
-            android:id="@+id/showKanjiSwitch"
+            android:id="@+id/showKanjiFirstSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:splitTrack="false"
-            android:text="@string/showKanjiText"
+            android:text="@string/showKanjiFirst"
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize"
             android:theme="@style/SwitchTheme" />
@@ -322,17 +322,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Switch
-            android:id="@+id/showKanjiFirstSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:splitTrack="false"
-            android:text="@string/showKanjiFirst"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/textSize"
-            android:theme="@style/SwitchTheme" />
 
         <Switch
             android:id="@+id/showLessonKanjiOnlySwitch"
