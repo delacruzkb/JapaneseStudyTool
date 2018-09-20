@@ -18,14 +18,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 public class AddTermsPage extends AppCompatActivity
 {
-    EditText jpnsTextBox;
-    EditText engTextBox;
-    EditText kanjiTextBox;
-    Spinner typeDropDownBar;
-    Spinner lessonDropDown;
+    private EditText jpnsTextBox,engTextBox,kanjiTextBox;
+    private Spinner typeDropDownBar,lessonDropDown;
     private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
-    CheckBox reqKanjiCheckbox;
-    Button addTermButton;
+    private CheckBox reqKanjiCheckbox;
+    private Button addTermButton;
     private CheckBoxDropDownSpinnerAdapter adapter;
 
     @Override

@@ -22,16 +22,11 @@ import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 public class EditSingleTermDialogPage extends AppCompatActivity
 {
-    EditText japaneseTextBox;
-    EditText englishTextBox;
-    EditText kanjiTextBox;
-    Spinner typeDropDownBar;
-    Spinner lessonDropDownBar;
-    CheckBox reqKanjiCheckBox;
-    Button cancelEdit;
-    Button confirmEdit;
-    Term originalTerm;
-    Term editedTerm;
+    private EditText japaneseTextBox,englishTextBox,kanjiTextBox;
+    private Spinner typeDropDownBar,lessonDropDownBar;
+    private CheckBox reqKanjiCheckBox;
+    private Button cancelEdit,confirmEdit;
+    private Term originalTerm,editedTerm;
     private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irr-verb","adjective","grammar","other"};
     private CheckBoxDropDownSpinnerAdapter adapter;
     @Override

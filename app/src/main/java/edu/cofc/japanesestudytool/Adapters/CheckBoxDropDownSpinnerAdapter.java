@@ -15,9 +15,9 @@ import edu.cofc.japanesestudytool.R;
 
 public class CheckBoxDropDownSpinnerAdapter extends BaseAdapter
 {
-    ArrayList<Boolean> checkboxes;
-    Context context;
-    LayoutInflater mInflater;
+    private ArrayList<Boolean> checkboxes;
+    private Context context;
+    private LayoutInflater mInflater;
     private final String[] values = new String[]{"blank","extra","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
             "20","21","22","23"};
     public CheckBoxDropDownSpinnerAdapter(Context context)

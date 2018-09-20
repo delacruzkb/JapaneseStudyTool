@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public class TermMenuMetrics implements Serializable
 {
-    boolean allTerms,showJpnsFirst, showKanji, showKanjiFirst,
+    private boolean allTerms,showJpnsFirst, showKanji, showKanjiFirst,
             showLessonKanjiOnly, useKanjiOnly,useLessonKanjiOnly;
-    int[] lessons;
-    int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
-    String mode;
+    private int[] lessons;
+    private int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
+    private String mode;
 
     public String getMode() {
         return mode;

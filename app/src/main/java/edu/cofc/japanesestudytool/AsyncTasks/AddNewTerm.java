@@ -13,9 +13,9 @@ import edu.cofc.japanesestudytool.TermDatabase;
 
 public class AddNewTerm extends AsyncTask<Void,Void,ArrayList<Term>>
 {
-    Context mContext;
-    Term mTerm;
-    TermDatabase termDatabase;
+    private Context mContext;
+    private Term mTerm;
+    private TermDatabase termDatabase;
     public AddNewTerm(Context context, Term term)
     {
         mContext = context;

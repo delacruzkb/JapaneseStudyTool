@@ -17,9 +17,9 @@ import edu.cofc.japanesestudytool.TermDatabase;
 
 public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
 {
-    Context context;
-    TermDatabase termDatabase;
-    ProgressBar spinner;
+    private Context context;
+    private TermDatabase termDatabase;
+    private ProgressBar spinner;
     public LoadInitialTerms(Context iContext,ProgressBar progressBar)
     {
         context = iContext;

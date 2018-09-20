@@ -24,10 +24,10 @@ import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 public class QueryTerms extends AsyncTask<Void,Void,Void>
 {
-    TermDatabase termDatabase;
-    TermMenuMetrics metrics;
-    Context mContext;
-    ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termList;
+    private TermDatabase termDatabase;
+    private TermMenuMetrics metrics;
+    private Context mContext;
+    private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termList;
     public QueryTerms(TermMenuMetrics termMenuMetrics, Context context)
     {
         mContext = context;

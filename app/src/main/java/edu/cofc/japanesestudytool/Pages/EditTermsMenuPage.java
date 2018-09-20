@@ -21,8 +21,7 @@ import edu.cofc.japanesestudytool.R;
 public class EditTermsMenuPage extends AppCompatActivity
 {
     private Button searchButton;
-    private Spinner dropDownBar;
-    private Spinner specificDropDownBar;
+    private Spinner dropDownBar,specificDropDownBar;
     private EditText searchEditTextBox;
     private Switch searchExactSwitch;
     private final String[] items = new String[]{"Japanese","English","Kanji","Type","Lesson","Req. Kanji"};

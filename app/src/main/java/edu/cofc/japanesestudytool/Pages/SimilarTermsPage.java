@@ -20,15 +20,12 @@ import edu.cofc.japanesestudytool.Term;
 
 public class SimilarTermsPage extends AppCompatActivity
 {
-    ListView similarTermsList;
-    Button toJpns,toEng,toKanji,cancel,addNewTerm;
-    ArrayList<Term> similarTerms;
-    Term newTerm;
-    EditText writingStyleTextBox;
-    TextView writingStyleLabel;
-    TextView newLessonTextBox;
-    TextView newTypeTextBox;
-    TextView newReqKanjiTextBox;
+    private ListView similarTermsList;
+    private Button toJpns,toEng,toKanji,cancel,addNewTerm;
+    private ArrayList<Term> similarTerms;
+    private Term newTerm;
+    private EditText writingStyleTextBox;
+    private TextView writingStyleLabel,newLessonTextBox,newTypeTextBox,newReqKanjiTextBox;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

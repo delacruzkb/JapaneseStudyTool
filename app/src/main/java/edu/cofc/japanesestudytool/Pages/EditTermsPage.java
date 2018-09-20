@@ -14,8 +14,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 public class EditTermsPage extends AppCompatActivity
 {
-    ListView editTermsListView;
-    ArrayList<Term> terms;
+    private ListView editTermsListView;
+    private ArrayList<Term> terms;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

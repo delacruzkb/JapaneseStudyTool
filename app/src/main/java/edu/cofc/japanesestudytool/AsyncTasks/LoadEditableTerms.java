@@ -14,17 +14,10 @@ import edu.cofc.japanesestudytool.TermDatabase;
 
 public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
 {
-    Context context;
-    String japanese;
-
-    String english;
-    String kanji;
-    String lesson;
-    String termType;
-    boolean reqKanji;
-    boolean isExact;
-    String mode;
-    TermDatabase termDatabase;
+    private Context context;
+    private String japanese,english,kanji,lesson,termType,mode;
+    private boolean reqKanji,isExact;
+    private TermDatabase termDatabase;
 
 
     public LoadEditableTerms(Context mContext, String mMode, String value, boolean isExact)

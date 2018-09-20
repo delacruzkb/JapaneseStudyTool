@@ -22,7 +22,7 @@ import edu.cofc.japanesestudytool.Term;
 
 public class EditTermListAdapter extends BaseAdapter
 {
-    ArrayList<Term> terms;
+    private ArrayList<Term> terms;
     private Context context;
     private LayoutInflater mLayoutInflater;
     public EditTermListAdapter(ArrayList<Term> eTerms, Context mContext)

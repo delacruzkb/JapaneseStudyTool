@@ -9,7 +9,7 @@ import edu.cofc.japanesestudytool.TermDatabase;
 
 public class DeleteTerm extends AsyncTask<Term,Void,Void>
 {
-    TermDatabase termDatabase;
+    private TermDatabase termDatabase;
 
     public DeleteTerm(Context mContext)
     {
