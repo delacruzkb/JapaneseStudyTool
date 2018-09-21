@@ -172,67 +172,49 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
 
     private ArrayList<Term> loadFromLessons(String type, int count, int[] lessons)
     {
-        ArrayList<Term> rtnval = new ArrayList<>();
-        String[] lessonStrings= new String[24];
-
-        //Fill the lessonStrings array with the proper values
-        // 1) copy all lessons
-        // 2) fill the rest with the string "ignore" to satisfy the query call and not affect the result
-        // all lessons are maped to a character sorted by ascii, 'ignore' will never appear
-        for(int i =0; i<lessonStrings.length;i++)
-        {
-            if(i<lessons.length)
-            {
-                lessonStrings[i]=Term.getLessonChar(lessons[i]);
-            }
-            else
-            {
-                lessonStrings[i]="ignore";
-            }
-        }
+        Set<Term> termHashTable = new HashSet<>();
+        ArrayList<Term> rtnval=new ArrayList<>();
+        ArrayList<Term> temp=new ArrayList<>();
 
         if(metrics.useKanjiOnly())
         {
             if(metrics.useLessonKanjiOnly())
             {
-                rtnval = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnlyFromLessons(type,count,
-                    lessonStrings[0], lessonStrings[1], lessonStrings[2],
-                        lessonStrings[3], lessonStrings[4], lessonStrings[5],
-                        lessonStrings[6], lessonStrings[7], lessonStrings[8],
-                        lessonStrings[9], lessonStrings[10], lessonStrings[11],
-                        lessonStrings[12], lessonStrings[13], lessonStrings[14],
-                        lessonStrings[15], lessonStrings[16], lessonStrings[17],
-                        lessonStrings[18], lessonStrings[19], lessonStrings[20],
-                        lessonStrings[21], lessonStrings[22], lessonStrings[23]);
+                for(int i=0;i<lessons.length;i++ )
+                {
+                    temp = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnlyFromLessons(type,count,Term.getLessonChar(lessons[i]));
+                    termHashTable.addAll(temp);
+                }
             }
             else
             {
-
-                rtnval = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLessons(type,count,
-                        lessonStrings[0], lessonStrings[1], lessonStrings[2],
-                        lessonStrings[3], lessonStrings[4], lessonStrings[5],
-                        lessonStrings[6], lessonStrings[7], lessonStrings[8],
-                        lessonStrings[9], lessonStrings[10], lessonStrings[11],
-                        lessonStrings[12], lessonStrings[13], lessonStrings[14],
-                        lessonStrings[15], lessonStrings[16], lessonStrings[17],
-                        lessonStrings[18], lessonStrings[19], lessonStrings[20],
-                        lessonStrings[21], lessonStrings[22], lessonStrings[23]);
-
+                for(int i=0;i<lessons.length;i++ )
+                {
+                    temp = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLessons(type,count,Term.getLessonChar(lessons[i]));
+                    termHashTable.addAll(temp);
+                }
             }
         }
         else
         {
-            rtnval= (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLessons(type,count,
-                    lessonStrings[0], lessonStrings[1], lessonStrings[2],
-                    lessonStrings[3], lessonStrings[4], lessonStrings[5],
-                    lessonStrings[6], lessonStrings[7], lessonStrings[8],
-                    lessonStrings[9], lessonStrings[10], lessonStrings[11],
-                    lessonStrings[12], lessonStrings[13], lessonStrings[14],
-                    lessonStrings[15], lessonStrings[16], lessonStrings[17],
-                    lessonStrings[18], lessonStrings[19], lessonStrings[20],
-                    lessonStrings[21], lessonStrings[22], lessonStrings[23]);
+            for(int i=0;i<lessons.length;i++ )
+            {
+                temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLessons(type,count,Term.getLessonChar(lessons[i]));
+                termHashTable.addAll(temp);
+            }
         }
-
+        //Add all terms in the set to the array list
+        rtnval.addAll(termHashTable);
+        //Randomize order and truncate to fit use
+        Collections.shuffle(rtnval);
+        if(rtnval.size()>count)
+        {
+            temp = new ArrayList<>();
+            for (int i = 0; i < count; i++)
+            {
+                temp.add(rtnval.get(i));
+            }
+        }
         return rtnval;
     }
 }
