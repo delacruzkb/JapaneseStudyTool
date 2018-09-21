@@ -25,22 +25,126 @@ public interface TermDAO
     @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypes(String type, int limit);
 
-    //QueryTerms || query requested terms based on metrics
-    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getAllTypeFromLessons(String type, String lesson, int limit);
-
     @Query("SELECT* FROM Term WHERE kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
     List<Term> getKanjiOnly(String type, int limit);
-
-    @Query("SELECT* FROM Term WHERE (kanji != '') and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getKanjiOnlyFromLessons(String type, String lesson, int limit);
 
     @Query("SELECT* FROM Term WHERE reqKanji = 1 and kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
     List<Term> getLessonKanjiOnly(String type, int limit);
 
-    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getLessonKanjiOnlyFromLessons(String type, String lesson, int limit);
+    //Lesson Specific Queries
+    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTypeFromLessons(String type, int limit, String lesson);
 
+    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' " +
+            "and (lesson LIKE '%' || :lesson || '%' " +
+            "or lesson LIKE '%' || :lesson2 || '%' " +
+            "or lesson LIKE '%' || :lesson3 || '%' " +
+            "or lesson LIKE '%' || :lesson4 || '%' " +
+            "or lesson LIKE '%' || :lesson5 || '%' " +
+            "or lesson LIKE '%' || :lesson6 || '%' " +
+            "or lesson LIKE '%' || :lesson7 || '%' " +
+            "or lesson LIKE '%' || :lesson8 || '%' " +
+            "or lesson LIKE '%' || :lesson9 || '%' " +
+            "or lesson LIKE '%' || :lesson10 || '%' " +
+            "or lesson LIKE '%' || :lesson11 || '%' " +
+            "or lesson LIKE '%' || :lesson12 || '%' " +
+            "or lesson LIKE '%' || :lesson13 || '%' " +
+            "or lesson LIKE '%' || :lesson14 || '%' " +
+            "or lesson LIKE '%' || :lesson15 || '%' " +
+            "or lesson LIKE '%' || :lesson16 || '%' " +
+            "or lesson LIKE '%' || :lesson17 || '%' " +
+            "or lesson LIKE '%' || :lesson18 || '%' " +
+            "or lesson LIKE '%' || :lesson19 || '%' " +
+            "or lesson LIKE '%' || :lesson20 || '%' " +
+            "or lesson LIKE '%' || :lesson21 || '%' " +
+            "or lesson LIKE '%' || :lesson22 || '%' " +
+            "or lesson LIKE '%' || :lesson23 || '%' " +
+            "or lesson LIKE '%' || :lesson24 || '%' )" +
+            "ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getAllTypeFromLessons(String type, int limit, String lesson, String lesson2, String lesson3,
+                                     String lesson4, String lesson5, String lesson6,
+                                     String lesson7, String lesson8, String lesson9,
+                                     String lesson10, String lesson11, String lesson12,
+                                     String lesson13, String lesson14, String lesson15,
+                                     String lesson16, String lesson17, String lesson18,
+                                     String lesson19, String lesson20, String lesson21,
+                                     String lesson22, String lesson23, String lesson24);
+
+    @Query("SELECT* FROM Term WHERE (kanji != '') and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getKanjiOnlyFromLessons(String type, int limit, String lesson);
+
+    @Query("SELECT* FROM Term WHERE (kanji != '') and type LIKE '%' || :type || '%' " +
+            "and (lesson LIKE '%' || :lesson || '%' " +
+            "or lesson LIKE '%' || :lesson2 || '%' " +
+            "or lesson LIKE '%' || :lesson3 || '%' " +
+            "or lesson LIKE '%' || :lesson4 || '%' " +
+            "or lesson LIKE '%' || :lesson5 || '%' " +
+            "or lesson LIKE '%' || :lesson6 || '%' " +
+            "or lesson LIKE '%' || :lesson7 || '%' " +
+            "or lesson LIKE '%' || :lesson8 || '%' " +
+            "or lesson LIKE '%' || :lesson9 || '%' " +
+            "or lesson LIKE '%' || :lesson10 || '%' " +
+            "or lesson LIKE '%' || :lesson11 || '%' " +
+            "or lesson LIKE '%' || :lesson12 || '%' " +
+            "or lesson LIKE '%' || :lesson13 || '%' " +
+            "or lesson LIKE '%' || :lesson14 || '%' " +
+            "or lesson LIKE '%' || :lesson15 || '%' " +
+            "or lesson LIKE '%' || :lesson16 || '%' " +
+            "or lesson LIKE '%' || :lesson17 || '%' " +
+            "or lesson LIKE '%' || :lesson18 || '%' " +
+            "or lesson LIKE '%' || :lesson19 || '%' " +
+            "or lesson LIKE '%' || :lesson20 || '%' " +
+            "or lesson LIKE '%' || :lesson21 || '%' " +
+            "or lesson LIKE '%' || :lesson22 || '%' " +
+            "or lesson LIKE '%' || :lesson23 || '%' " +
+            "or lesson LIKE '%' || :lesson24 || '%' )" +
+            "ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getKanjiOnlyFromLessons(String type, int limit, String lesson, String lesson2, String lesson3,
+                                       String lesson4, String lesson5, String lesson6,
+                                       String lesson7, String lesson8, String lesson9,
+                                       String lesson10, String lesson11, String lesson12,
+                                       String lesson13, String lesson14, String lesson15,
+                                       String lesson16, String lesson17, String lesson18,
+                                       String lesson19, String lesson20, String lesson21,
+                                       String lesson22, String lesson23, String lesson24);
+
+    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getLessonKanjiOnlyFromLessons(String type,  int limit, String lesson);
+
+    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' " +
+            "and (lesson LIKE '%' || :lesson || '%' " +
+            "or lesson LIKE '%' || :lesson2 || '%' " +
+            "or lesson LIKE '%' || :lesson3 || '%' " +
+            "or lesson LIKE '%' || :lesson4 || '%' " +
+            "or lesson LIKE '%' || :lesson5 || '%' " +
+            "or lesson LIKE '%' || :lesson6 || '%' " +
+            "or lesson LIKE '%' || :lesson7 || '%' " +
+            "or lesson LIKE '%' || :lesson8 || '%' " +
+            "or lesson LIKE '%' || :lesson9 || '%' " +
+            "or lesson LIKE '%' || :lesson10 || '%' " +
+            "or lesson LIKE '%' || :lesson11 || '%' " +
+            "or lesson LIKE '%' || :lesson12 || '%' " +
+            "or lesson LIKE '%' || :lesson13 || '%' " +
+            "or lesson LIKE '%' || :lesson14 || '%' " +
+            "or lesson LIKE '%' || :lesson15 || '%' " +
+            "or lesson LIKE '%' || :lesson16 || '%' " +
+            "or lesson LIKE '%' || :lesson17 || '%' " +
+            "or lesson LIKE '%' || :lesson18 || '%' " +
+            "or lesson LIKE '%' || :lesson19 || '%' " +
+            "or lesson LIKE '%' || :lesson20 || '%' " +
+            "or lesson LIKE '%' || :lesson21 || '%' " +
+            "or lesson LIKE '%' || :lesson22 || '%' " +
+            "or lesson LIKE '%' || :lesson23 || '%' " +
+            "or lesson LIKE '%' || :lesson24 || '%' )" +
+            "ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getLessonKanjiOnlyFromLessons(String type, int limit, String lesson, String lesson2, String lesson3,
+                                             String lesson4, String lesson5, String lesson6,
+                                             String lesson7, String lesson8, String lesson9,
+                                             String lesson10, String lesson11, String lesson12,
+                                             String lesson13, String lesson14, String lesson15,
+                                             String lesson16, String lesson17, String lesson18,
+                                             String lesson19, String lesson20, String lesson21,
+                                             String lesson22, String lesson23, String lesson24);
 
     //AddNewTerm || ued to find similarities
     @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%'OR eng LIKE '%' || :english|| '%'")
