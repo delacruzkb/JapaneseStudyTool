@@ -182,7 +182,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             {
                 for(int i=0;i<lessons.length;i++ )
                 {
-                    temp = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnlyFromLessons(type,count,Term.getLessonChar(lessons[i]));
+                    temp = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnlyFromLesson(type,count,Term.getLessonChar(lessons[i]));
                     termHashTable.addAll(temp);
                 }
             }
@@ -190,7 +190,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             {
                 for(int i=0;i<lessons.length;i++ )
                 {
-                    temp = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLessons(type,count,Term.getLessonChar(lessons[i]));
+                    temp = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLesson(type,count,Term.getLessonChar(lessons[i]));
                     termHashTable.addAll(temp);
                 }
             }
@@ -199,7 +199,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         {
             for(int i=0;i<lessons.length;i++ )
             {
-                temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLessons(type,count,Term.getLessonChar(lessons[i]));
+                temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLesson(type,count,Term.getLessonChar(lessons[i]));
                 termHashTable.addAll(temp);
             }
         }

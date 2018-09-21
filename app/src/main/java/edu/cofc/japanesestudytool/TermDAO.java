@@ -33,13 +33,13 @@ public interface TermDAO
   
     //TODO:optimize lesson queries
     @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getAllTypeFromLessons(String type, int limit, String lesson);
+    List<Term> getAllTypeFromLesson(String type, int limit, String lesson);
 
     @Query("SELECT* FROM Term WHERE (kanji != '') and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getKanjiOnlyFromLessons(String type, int limit, String lesson);
+    List<Term> getKanjiOnlyFromLesson(String type, int limit, String lesson);
 
     @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getLessonKanjiOnlyFromLessons(String type, int limit, String lesson);
+    List<Term> getLessonKanjiOnlyFromLesson(String type, int limit, String lesson);
 
     //AddNewTerm || ued to find similarities
     @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%'OR eng LIKE '%' || :english|| '%'")
