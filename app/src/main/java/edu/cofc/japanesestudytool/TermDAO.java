@@ -30,7 +30,7 @@ public interface TermDAO
 
     @Query("SELECT* FROM Term WHERE reqKanji = 1 and kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
     List<Term> getLessonKanjiOnly(String type, int limit);
-
+  
     //TODO:optimize lesson queries
     @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
     List<Term> getAllTypeFromLessons(String type, String lesson, int limit);
@@ -40,7 +40,10 @@ public interface TermDAO
 
     @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
     List<Term> getLessonKanjiOnlyFromLessons(String type, String lesson, int limit);
+   
 
+    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
+    List<Term> getLessonKanjiOnlyFromLessons(String type,  int limit, String lesson);
 
     //AddNewTerm || ued to find similarities
     @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%'OR eng LIKE '%' || :english|| '%'")
