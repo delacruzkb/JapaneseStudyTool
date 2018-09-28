@@ -58,6 +58,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
         lessonDropDownBar.setAdapter(adapter);
 
         reqKanjiCheckBox = findViewById(R.id.editReqKanjiCheckBox);
+        reqKanjiCheckBox.setChecked(originalTerm.isReqKanji());
         cancelEdit = findViewById(R.id.cancelEditTermButton);
         cancelEdit.setOnClickListener(new View.OnClickListener() {
             @Override
