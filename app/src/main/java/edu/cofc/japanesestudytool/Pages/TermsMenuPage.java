@@ -184,6 +184,15 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
+        nounCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                nounCountText.setText(minCountLimit +"");
+                return false;
+            }
+        });
+
         nounCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -194,6 +203,15 @@ public class TermsMenuPage extends AppCompatActivity
                 {
                     nounCountText.setText((count+1) + "");
                 }
+            }
+        });
+
+        nounCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                nounCountText.setText(maxNounCountLimit +"");
+                return false;
             }
         });
 
@@ -210,6 +228,15 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
+        adjectiveCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                adjectiveCountText.setText(minCountLimit +"");
+                return false;
+            }
+        });
+
         adjectiveCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -220,6 +247,15 @@ public class TermsMenuPage extends AppCompatActivity
                 {
                     adjectiveCountText.setText((count+1) + "");
                 }
+            }
+        });
+
+        adjectiveCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                adjectiveCountText.setText(maxCountLimit +"");
+                return false;
             }
         });
 
@@ -235,6 +271,15 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
+        verbCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                verbCountText.setText(minCountLimit +"");
+                return false;
+            }
+        });
+
         verbCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -244,6 +289,15 @@ public class TermsMenuPage extends AppCompatActivity
                 {
                     verbCountText.setText((count+1) + "");
                 }
+            }
+        });
+
+        verbCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                verbCountText.setText(maxCountLimit +"");
+                return false;
             }
         });
 
@@ -259,6 +313,15 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
+        grammarCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                grammarCountText.setText(minCountLimit +"");
+                return false;
+            }
+        });
+
         grammarCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -268,6 +331,15 @@ public class TermsMenuPage extends AppCompatActivity
                 {
                     grammarCountText.setText((count+1) + "");
                 }
+            }
+        });
+
+        grammarCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                grammarCountText.setText(maxCountLimit +"");
+                return false;
             }
         });
 
@@ -283,6 +355,15 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
+        otherCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                otherCountText.setText(minCountLimit +"");
+                return false;
+            }
+        });
+
         otherCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -292,6 +373,15 @@ public class TermsMenuPage extends AppCompatActivity
                 {
                     otherCountText.setText((count+1) + "");
                 }
+            }
+        });
+
+        otherCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v)
+            {
+                otherCountText.setText(maxCountLimit +"");
+                return false;
             }
         });
     }
