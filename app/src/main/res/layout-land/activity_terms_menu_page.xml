@@ -242,7 +242,7 @@
             android:id="@+id/otherCountLabel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="6.5"
+            android:layout_weight="9"
             android:gravity="center_vertical"
             android:text="@string/otherTermLabel"
             android:textColor="@color/textColor"
@@ -318,27 +318,24 @@
 
     </LinearLayout>
 
+    <Switch
+        android:id="@+id/showLessonKanjiOnlySwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/showLessonKanjiOnlyText"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Switch
-            android:id="@+id/showLessonKanjiOnlySwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/showLessonKanjiOnlyText"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/textSize"
-            android:theme="@style/SwitchTheme" />
-    </LinearLayout>
+        android:orientation="horizontal"></LinearLayout>
 
     <Switch
         android:id="@+id/useKanjiOnlySwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:splitTrack="false"
         android:text="@string/useKanjiOnly"
         android:textColor="@color/textColor"
@@ -349,7 +346,6 @@
         android:id="@+id/useLessonKanjiOnlySwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:splitTrack="false"
         android:text="@string/useLessonKanjiOnly"
         android:textColor="@color/textColor"

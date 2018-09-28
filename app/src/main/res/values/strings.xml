@@ -28,7 +28,7 @@
     <string name="verbLabel"># of Verbs</string>
     <string name="nounLabel"># of Nouns</string>
     <string name="adjectiveLabel"># of Adjectives</string>
-    <string name="otherTermLabel"># of Other terms and phrases</string>
+    <string name="otherTermLabel"># of Other terms/phrases</string>
     <string name="grammarLabel"># of Grammar points</string>
     <string name="initialCount">0</string>
     <string name="displayHintLanguage">Use Hiragana as hint</string>

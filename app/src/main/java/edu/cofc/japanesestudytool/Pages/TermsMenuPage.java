@@ -88,7 +88,7 @@ public class TermsMenuPage extends AppCompatActivity
         showLessonKanjiOnlySwitch = findViewById(R.id.showLessonKanjiOnlySwitch);
         useKanjiOnlySwitch = findViewById(R.id.useKanjiOnlySwitch);
         useLessonKanjiOnlySwitch = findViewById(R.id.useLessonKanjiOnlySwitch);
-        useLessonKanjiOnlySwitch.setVisibility(View.GONE);
+        useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
 
         //Instantiate checkboxes
         allLessons = findViewById(R.id.allLessonsCheckBox);
@@ -413,7 +413,7 @@ public class TermsMenuPage extends AppCompatActivity
             public void onClick(View v) {
                 if(!useKanjiOnlySwitch.isChecked())
                 {
-                    useLessonKanjiOnlySwitch.setVisibility(View.GONE);
+                    useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
                     useLessonKanjiOnlySwitch.setChecked(false);
                     showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
                 }
