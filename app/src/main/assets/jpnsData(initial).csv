@@ -67,7 +67,7 @@ XはYです,X is Y,null,grammar,1,null
 おやすみ（なさい）,Good night,null,other,1,null
 ごご,P.M. / In the afternoon,午後,other,1,null
 ごぜん,A.M.,午前,other,1,null
-ごちそうさま（でした）,Thank you for the mean ( after eating),null,other,1,null
+ごちそうさま（でした）,Thank you for the meal ( after eating),null,other,1,null
 こんにちは,Good afternoon,null,other,1,null
 こんばんは,Good evening,null,other,1,null
 さようなら,Good-bye,null,other,1,null
@@ -2414,138 +2414,139 @@ Xがほうしい,I want (x),null,grammar,14,null
 ならう,to learn,習う,u-verb,17,kanji
 ひげをそる,to shave one's beard,null,u-verb,17,null
 むすぶ,to tie a knot,結ぶ,u-verb,17,kanji
-おかげさまで,"""I'm fine thanks to you"" / Used to show appriciation for the addressee's help/support/concern",null,grammar,18,null
-（～が）こわれる,(something) breaks,（～が）壊れる,ru-verb,18,null
-（～が）しまる,(something) closes,（～が）閉まる,u-verb,18,null
-（～が）おちる,(something) drops,（～が）落ちる,ru-verb,18,null
-（～が）きえる,(something) goes off,（～が）消える,ru-verb,18,null
 （～が）あく,(something) opens,（～が）開く,u-verb,18,null
+（～が）さく,to bloom,（～が）咲く,u-verb,18,null
+（～が）しまる,(something) closes,（～が）閉まる,u-verb,18,null
 （～が）つく,(something) turns on,null,u-verb,18,null
-ようふく,(western) clothes,洋服,noun,18,kanji
-（Stem of masu form)　ながら（Any verb tense),2 different actions performed by 1 person,null,grammar,18,null
-エアコン,air conditioner,null,noun,18,null
-るすばんでんわ,answering machine,留守番電話,noun,18,null
-ちんたいマンション,apartment for rent,賃貸マンション,noun,18,kanji
-バオオ,banana,null,noun,18,null
-げしゅく,boardinghouse,下宿,noun,18,kanji
-あかるい,bright,明るい,adjective,18,null
-～までに,by (time/date),null,other,18,null
-しょくどう,cafeteria,食堂,noun,18,kanji
-ろうそく,candle,null,noun,18,null
-じゅぎょう,class,授業,noun,18,kanji
-ふく,clothes,服,noun,18,kanji
-きょうりょく,cooperation,協力,noun,18,kanji
-カーテン,curtain,null,noun,18,null
-クッション,cushion,null,noun,18,null
-くらい,dark,暗い,adjective,18,null
-にっき,diary,日記,noun,18,null
-どうどうとした（な）,dignified / imposing,堂々とした（な）,adjective,18,kanji
-はずかしい,embarrassing / to feel embarrased,恥ずかしい,adjective,18,null
-たいしかん,embassy,大使館,noun,18,kanji
-どりょく,endeavor,努力,noun,18,kanji
-おわり,end,終わり,noun,18,kanji
-にゅうし,entrance exam,入試,noun,18,kanji
-ゆうがた,evening,夕方,noun,18,null
-しけん,exam,試験,noun,18,kanji
-けいけん,experience,経験,noun,18,kanji
-じっけん,experiment,実験,noun,18,kanji
-め,eye,目,noun,18,kanji
-めぐすり,eye drops,目薬,noun,18,kanji
-ず,figure,図,noun,18,kanji
-まず,first of all,null,other,18,null
-しあい,game / match,試合,noun,18,kanji
-しゅくだい,homework,宿題,noun,18,kanji
-さんぎょう,industry,産業,noun,18,kanji
-やど,inn,宿,noun,18,kanji
-むし,insect,虫,noun,18,null
-わふく,Japanese clothes,和服,noun,18,kanji
-りょかん,Japanese inn,旅館,noun,18,kanji
-しゅうてん,last stop,終点,noun,18,kanji
-かしだし,lending,貸し出し,noun,18,kanji
-としょかん,library,図書館,noun,18,kanji
-しゅくはく,lodging,宿泊,noun,18,kanji
-ちず,map,地図,noun,18,kanji
-げんだいてき（な）,modern,現代的（な）,adjective,18,kanji
-えいがかん,movie theatre,映画館,noun,18,kanji
-しょくぎょう,occupation,職業,noun,18,kanji
-ねうえのひと,one's surperiors,目上の人,noun,18,kanji
-そと,outside,外,noun,18,null
-ちからしごと,physical labor such as construction,力仕事,noun,18,kanji
-ポップコーン,popcorn,null,noun,18,null
-～（ん）だろう,Probably / . . . 、right? / (Short form) of～（ん）でしょう ,null,other,18,null
-もんだい,problem / question,問題,noun,18,kanji
-きょうじゅ,professor,教授,noun,18,kanji
-こうかいどう,public hall,公会堂,noun,18,kanji
-もくてき,purpose,目的,noun,18,kanji
-ほんとうに,really,本当に,other,18,null
-れいぞうこ,refrigerator,冷蔵庫,noun,18,null
-やちん,rent,家賃,noun,18,null
-いますぐ,right away,今すぐ,other,18,null
-おさきにしつれいします,See you. (I'm leaving ahead of you),お先に失礼します,other,18,null
-サービスぎょう,service industry,サービス業,noun,18,kanji
-シャンプー,shampoo,null,noun,18,null
-あいず,signal,合図,noun,18,kanji
-スカート,skirt,null,noun,18,null
-しゃかいてき（な）,social,社会的（な）,adjective,18,kanji
-ソファ,sofa,null,noun,18,null
-スープ,soup,null,noun,18,null
-しょうゆ,soy sauce,しょう油,noun,18,null
-りきし,sumo wrestler,力士,noun,18,kanji
-スイッチ,switch,null,noun,18,null
-じゅけん,taking examination,受験,noun,18,kanji
-まと,target,的,noun,18,kanji
-おかげで,thanks to . . .,null,other,18,null
-たいせいよう,the Atlantic,大西洋,noun,18,kanji
-とうよう,the east,東洋,noun,18,kanji
-さいしゅう～,the last . . .,最終～,other,18,kanji
-あと,the rest,後,noun,18,null
-にばんめ,the second,に番目,noun,18,kanji
-だい,title,題,noun,18,kanji
+（～を）おす,to press / to push,（～を）押す,u-verb,18,null
+（～を）おとす,to drop (something),（～を）落とす,u-verb,18,null
+（～を）こわす,to break (something),（～を）壊す,u-verb,18,null
+（～を）よごす,to make dirty,（～を）汚す,u-verb,18,null
 (Person)(に)　あやまる,to apologize,(Person)(に)　謝る,u-verb,18,null
 (Person)(に)(Favor)（を）たのむ,to ask (a favor),(Person)(に)(Favor)（を）頼む,u-verb,18,null
-はかる,to attempt,図る,u-verb,18,kanji
-さずかる,to be given,授かる,,18,kanji
-たすかる,to be saved / to be helped,助かる,u-verb,18,null
-（～が）よごれる,to become dirty,（～が）汚れる,ru-verb,18,null
-（～が）さく,to bloom,（～が）咲く,u-verb,18,null
-（～を）こわす,to break (something),（～を）壊す,u-verb,18,null
-おわる,to come to an end,終わる,u-verb,18,kanji
-（Te-form）しまう,To complete doing something /To show a sense of regret,null,grammar,18,null
-（Stem of De-form）じゃう,To complete doing something /To show a sense of regret,null,grammar,18,null
-（Stem of Te-form）ちゃう,To complete doing something /To show a sense of regret,null,grammar,18,null
-（～を）おとす,to drop (something),（～を）落とす,u-verb,18,null
-（Noun）のおけげ（で）,To express gratitude to something or someone when things turn out as desired,null,grammar,18,null
-ころぶ,to fall down,転ぶ,u-verb,18,null
-きぶんがわるい,to feel sick,気分が悪い,adjective,18,null
-かす,to lend,貸す,u-verb,18,kanji
-（～を）よごす,to make dirty,（～を）汚す,u-verb,18,null
-（～を）ちゅうもんする,to place an order,（～を）注文する,irr-verb,18,null
-（～を）おす,to press / to push,（～を）押す,u-verb,18,null
-かんがえる,to think (about) / to consider,考える,ru-verb,18,null
-（～を）かたづける,to tidy up,（～を）片付ける,ru-verb,18,null
-こころみる,to try,試みる,ru-verb,18,kanji
-"（drop the final 'u', add 'e'）ばよかったです",To wish one (should) had done something,null,grammar,18,null
-わだい,topic of conversation,話題,noun,18,kanji
-タオル,towel,null,noun,18,null
-せいふく,uniform,制服,noun,18,kanji
 おゆがわく,water boils,お湯が沸く,u-verb,18,null
-ようしょく,western food,洋食,noun,18,kanji
-どうしよう,What should I/we do?,null,other,18,null
+ころぶ,to fall down,転ぶ,u-verb,18,null
+たすかる,to be saved / to be helped,助かる,u-verb,18,null
+（～が）おちる,(something) drops,（～が）落ちる,ru-verb,18,null
+（～が）きえる,(something) goes off,（～が）消える,ru-verb,18,null
+（～が）こわれる,(something) breaks,（～が）壊れる,ru-verb,18,null
+（～が）よごれる,to become dirty,（～が）汚れる,ru-verb,18,null
+（～を）かたづける,to tidy up,（～を）片付ける,ru-verb,18,null
+かんがえる,to think (about) / to consider,考える,ru-verb,18,null
+～（ん）だろう,Probably / . . . 、right? / (Short form) of～（ん）でしょう ,null,other,18,null
+～いじょう,... or more,～以上,other,18,null
+～までに,by (time/date),null,other,18,null
+いますぐ,right away,今すぐ,other,18,null
+おかげで,thanks to . . .,null,other,18,null
+おさきにしつれいします,See you. (I'm leaving ahead of you),お先に失礼します,other,18,null
 おつかれさま（でした）,You must be tired after working so hard.,お疲れ様（でした）,other,18,null
-"（Short,Present Predicate　A)～と（Predicate　B)",,null,grammar,18,null
+どうしよう,What should I/we do?,null,other,18,null
+ほんとうに,really,本当に,other,18,null
+まず,first of all,null,other,18,null
+～だい,charge / fee,～代,noun,18,null
+あと,the rest,後,noun,18,null
+エアコン,air conditioner,null,noun,18,null
+カーテン,curtain,null,noun,18,null
+かていきょうし,tutor,家庭教師,noun,18,null
+クッション,cushion,null,noun,18,null
 じきゅう,an hourly wage,時給,noun,18,null
+シャンプー,shampoo,null,noun,18,null
+しょうゆ,soy sauce,しょう油,noun,18,null
+しょくひ,food cost,食費,noun,18,null
 じょしがくせい,female student,女子学生,noun,18,null
-だんしがくせい,male student,男子学生,noun,18,null
+スープ,soup,null,noun,18,null
+スイッチ,switch,null,noun,18,null
+スカート,skirt,null,noun,18,null
 せいかつのゆとり,extra money to spare for the cost of living,生活のゆとり,noun,18,null
 せいかつひ,the cost of living,生活費,noun,18,null
+そと,outside,外,noun,18,null
+ソファ,sofa,null,noun,18,null
+タオル,towel,null,noun,18,null
+だんしがくせい,male student,男子学生,noun,18,null
 ちょきん,saving,貯金,noun,18,null
-～いじょう,... or more,～以上,other,18,null
-ワンルームマンション,one-room apartment / a studio,null,noun,18,null
-しょくひ,food cost,食費,noun,18,null
-～だい,charge / fee,～代,noun,18,null
 でんきだい,charge for electricity,電気代,noun,18,null
-まいつき,every month,毎月,noun,18,null
-かていきょうし,tutor,家庭教師,noun,18,null
-ひっこし,moving,引っ越し,noun,18,null
+にっき,diary,日記,noun,18,null
+バオオ,banana,null,noun,18,null
 はじめは,at first,初めは,noun,18,null
+ひっこし,moving,引っ越し,noun,18,null
+ポップコーン,popcorn,null,noun,18,null
+まいつき,every month,毎月,noun,18,null
+むし,insect,虫,noun,18,null
+やちん,rent,家賃,noun,18,null
+ゆうがた,evening,夕方,noun,18,null
+るすばんでんわ,answering machine,留守番電話,noun,18,null
+れいぞうこ,refrigerator,冷蔵庫,noun,18,null
+ろうそく,candle,null,noun,18,null
+ワンルームマンション,one-room apartment / a studio,null,noun,18,null
+（～を）ちゅうもんする,to place an order,（～を）注文する,irr-verb,18,null
+"（drop the final 'u', add 'e'）ばよかったです",To wish one (should) had done something,null,grammar,18,null
+（Noun）のおけげ（で）,To express gratitude to something or someone when things turn out as desired,null,grammar,18,null
+"（Short,Present Predicate　A)～と（Predicate　B)",,null,grammar,18,null
+（Stem of De-form）じゃう,To complete doing something /To show a sense of regret,null,grammar,18,null
+（Stem of masu form)　ながら（Any verb tense),2 different actions performed by 1 person,null,grammar,18,null
+（Stem of Te-form）ちゃう,To complete doing something /To show a sense of regret,null,grammar,18,null
+（Te-form）しまう,To complete doing something /To show a sense of regret,null,grammar,18,null
+おかげさまで,"""I'm fine thanks to you"" / Used to show appriciation for the addressee's help/support/concern",null,grammar,18,null
+あかるい,bright,明るい,adjective,18,null
+きぶんがわるい,to feel sick,気分が悪い,adjective,18,null
+くらい,dark,暗い,adjective,18,null
 したしい,close / intimate,親しい,adjective,18,null
+はずかしい,embarrassing / to feel embarrased,恥ずかしい,adjective,18,null
+おわる,to come to an end,終わる,u-verb,18,kanji
+かす,to lend,貸す,u-verb,18,kanji
+はかる,to attempt,図る,u-verb,18,kanji
+こころみる,to try,試みる,ru-verb,18,kanji
+さいしゅう～,the last . . .,最終～,other,18,kanji
+あいず,signal,合図,noun,18,kanji
+えいがかん,movie theatre,映画館,noun,18,kanji
+おわり,end,終わり,noun,18,kanji
+かしだし,lending,貸し出し,noun,18,kanji
+きょうじゅ,professor,教授,noun,18,kanji
+きょうりょく,cooperation,協力,noun,18,kanji
+けいけん,experience,経験,noun,18,kanji
+げしゅく,boardinghouse,下宿,noun,18,kanji
+こうかいどう,public hall,公会堂,noun,18,kanji
+サービスぎょう,service industry,サービス業,noun,18,kanji
+さんぎょう,industry,産業,noun,18,kanji
+しあい,game / match,試合,noun,18,kanji
+しけん,exam,試験,noun,18,kanji
+じっけん,experiment,実験,noun,18,kanji
+しゅうてん,last stop,終点,noun,18,kanji
+じゅぎょう,class,授業,noun,18,kanji
+しゅくだい,homework,宿題,noun,18,kanji
+しゅくはく,lodging,宿泊,noun,18,kanji
+じゅけん,taking examination,受験,noun,18,kanji
+しょくぎょう,occupation,職業,noun,18,kanji
+しょくどう,cafeteria,食堂,noun,18,kanji
+ず,figure,図,noun,18,kanji
+せいふく,uniform,制服,noun,18,kanji
+だい,title,題,noun,18,kanji
+たいしかん,embassy,大使館,noun,18,kanji
+たいせいよう,the Atlantic,大西洋,noun,18,kanji
+ちからしごと,physical labor such as construction,力仕事,noun,18,kanji
+ちず,map,地図,noun,18,kanji
+ちんたいマンション,apartment for rent,賃貸マンション,noun,18,kanji
+とうよう,the east,東洋,noun,18,kanji
+としょかん,library,図書館,noun,18,kanji
+どりょく,endeavor,努力,noun,18,kanji
+にばんめ,the second,に番目,noun,18,kanji
+にゅうし,entrance exam,入試,noun,18,kanji
+めうえのひと,one's surperiors,目上の人,noun,18,kanji
+ふく,clothes,服,noun,18,kanji
+まと,target,的,noun,18,kanji
+め,eye,目,noun,18,kanji
+めぐすり,eye drops,目薬,noun,18,kanji
+もくてき,purpose,目的,noun,18,kanji
+もんだい,problem / question,問題,noun,18,kanji
+やど,inn,宿,noun,18,kanji
+ようしょく,western food,洋食,noun,18,kanji
+ようふく,(western) clothes,洋服,noun,18,kanji
+りきし,sumo wrestler,力士,noun,18,kanji
+りょかん,Japanese inn,旅館,noun,18,kanji
+わだい,topic of conversation,話題,noun,18,kanji
+わふく,Japanese clothes,和服,noun,18,kanji
+げんだいてき（な）,modern,現代的（な）,adjective,18,kanji
+しゃかいてき（な）,social,社会的（な）,adjective,18,kanji
+どうどうとした（な）,dignified / imposing,堂々とした（な）,adjective,18,kanji
+さずかる,to be given,授かる,u-verb,18,kanji
+せいふく,uniform,制服,noun,18,kanji

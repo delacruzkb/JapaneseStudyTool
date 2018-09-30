@@ -462,7 +462,7 @@ public class TermsMenuPage extends AppCompatActivity
     {
         LinearLayout layout = findViewById(R.id.grammarCountLayout);
         grammarCountText.setText("0");
-        layout.setVisibility(View.GONE);
+        layout.setVisibility(View.INVISIBLE);
 
         showKanjiFirstSwitch.setVisibility(View.GONE);
         showLessonKanjiOnlySwitch.setVisibility(View.GONE);
