@@ -79,12 +79,6 @@
                     android:textSize="@dimen/textSize" />
             </LinearLayout>
 
-            <View
-                android:id="@+id/divider24"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dividerHeight"
-                android:background="@color/dividerColor" />
-
             <TextView
                 android:id="@+id/writingStyleLabel"
                 android:layout_width="match_parent"
@@ -117,12 +111,6 @@
 
             </LinearLayout>
 
-            <View
-                android:id="@+id/divider26"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dividerHeight"
-                android:background="@color/dividerColor" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -148,7 +136,6 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/divider33"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dividerHeight"
                 android:background="@color/dividerColor" />
@@ -202,12 +189,6 @@
             android:background="@color/dividerColor" />
 
     </LinearLayout>
-
-    <View
-        android:id="@+id/divider18"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
 
     <View
         android:id="@+id/divider5"
