@@ -1,6 +1,5 @@
 package edu.cofc.japanesestudytool.Pages;
 
-import android.arch.persistence.room.Room;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -12,12 +11,10 @@ import android.widget.ProgressBar;
 
 import edu.cofc.japanesestudytool.AsyncTasks.LoadInitialTerms;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.TermDatabase;
 
 public class HomePage extends AppCompatActivity
 {
-    private Button storyButton, flashCardButton, addTermsButton,editTermsButton,strokePracticeButton,loadDataButton;
-    private TermDatabase termDatabase;
+    private Button studyButton, addTermsButton,editTermsButton,loadDataButton;
     private ProgressBar spinner;
 
     @Override
@@ -26,39 +23,18 @@ public class HomePage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        termDatabase = Room.databaseBuilder(this,TermDatabase.class,"terms").build();
         spinner = findViewById(R.id.progressBar);
         spinner.setVisibility(View.INVISIBLE);
-        storyButton = findViewById(R.id.storyButton);
-        storyButton.setOnClickListener(new View.OnClickListener() {
+
+        studyButton = findViewById(R.id.studyButton);
+        studyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(storyButton.getContext(),TermsMenuPage.class);
-                intent.putExtra("mode","story");
+                Intent intent = new Intent(studyButton.getContext(),TermsMenuPage.class);
                 startActivity(intent);
             }
         });
 
-
-        flashCardButton = findViewById(R.id.flashCardButton);
-        flashCardButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(flashCardButton.getContext(),TermsMenuPage.class);
-                intent.putExtra("mode","flashcard");
-                startActivity(intent);
-            }
-        });
-
-        strokePracticeButton = findViewById(R.id.strokePractice);
-        strokePracticeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(editTermsButton.getContext(),TermsMenuPage.class);
-                intent.putExtra("mode","kanjiwriting");
-                startActivity(intent);
-            }
-        });
         addTermsButton = findViewById(R.id.addTermsButton);
         addTermsButton.setOnClickListener(new View.OnClickListener() {
             @Override

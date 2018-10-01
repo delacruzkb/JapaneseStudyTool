@@ -9,6 +9,20 @@
     android:orientation="vertical"
     tools:context=".Pages.TermsMenuPage">
 
+    <Spinner
+        android:id="@+id/modeDropDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="@color/buttonColor"
+        android:backgroundTintMode="multiply" />
+
+    <View
+        android:id="@+id/divider49"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/dividerColor" />
+
     <LinearLayout
         android:id="@+id/nountCountLayout"
         android:layout_width="match_parent"
@@ -350,8 +364,7 @@
             android:layout_weight="1"
             android:background="@android:drawable/btn_dropdown"
             android:backgroundTint="@color/buttonColor"
-            android:backgroundTintMode="multiply"
-            android:spinnerMode="dialog" />
+            android:backgroundTintMode="multiply" />
 
     </LinearLayout>
 

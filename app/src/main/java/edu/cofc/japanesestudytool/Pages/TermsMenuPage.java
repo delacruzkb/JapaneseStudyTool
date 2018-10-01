@@ -6,14 +6,14 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
-
-import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
@@ -33,7 +33,7 @@ public class TermsMenuPage extends AppCompatActivity
     private Switch showJpnsFirstSwitch, showKanjiFirstSwitch,
             showLessonKanjiOnlySwitch, useKanjiOnlySwitch,useLessonKanjiOnlySwitch;
 
-    private Spinner lessonDropDown;
+    private Spinner modeDropDown,lessonDropDown;
     private CheckBox allLessons;
     private String whichMode;
     private final int minCountLimit=0;
@@ -46,7 +46,6 @@ public class TermsMenuPage extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terms_menu_page);
-        whichMode= getIntent().getStringExtra("mode");
         // segregated into private methods to ease debugging
         initializeViews();
         setCountButtonOnClickListeners();
@@ -54,10 +53,6 @@ public class TermsMenuPage extends AppCompatActivity
         setConfirmButtonOnClickListener();
         setSwitchOnClickListener();
         setCheckBoxOnClickListener();
-        if(whichMode.equalsIgnoreCase("kanjiwriting"))
-        {
-            adjustViewsForKanjiWriting();
-        }
     }
 
     private void initializeViews()
@@ -93,7 +88,34 @@ public class TermsMenuPage extends AppCompatActivity
         //Instantiate checkboxes
         allLessons = findViewById(R.id.allLessonsCheckBox);
 
-        //Instantiate dropdown checkboxes
+        //Instantiate spinners
+        modeDropDown = findViewById(R.id.modeDropDown);
+        final String[] items = {getResources().getString(R.string.flashCardModeText),
+                            getResources().getString(R.string.kanjiStrokeModeText),
+                            getResources().getString(R.string.storyModeText)};
+        final ArrayAdapter<String> modeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,items);
+        modeDropDown.setAdapter(modeAdapter);
+        modeDropDown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                whichMode = parent.getItemAtPosition(position).toString();
+                if(whichMode.equalsIgnoreCase(modeDropDown.getContext().getResources().getString(R.string.kanjiStrokeModeText)))
+                {
+                    hideExtraViews();
+                }
+                else
+                {
+                    showExtraViews();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         lessonDropDown = findViewById(R.id.termLessonsCheckDropDown);
         adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext());
         lessonDropDown.setAdapter(adapter);
@@ -458,18 +480,6 @@ public class TermsMenuPage extends AppCompatActivity
         });
     }
 
-    private void adjustViewsForKanjiWriting()
-    {
-        LinearLayout layout = findViewById(R.id.grammarCountLayout);
-        grammarCountText.setText("0");
-        layout.setVisibility(View.INVISIBLE);
-
-        showKanjiFirstSwitch.setVisibility(View.GONE);
-        showLessonKanjiOnlySwitch.setVisibility(View.GONE);
-        useKanjiOnlySwitch.setChecked(true);
-        useKanjiOnlySwitch.setVisibility(View.GONE);
-        useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
-    }
     private void setConfirmButtonOnClickListener()
     {
         confirmButton.setOnClickListener(new View.OnClickListener() {
@@ -569,5 +579,31 @@ public class TermsMenuPage extends AppCompatActivity
         {
             otherCountText.setText(Integer.toString(maxCountLimit));
         }
+    }
+
+    private void hideExtraViews()
+    {
+        LinearLayout layout = findViewById(R.id.grammarCountLayout);
+        grammarCountText.setText("0");
+        layout.setVisibility(View.INVISIBLE);
+
+        showKanjiFirstSwitch.setVisibility(View.GONE);
+        showLessonKanjiOnlySwitch.setVisibility(View.GONE);
+        useKanjiOnlySwitch.setChecked(true);
+        useKanjiOnlySwitch.setVisibility(View.GONE);
+        useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
+    }
+
+    private void showExtraViews()
+    {
+        LinearLayout layout = findViewById(R.id.grammarCountLayout);
+        grammarCountText.setText("0");
+        layout.setVisibility(View.VISIBLE);
+
+        showKanjiFirstSwitch.setVisibility(View.VISIBLE);
+        showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
+        useKanjiOnlySwitch.setChecked(false);
+        useKanjiOnlySwitch.setVisibility(View.VISIBLE);
+        useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
     }
 }

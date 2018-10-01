@@ -19,17 +19,21 @@
 
 
     //HomePage
-    <string name="flashCardLabel">Flash Cards</string>
+    <string name="studyButtonLabel">Study Terms</string>
     <string name="addTermsLabel">Add Terms</string>
     <string name="editTermsLabel">Edit Terms</string>
     <string name="loadDataLabel">Load initial Data</string>
 
     //TermsMenuPage
-    <string name="verbLabel"># of Verbs</string>
-    <string name="nounLabel"># of Nouns</string>
-    <string name="adjectiveLabel"># of Adjectives</string>
-    <string name="otherTermLabel"># of Other terms/phrases</string>
-    <string name="grammarLabel"># of Grammar points</string>
+    <string name="flashCardModeText">Flash Card Mode</string>
+    <string name="kanjiStrokeModeText">Kanji Stroke Practice Mode</string>
+    <string name="storyModeText">Story Mode</string>
+
+    <string name="verbLabel">Verb(s)</string>
+    <string name="nounLabel">Noun(s)</string>
+    <string name="adjectiveLabel">Adjective(s)</string>
+    <string name="otherTermLabel">Other(s)</string>
+    <string name="grammarLabel">Grammar point(s)</string>
     <string name="initialCount">0</string>
     <string name="displayHintLanguage">Use Hiragana as hint</string>
 

@@ -55,15 +55,15 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         else
         {
             Intent intent = new Intent(mContext, HomePage.class);
-            if(metrics.getMode().equalsIgnoreCase("story"))
+            if(metrics.getMode().equalsIgnoreCase(mContext.getResources().getString(R.string.storyModeText)))
             {
                 intent = new Intent(mContext, StoryPage.class);
             }
-            if(metrics.getMode().equalsIgnoreCase("flashcard"))
+            if(metrics.getMode().equalsIgnoreCase(mContext.getResources().getString(R.string.flashCardModeText)))
             {
                 intent = new Intent(mContext, FlashCardPage.class);
             }
-            if(metrics.getMode().equalsIgnoreCase("kanjiwriting"))
+            if(metrics.getMode().equalsIgnoreCase(mContext.getResources().getString(R.string.kanjiStrokeModeText)))
             {
                 intent= new Intent(mContext, KanjiWritingPage.class);
             }
