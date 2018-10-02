@@ -16,69 +16,13 @@
 
     </WebView>
 
-    <LinearLayout
+    <Spinner
+        android:id="@+id/typeDropDown"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <Button
-                android:id="@+id/nounListButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/buttonColor"
-                android:text="@string/nounListingLabel"
-                android:textColor="@color/buttonTextColor"
-                android:textSize="@dimen/textSize" />
-
-            <Button
-                android:id="@+id/verbListButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/buttonColor"
-                android:text="@string/verbListingLabel"
-                android:textColor="@color/buttonTextColor"
-                android:textSize="@dimen/textSize" />
-
-            <Button
-                android:id="@+id/adjectiveListButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/buttonColor"
-                android:text="@string/adjectiveListingLabel"
-                android:textColor="@color/buttonTextColor"
-                android:textSize="@dimen/textSize" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <Button
-                android:id="@+id/grammarlistButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/buttonColor"
-                android:text="@string/grammarListingLabel"
-                android:textColor="@color/buttonTextColor"
-                android:textSize="@dimen/textSize" />
-
-            <Button
-                android:id="@+id/otherListButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/buttonColor"
-                android:text="@string/otherListingLabel"
-                android:textColor="@color/buttonTextColor"
-                android:textSize="@dimen/textSize" />
-        </TableRow>
-    </LinearLayout>
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="@color/buttonColor"
+        android:backgroundTintMode="multiply" />
 
     <ListView
         android:id="@+id/termListView"
