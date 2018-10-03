@@ -4,15 +4,18 @@ Just something made to help me practice japanese based on our textbooks.
 
 Story mode:
 
-+half of the screen dedicated to loading google translate page
++half of the screen dedicated to loading google translate page in a webView
 
 +half of the screen dedicated to presenting nouns/verbs/adjectives/grammar points/other expressions
 
-+Goal: write a story/scenario with the given information in japanese, then see if when translated bac itn english, was it the intended story?
++Goal: write a story/scenario with the given information in japanese, then see if when translated back into english, was it the intended story?
 
 FlashCard Mode:
 
 +Simple flashcard for testing terms in japanese (hiragana or kanji) to english and vice versa
+
+Stroke practice:
++ Practice the strokes for kanji
 
 Add Term:
 
@@ -23,8 +26,7 @@ Add Term:
 Edit Term:
 + search for a term to edit based on certain fields
 
-Stroke practice:
-+ Practice the strokes for kanji
+
 
 Load initial terms:
 + Loads a set of terms based on our textbook and other expressions the professor has mentioned off-hand
