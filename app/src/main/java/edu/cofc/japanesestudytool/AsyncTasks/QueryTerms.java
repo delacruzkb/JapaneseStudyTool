@@ -198,11 +198,8 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
 
     private ArrayList<Term> loadFromLessons(String type, int count, boolean isCountAll, int[] lessons)
     {
-        Set<Term> termHashTable = new HashSet<>();
         ArrayList<Term> rtnval=new ArrayList<>();
-        ArrayList<Term> temp=new ArrayList<>();
-
-        temp = loadTerms(type,count,isCountAll);
+        ArrayList<Term> temp = loadTerms(type,count,isCountAll);
         for(int i =0; i< temp.size();i++)
         {
             for(int q=0; q<lessons.length; q++)
@@ -217,84 +214,5 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             }
         }
         return rtnval;
-        /*
-        if(metrics.useKanjiOnly())
-        {
-            if(metrics.useLessonKanjiOnly())
-            {
-                if(isCountAll)
-                {
-                    for(int i=0;i<lessons.length;i++ )
-                    {
-                        temp = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnlyFromLesson(type,Term.getLessonChar(lessons[i]));
-                        termHashTable.addAll(temp);
-                    }
-                }
-                else
-                {
-                    for(int i=0;i<lessons.length;i++ )
-                    {
-                        temp = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnlyFromLesson(type,count,Term.getLessonChar(lessons[i] ));
-                        termHashTable.addAll(temp);
-                    }
-                }
-
-            }
-            else
-            {
-                if(isCountAll)
-                {
-                    for(int i=0;i<lessons.length;i++ )
-                    {
-                        temp = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLesson(type,Term.getLessonChar(lessons[i]));
-                        termHashTable.addAll(temp);
-                    }
-                }
-                else
-                {
-                    for(int i=0;i<lessons.length;i++ )
-                    {
-                        temp = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnlyFromLesson(type,count,Term.getLessonChar(lessons[i]));
-                        termHashTable.addAll(temp);
-                    }
-                }
-
-            }
-        }
-        else
-        {
-            if(isCountAll)
-            {
-                for(int i=0;i<lessons.length;i++ )
-                {
-                    temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLesson(type,Term.getLessonChar(lessons[i]));
-                    termHashTable.addAll(temp);
-                }
-            }
-            else
-            {
-                for(int i=0;i<lessons.length;i++ )
-                {
-                    temp = (ArrayList<Term>) termDatabase.termDAO().getAllTypeFromLesson(type,count,Term.getLessonChar(lessons[i]));
-                    termHashTable.addAll(temp);
-                }
-            }
-
-        }
-        //Add all terms in the set to the array list
-        rtnval.addAll(termHashTable);
-        //Randomize order
-        Collections.shuffle(rtnval);
-        //truncate if needed
-        if(!isCountAll && rtnval.size()>count)
-        {
-            temp = new ArrayList<>();
-            for (int i = 0; i < count; i++)
-            {
-                temp.add(rtnval.get(i));
-            }
-        }
-        return rtnval;//*/
-
     }
 }
