@@ -125,7 +125,6 @@ public class EditSingleTermDialogPage extends AppCompatActivity
     {
         super.onRestoreInstanceState(savedInstanceState);
         adapter.setCheckedFromArray(savedInstanceState.getIntArray("lessons"));
-        //TODO:figure out how to set
     }
 
     private void promptThenAdd()

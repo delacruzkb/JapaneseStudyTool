@@ -180,7 +180,6 @@ public class EditTermsMenuPage extends AppCompatActivity
     {
         super.onRestoreInstanceState(savedInstanceState);
         searchEditTextBox.setText(savedInstanceState.getString("text"));
-        //TODO:figure out how to set spec
     }
 
     @Override
