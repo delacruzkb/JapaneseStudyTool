@@ -17,14 +17,18 @@
         android:backgroundTint="@color/buttonColor"
         android:backgroundTintMode="multiply" />
 
-    <View
-        android:id="@+id/divider49"
+    <Switch
+        android:id="@+id/useSpecificCountSwitch"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
+        android:layout_height="wrap_content"
+        android:splitTrack="false"
+        android:text="@string/useSpecificCountText"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
 
     <LinearLayout
-        android:id="@+id/nountCountLayout"
+        android:id="@+id/nounCountLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
         android:orientation="horizontal">
@@ -268,12 +272,6 @@
             android:textSize="@dimen/textSize" />
     </LinearLayout>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
     <Switch
         android:id="@+id/showJpnsFirstSwitch"
         android:layout_width="match_parent"
@@ -323,12 +321,6 @@
         android:textSize="@dimen/textSize"
         android:theme="@style/SwitchTheme" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
     <LinearLayout
         android:id="@+id/lessonSelection"
         android:layout_width="match_parent"
@@ -376,7 +368,7 @@
 
     <Button
         android:id="@+id/confirmButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonColor"
         android:text="@string/submitButtonText"

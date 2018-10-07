@@ -16,7 +16,11 @@
     <string name="multiLineWarning">There were multiple lines detected.</string>
     <string name="lessonSpinnerLabel">Custom...</string>
     <string name="fillReqFields">Please make sure to fill in the Japanese, English, and Lesson fields</string>
-
+    <string name="verbLabel">Verb(s)</string>
+    <string name="nounLabel">Noun(s)</string>
+    <string name="adjectiveLabel">Adjective(s)</string>
+    <string name="otherTermLabel">Other(s)</string>
+    <string name="grammarLabel">Grammar point(s)</string>
 
     //HomePage
     <string name="studyButtonLabel">Study Terms</string>
@@ -28,15 +32,10 @@
     <string name="flashCardModeText">Flash Card Mode</string>
     <string name="kanjiStrokeModeText">Kanji Stroke Practice Mode</string>
     <string name="storyModeText">Story Mode</string>
-
-    <string name="verbLabel">Verb(s)</string>
-    <string name="nounLabel">Noun(s)</string>
-    <string name="adjectiveLabel">Adjective(s)</string>
-    <string name="otherTermLabel">Other(s)</string>
-    <string name="grammarLabel">Grammar point(s)</string>
     <string name="initialCount">0</string>
     <string name="displayHintLanguage">Use Hiragana as hint</string>
 
+    <string name="useSpecificCountText">Use Specific Term Counts</string>
     <string name="showJpnsFirstText">Show Japanese First</string>
     <string name="showKanjiText">Show Kanji</string>
     <string name="showLessonKanjiOnlyText">Show Lesson Kanji Only</string>
@@ -47,13 +46,6 @@
     <string name="lessonSelectionText">Include Lessons:</string>
     <string name="submitButtonText">Confirm</string>
 
-    //StoryPage
-    <string name="nounListingLabel">Noun(s)</string>
-    <string name="verbListingLabel">Verb(s)</string>
-    <string name="adjectiveListingLabel">Adj.(s)</string>
-
-    <string name="grammarListingLabel">Grammar</string>
-    <string name="otherListingLabel">Other(s)</string>
 
     //FlashCardPage
     <string name="lessonLabel">Lesson(s): </string>

@@ -15,14 +15,16 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
 public class StoryPage extends AppCompatActivity
 {
-    private Button nounListButton,verbListButton, adjectiveListButton, grammarListButton, otherListButton;
+    private Spinner typeDropDown;
     private WebView browser;
     private ListView termListView;
     private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList;
@@ -48,45 +50,43 @@ public class StoryPage extends AppCompatActivity
         adjectiveList = new ArrayList<>();
         grammarList = new ArrayList<>();
         otherList = new ArrayList<>();
-        nounListButton = findViewById(R.id.nounListButton);
-        nounListButton.setOnClickListener(new View.OnClickListener() {
+
+        typeDropDown = findViewById(R.id.typeDropDown);
+        final String[] items = {getResources().getString(R.string.nounLabel),getResources().getString(R.string.verbLabel),
+                getResources().getString(R.string.adjectiveLabel),getResources().getString(R.string.grammarLabel),getResources().getString(R.string.otherTermLabel)};
+        final ArrayAdapter<String> modeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,items);
+        typeDropDown.setAdapter(modeAdapter);
+        typeDropDown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v)
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
-                rePopulateListView(nounList);
+                String type = parent.getItemAtPosition(position).toString();
+                if( type.equalsIgnoreCase(getResources().getString(R.string.nounLabel)))
+                {
+                    rePopulateListView(nounList);
+                }
+                else if (type.equalsIgnoreCase(getResources().getString(R.string.verbLabel)))
+                {
+                    rePopulateListView(verbList);
+                }
+                else if (type.equalsIgnoreCase(getResources().getString(R.string.adjectiveLabel)))
+                {
+                    rePopulateListView(adjectiveList);
+                }
+                else if (type.equalsIgnoreCase(getResources().getString(R.string.grammarLabel)))
+                {
+                    rePopulateListView(grammarList);
+                }
+                else if (type.equalsIgnoreCase(getResources().getString(R.string.otherTermLabel)))
+                {
+                    rePopulateListView(otherList);
+                }
 
             }
-        });
-        verbListButton = findViewById(R.id.verbListButton);
-        verbListButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View v)
-            {
-                rePopulateListView(verbList);
-            }
-        });
-        adjectiveListButton = findViewById(R.id.adjectiveListButton);
-        adjectiveListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                rePopulateListView(adjectiveList);
-            }
-        });
-        grammarListButton = findViewById(R.id.grammarlistButton);
-        grammarListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                rePopulateListView(grammarList);
-            }
-        });
-        otherListButton = findViewById(R.id.otherListButton);
-        otherListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                rePopulateListView(otherList);
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
@@ -126,11 +126,11 @@ public class StoryPage extends AppCompatActivity
     private void gatherInformation(Intent intent)
     {
         metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");
-        nounList= (ArrayList<Term>) intent.getSerializableExtra("nounList");
-        verbList=(ArrayList<Term>) intent.getSerializableExtra("verbList");
-        adjectiveList=(ArrayList<Term>) intent.getSerializableExtra("adjectiveList");
-        grammarList=(ArrayList<Term>) intent.getSerializableExtra("grammarList");
-        otherList=(ArrayList<Term>) intent.getSerializableExtra("otherList");
+        nounList= metrics.getNounList();
+        verbList= metrics.getVerbList();
+        adjectiveList= metrics.getAdjectiveList();
+        grammarList= metrics.getGrammarList();
+        otherList= metrics.getOtherList();
 
 
     }

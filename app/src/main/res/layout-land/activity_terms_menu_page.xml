@@ -9,19 +9,32 @@
     android:orientation="vertical"
     tools:context=".Pages.TermsMenuPage">
 
-    <Spinner
-        android:id="@+id/modeDropDown"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:backgroundTint="@color/buttonColor"
-        android:backgroundTintMode="multiply" />
+        android:orientation="horizontal">
 
-    <View
-        android:id="@+id/divider50"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
+        <Spinner
+            android:id="@+id/modeDropDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown"
+            android:backgroundTint="@color/buttonColor"
+            android:backgroundTintMode="multiply" />
+
+        <Switch
+            android:id="@+id/useSpecificCountSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:splitTrack="false"
+            android:text="@string/useSpecificCountText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize"
+            android:theme="@style/SwitchTheme" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/firstRowCountLayout"
@@ -30,7 +43,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/nountCountLayout"
+            android:id="@+id/nountCounLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -303,12 +316,6 @@
 
     </LinearLayout>
 
-    <View
-        android:id="@+id/divider51"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -387,13 +394,8 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize"
             android:theme="@style/SwitchTheme" />
-    </LinearLayout>
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lessonSelection"
@@ -433,20 +435,38 @@
             android:backgroundTint="@color/buttonColor"
             android:backgroundTintMode="multiply" />
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
         <View
-            android:id="@+id/divider13"
+            android:id="@+id/divider3"
             android:layout_width="@dimen/dividerHeight"
             android:layout_height="match_parent"
             android:background="@color/dividerColor" />
 
-        <Button
-            android:id="@+id/confirmButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/buttonColor"
-            android:text="@string/submitButtonText"
-            android:textColor="@color/buttonTextColor" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/divider123456"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerHeight"
+                android:background="@color/dividerColor" />
+
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonColor"
+                android:text="@string/submitButtonText"
+                android:textColor="@color/buttonTextColor" />
+        </LinearLayout>
 
     </LinearLayout>
 
