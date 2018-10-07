@@ -155,6 +155,41 @@ public class TermsMenuPage extends AppCompatActivity
     public void onSaveInstanceState(Bundle savedInstanceState)
     {
         super.onSaveInstanceState(savedInstanceState);
+
+        EditText count;
+        count = findViewById(R.id.nounCountInput);
+        savedInstanceState.putString("nci",count.getText().toString());
+
+        count = findViewById(R.id.verbCountInput);
+        savedInstanceState.putString("vci",count.getText().toString());
+
+        count = findViewById(R.id.adjectiveCountInput);
+        savedInstanceState.putString("aci",count.getText().toString());
+
+        count = findViewById(R.id.grammarCountInput);
+        savedInstanceState.putString("gci",count.getText().toString());
+
+        count = findViewById(R.id.otherCountInput);
+        savedInstanceState.putString("oci",count.getText().toString());
+
+        LinearLayout layout;
+        layout = findViewById(R.id.nounCountLayout);
+        savedInstanceState.putInt("ncl",layout.getVisibility());
+
+        layout = findViewById(R.id.adjectiveCountLayout);
+        savedInstanceState.putInt("acl",layout.getVisibility());
+
+        layout = findViewById(R.id.verbCountLayout);
+        savedInstanceState.putInt("vcl",layout.getVisibility());
+
+        layout = findViewById(R.id.grammarCountLayout);
+        savedInstanceState.putInt("gcl",layout.getVisibility());
+
+        layout = findViewById(R.id.otherCountLayout);
+        savedInstanceState.putInt("ocl",layout.getVisibility());
+
+        savedInstanceState.putBoolean("useSpecificCountSwitch", useSpecificCountSwitch.isChecked());
+
         savedInstanceState.putBoolean("useKanjiOnlySwitch", useKanjiOnlySwitch.isChecked());
         savedInstanceState.putBoolean("useLessonKanjiOnlySwitch", useLessonKanjiOnlySwitch.isChecked());
         savedInstanceState.putBoolean("allLessons",allLessons.isChecked());
@@ -165,6 +200,41 @@ public class TermsMenuPage extends AppCompatActivity
     protected void onRestoreInstanceState(Bundle savedInstanceState)
     {
         super.onRestoreInstanceState(savedInstanceState);
+
+        EditText count;
+        count = findViewById(R.id.nounCountInput);
+        count.setText(savedInstanceState.getString("nci"));
+
+        count = findViewById(R.id.verbCountInput);
+        count.setText(savedInstanceState.getString("vci"));
+
+        count = findViewById(R.id.adjectiveCountInput);
+        count.setText(savedInstanceState.getString("aci"));
+
+        count = findViewById(R.id.grammarCountInput);
+        count.setText(savedInstanceState.getString("gci"));
+
+        count = findViewById(R.id.otherCountInput);
+        count.setText(savedInstanceState.getString("oci"));
+
+        LinearLayout layout;
+        layout = findViewById(R.id.nounCountLayout);
+        layout.setVisibility(savedInstanceState.getInt("ncl"));
+
+        layout = findViewById(R.id.adjectiveCountLayout);
+        layout.setVisibility(savedInstanceState.getInt("acl"));
+
+        layout = findViewById(R.id.verbCountLayout);
+        layout.setVisibility(savedInstanceState.getInt("vcl"));
+
+        layout = findViewById(R.id.grammarCountLayout);
+        layout.setVisibility(savedInstanceState.getInt("gcl"));
+
+        layout = findViewById(R.id.otherCountLayout);
+        layout.setVisibility(savedInstanceState.getInt("ocl"));
+
+        useSpecificCountSwitch.setChecked(savedInstanceState.getBoolean("useSpecificCountSwitch"));
+
         showJpnsFirstSwitch.setChecked(savedInstanceState.getBoolean("showJpnsFirstSwitch"));
         if(useKanjiOnlySwitch.isChecked())
         {
@@ -662,7 +732,7 @@ public class TermsMenuPage extends AppCompatActivity
         verbCountText.setText("0");
         layout.setVisibility(View.VISIBLE);
 
-        if(!whichMode.equalsIgnoreCase(modeDropDown.getContext().getResources().getString(R.string.kanjiStrokeModeText)))
+        if(!whichMode.equalsIgnoreCase(getResources().getString(R.string.kanjiStrokeModeText)))
         {
             layout = findViewById(R.id.grammarCountLayout);
             grammarCountText.setText("0");
