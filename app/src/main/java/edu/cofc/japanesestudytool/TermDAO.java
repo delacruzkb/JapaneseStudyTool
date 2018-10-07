@@ -39,25 +39,6 @@ public interface TermDAO
 
     @Query("SELECT* FROM Term WHERE reqKanji = 1 and kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
     List<Term> getLessonKanjiOnly(String type, int limit);
-  
-    //TODO:optimize lesson queries
-    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM()")
-    List<Term> getAllTypeFromLesson(String type,String lesson);
-
-    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getAllTypeFromLesson(String type, int limit, String lesson);
-
-    @Query("SELECT* FROM Term WHERE (kanji != '') and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM()")
-    List<Term> getKanjiOnlyFromLesson(String type, String lesson);
-
-    @Query("SELECT* FROM Term WHERE (kanji != '') and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%' ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getKanjiOnlyFromLesson(String type, int limit, String lesson);
-
-    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM()")
-    List<Term> getLessonKanjiOnlyFromLesson(String type, String lesson);
-
-    @Query("SELECT* FROM Term WHERE reqKanji = 1 and  kanji NOT LIKE '' and type LIKE '%' || :type || '%' and lesson LIKE '%' || :lesson || '%'  ORDER BY RANDOM() LIMIT :limit")
-    List<Term> getLessonKanjiOnlyFromLesson(String type, int limit, String lesson);
 
     //AddNewTerm || ued to find similarities
     @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%'OR eng LIKE '%' || :english|| '%'")

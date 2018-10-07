@@ -37,8 +37,7 @@ public class TermsMenuPage extends AppCompatActivity
     private CheckBox allLessons;
     private String whichMode;
     private final int minCountLimit=0;
-    private final int maxNounCountLimit=200;
-    private final int maxCountLimit=100;
+    private final int maxCountLimit=9999;
 
     private CheckBoxDropDownSpinnerAdapter adapter;
     @Override
@@ -224,7 +223,7 @@ public class TermsMenuPage extends AppCompatActivity
             {
                 makeCountsValid();
                 int count = Integer.parseInt(nounCountText.getText().toString());
-                if(count < maxNounCountLimit)
+                if(count < maxCountLimit)
                 {
                     nounCountText.setText((count+1) + "");
                 }
@@ -235,7 +234,7 @@ public class TermsMenuPage extends AppCompatActivity
             @Override
             public boolean onLongClick(View v)
             {
-                nounCountText.setText(maxNounCountLimit +"");
+                nounCountText.setText(maxCountLimit +"");
                 return false;
             }
         });
@@ -537,11 +536,11 @@ public class TermsMenuPage extends AppCompatActivity
         }
         else if(nounCountText.getText().toString().length() >6)
         {
-            nounCountText.setText(Integer.toString(maxNounCountLimit));
+            nounCountText.setText(Integer.toString(maxCountLimit));
         }
-        else if(Integer.parseInt(nounCountText.getText().toString()) >maxNounCountLimit)
+        else if(Integer.parseInt(nounCountText.getText().toString()) >maxCountLimit)
         {
-            nounCountText.setText(Integer.toString(maxNounCountLimit));
+            nounCountText.setText(Integer.toString(maxCountLimit));
         }
 
         if((adjectiveCountText.getText().toString().equalsIgnoreCase("")))
