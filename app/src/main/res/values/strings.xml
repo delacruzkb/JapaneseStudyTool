@@ -35,6 +35,7 @@
     <string name="initialCount">0</string>
     <string name="displayHintLanguage">Use Hiragana as hint</string>
 
+    <string name="useSpecificCountText">Use Specific Term Counts</string>
     <string name="showJpnsFirstText">Show Japanese First</string>
     <string name="showKanjiText">Show Kanji</string>
     <string name="showLessonKanjiOnlyText">Show Lesson Kanji Only</string>

@@ -17,8 +17,18 @@
         android:backgroundTint="@color/buttonColor"
         android:backgroundTintMode="multiply" />
 
+    <Switch
+        android:id="@+id/useSpecificCountSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:splitTrack="false"
+        android:text="@string/useSpecificCountText"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
     <LinearLayout
-        android:id="@+id/nountCountLayout"
+        android:id="@+id/nounCountLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/typeLabelHeight"
         android:orientation="horizontal">

@@ -9,13 +9,32 @@
     android:orientation="vertical"
     tools:context=".Pages.TermsMenuPage">
 
-    <Spinner
-        android:id="@+id/modeDropDown"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:backgroundTint="@color/buttonColor"
-        android:backgroundTintMode="multiply" />
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/modeDropDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown"
+            android:backgroundTint="@color/buttonColor"
+            android:backgroundTintMode="multiply" />
+
+        <Switch
+            android:id="@+id/useSpecificCountSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:splitTrack="false"
+            android:text="@string/useSpecificCountText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize"
+            android:theme="@style/SwitchTheme" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/firstRowCountLayout"
@@ -24,7 +43,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/nountCountLayout"
+            android:id="@+id/nountCounLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

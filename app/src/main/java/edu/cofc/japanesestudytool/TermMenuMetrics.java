@@ -1,14 +1,19 @@
 package edu.cofc.japanesestudytool;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class TermMenuMetrics implements Serializable
 {
-    private boolean allTerms,showJpnsFirst, showKanjiFirst,
+
+    private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termList;
+    private boolean countAll,allTerms,showJpnsFirst, showKanjiFirst,
             showLessonKanjiOnly, useKanjiOnly,useLessonKanjiOnly;
     private int[] lessons;
     private int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
     private String mode;
+
+
 
     public String getMode() {
         return mode;
@@ -21,19 +26,76 @@ public class TermMenuMetrics implements Serializable
 
     public TermMenuMetrics()
     {
-        allTerms = false;
+        countAll=true;
+        allTerms = true;
         showJpnsFirst=false;
         showKanjiFirst=false;
         showLessonKanjiOnly=false;
         useKanjiOnly=false;
         useLessonKanjiOnly = false;
         lessons=null;
-        nounCount =1;
-        verbCount=1;
+        nounCount =0;
+        verbCount=0;
 
-        adjectiveCount = 1;
-        grammarCount =1;
+        adjectiveCount = 0;
+        grammarCount =0;
         mode="mainMenu";
+    }
+
+    public ArrayList<Term> getNounList() {
+        return nounList;
+    }
+
+    public void setNounList(ArrayList<Term> nounList) {
+        this.nounList = nounList;
+    }
+
+    public ArrayList<Term> getVerbList() {
+        return verbList;
+    }
+
+    public void setVerbList(ArrayList<Term> verbList) {
+        this.verbList = verbList;
+    }
+
+    public ArrayList<Term> getAdjectiveList() {
+        return adjectiveList;
+    }
+
+    public void setAdjectiveList(ArrayList<Term> adjectiveList) {
+        this.adjectiveList = adjectiveList;
+    }
+
+    public ArrayList<Term> getGrammarList() {
+        return grammarList;
+    }
+
+    public void setGrammarList(ArrayList<Term> grammarList) {
+        this.grammarList = grammarList;
+    }
+
+    public ArrayList<Term> getOtherList() {
+        return otherList;
+    }
+
+    public void setOtherList(ArrayList<Term> otherList) {
+        this.otherList = otherList;
+    }
+
+    public ArrayList<Term> getTermList() {
+        return termList;
+    }
+
+    public void setTermList(ArrayList<Term> termList) {
+        this.termList = termList;
+    }
+
+    public boolean isCountAll() {
+        return countAll;
+    }
+
+    public void setCountAll(boolean countAll) {
+        this.countAll = countAll;
     }
 
     public boolean isAllTerms() {

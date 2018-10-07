@@ -218,7 +218,7 @@ public class FlashCardPage extends AppCompatActivity
     private void gatherInformation(Intent intent)
     {
         metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");
-        termList= (ArrayList<Term>) intent.getSerializableExtra("termList");
+        termList= metrics.getTermList();
         showJapaneseFirst= metrics.showJpnsFirst();
         showLessonKanjiOnly = metrics.showLessonKanjiOnly();
         showKanjiFirst = metrics.showKanjiFirst();

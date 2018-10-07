@@ -30,9 +30,9 @@ public class TermsMenuPage extends AppCompatActivity
     private Button otherCountDecreaseButton, otherCountIncreaseButton;
     private Button confirmButton;
 
-    private Switch showJpnsFirstSwitch, showKanjiFirstSwitch,
+    private Switch useSpecificCountSwitch,showJpnsFirstSwitch, showKanjiFirstSwitch,
             showLessonKanjiOnlySwitch, useKanjiOnlySwitch,useLessonKanjiOnlySwitch;
-
+    private TermMenuMetrics metrics;
     private Spinner modeDropDown,lessonDropDown;
     private CheckBox allLessons;
     private String whichMode;
@@ -57,6 +57,7 @@ public class TermsMenuPage extends AppCompatActivity
 
     private void initializeViews()
     {
+        metrics = new TermMenuMetrics();
         //Instantiate Counters
         nounCountText = findViewById(R.id.nounCountInput);
         adjectiveCountText = findViewById(R.id.adjectiveCountInput);
@@ -84,6 +85,8 @@ public class TermsMenuPage extends AppCompatActivity
         useKanjiOnlySwitch = findViewById(R.id.useKanjiOnlySwitch);
         useLessonKanjiOnlySwitch = findViewById(R.id.useLessonKanjiOnlySwitch);
         useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
+        useSpecificCountSwitch = findViewById(R.id.useSpecificCountSwitch);
+        hideCounters();
 
         //Instantiate checkboxes
         allLessons = findViewById(R.id.allLessonsCheckBox);
@@ -102,11 +105,11 @@ public class TermsMenuPage extends AppCompatActivity
                 whichMode = parent.getItemAtPosition(position).toString();
                 if(whichMode.equalsIgnoreCase(modeDropDown.getContext().getResources().getString(R.string.kanjiStrokeModeText)))
                 {
-                    hideExtraViews();
+                    hideExtraSwitches();
                 }
                 else
                 {
-                    showExtraViews();
+                    showExtraSwitches();
                 }
             }
 
@@ -429,6 +432,20 @@ public class TermsMenuPage extends AppCompatActivity
 
     private void setSwitchOnClickListener()
     {
+        useSpecificCountSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!useSpecificCountSwitch.isChecked())
+                {
+                    hideCounters();
+                }
+                else
+                {
+                    showCounters();
+
+                }
+            }
+        });
 
         useKanjiOnlySwitch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -485,7 +502,6 @@ public class TermsMenuPage extends AppCompatActivity
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TermMenuMetrics metrics = new TermMenuMetrics();
                 metrics.setMode(whichMode);
                 makeCountsValid();
                 metrics.setNounCount(Integer.parseInt(nounCountText.getText().toString()));
@@ -523,7 +539,7 @@ public class TermsMenuPage extends AppCompatActivity
         {
             nounCountText.setText(Integer.toString(maxNounCountLimit));
         }
-        else if(Integer.parseInt(nounCountText.getText().toString()) >maxCountLimit)
+        else if(Integer.parseInt(nounCountText.getText().toString()) >maxNounCountLimit)
         {
             nounCountText.setText(Integer.toString(maxNounCountLimit));
         }
@@ -581,12 +597,14 @@ public class TermsMenuPage extends AppCompatActivity
         }
     }
 
-    private void hideExtraViews()
+    private void hideExtraSwitches()
     {
-        LinearLayout layout = findViewById(R.id.grammarCountLayout);
-        grammarCountText.setText("0");
-        layout.setVisibility(View.INVISIBLE);
-
+        if(useSpecificCountSwitch.isChecked())
+        {
+            LinearLayout layout = findViewById(R.id.grammarCountLayout);
+            grammarCountText.setText("0");
+            layout.setVisibility(View.INVISIBLE);
+        }
         showKanjiFirstSwitch.setVisibility(View.GONE);
         showLessonKanjiOnlySwitch.setVisibility(View.GONE);
         useKanjiOnlySwitch.setChecked(true);
@@ -594,16 +612,67 @@ public class TermsMenuPage extends AppCompatActivity
         useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
     }
 
-    private void showExtraViews()
+    private void showExtraSwitches()
     {
-        LinearLayout layout = findViewById(R.id.grammarCountLayout);
-        grammarCountText.setText("0");
-        layout.setVisibility(View.VISIBLE);
+        if(useSpecificCountSwitch.isChecked())
+        {
+            LinearLayout layout = findViewById(R.id.grammarCountLayout);
+            grammarCountText.setText("0");
+            layout.setVisibility(View.VISIBLE);
+        }
 
         showKanjiFirstSwitch.setVisibility(View.VISIBLE);
         showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
         useKanjiOnlySwitch.setChecked(false);
         useKanjiOnlySwitch.setVisibility(View.VISIBLE);
         useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
+    }
+
+
+    private void hideCounters()
+    {
+        LinearLayout layout;
+        layout = findViewById(R.id.nounCountLayout);
+        nounCountText.setText("0");
+        layout.setVisibility(View.GONE);
+        layout = findViewById(R.id.adjectiveCountLayout);
+        adjectiveCountText.setText("0");
+        layout.setVisibility(View.GONE);
+        layout = findViewById(R.id.verbCountLayout);
+        verbCountText.setText("0");
+        layout.setVisibility(View.GONE);
+        layout = findViewById(R.id.grammarCountLayout);
+        grammarCountText.setText("0");
+        layout.setVisibility(View.GONE);
+        layout = findViewById(R.id.otherCountLayout);
+        otherCountText.setText("0");
+        layout.setVisibility(View.GONE);
+        metrics.setCountAll(true);
+    }
+
+    private void showCounters()
+    {
+        LinearLayout layout;
+        layout = findViewById(R.id.nounCountLayout);
+        nounCountText.setText("0");
+        layout.setVisibility(View.VISIBLE);
+        layout = findViewById(R.id.adjectiveCountLayout);
+        adjectiveCountText.setText("0");
+        layout.setVisibility(View.VISIBLE);
+        layout = findViewById(R.id.verbCountLayout);
+        verbCountText.setText("0");
+        layout.setVisibility(View.VISIBLE);
+
+        if(!whichMode.equalsIgnoreCase(modeDropDown.getContext().getResources().getString(R.string.kanjiStrokeModeText)))
+        {
+            layout = findViewById(R.id.grammarCountLayout);
+            grammarCountText.setText("0");
+            layout.setVisibility(View.VISIBLE);
+        }
+
+        layout = findViewById(R.id.otherCountLayout);
+        otherCountText.setText("0");
+        layout.setVisibility(View.VISIBLE);
+        metrics.setCountAll(false);
     }
 }

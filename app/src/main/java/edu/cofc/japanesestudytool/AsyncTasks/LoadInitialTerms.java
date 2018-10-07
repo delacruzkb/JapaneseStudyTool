@@ -4,6 +4,7 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -20,10 +21,12 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
     private Context context;
     private TermDatabase termDatabase;
     private ProgressBar spinner;
-    public LoadInitialTerms(Context iContext,ProgressBar progressBar)
+    private LinearLayout menuButtonsLayout;
+    public LoadInitialTerms(Context iContext, ProgressBar progressBar, LinearLayout menuButtons)
     {
         context = iContext;
         spinner = progressBar;
+        menuButtonsLayout = menuButtons;
         termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
     }
 
@@ -31,7 +34,8 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
     protected void onPostExecute(Void aVoid)
     {
         super.onPostExecute(aVoid);
-        spinner.setVisibility(View.INVISIBLE);
+        spinner.setVisibility(View.GONE);
+        menuButtonsLayout.setVisibility(View.VISIBLE);
     }
 
     @Override
