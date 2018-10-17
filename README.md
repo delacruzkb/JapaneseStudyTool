@@ -2,6 +2,11 @@
 
 Just something made to help me practice japanese based on our textbooks.
 
+Everything stored in the Database is a Term class.
+
+CSV format for initial loading:
+japanese(hiragana),english,japanese(kanji),type,lesson,requiredKanji
+
 Story mode:
 
 +half of the screen dedicated to loading google translate page in a webView
@@ -27,11 +32,13 @@ Edit Term:
 + search for a term to edit based on certain fields
 
 
-
 Load initial terms:
 + Loads a set of terms based on our textbook and other expressions the professor has mentioned off-hand
 
 
+KanjiStroke Practice:
++ area for writing kanji on phone
++ the kanji is hidden at first, at first you are presented with either the english or hiragana meaning of the kanji
 
 
 Foundations of Drawing code provided by:
