@@ -1024,7 +1024,7 @@ DVD（ディーブイディー）,DVD,null,noun,7,null
 （～が）おわる,(Something) ends,（～が）終わる,u-verb,9,null
 （～が）はじまる,(Something) begins,（～が）始まる,u-verb,9,null
 （～が）ひく,To play ( a string instrument or piano),（～が）弾く,u-verb,9,null
-(Person)(に)(thing)(に)　もらう,To get (something) from (person),null,u-verb,9,null
+(Person)(に)(thing)(に)　もらう,To receive (something) from (person),null,u-verb,9,null
 おどる,To dance,踊る,u-verb,9,null
 くすりをのむ,To take medicine,薬を飲む,u-verb,9,null
 にんきがある,To be popular,（～が）人気がある,u-verb,9,null
@@ -2423,10 +2423,10 @@ Xがほうしい,I want (x),null,grammar,14,null
 どうどうとした（な）,dignified / imposing,堂々とした（な）,adjective,18,kanji
 はずかしい,embarrassing / to feel embarrassed,恥ずかしい,adjective,18,null
 (drop the final 'u'、add 'e')　ばよかったです,To wish one (should) had done something,null,grammar,18,null
-（Noun）のおけげ（で）,To express gratitude to something or someone when things turn out as desired,null,grammar,18,null
+（Noun）のおかげ（で）,To express gratitude to something or someone when things turn out as desired,null,grammar,18,null
 (Short-Present Predicate　A)～と(Predicate B),Whenever A happens、 B also happens.,null,grammar,18,null
 （Stem of De-form）じゃう,To complete doing something /To show a sense of regret,null,grammar,18,null
-（Stem of masu form)　ながら（Any verb tense),2 different actions performed by 1 person,null,grammar,18,null
+（Stem of masu form)　ながら（Any verb tense),"2 different actions performed by 1 person, where the last action is the main action",null,grammar,18,null
 （Stem of Te-form）ちゃう,To complete doing something /To show a sense of regret,null,grammar,18,null
 （Te-form）しまう,To complete doing something /To show a sense of regret,null,grammar,18,null
 おかげさまで, ' I'm fine thanks to you' / Used to show appreciation for the addressee's help/support/concern,null,grammar,18,null
@@ -2487,7 +2487,7 @@ Xがほうしい,I want (x),null,grammar,14,null
 としょかん,library,図書館,noun,18,kanji
 どりょく,endeavor,努力,noun,18,kanji
 にっき,diary,日記,noun,18,null
-にばんめ,the second,に番目,noun,18,kanji
+にばんめ,the second,二番目,noun,18,kanji
 にゅうし,entrance exam,入試,noun,18,kanji
 バオオ,banana,null,noun,18,null
 はじめは,at first,初めは,noun,18,null
@@ -2550,3 +2550,122 @@ Xがほうしい,I want (x),null,grammar,14,null
 さずかる,to be given,授かる,u-verb,18,kanji
 たすかる,to be saved / to be helped,助かる,u-verb,18,null
 はかる,to attempt,図る,u-verb,18,kanji
+おくさま,(your/his) wife (polite),奥様,noun,19,null
+おこさん,(your/their) child (polite),お子さん,noun,19,null
+おれい,expression of gratitude,お礼,noun,19,null
+けいご,honorific language,敬語,noun,19,null
+こちら,this way (polite),null,noun,19,null
+しゅっちょう,business trip,出張,noun,19,null
+しゅるい,a kind / a sort,種類,noun,19,null
+せいかく,personality,性格,noun,19,null
+ちゅうがくせい,junior high school student,中学生,noun,19,null
+どちら,where (polite),null,noun,19,null
+なまけもの,lazy person,怠け者,noun,19,null
+なやみ,worry,悩み,noun,19,null
+はずかしがりや,shy person,恥ずかしがり屋,noun,19,null
+はなし,chat / talk,話,noun,19,null
+ぶちょう,department manager,部長,noun,19,null
+ぶんか,culture,文化,noun,19,null
+まちがい,mistake,間違い,noun,19,null
+なかがいい,be on good or close terms / to get along well,仲がいい,adjective,19,null
+まじめ（な）,serious / sober / diligent,null,adjective,19,null
+いらっしゃる,honorific for いく/くる/いる,null,u-verb,19,null
+(～が)　おくる,to walk / drive (someone),(～が)　送る,u-verb,19,null
+(person)(を)(place)(まで)　おこる,to get angry,(person)(を)(place)(まで)　怒る,u-verb,19,null
+おっしゃる,honorific for いう,null,u-verb,19,null
+おやすみになる,honorific for ねる,お休みになる,u-verb,19,null
+きまる,to be decided,決まる,u-verb,19,null
+くださる,honorific for くれる,下さる,u-verb,19,null
+(～と)　ごらんになる,honorific for みる,(～と)　ご覧になる,u-verb,19,null
+しりあう,to get aquainted with ,知り合う,u-verb,19,null
+～ていらっしゃる,honorific for: ～ている,null,u-verb,19,null
+なさる,honorific for: する,null,u-verb,19,null
+(～に)　ひっこす,to move ( to another place),(～に)　引っ越す,u-verb,19,null
+めしあがる,honorific expression for たべる/のむ,召し上がる,u-verb,19,null
+(～を)　よぶ,to call (one's name),(～を)　呼ぶ,u-verb,19,null
+(person)(を)(event)(に)　よぶ,to invite,(person)(を)(event)(に)　呼ぶ,u-verb,19,null
+(～に)　よる,to stop by,(～に)　寄る,u-verb,19,null
+(～に)　おくれる,to become late,(～に)　遅れる,ru-verb,19,null
+(seat)(に)　かける,to sit down,null,ru-verb,19,null
+はれる,to become sunny,晴れる,ru-verb,19,null
+(people)(に)　もてる,to be popular( in terms of romantic interest),null,ru-verb,19,null
+えんりょする,to hold back for the time being / to refrain from,遠慮する,irr-verb,19,null
+(person)(に)(meal)(を)　ごちそうする,to treat/invite (someone) ot a meal,null,irr-verb,19,null
+(person)(を)(event/place)(に)　しょうたいする,to invite someone (to an event / a place),(person)(を)(event/place)(に)　招待する,irr-verb,19,null
+ちゅういする,to watch out / to give warning,注意する,irr-verb,19,null
+はなしをする,to have a talk,話をする,irr-verb,19,null
+おととい,the day before yesterday,null,other,19,null
+それで,then / therefore,null,other,19,null
+なぜ,why,null,other,19,null
+ほんとうは,in fact / originally,本当は,other,19,null
+まいあさ,everymorning,毎朝,other,19,null
+まだ,still,null,other,19,null
+～めいさま,party of . . . people,～名様,other,19,null
+ようこそ,welcome,null,other,19,null
+(～に)　よろしくおつたえください,please give my best regards (to . . .),(～に)　よろしくお伝えください,other,19,null
+（けいご）よみ➞おやすみになる,A way of speech to show respect to someone above you,null,grammar,19,null
+お＋(verb stem)＋ください,Giving respectful advice,null,grammar,19,null
+(te-form)＋くれてありがとう,To expres gratitude to someone for something,null,grammar,19,null
+(te-form)＋よかったです,I'm glad that . . .,null,grammar,19,null
+(short-form)はずです,. . . is supposed to be the case,null,grammar,19,null
+(short-form)＋　はずがありません / はずがない,Say something is inconceivable,null,grammar,19,null
+はる,spring,春,noun,19,kanji
+はるまき,spring roll,春巻,noun,19,kanji
+しゅんぶん,vernal equinox,春分,noun,19,kanji
+せいしゅん,youth,青春,noun,19,kanji
+あき,autumn,秋,noun,19,kanji
+あきがっき,fall semester,秋学期,noun,19,kanji
+しゅうぶん,autumnal equinox,秋分,noun,19,kanji
+ふゆ,winter,冬,noun,19,kanji
+ふゆやすみ,winter yasumi,冬休み,noun,19,kanji
+だんとう,warm winter,暖冬,noun,19,kanji
+しゅんかしゅうとう,four seasons,春夏秋冬,noun,19,kanji
+はな,flower,花,noun,19,kanji
+はなみ,flower viewing,花見,noun,19,kanji
+はなび,fireworks,花火,noun,19,kanji
+かふんしょう,hay fever,花粉症,noun,19,kanji
+いけばな,flower arrangement,生け花,noun,19,kanji
+～さま,mr. / ms. . . .,～様,other,19,kanji
+おきゃくさま,dear customer,お客様,noun,19,kanji
+みなさま,everyone,皆様,noun,19,kanji
+ようす,manner,様子,noun,19,kanji
+ふあんな,uneasy,不安な,adjective,19,kanji
+ふけいき,recession,不景気,noun,19,kanji
+ふべん,inconvenience,不文,noun,19,kanji
+みずぶそく,lack of water,水不足,noun,19,kanji
+あね,older sister,姉,noun,19,kanji
+おねえさん,older sister,お姉さん,noun,19,kanji
+しまい,sisters,姉妹,noun,19,kanji
+しまいとし,sister city,姉妹都市,noun,19,kanji
+あに,older brother,兄,noun,19,kanji
+おにいさん,older brother,お兄さん,noun,19,kanji
+きょうだい,brothers,兄弟,noun,19,kanji
+かんじ,chinese character,漢字,noun,19,kanji
+かんぽうやく,chinese herbal medicine,漢方薬,noun,19,kanji
+かんわじてん,kanji dictionary,漢和辞典,noun,19,kanji
+そつぎょうする,to graduate,卒業する,irr-verb,19,kanji
+そつぎょうしき,graduation ceremony,卒業式,noun,19,kanji
+だいそつ,university graduate,大卒,noun,19,kanji
+こうがく,engineering,工学,noun,19,kanji
+こうじ,construction,工事,noun,19,kanji
+こうじょう,factory,工場,noun,19,kanji
+だいく,carpenter,大工,noun,19,kanji
+けんきゅう,research,研究,noun,19,kanji
+けんきゅうしゃ,researcher,研究者,noun,19,kanji
+けんしゅう,training,研修,noun,19,kanji
+とぐ,to sharpen,研ぐ,u-verb,19,kanji
+けんきゅう,research,研究,noun,19,kanji
+たんきゅう,inquiry,探究,noun,19,kanji
+きわめる,to investigate thoroughly,究める,ru-verb,19,kanji
+しつもん,question,質問,noun,19,kanji
+しつがいい,good quality,質がいい,noun,19,kanji
+そしつ,aptitude,素質,noun,19,kanji
+しちや,pawn shop,質屋,noun,19,kanji
+しつもん,question,質問,noun,19,kanji
+もんだい,problem / question,問題,noun,19,kanji
+ほうもん,visit,訪問,noun,19,kanji
+とう,to question,問う,u-verb,19,kanji
+おおい,many,多い,other,19,kanji
+たぶん,probably,多分,other,19,kanji
+～のおおく,many of . . .,～の多く,other,19,kanji
+たすうけつ,decision by majority,多数決,noun,19,kanji
