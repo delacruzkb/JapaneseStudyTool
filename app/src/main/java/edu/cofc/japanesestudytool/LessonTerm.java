@@ -38,4 +38,20 @@ public class LessonTerm
     public void setEngID(String engID) {
         this.engID = engID;
     }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        boolean rtnval = false;
+        LessonTerm otherLessonTerm = (LessonTerm)obj;
+        if(otherLessonTerm.getEngID().equalsIgnoreCase(engID) &&
+                otherLessonTerm.getJpnsID().equalsIgnoreCase(jpnsID) &&
+                otherLessonTerm.getLesson() == lesson)
+        {
+            rtnval = true;
+        }
+
+        return rtnval;
+
+    }
 }

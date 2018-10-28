@@ -9,30 +9,27 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import edu.cofc.japanesestudytool.Pages.FlashCardPage;
 import edu.cofc.japanesestudytool.Pages.HomePage;
 import edu.cofc.japanesestudytool.Pages.KanjiWritingPage;
 import edu.cofc.japanesestudytool.Pages.StoryPage;
 import edu.cofc.japanesestudytool.R;
+import edu.cofc.japanesestudytool.StudyGuideDatabase;
 import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.TermDatabase;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 public class QueryTerms extends AsyncTask<Void,Void,Void>
 {
-    private TermDatabase termDatabase;
+    private StudyGuideDatabase studyGuideDatabase;
     private TermMenuMetrics metrics;
-    private Context mContext;
+    private Context context;
     private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termList;
-    public QueryTerms(TermMenuMetrics termMenuMetrics, Context context)
+    public QueryTerms(TermMenuMetrics termMenuMetrics, Context iContext)
     {
-        mContext = context;
+        context = iContext;
         metrics = termMenuMetrics;
-        termDatabase = Room.databaseBuilder(mContext,TermDatabase.class,"terms").build();
+        studyGuideDatabase = Room.databaseBuilder(context,StudyGuideDatabase.class,context.getResources().getString(R.string.databaseName)).build();
     }
 
     @Override
@@ -40,10 +37,10 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
     {
         if(termList.size()==0)
         {
-            AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-            builder.setTitle(mContext.getResources().getString(R.string.errorTitle));
-            builder.setMessage(mContext.getResources().getString(R.string.noTermsFound));
-            builder.setPositiveButton(mContext.getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle(context.getResources().getString(R.string.errorTitle));
+            builder.setMessage(context.getResources().getString(R.string.noTermsFound));
+            builder.setPositiveButton(context.getResources().getString(R.string.okLabel), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
@@ -54,18 +51,18 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         }
         else
         {
-            Intent intent = new Intent(mContext, HomePage.class);
-            if(metrics.getMode().equalsIgnoreCase(mContext.getResources().getString(R.string.storyModeText)))
+            Intent intent = new Intent(context, HomePage.class);
+            if(metrics.getMode().equalsIgnoreCase(context.getResources().getString(R.string.storyModeText)))
             {
-                intent = new Intent(mContext, StoryPage.class);
+                intent = new Intent(context, StoryPage.class);
             }
-            if(metrics.getMode().equalsIgnoreCase(mContext.getResources().getString(R.string.flashCardModeText)))
+            if(metrics.getMode().equalsIgnoreCase(context.getResources().getString(R.string.flashCardModeText)))
             {
-                intent = new Intent(mContext, FlashCardPage.class);
+                intent = new Intent(context, FlashCardPage.class);
             }
-            if(metrics.getMode().equalsIgnoreCase(mContext.getResources().getString(R.string.kanjiStrokeModeText)))
+            if(metrics.getMode().equalsIgnoreCase(context.getResources().getString(R.string.kanjiStrokeModeText)))
             {
-                intent= new Intent(mContext, KanjiWritingPage.class);
+                intent= new Intent(context, KanjiWritingPage.class);
             }
 
             metrics.setNounList(nounList);
@@ -75,7 +72,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             metrics.setOtherList(otherList);
             metrics.setTermList(termList);
             intent.putExtra("metrics",metrics);
-            mContext.startActivity(intent);
+            context.startActivity(intent);
         }
 
     }
@@ -157,62 +154,79 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
             {
                 if(isCountAll)
                 {
-                    rtnval = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly(type);
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getLessonKanjiOnly(type);
                 }
                 else
                 {
-                    rtnval = (ArrayList<Term>) termDatabase.termDAO().getLessonKanjiOnly(type,count);
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getLessonKanjiOnly(type,count);
                 }
-
             }
             else
             {
                 if(isCountAll)
                 {
-                    rtnval = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly(type);
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getKanjiOnly(type);
                 }
                 else
                 {
-                    rtnval = (ArrayList<Term>) termDatabase.termDAO().getKanjiOnly(type,count);
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getKanjiOnly(type,count);
                 }
-
-
-
             }
         }
         else
         {
             if(isCountAll)
             {
-                rtnval= (ArrayList<Term>) termDatabase.termDAO().getAllTypes(type);
+                rtnval= (ArrayList<Term>) studyGuideDatabase.termDAO().getAllTypes(type);
             }
             else
             {
-                rtnval= (ArrayList<Term>) termDatabase.termDAO().getAllTypes(type,count);
+                rtnval= (ArrayList<Term>) studyGuideDatabase.termDAO().getAllTypes(type,count);
             }
-
         }
-
         return rtnval;
     }
 
     private ArrayList<Term> loadFromLessons(String type, int count, boolean isCountAll, int[] lessons)
     {
-        ArrayList<Term> rtnval=new ArrayList<>();
-        ArrayList<Term> temp = loadTerms(type,count,isCountAll);
-        for(int i =0; i< temp.size();i++)
+        ArrayList<Term> rtnval = new ArrayList<>();
+        if(metrics.useKanjiOnly())
         {
-            for(int q=0; q<lessons.length; q++)
+            if(metrics.useLessonKanjiOnly())
             {
-                if(temp.get(i).getLesson().contains(Term.getLessonChar(lessons[q])))
+                if(isCountAll)
                 {
-                    if(!rtnval.contains(temp.get(i)))
-                    {
-                        rtnval.add(temp.get(i));
-                    }
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getLessonKanjiOnlyFromLessons(type,lessons);
+                }
+                else
+                {
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getLessonKanjiOnlyFromLessons(type,lessons,count);
+                }
+            }
+            else
+            {
+                if(isCountAll)
+                {
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getKanjiOnlyFromLessons(type,lessons);
+                }
+                else
+                {
+                    rtnval = (ArrayList<Term>) studyGuideDatabase.termDAO().getKanjiOnlyFromLessons(type,lessons, count);
                 }
             }
         }
+        else
+        {
+            if(isCountAll)
+            {
+                rtnval= (ArrayList<Term>) studyGuideDatabase.termDAO().getAllTypesFromLessons(type,lessons);
+            }
+            else
+            {
+                rtnval= (ArrayList<Term>) studyGuideDatabase.termDAO().getAllTypesFromLessons(type,lessons, count);
+            }
+        }
+
         return rtnval;
     }
 }

@@ -1,6 +1,11 @@
 <resources>
-    //Generics
+    //Program dependent strings
     <string name="app_name">JapaneseStudyTool</string>
+    <string name="databaseName">StudyGuide</string>
+    <string name="initialCSV">jpnsData(initial).csv</string>
+    <string name="requiredKanjiFlag">kanji</string>
+
+    //Generic Strings
     <string name="storyButtonLabel">Create a story / 話を作りましょう</string>
     <string name="toEnglishText">ENG</string>
     <string name="toJapaneseText">ひらがな</string>

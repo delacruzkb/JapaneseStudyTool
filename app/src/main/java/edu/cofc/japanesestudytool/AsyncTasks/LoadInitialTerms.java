@@ -6,20 +6,21 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import edu.cofc.japanesestudytool.Lessons;
+import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.TermDatabase;
+import edu.cofc.japanesestudytool.StudyGuideDatabase;
 
 public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
 {
     private Context context;
-    private TermDatabase termDatabase;
+    private StudyGuideDatabase studyGuideDatabase;
     private ProgressBar spinner;
     private LinearLayout menuButtonsLayout;
     public LoadInitialTerms(Context iContext, ProgressBar progressBar, LinearLayout menuButtons)
@@ -27,7 +28,7 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
         context = iContext;
         spinner = progressBar;
         menuButtonsLayout = menuButtons;
-        termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
+        studyGuideDatabase = Room.databaseBuilder(context,StudyGuideDatabase.class,context.getResources().getString(R.string.databaseName)).build();
     }
 
     @Override
@@ -42,11 +43,11 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
     protected Void doInBackground(Void... voids)
     {
 
-        termDatabase.termDAO().deleteAllTerms();
+        studyGuideDatabase.termDAO().deleteAllTerms();
         ArrayList<Term> listOfTerms = new ArrayList();
         try
         {
-            InputStream is = context.getAssets().open("jpnsData(initial).csv");
+            InputStream is = context.getAssets().open(context.getResources().getString(R.string.initialCSV));
             String line ="";
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
@@ -54,47 +55,61 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
             {
                 String[] termData = line.split(",");
 
-                Term term = new Term();
-                term.setJpns(termData[0]);
-                term.setEng(termData[1]);
-                term.setKanji(termData[2]);
-                term.setType(termData[3]);
-                term.setLesson(Integer.parseInt(termData[4]),Integer.parseInt(termData[4]));
-                term.setReqKanji(termData[5]);
+                //Store data from CSV Line
+                String jpns = termData[0];
+                String eng = termData[1];
+                String kanji = termData[2];
+                String type = termData[3];
+                int lesson = Integer.parseInt(termData[4]);
+                boolean reqKanji = termData[5].equalsIgnoreCase(context.getResources().getString(R.string.requiredKanjiFlag));
 
+                //Create new Term from CSV
+                Term term = new Term();
+                term.setJpns(jpns);
+                term.setEng(eng);
+                term.setKanji(kanji);
+                term.setType(type);
+                Lessons lessons = new Lessons();
+                lessons.addLesson(lesson);
+                term.setLessons(lessons);
+                term.setReqKanji(reqKanji);
+
+                //If duplicate is found, update it
                 if(listOfTerms.contains(term)) // no duplicates
                 {
-                    Term duplicate = listOfTerms.get(listOfTerms.indexOf(term));
-                    //updates all possible fields
+                    Term duplicate = listOfTerms.remove(listOfTerms.indexOf(term));
 
-                    // don't touch kanji if null
-                    if(!termData[2].equalsIgnoreCase(""))
+                    // Don't replace if new kanji is null
+                    if(kanji != null && !kanji.equalsIgnoreCase("") && !kanji.equalsIgnoreCase("null"))
                     {
-                        duplicate.setKanji(termData[2]);
+                        duplicate.setKanji(kanji);
                     }
 
-                    duplicate.setLesson(Integer.parseInt(termData[4]),Integer.parseInt(termData[4]));
+                    duplicate.addLesson(lesson);
 
-                    //don't touch reqKanji if already true
-                    if(!duplicate.isReqKanji())
+                    //Only update if it is to be set to required
+                    if(!duplicate.isReqKanji() && reqKanji)
                     {
-                        duplicate.setReqKanji(termData[5]);
+                        duplicate.setReqKanji(reqKanji);
                     }
 
                     term = duplicate;
                 }
                 listOfTerms.add(term);
             }
-
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
+
+        // Insert all terms into the database
         for(int i=0; i < listOfTerms.size(); i++)
         {
-            termDatabase.termDAO().insertTerm(listOfTerms.get(i));
+            InsertTerm insertTerm = new InsertTerm(context);
+            insertTerm.execute(listOfTerms.get(i));
         }
+
         return null;
     }
 }

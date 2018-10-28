@@ -9,15 +9,17 @@ import android.os.AsyncTask;
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.Pages.EditTermsPage;
+import edu.cofc.japanesestudytool.R;
+import edu.cofc.japanesestudytool.StudyGuideDatabase;
 import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.TermDatabase;
 
 public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
 {
     private Context context;
-    private String japanese,english,kanji,lesson,termType,mode;
+    private String japanese,english,kanji,termType,mode;
+    int lesson;
     private boolean reqKanji,isExact;
-    private TermDatabase termDatabase;
+    private StudyGuideDatabase studyGuideDatabase;
 
 
     public LoadEditableTerms(Context mContext, String mMode, String value, boolean isExact)
@@ -42,14 +44,14 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         }
         else  if(mode.equalsIgnoreCase("Lesson"))
         {
-            lesson = Term.getLessonChar(Integer.parseInt(value));
+            lesson = Integer.parseInt(value);
         }
         else if(mode.equalsIgnoreCase("Req. Kanji"))
         {
             reqKanji = value.equalsIgnoreCase("required");
         }
         this.isExact =isExact;
-        termDatabase = Room.databaseBuilder(context,TermDatabase.class,"terms").build();
+        studyGuideDatabase = Room.databaseBuilder(context,StudyGuideDatabase.class,context.getResources().getString(R.string.databaseName)).build();
     }
 
     @Override
@@ -70,11 +72,11 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         {
             if(isExact)
             {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchExactJpns(japanese);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactJpns(japanese);
             }
             else
             {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchJpns(japanese);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchJpns(japanese);
             }
 
         }
@@ -82,37 +84,37 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         {
             if(isExact)
             {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchExactEng(english);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactEng(english);
             }
             else
             {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchEng(english);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchEng(english);
             }
         }
         else if(mode.equalsIgnoreCase("Kanji"))
         {
             if(isExact)
             {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchExactKanji(kanji);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactKanji(kanji);
             }
             else
             {
-                returnValue = (ArrayList<Term>) termDatabase.termDAO().searchKanji(kanji);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchKanji(kanji);
             }
 
         }
         else if(mode.equalsIgnoreCase("Type"))
         {
-            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchType(termType);
+            returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchType(termType);
         }
         else  if(mode.equalsIgnoreCase("Lesson"))
         {
-            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchLesson(lesson);
+            returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchLesson(lesson);
             return returnValue;
         }
         else if(mode.equalsIgnoreCase("Req. Kanji"))
         {
-            returnValue = (ArrayList<Term>) termDatabase.termDAO().searchReqKanji(reqKanji);
+            returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchReqKanji(reqKanji);
         }
 
         return returnValue;

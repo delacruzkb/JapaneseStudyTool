@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
-import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
+import edu.cofc.japanesestudytool.AsyncTasks.InsertTerm;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 public class EditSingleTermDialogPage extends AppCompatActivity
@@ -153,8 +153,8 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                 temp.add(editedTerm);
                 DeleteTerm deleteTerm = new DeleteTerm(confirmEdit.getContext());
                 deleteTerm.execute(originalTerm);
-                InsertTerms insertTerms = new InsertTerms(confirmEdit.getContext());
-                insertTerms.execute(temp);
+                InsertTerm insertTerm = new InsertTerm(confirmEdit.getContext());
+                insertTerm.execute(temp);
                 Intent intent = new Intent(confirmEdit.getContext(),EditTermsMenuPage.class);
                 confirmEdit.getContext().startActivity(intent);
                 finish();

@@ -46,26 +46,12 @@ public class Term implements Serializable
         this.eng = eng;
     }
 
-    public String getKanji()
-    {
-        String rtnval = kanji;
-        if(rtnval==null)
-        {
-            rtnval="";
-        }
-        return rtnval;
+    public String getKanji() {
+        return kanji;
     }
 
-    public void setKanji(String kanji)
-    {
-        if(kanji == null || kanji.equalsIgnoreCase("null") || kanji.equalsIgnoreCase(""))
-        {
-            this.kanji=null;
-        }
-        else
-        {
-            this.kanji = kanji.toLowerCase();
-        }
+    public void setKanji(String kanji) {
+        this.kanji = kanji;
     }
 
     public String getType() {
