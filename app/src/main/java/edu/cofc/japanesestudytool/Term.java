@@ -1,7 +1,6 @@
 package edu.cofc.japanesestudytool;
 
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 import java.io.Serializable;
@@ -16,7 +15,7 @@ public class Term implements Serializable
     private String eng;
     private String kanji;
     private String type;
-    private String lesson;
+    private Lessons lessons;
     private boolean reqKanji;
     private boolean checked;
 
@@ -26,7 +25,7 @@ public class Term implements Serializable
         eng= "ア";
         kanji = "a";
         type = "u-verb";
-        lesson="";
+        lessons = new Lessons();
         reqKanji=false;
         checked = false;
     }
@@ -47,15 +46,21 @@ public class Term implements Serializable
         this.eng = eng;
     }
 
-    public String getKanji() {
-        return kanji;
+    public String getKanji()
+    {
+        String rtnval = kanji;
+        if(rtnval==null)
+        {
+            rtnval="";
+        }
+        return rtnval;
     }
 
     public void setKanji(String kanji)
     {
-        if(kanji == null || kanji.equalsIgnoreCase("null"))
+        if(kanji == null || kanji.equalsIgnoreCase("null") || kanji.equalsIgnoreCase(""))
         {
-            this.kanji="";
+            this.kanji=null;
         }
         else
         {
@@ -71,53 +76,12 @@ public class Term implements Serializable
         this.type = type.toLowerCase();
     }
 
-    public void setLesson(String lesson)
-    {
-        this.lesson = lesson;
+    public Lessons getLessons() {
+        return lessons;
     }
 
-    public void setLesson(int position, int value)
-    {
-        int[] convertedLesson = fromStringToArray(lesson);
-        convertedLesson[position] = value;
-        setLesson(fromArrayToString(convertedLesson));
-        System.out.println("woop");
-    }
-
-    public void setLesson(int[] newLesson)
-    {
-        lesson = fromArrayToString(newLesson );
-    }
-
-    public String getLesson() {
-        return lesson;
-    }
-
-    public String getNumberedLessonString()
-    {
-        int[] lessons = fromStringToArray(lesson);
-        String rtnval="";
-        for(int i=0; i<lessons.length; i++)
-        {
-            if(lessons[i]>=0)
-            {
-                if(i==0)
-                {
-                    rtnval= rtnval+"extra,";
-                }
-                else {
-                    rtnval = rtnval + lessons[i] + ",";
-                }
-            }
-        }
-        //remove last ","
-        rtnval = rtnval.substring(0,rtnval.length()-1);
-        return rtnval;
-    }
-
-    public int[] getLessonArray()
-    {
-        return fromStringToArray(lesson);
+    public void setLessons(Lessons lessons) {
+        this.lessons = lessons;
     }
 
     public boolean isReqKanji() {
@@ -160,41 +124,19 @@ public class Term implements Serializable
 
     }
 
-    private int[] fromStringToArray(String value)
+    public String getLessonString()
     {
-        int[] lessons = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
-        for(int i=0;i<lessons.length;i++)
-        {
-            String letter = getLessonChar(i);
-            if(value.contains(letter))
-            {
-                lessons[i]=i;
-            }
-        }
-        return lessons;
+        return lessons.getLessonString();
     }
 
-    private String fromArrayToString(int[] value)
+    public void addLesson(int lesson)
     {
-        String lessonString="";
-
-        for (int i=0; i< value.length;i++)
-        {
-            if(value[i]>=0)
-            {
-                lessonString= lessonString + getLessonChar(value[i]);
-            }
-        }
-
-        return lessonString;
+        lessons.addLesson(lesson);
     }
 
-    public static String getLessonChar(int lesson)
+    public void removeLesson(int lesson)
     {
-        String rtnval="";
-        int letterOffset= 'a';
-        rtnval=String.valueOf(Character.toChars(letterOffset+lesson));
-        return rtnval;
+        lessons.removeLesson(lesson);
     }
 
 }

@@ -2,7 +2,7 @@ package edu.cofc.japanesestudytool;
 
 import android.arch.persistence.room.Entity;
 
-@Entity
+@Entity(primaryKeys = {"lesson,jpnsID,engID"})
 public class LessonTerm
 {
     private int lesson;
