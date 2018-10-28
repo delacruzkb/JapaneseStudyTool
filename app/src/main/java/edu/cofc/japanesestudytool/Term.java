@@ -7,13 +7,12 @@ import android.support.annotation.NonNull;
 import java.io.Serializable;
 
 
-@Entity
+@Entity(primaryKeys = {"jpns","eng"})
 public class Term implements Serializable
 {
-    @PrimaryKey @NonNull
-    String id;
-
+    @NonNull
     private String jpns;
+    @NonNull
     private String eng;
     private String kanji;
     private String type;
@@ -30,15 +29,6 @@ public class Term implements Serializable
         lesson="";
         reqKanji=false;
         checked = false;
-        setId(jpns+eng);
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id.toLowerCase();
     }
 
     public String getJpns() {
@@ -47,7 +37,6 @@ public class Term implements Serializable
 
     public void setJpns(String jpns) {
         this.jpns = jpns;
-        setId(jpns+eng);
     }
 
     public String getEng() {
@@ -56,7 +45,6 @@ public class Term implements Serializable
 
     public void setEng(String eng) {
         this.eng = eng;
-        setId(jpns+eng);
     }
 
     public String getKanji() {
