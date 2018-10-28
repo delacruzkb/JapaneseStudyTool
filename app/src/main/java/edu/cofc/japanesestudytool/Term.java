@@ -151,7 +151,7 @@ public class Term implements Serializable
     {
         boolean rtnval = false;
         Term otherTerm = (Term)term;
-        if(this.getId().equals(otherTerm.getId()))
+        if(jpns.equalsIgnoreCase(otherTerm.getJpns()) && eng.equalsIgnoreCase(otherTerm.getEng()))
         {
             rtnval = true;
         }
