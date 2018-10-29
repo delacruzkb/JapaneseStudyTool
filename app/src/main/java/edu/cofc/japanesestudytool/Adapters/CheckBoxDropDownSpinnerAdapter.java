@@ -117,7 +117,7 @@ public class CheckBoxDropDownSpinnerAdapter extends BaseAdapter
         {
             if(checkboxes.get(i))
             {
-                rtnval[index] = i;
+                rtnval[index] = i-1;
                 index++;
             }
         }

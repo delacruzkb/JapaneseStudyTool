@@ -128,7 +128,7 @@ public class FlashCardPage extends AppCompatActivity
             flashCard.setText(term.getEng());
         }
         //Hide Kanji Flip if: null value, don't use kanji, not required kanji when asked
-        if(term.getKanji().equalsIgnoreCase("") || (showLessonKanjiOnly &&!term.isReqKanji()))
+        if(term.getKanji() == null || term.getKanji().equalsIgnoreCase("") || term.getKanji().equalsIgnoreCase("null")||(showLessonKanjiOnly &&!term.isReqKanji()))
         {
             flipKanji.setVisibility(View.INVISIBLE);
         }

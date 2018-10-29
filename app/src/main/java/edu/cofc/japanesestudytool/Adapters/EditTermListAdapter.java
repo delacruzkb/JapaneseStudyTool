@@ -60,7 +60,11 @@ public class EditTermListAdapter extends BaseAdapter
         eng.setText(term.getEng());
         EditText kanji = rowView.findViewById(R.id.searchKanjiTextBox);
         kanji.setEnabled(false);
-        kanji.setText(term.getKanji());
+        if(term.getKanji() == null || term.getKanji().equalsIgnoreCase("") || term.getKanji().equalsIgnoreCase("null"))
+        {
+            kanji.setText(term.getKanji());
+        }
+
         TextView lesson = rowView.findViewById(R.id.searchLessonTextBox);
         lesson.setText(term.getLessonString());
         TextView type = rowView.findViewById(R.id.searchTypeTextBox);

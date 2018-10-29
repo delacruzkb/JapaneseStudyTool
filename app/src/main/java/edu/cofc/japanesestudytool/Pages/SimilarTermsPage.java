@@ -142,6 +142,10 @@ public class SimilarTermsPage extends AppCompatActivity
         {
             newReqKanjiTextBox.setVisibility(View.INVISIBLE);
         }
+        if(term.getKanji() == null || term.getKanji().equalsIgnoreCase("") || term.getKanji().equalsIgnoreCase("null"))
+        {
+            toKanji.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
