@@ -1,12 +1,15 @@
 package edu.cofc.japanesestudytool;
 
 import android.arch.persistence.room.Entity;
+import android.support.annotation.NonNull;
 
-@Entity(primaryKeys = {"lesson,jpnsID,engID"})
+@Entity(primaryKeys = {"lesson", "jpnsID", "engID"})
 public class LessonTerm
 {
     private int lesson;
+    @NonNull
     private String jpnsID;
+    @NonNull
     private String engID;
 
     public LessonTerm(int lesson, String jpnsID, String engID) {

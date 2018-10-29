@@ -9,7 +9,7 @@ public class TermMenuMetrics implements Serializable
     private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termList;
     private boolean countAll,allTerms,showJpnsFirst, showKanjiFirst,
             showLessonKanjiOnly, useKanjiOnly,useLessonKanjiOnly;
-    private int[] lessons;
+    private ArrayList<Integer> lessons;
     private int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
     private String mode;
 
@@ -146,11 +146,20 @@ public class TermMenuMetrics implements Serializable
         this.useLessonKanjiOnly = useLessonKanjiOnly;
     }
 
-    public int[] getLessons() {
+    public ArrayList<Integer> getLessons() {
         return lessons;
     }
 
-    public void setLessons(int[] lessons) {
+    public int[] getLessonsArray()
+    {
+        int[] rtnval = new int[lessons.size()];
+        for(int i =0; i<rtnval.length;i++)
+        {
+            rtnval[i] = lessons.get(i);
+        }
+        return rtnval;
+    }
+    public void setLessons(ArrayList<Integer> lessons) {
         this.lessons = lessons;
     }
 
