@@ -99,6 +99,32 @@ public class CheckBoxDropDownSpinnerAdapter extends BaseAdapter
         return rtnval;
     }
 
+    public int[] getLessonArray()
+    {
+        int lessonCounter=0;
+
+        for(int i=1; i<values.length;i++)
+        {
+            if(checkboxes.get(i))
+            {
+                lessonCounter++;
+            }
+        }
+
+        int[] rtnval = new int[lessonCounter];
+        int index=0;
+        for(int i=1; i<values.length;i++)
+        {
+            if(checkboxes.get(i))
+            {
+                rtnval[index] = i;
+                index++;
+            }
+        }
+
+        return rtnval;
+    }
+
     public void setCheckedFromArrayList(ArrayList<Integer> lessons)
     {
         refreshList();

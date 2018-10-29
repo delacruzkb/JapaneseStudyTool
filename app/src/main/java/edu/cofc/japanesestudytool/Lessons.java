@@ -1,9 +1,10 @@
 package edu.cofc.japanesestudytool;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Lessons
+public class Lessons implements Serializable
 {
     private ArrayList<Integer> lessons;
 

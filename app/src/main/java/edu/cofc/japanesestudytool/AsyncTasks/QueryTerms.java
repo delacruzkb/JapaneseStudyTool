@@ -113,7 +113,7 @@ public class QueryTerms extends AsyncTask<Void,Void,Void>
         }
         else
         {
-            int[] lessons = metrics.getLessonsArray();
+            int[] lessons = metrics.getLessons();
             nounList=   loadFromLessons("noun",metrics.getNounCount(),metrics.isCountAll(),lessons);
             verbList=   loadFromLessons("verb",metrics.getVerbCount(),metrics.isCountAll(),lessons);
             adjectiveList=  loadFromLessons("adjective",metrics.getAdjectiveCount(),metrics.isCountAll(),lessons);

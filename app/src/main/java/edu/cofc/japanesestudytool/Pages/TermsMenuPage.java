@@ -588,10 +588,10 @@ public class TermsMenuPage extends AppCompatActivity
                 metrics.setUseLessonKanjiOnly(useLessonKanjiOnlySwitch.isChecked());
                 metrics.setAllTerms(allLessons.isChecked());
                 //Gather all lessons selected
-                ArrayList<Integer> lessons=null;
+                int[] lessons=null;
                 if(!allLessons.isChecked())
                 {
-                    lessons = adapter.getLessonsArrayList();
+                    lessons = adapter.getLessonArray();
                 }
                 metrics.setLessons(lessons);
                 QueryTerms queryTerms = new QueryTerms(metrics, confirmButton.getContext());

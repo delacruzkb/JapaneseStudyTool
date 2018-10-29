@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import edu.cofc.japanesestudytool.LessonTerm;
 import edu.cofc.japanesestudytool.Lessons;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
@@ -45,6 +46,7 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
 
         studyGuideDatabase.termDAO().deleteAllTerms();
         ArrayList<Term> listOfTerms = new ArrayList();
+        ArrayList<LessonTerm> listOfLessonTerms = new ArrayList<>();
         try
         {
             InputStream is = context.getAssets().open(context.getResources().getString(R.string.initialCSV));
@@ -96,6 +98,13 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                     term = duplicate;
                 }
                 listOfTerms.add(term);
+
+                //Create LessonTerm from CSV
+                LessonTerm lessonTerm = new LessonTerm(lesson,jpns,eng);
+                if(!listOfLessonTerms.contains(lessonTerm))
+                {
+                    listOfLessonTerms.add(lessonTerm);
+                }
             }
         }
         catch (Exception e)
@@ -103,13 +112,15 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
             e.printStackTrace();
         }
 
-        // Insert all terms into the database
-        for(int i=0; i < listOfTerms.size(); i++)
+        for(int i=0; i<listOfTerms.size();i++)
         {
-            InsertTerm insertTerm = new InsertTerm(context);
-            insertTerm.execute(listOfTerms.get(i));
+            studyGuideDatabase.termDAO().insertTerm(listOfTerms.get(i));
         }
 
+        for(int i=0; i<listOfLessonTerms.size();i++)
+        {
+            studyGuideDatabase.lessonTermDAO().insertTerm(listOfLessonTerms.get(i));
+        }
         return null;
     }
 }
