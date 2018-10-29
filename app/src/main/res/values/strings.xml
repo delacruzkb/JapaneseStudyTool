@@ -4,6 +4,7 @@
     <string name="databaseName">StudyGuide</string>
     <string name="initialCSV">jpnsData(initial).csv</string>
     <string name="requiredKanjiFlag">kanji</string>
+    <string name="translationWebsite">https://translate.google.com/#ja/en</string>
 
     //Generic Strings
     <string name="storyButtonLabel">Create a story / 話を作りましょう</string>
@@ -31,7 +32,8 @@
     <string name="studyButtonLabel">Study Terms</string>
     <string name="addTermsLabel">Add Terms</string>
     <string name="editTermsLabel">Edit Terms</string>
-    <string name="loadDataLabel">Load initial Data</string>
+    <string name="loadDataLabel">Load Initial Data</string>
+    <string name="loadDataWarning">Warning: will erase all data and load default data.</string>
 
     //TermsMenuPage
     <string name="flashCardModeText">Flash Card Mode</string>

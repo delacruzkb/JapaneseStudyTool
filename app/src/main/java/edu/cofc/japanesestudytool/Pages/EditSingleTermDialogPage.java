@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerm;
+import edu.cofc.japanesestudytool.Lessons;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 public class EditSingleTermDialogPage extends AppCompatActivity
@@ -54,7 +55,7 @@ public class EditSingleTermDialogPage extends AppCompatActivity
 
         lessonDropDownBar = findViewById(R.id.editLessonDropDownBar);
         adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext());
-        adapter.setCheckedFromArray(originalTerm.getLessonArray());
+        adapter.setCheckedFromArrayList(originalTerm.getLessons().getLessons());
         lessonDropDownBar.setAdapter(adapter);
 
         reqKanjiCheckBox = findViewById(R.id.editReqKanjiCheckBox);
@@ -117,14 +118,14 @@ public class EditSingleTermDialogPage extends AppCompatActivity
     public void onSaveInstanceState(Bundle savedInstanceState)
     {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putIntArray("lessons",adapter.getLessonsArray());
+        savedInstanceState.putIntegerArrayList("lessons",adapter.getLessonsArrayList());
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState)
     {
         super.onRestoreInstanceState(savedInstanceState);
-        adapter.setCheckedFromArray(savedInstanceState.getIntArray("lessons"));
+        adapter.setCheckedFromArrayList(savedInstanceState.getIntegerArrayList("lessons"));
     }
 
     private void promptThenAdd()
@@ -147,14 +148,16 @@ public class EditSingleTermDialogPage extends AppCompatActivity
                 editedTerm.setEng(englishTextBox.getText().toString());
                 editedTerm.setKanji(kanjiTextBox.getText().toString());
                 editedTerm.setType(typeDropDownBar.getSelectedItem().toString());
-                editedTerm.setLesson(adapter.getLessonsArray());
+                Lessons lessons = new Lessons();
+                lessons.setLessons(adapter.getLessonsArrayList());
+                editedTerm.setLessons(lessons);
                 editedTerm.setReqKanji(reqKanjiCheckBox.isChecked());
-                ArrayList<Term> temp = new ArrayList<>();
-                temp.add(editedTerm);
+
+
                 DeleteTerm deleteTerm = new DeleteTerm(confirmEdit.getContext());
                 deleteTerm.execute(originalTerm);
                 InsertTerm insertTerm = new InsertTerm(confirmEdit.getContext());
-                insertTerm.execute(temp);
+                insertTerm.execute(editedTerm);
                 Intent intent = new Intent(confirmEdit.getContext(),EditTermsMenuPage.class);
                 confirmEdit.getContext().startActivity(intent);
                 finish();

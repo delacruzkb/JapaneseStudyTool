@@ -86,35 +86,25 @@ public class CheckBoxDropDownSpinnerAdapter extends BaseAdapter
         checkboxes= getInitialList();
     }
 
-    public int[] getLessonsArray()
+    public ArrayList<Integer> getLessonsArrayList()
     {
-        int lessonCounter=0;
-        for(int i=0; i<values.length;i++)
+        ArrayList<Integer> rtnval = new ArrayList<>();
+        for(int i=1; i<values.length;i++)
         {
             if(checkboxes.get(i))
             {
-                lessonCounter++;
+                rtnval.add(i-1);
             }
         }
-        int[] lesson = new int[lessonCounter];
-        int placeCounter =0;
-        for(int i=0; i<values.length;i++)
-        {
-            if(checkboxes.get(i))
-            {
-                lesson[placeCounter]=i-1;
-                placeCounter++;
-            }
-        }
-        return lesson;
+        return rtnval;
     }
 
-    public void setCheckedFromArray(int[] lessons)
+    public void setCheckedFromArrayList(ArrayList<Integer> lessons)
     {
         refreshList();
-        for(int i =0; i<lessons.length; i++)
+        for(int i =0; i<lessons.size(); i++)
         {
-            checkboxes.set(lessons[i]+1,true);
+            checkboxes.set(lessons.get(i)+1,true);
         }
     }
 }

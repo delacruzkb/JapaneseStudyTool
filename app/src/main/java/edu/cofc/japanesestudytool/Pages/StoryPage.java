@@ -104,7 +104,7 @@ public class StoryPage extends AppCompatActivity
         browser.getSettings().setDisplayZoomControls(false);
         browser.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         browser.setScrollbarFadingEnabled(false);
-        browser.loadUrl("https://translate.google.com/#ja/en");
+        browser.loadUrl(getResources().getString(R.string.translationWebsite));
     }
 
     private void rePopulateListView(ArrayList<Term> terms)

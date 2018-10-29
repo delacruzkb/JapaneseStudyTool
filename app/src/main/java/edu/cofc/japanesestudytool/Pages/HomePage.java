@@ -65,9 +65,9 @@ public class HomePage extends AppCompatActivity
             public void onClick(View v)
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(loadDataButton.getContext());
-                builder.setMessage("Warning: will erase all data and load default data.");
-                builder.setTitle("Load Initial Data");
-                builder.setPositiveButton("Proceed", new DialogInterface.OnClickListener() {
+                builder.setMessage(R.string.loadDataWarning);
+                builder.setTitle(R.string.loadDataLabel);
+                builder.setPositiveButton(R.string.proceedLabel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         menuButtons.setVisibility(View.GONE);
@@ -76,7 +76,7 @@ public class HomePage extends AppCompatActivity
                         load.execute();
                     }
                 });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //do nothing

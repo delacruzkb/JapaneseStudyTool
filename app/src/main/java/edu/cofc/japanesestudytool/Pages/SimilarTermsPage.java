@@ -122,9 +122,7 @@ public class SimilarTermsPage extends AppCompatActivity
                     public void onClick(DialogInterface dialog, int which)
                     {
                         InsertTerm insertTerm = new InsertTerm(addNewTerm.getContext());
-                        ArrayList<Term> temp = new ArrayList<>();
-                        temp.add(newTerm);
-                        insertTerm.execute(temp);
+                        insertTerm.execute(newTerm);
                         onBackPressed();
                     }
                 });
@@ -139,7 +137,7 @@ public class SimilarTermsPage extends AppCompatActivity
         writingStyleLabel.setText(getResources().getString(R.string.toJapaneseText));
         writingStyleTextBox.setText(term.getJpns());
         newTypeTextBox.setText(term.getType());
-        newLessonTextBox.setText(term.getNumberedLessonString());
+        newLessonTextBox.setText(term.getLessonString());
         if(!term.isReqKanji())
         {
             newReqKanjiTextBox.setVisibility(View.INVISIBLE);
