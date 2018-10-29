@@ -13,73 +13,202 @@ import java.util.List;
 @Dao
 public interface TermDAO
 {
+    //Insert Term
     @Insert (onConflict = OnConflictStrategy.REPLACE)
     void insertTerm(Term term);
-
-    @Query("SELECT * FROM Term ORDER BY jpns")
-    List<Term> getAllTerms();
-
-    @Query("SELECT * FROM Term WHERE id LIKE :id")
-    Term getTermById(String id);
-
-    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY RANDOM()")
+    //----------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
+    // Generic Queries
+    //----------------------------------------------------------------------------------------------
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE type " +
+            "LIKE '%' || :type || '%' " +
+            "ORDER BY RANDOM()")
     List<Term> getAllTypes(String type);
 
-    @Query("SELECT * FROM Term WHERE type LIKE '%' || :type || '%' ORDER BY RANDOM() LIMIT :limit")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE type " +
+            "LIKE '%' || :type || '%' " +
+            "ORDER BY RANDOM() " +
+            "LIMIT :limit")
     List<Term> getAllTypes(String type, int limit);
 
-    @Query("SELECT* FROM Term WHERE kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM()")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE kanji IS NOT NULL " +
+            "and type LIKE '%' || :type || '%' " +
+            "ORDER BY RANDOM()")
     List<Term> getKanjiOnly(String type);
 
-    @Query("SELECT* FROM Term WHERE kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE kanji IS NOT NULL " +
+            "and type LIKE '%' || :type || '%' " +
+            "ORDER BY RANDOM() " +
+            "LIMIT :limit")
     List<Term> getKanjiOnly(String type, int limit);
 
-    @Query("SELECT* FROM Term WHERE reqKanji = 1 and kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM()")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE reqKanji = 1 " +
+            "and kanji IS NOT NULL " +
+            "and type LIKE '%' || :type || '%' " +
+            "ORDER BY RANDOM()")
     List<Term> getLessonKanjiOnly(String type);
 
-    @Query("SELECT* FROM Term WHERE reqKanji = 1 and kanji NOT LIKE '' and type LIKE '%' || :type || '%'ORDER BY RANDOM() LIMIT :limit")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE reqKanji = 1 " +
+            "and kanji IS NOT NULL " +
+            "and type LIKE '%' || :type || '%' " +
+            "ORDER BY RANDOM() " +
+            "LIMIT :limit")
     List<Term> getLessonKanjiOnly(String type, int limit);
+    //----------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
+    // Lesson-based Queries
+    //----------------------------------------------------------------------------------------------
+    @Query("SELECT t.* " +
+            "FROM Term t, LessonTerm lt " +
+            "WHERE t.type LIKE '%' || :type || '%' " +
+            "and lt.lesson IN(:lessons) " +
+            "and t.jpns = lt.jpnsID " +
+            "and t.eng = lt.engID " +
+            "ORDER BY RANDOM()")
+    List<Term> getAllTypesFromLessons(String type, int[] lessons);
 
-    //AddNewTerm || ued to find similarities
-    @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%'OR eng LIKE '%' || :english|| '%'")
+    @Query("SELECT t.* " +
+            "FROM Term t, LessonTerm lt " +
+            "WHERE t.type LIKE '%' || :type || '%' " +
+            "and lt.lesson IN(:lessons) " +
+            "and t.jpns = lt.jpnsID " +
+            "and t.eng = lt.engID " +
+            "ORDER BY RANDOM() " +
+            "LIMIT :limit")
+    List<Term> getAllTypesFromLessons(String type, int[] lessons, int limit);
+
+    @Query("SELECT t.* " +
+            "FROM Term t, LessonTerm lt " +
+            "WHERE t.kanji IS NOT NULL " +
+            "and t.type LIKE '%' || :type || '%' " +
+            "and lt.lesson IN (:lessons) " +
+            "and t.eng = lt.engID " +
+            "and t.jpns = lt.jpnsID "+
+            "ORDER BY RANDOM()")
+    List<Term> getKanjiOnlyFromLessons(String type,int[] lessons);
+
+    @Query("SELECT t.* " +
+            "FROM Term t, LessonTerm lt " +
+            "WHERE t.kanji IS NOT NULL " +
+            "and t.type LIKE '%' || :type || '%' " +
+            "and lt.lesson IN (:lessons) " +
+            "and t.eng = lt.engID " +
+            "and t.jpns = lt.jpnsID "+
+            "ORDER BY RANDOM() " +
+            "LIMIT :limit")
+    List<Term> getKanjiOnlyFromLessons(String type, int[] lessons,int limit);
+
+    @Query("SELECT t.* " +
+            "FROM Term t, LessonTerm lt " +
+            "WHERE t.reqKanji = 1 " +
+            "and t.kanji IS NOT NULL " +
+            "and t.type LIKE '%' || :type || '%' " +
+            "and lt.lesson IN (:lessons) " +
+            "and t.eng = lt.engID " +
+            "and t.jpns = lt.jpnsID "+
+            "ORDER BY RANDOM()")
+    List<Term> getLessonKanjiOnlyFromLessons(String type, int[] lessons);
+
+    @Query("SELECT t.* " +
+            "FROM Term t, LessonTerm lt " +
+            "WHERE t.reqKanji = 1 " +
+            "and t.kanji IS NOT NULL " +
+            "and t.type LIKE '%' || :type || '%' " +
+            "and lt.lesson IN (:lessons) " +
+            "and t.eng = lt.engID " +
+            "and t.jpns = lt.jpnsID "+
+            "ORDER BY RANDOM() " +
+            "LIMIT :limit")
+    List<Term> getLessonKanjiOnlyFromLessons(String type, int[] lessons ,int limit);
+
+    //----------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
+    //Query to find Similar terms
+    //----------------------------------------------------------------------------------------------
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE jpns LIKE '%' || :japanese || '%' " +
+            "or eng LIKE '%' || :english|| '%'")
     List<Term> searchSimilarTerms(String japanese, String english);
 
-
-    //LoadEditableTerms || used to search for a tem
-    @Query("SELECT* FROM Term WHERE jpns LIKE '%' || :japanese || '%' ORDER BY jpns")
+    //----------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
+    //Query to find a term
+    //----------------------------------------------------------------------------------------------
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE jpns LIKE '%' || :japanese || '%' " +
+            "ORDER BY jpns")
     List<Term> searchJpns(String japanese);
 
-    @Query("SELECT* FROM Term WHERE eng LIKE  '%' || :english || '%' ORDER BY eng")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE eng LIKE  '%' || :english || '%' " +
+            "ORDER BY eng")
     List<Term> searchEng(String english);
 
-    @Query("SELECT* FROM Term WHERE kanji LIKE '%' || :kanji || '%' ORDER BY jpns")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE kanji LIKE '%' || :kanji || '%' " +
+            "ORDER BY jpns")
     List<Term> searchKanji(String kanji);
 
-    @Query("SELECT* FROM Term WHERE jpns LIKE :japanese ORDER BY jpns")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE jpns " +
+            "LIKE :japanese " +
+            "ORDER BY jpns")
     List<Term> searchExactJpns(String japanese);
 
-    @Query("SELECT* FROM Term WHERE eng LIKE  :english ORDER BY eng")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE eng LIKE  :english " +
+            "ORDER BY eng")
     List<Term> searchExactEng(String english);
 
-    @Query("SELECT* FROM Term WHERE kanji LIKE :kanji ORDER BY jpns")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE kanji LIKE :kanji " +
+            "ORDER BY jpns")
     List<Term> searchExactKanji(String kanji);
 
-    @Query("SELECT* FROM Term WHERE type LIKE :type ORDER BY jpns")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE type LIKE :type " +
+            "ORDER BY jpns")
     List<Term> searchType(String type);
 
-    @Query("SELECT* FROM Term WHERE reqKanji = :reqKanji ORDER BY jpns")
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE reqKanji = :reqKanji " +
+            "ORDER BY jpns")
     List<Term> searchReqKanji(boolean reqKanji);
 
-    @Query("SELECT* FROM Term WHERE lesson LIKE '%' || :lesson || '%'  ORDER BY jpns")
-    List<Term> searchLesson(String lesson);
+    @Query("SELECT t.* " +
+            "FROM Term t, LessonTerm lt " +
+            "WHERE lt.lesson = :lesson " +
+            "and t.eng = lt.engID " +
+            "and t.jpns = lt.jpnsID "+
+            "ORDER BY jpns")
+    List<Term> searchLesson(int lesson);
 
     //Delete everything
     @Query("DELETE FROM Term")
     void deleteAllTerms();
 
-
+    //Delete Single Term
     @Delete
     void deleteTerm( Term term);
-
-
 }

@@ -2,6 +2,7 @@ package edu.cofc.japanesestudytool.Pages;
 
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.AddNewTerm;
+import edu.cofc.japanesestudytool.Lessons;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 
@@ -37,7 +38,7 @@ public class AddTermsPage extends AppCompatActivity
     public void onSaveInstanceState(Bundle savedInstanceState)
     {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putIntArray("lessonDropDownAdapter",adapter.getLessonsArray());
+        savedInstanceState.putIntegerArrayList("lessonDropDownAdapter",adapter.getLessonsArrayList());
         savedInstanceState.putInt("type",typeDropDownBar.getSelectedItemPosition());
     }
 
@@ -46,7 +47,7 @@ public class AddTermsPage extends AppCompatActivity
     {
         super.onRestoreInstanceState(savedInstanceState);
         typeDropDownBar.setSelection(savedInstanceState.getInt("type"));
-        adapter.setCheckedFromArray(savedInstanceState.getIntArray("lessonDropDownAdapter"));
+        adapter.setCheckedFromArrayList(savedInstanceState.getIntegerArrayList("lessonDropDownAdapter"));
         lessonDropDown.setAdapter(adapter);
     }
 
@@ -82,7 +83,7 @@ public class AddTermsPage extends AppCompatActivity
     {
         boolean engSupplied =!(engTextBox.getText().toString() == null || engTextBox.getText().toString().equalsIgnoreCase(""));
         boolean jpnsSupplied=!(jpnsTextBox.getText().toString() == null || jpnsTextBox.getText().toString().equalsIgnoreCase(""));
-        boolean lessonSupplied = !(adapter.getLessonsArray().length==0);
+        boolean lessonSupplied = !(adapter.getLessonsArrayList().size()==0);
         if(engSupplied && jpnsSupplied && lessonSupplied)
         {
             final Term temp = new Term();
@@ -167,7 +168,9 @@ public class AddTermsPage extends AppCompatActivity
         temp.setJpns(jpnsTextBox.getText().toString());
         temp.setKanji(kanjiTextBox.getText().toString());
         temp.setType(typeDropDownBar.getSelectedItem().toString());
-        temp.setLesson(adapter.getLessonsArray());
+        Lessons lessons = new Lessons();
+        lessons.setLessons(adapter.getLessonsArrayList());
+        temp.setLessons(lessons);
         temp.setReqKanji(reqKanjiCheckbox.isChecked());
         resetFields();
         AddNewTerm addNewTerm = new AddNewTerm(getApplicationContext(),temp);

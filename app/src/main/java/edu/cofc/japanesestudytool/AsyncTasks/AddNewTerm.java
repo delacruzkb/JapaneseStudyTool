@@ -8,19 +8,20 @@ import android.os.AsyncTask;
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.Pages.SimilarTermsPage;
+import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.TermDatabase;
+import edu.cofc.japanesestudytool.StudyGuideDatabase;
 
 public class AddNewTerm extends AsyncTask<Void,Void,ArrayList<Term>>
 {
-    private Context mContext;
+    private Context context;
     private Term mTerm;
-    private TermDatabase termDatabase;
-    public AddNewTerm(Context context, Term term)
+    private StudyGuideDatabase studyGuideDatabase;
+    public AddNewTerm(Context iContext, Term term)
     {
-        mContext = context;
+        context = iContext;
         mTerm =term;
-        termDatabase = Room.databaseBuilder(mContext,TermDatabase.class,"terms").build();
+        studyGuideDatabase = Room.databaseBuilder(context,StudyGuideDatabase.class,context.getResources().getString(R.string.databaseName)).build();
     }
     @Override
     protected void onPostExecute(ArrayList<Term> terms)
@@ -28,24 +29,22 @@ public class AddNewTerm extends AsyncTask<Void,Void,ArrayList<Term>>
         super.onPostExecute(terms);
         if(terms == null || terms.size()==0)
         {
-            ArrayList<Term> temp = new ArrayList<>();
-            temp.add(mTerm);
-            InsertTerms insertTerms = new InsertTerms(mContext);
-            insertTerms.execute(temp);
+            InsertTerm insertTerm = new InsertTerm(context);
+            insertTerm.execute(mTerm);
         }
         else
         {
-            Intent intent = new Intent(mContext, SimilarTermsPage.class);
+            Intent intent = new Intent(context, SimilarTermsPage.class);
             intent.putExtra("similarTerms",terms);
             intent.putExtra("newTerm",mTerm);
-            mContext.startActivity(intent);
+            context.startActivity(intent);
         }
     }
 
     @Override
     protected ArrayList<Term> doInBackground(Void... voids)
     {
-        ArrayList<Term> similarTerms= (ArrayList<Term>) termDatabase.termDAO().searchSimilarTerms(mTerm.getJpns(),mTerm.getEng());
+        ArrayList<Term> similarTerms= (ArrayList<Term>) studyGuideDatabase.termDAO().searchSimilarTerms(mTerm.getJpns(),mTerm.getEng());
         return similarTerms;
     }
 }

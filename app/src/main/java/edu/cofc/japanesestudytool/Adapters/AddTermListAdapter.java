@@ -60,7 +60,7 @@ public class AddTermListAdapter extends BaseAdapter
         kanji.setEnabled(false);
         kanji.setText(term.getKanji());
         TextView lesson = rowView.findViewById(R.id.similarLessonTextBox);
-        lesson.setText(term.getNumberedLessonString());
+        lesson.setText(term.getLessonString());
         TextView type = rowView.findViewById(R.id.similarTypeTextBox);
         type.setText(term.getType());
         TextView reqKanji = rowView.findViewById(R.id.similarReqKanjiTextBox);

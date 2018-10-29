@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.Adapters.AddTermListAdapter;
-import edu.cofc.japanesestudytool.AsyncTasks.InsertTerms;
+import edu.cofc.japanesestudytool.AsyncTasks.InsertTerm;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Term;
 
@@ -121,10 +121,8 @@ public class SimilarTermsPage extends AppCompatActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which)
                     {
-                        InsertTerms insertTerms = new InsertTerms(addNewTerm.getContext());
-                        ArrayList<Term> temp = new ArrayList<>();
-                        temp.add(newTerm);
-                        insertTerms.execute(temp);
+                        InsertTerm insertTerm = new InsertTerm(addNewTerm.getContext());
+                        insertTerm.execute(newTerm);
                         onBackPressed();
                     }
                 });
@@ -139,7 +137,7 @@ public class SimilarTermsPage extends AppCompatActivity
         writingStyleLabel.setText(getResources().getString(R.string.toJapaneseText));
         writingStyleTextBox.setText(term.getJpns());
         newTypeTextBox.setText(term.getType());
-        newLessonTextBox.setText(term.getNumberedLessonString());
+        newLessonTextBox.setText(term.getLessonString());
         if(!term.isReqKanji())
         {
             newReqKanjiTextBox.setVisibility(View.INVISIBLE);

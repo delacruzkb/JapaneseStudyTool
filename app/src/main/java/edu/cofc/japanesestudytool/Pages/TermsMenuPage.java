@@ -15,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
 
+import java.util.ArrayList;
+
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
 import edu.cofc.japanesestudytool.R;
@@ -193,7 +195,7 @@ public class TermsMenuPage extends AppCompatActivity
         savedInstanceState.putBoolean("useKanjiOnlySwitch", useKanjiOnlySwitch.isChecked());
         savedInstanceState.putBoolean("useLessonKanjiOnlySwitch", useLessonKanjiOnlySwitch.isChecked());
         savedInstanceState.putBoolean("allLessons",allLessons.isChecked());
-        savedInstanceState.putIntArray("lessonDropDownAdapter",adapter.getLessonsArray());
+        savedInstanceState.putIntegerArrayList("lessonDropDownAdapter",adapter.getLessonsArrayList());
     }
 
     @Override
@@ -257,7 +259,7 @@ public class TermsMenuPage extends AppCompatActivity
         else
         {
             lessonDropDown.setVisibility(View.VISIBLE);
-            adapter.setCheckedFromArray(savedInstanceState.getIntArray("lessonDropDownAdapter"));
+            adapter.setCheckedFromArrayList(savedInstanceState.getIntegerArrayList("lessonDropDownAdapter"));
             lessonDropDown.setAdapter(adapter);
         }
     }
@@ -589,7 +591,7 @@ public class TermsMenuPage extends AppCompatActivity
                 int[] lessons=null;
                 if(!allLessons.isChecked())
                 {
-                    lessons = adapter.getLessonsArray();
+                    lessons = adapter.getLessonArray();
                 }
                 metrics.setLessons(lessons);
                 QueryTerms queryTerms = new QueryTerms(metrics, confirmButton.getContext());

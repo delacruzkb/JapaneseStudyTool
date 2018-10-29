@@ -4,26 +4,28 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import java.util.ArrayList;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.StudyGuideDatabase;
 import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.StudyGuideDatabase;
 
-public class DeleteTerm extends AsyncTask<Term,Void,Void>
+public class InsertTerm extends AsyncTask<Term,Void,Void>
 {
     private StudyGuideDatabase studyGuideDatabase;
 
-    public DeleteTerm(Context context)
+    public InsertTerm(Context context)
     {
         studyGuideDatabase = Room.databaseBuilder(context,StudyGuideDatabase.class,context.getResources().getString(R.string.databaseName)).build();
     }
 
     @Override
-    protected Void doInBackground(Term... terms)
-    {
+    protected Void doInBackground(Term... terms) {
         Term term = terms[0];
-        studyGuideDatabase.termDAO().deleteTerm(term);
 
-        studyGuideDatabase.lessonTermDAO().deleteTermInLesson(term.getJpns(),term.getEng());
+        ArrayList<Integer> lessons = term.getLessons().getLessons();
+
+        studyGuideDatabase.termDAO().insertTerm(term);
+
         return null;
     }
 }
