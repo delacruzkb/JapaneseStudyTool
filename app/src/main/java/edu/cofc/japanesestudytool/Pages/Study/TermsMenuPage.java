@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.Study;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.QueryTerms;
+import edu.cofc.japanesestudytool.Pages.HomePage;
 import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 

@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Database.Entities;
 
 import android.arch.persistence.room.Entity;
 import android.support.annotation.NonNull;
@@ -118,6 +118,11 @@ public class Term implements Serializable
     public void addLesson(int lesson)
     {
         lessons.addLesson(lesson);
+    }
+
+    public void addLessons(Lessons lessons)
+    {
+        this.lessons.addLessons(lessons);
     }
 
     public void removeLesson(int lesson)

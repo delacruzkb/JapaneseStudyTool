@@ -76,6 +76,8 @@
     <string name="addLessonLabel">Select lesson(s):</string>
     <string name="addRequiredKanjiLabel">Required Kanji</string>
     <string name="addTermButton">Add</string>
+    <string name="mergeTermButton">Merge</string>
+    <string name="mergeTermMessage">Are you sure you want to merge these terms?\nEnglish, Japanese, and Type will not be changed.</string>
 
 
     //Similarities Dialog

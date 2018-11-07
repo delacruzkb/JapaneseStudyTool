@@ -11,6 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import edu.cofc.japanesestudytool.AsyncTasks.LoadInitialTerms;
+import edu.cofc.japanesestudytool.Pages.DatabaseEditing.AddTermsPage;
+import edu.cofc.japanesestudytool.Pages.DatabaseEditing.EditTermsMenuPage;
+import edu.cofc.japanesestudytool.Pages.Study.TermsMenuPage;
 import edu.cofc.japanesestudytool.R;
 
 public class HomePage extends AppCompatActivity

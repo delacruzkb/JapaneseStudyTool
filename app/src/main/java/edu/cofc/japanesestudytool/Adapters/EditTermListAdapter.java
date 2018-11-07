@@ -16,19 +16,30 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
-import edu.cofc.japanesestudytool.Pages.EditSingleTermDialogPage;
+import edu.cofc.japanesestudytool.AsyncTasks.MergeTerms;
+import edu.cofc.japanesestudytool.Pages.DatabaseEditing.EditSingleTermDialogPage;
+import edu.cofc.japanesestudytool.Pages.HomePage;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 
 public class EditTermListAdapter extends BaseAdapter
 {
     private ArrayList<Term> terms;
     private Context context;
     private LayoutInflater mLayoutInflater;
+    private Term mergeableTerm;
     public EditTermListAdapter(ArrayList<Term> eTerms, Context mContext)
     {
         terms = eTerms;
         context = mContext;
+        mLayoutInflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    public EditTermListAdapter(ArrayList<Term> eTerms, Context mContext, Term iTerm)
+    {
+        terms = eTerms;
+        context = mContext;
+        mergeableTerm = iTerm;
         mLayoutInflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -60,7 +71,7 @@ public class EditTermListAdapter extends BaseAdapter
         eng.setText(term.getEng());
         EditText kanji = rowView.findViewById(R.id.searchKanjiTextBox);
         kanji.setEnabled(false);
-        if(term.getKanji() == null || term.getKanji().equalsIgnoreCase("") || term.getKanji().equalsIgnoreCase("null"))
+        if(term.getKanji() != null || !term.getKanji().equalsIgnoreCase("") || !term.getKanji().equalsIgnoreCase("null"))
         {
             kanji.setText(term.getKanji());
         }
@@ -74,16 +85,48 @@ public class EditTermListAdapter extends BaseAdapter
         {
             reqKanji.setVisibility(View.INVISIBLE);
         }
-        Button editButton = rowView.findViewById(R.id.editTermButton);
-        editButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(context,EditSingleTermDialogPage.class);
-                intent.putExtra("term",term);
-                ((Activity)context).startActivityForResult(intent,1);
-            }
-        });
+        final Button editButton = rowView.findViewById(R.id.editTermButton);
+        if(mergeableTerm!=null)
+        {
+            editButton.setText(context.getResources().getString(R.string.mergeTermButton));
+            editButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(editButton.getContext());
+                    builder.setTitle(context.getResources().getString(R.string.warningTitle));
+                    builder.setMessage(context.getResources().getString(R.string.mergeTermMessage));
+                    builder.setNegativeButton(context.getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.setPositiveButton(context.getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            MergeTerms mergeTerms = new MergeTerms(context,term,mergeableTerm);
+                            mergeTerms.execute();
+                        }
+                    });
+                    android.support.v7.app.AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+            });
+        }
+        else
+        {
+            editButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    Intent intent = new Intent(context,EditSingleTermDialogPage.class);
+                    intent.putExtra("term",term);
+                    ((Activity)context).startActivityForResult(intent,1);
+                }
+            });
+        }
+
 
 
         Button deleteButton = rowView.findViewById(R.id.deleteTermButton);

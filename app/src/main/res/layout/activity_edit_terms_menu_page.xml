@@ -7,7 +7,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    tools:context=".Pages.EditTermsMenuPage">
+    tools:context=".Pages.DatabaseEditing.EditTermsMenuPage">
 
     <TextView
         android:id="@+id/searchTitle"

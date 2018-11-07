@@ -12,7 +12,7 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 public class TermListAdapter extends BaseAdapter

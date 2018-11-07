@@ -1,10 +1,11 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.DatabaseEditing;
 
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.AddNewTerm;
-import edu.cofc.japanesestudytool.Lessons;
+import edu.cofc.japanesestudytool.Database.Entities.Lessons;
+import edu.cofc.japanesestudytool.Pages.HomePage;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -132,17 +133,18 @@ public class AddTermsPage extends AppCompatActivity
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(jpnsTextBox.getContext());
-        builder.setTitle("Warning");
-        builder.setMessage("Return to the menu??");
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.warningTitle));
+        builder.setMessage(getResources().getString(R.string.onBackPressedMessage));
+        builder.setNegativeButton(getResources().getString(R.string.cancelLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
-        builder.setPositiveButton("Return", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getResources().getString(R.string.proceedLabel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
                 Intent intent = new Intent(jpnsTextBox.getContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

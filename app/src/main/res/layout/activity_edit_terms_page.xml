@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".Pages.EditTermsPage">
+    tools:context=".Pages.DatabaseEditing.EditTermsPage">
 
     <ListView
         android:id="@+id/editTermsListView"

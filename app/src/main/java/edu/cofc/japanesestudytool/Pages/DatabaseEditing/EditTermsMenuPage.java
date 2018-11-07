@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.DatabaseEditing;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.Switch;
 
 import edu.cofc.japanesestudytool.AsyncTasks.LoadEditableTerms;
+import edu.cofc.japanesestudytool.Pages.HomePage;
 import edu.cofc.japanesestudytool.R;
 
 public class EditTermsMenuPage extends AppCompatActivity
