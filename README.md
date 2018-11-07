@@ -27,6 +27,7 @@ Add Term:
 +Used to add new terms
 
 +searches database for similar terms based on japanese and english fields of each term
+++ Populates a list of similar terms with an option to merge the new term into an existing term
 
 Edit Term:
 + search for a term to edit based on certain fields
