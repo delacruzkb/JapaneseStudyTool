@@ -1,8 +1,10 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Database.Converters;
 
 import android.arch.persistence.room.TypeConverter;
 
 import java.util.ArrayList;
+
+import edu.cofc.japanesestudytool.Database.Entities.Lessons;
 
 public class LessonsConverter
 {

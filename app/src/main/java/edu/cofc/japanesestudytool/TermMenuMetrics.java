@@ -3,6 +3,8 @@ package edu.cofc.japanesestudytool;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import edu.cofc.japanesestudytool.Database.Entities.Term;
+
 public class TermMenuMetrics implements Serializable
 {
 

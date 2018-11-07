@@ -4,9 +4,9 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import edu.cofc.japanesestudytool.LessonTerm;
+import edu.cofc.japanesestudytool.Database.Entities.LessonTerm;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.StudyGuideDatabase;
+import edu.cofc.japanesestudytool.Database.StudyGuideDatabase;
 
 public class InsertLessonTerm extends AsyncTask<LessonTerm,Void,Void>
 {

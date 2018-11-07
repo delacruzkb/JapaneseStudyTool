@@ -1,7 +1,7 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.Study;
 
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 import edu.cofc.japanesestudytool.Adapters.TermListAdapter;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 

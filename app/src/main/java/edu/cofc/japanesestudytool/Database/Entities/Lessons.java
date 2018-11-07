@@ -1,8 +1,9 @@
-package edu.cofc.japanesestudytool;
+package edu.cofc.japanesestudytool.Database.Entities;
 
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Lessons implements Serializable
 {
@@ -19,6 +20,16 @@ public class Lessons implements Serializable
         {
             lessons.add(lesson);
         }
+    }
+
+    public void addLessons(Lessons newLessons)
+    {
+        ArrayList<Integer> newLessonsList = newLessons.getLessons();
+        for(int i =0; i<newLessonsList.size();i++)
+        {
+            addLesson(newLessonsList.get(i));
+        }
+        Collections.sort(lessons);
     }
 
     public void removeLesson(int lesson)

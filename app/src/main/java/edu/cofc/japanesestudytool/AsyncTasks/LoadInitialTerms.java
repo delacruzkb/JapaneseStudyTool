@@ -12,11 +12,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import edu.cofc.japanesestudytool.LessonTerm;
-import edu.cofc.japanesestudytool.Lessons;
+import edu.cofc.japanesestudytool.Database.Entities.LessonTerm;
+import edu.cofc.japanesestudytool.Database.Entities.Lessons;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.StudyGuideDatabase;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
+import edu.cofc.japanesestudytool.Database.StudyGuideDatabase;
 
 public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
 {

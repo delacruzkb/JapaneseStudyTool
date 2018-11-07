@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.DatabaseEditing;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,14 +13,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
-
 import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.DeleteTerm;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerm;
-import edu.cofc.japanesestudytool.Lessons;
+import edu.cofc.japanesestudytool.Database.Entities.Lessons;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 public class EditSingleTermDialogPage extends AppCompatActivity
 {
     private EditText japaneseTextBox,englishTextBox,kanjiTextBox;

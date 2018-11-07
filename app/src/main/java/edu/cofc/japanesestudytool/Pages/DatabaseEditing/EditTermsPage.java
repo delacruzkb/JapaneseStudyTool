@@ -1,8 +1,8 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.DatabaseEditing;
 
 import edu.cofc.japanesestudytool.Adapters.EditTermListAdapter;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 
 import android.content.DialogInterface;
 import android.content.Intent;

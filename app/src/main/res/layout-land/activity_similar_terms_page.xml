@@ -6,7 +6,7 @@
     android:background="@color/backgroundColor"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".Pages.SimilarTermsPage">
+    tools:context=".Pages.DatabaseEditing.SimilarTermsPage">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -213,12 +213,13 @@
             android:background="@color/dividerColor" />
 
         <ListView
-            android:id="@+id/similarTermListView"
+            android:id="@+id/editableTermListView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <LinearLayout
+            android:id="@+id/addButtonLAyout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">

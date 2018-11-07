@@ -7,209 +7,218 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    tools:context=".Pages.SimilarTermsPage">
-
-    <TextView
-        android:id="@+id/newTermLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/dividerHeight"
-        android:text="@string/newTermLabel"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
-
-    <View
-        android:id="@+id/divider17"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
+    tools:context=".Pages.DatabaseEditing.SimilarTermsPage">
 
     <LinearLayout
+        android:id="@+id/similarTermLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/newTermLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dividerHeight"
+            android:text="@string/newTermLabel"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
 
         <View
-            android:id="@+id/divider20"
-            android:layout_width="@dimen/dividerHeight"
-            android:layout_height="match_parent"
+            android:id="@+id/divider17"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
             android:background="@color/dividerColor" />
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/divider20"
+                android:layout_width="@dimen/dividerHeight"
+                android:layout_height="match_parent"
+                android:background="@color/dividerColor" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/toJpnsNewTerm"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.25"
-                    android:backgroundTint="@color/buttonColor"
-                    android:text="@string/toJapaneseText"
-                    android:textColor="@color/buttonTextColor"
-                    android:textSize="@dimen/textSize" />
-
-                <Button
-                    android:id="@+id/toEngNewTerm"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/buttonColor"
-                    android:text="@string/toEnglishText"
-                    android:textColor="@color/buttonTextColor"
-                    android:textSize="@dimen/textSize" />
-
-                <Button
-                    android:id="@+id/toKanjiNewTerm"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/buttonColor"
-                    android:text="@string/toKanjiText"
-                    android:textColor="@color/buttonTextColor"
-                    android:textSize="@dimen/textSize" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/writingStyleLabel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/toJapaneseText"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
-
-            <EditText
-                android:id="@+id/writingStyleTextBox"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textMultiLine"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/textSize" />
+                android:orientation="vertical">
 
-            <View
-                android:id="@+id/divider25"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dividerHeight"
-                android:background="@color/dividerColor" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView10"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2.5"
-                    android:text="@string/lessonLabel"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/textSize" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/toJpnsNewTerm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:backgroundTint="@color/buttonColor"
+                        android:text="@string/toJapaneseText"
+                        android:textColor="@color/buttonTextColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <Button
+                        android:id="@+id/toEngNewTerm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/buttonColor"
+                        android:text="@string/toEnglishText"
+                        android:textColor="@color/buttonTextColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <Button
+                        android:id="@+id/toKanjiNewTerm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/buttonColor"
+                        android:text="@string/toKanjiText"
+                        android:textColor="@color/buttonTextColor"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/newTermLessonTextBox"
+                    android:id="@+id/writingStyleLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:text="@string/toJapaneseText"
                     android:textAlignment="center"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
-            </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dividerHeight"
-                android:background="@color/dividerColor" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                <EditText
+                    android:id="@+id/writingStyleTextBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/typeLabel"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/textSize" />
-
-                <TextView
-                    android:id="@+id/newTermTypeTextBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:textAlignment="center"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
 
                 <View
-                    android:id="@+id/divider34"
-                    android:layout_width="@dimen/dividerHeight"
-                    android:layout_height="match_parent"
+                    android:id="@+id/divider25"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
                     android:background="@color/dividerColor" />
 
-                <TextView
-                    android:id="@+id/newTermReqKanjiTextBox"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="@string/addRequiredKanjiLabel"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/textSize" />
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:text="@string/lessonLabel"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <TextView
+                        android:id="@+id/newTermLessonTextBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/dividerColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/typeLabel"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <TextView
+                        android:id="@+id/newTermTypeTextBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <View
+                        android:id="@+id/divider34"
+                        android:layout_width="@dimen/dividerHeight"
+                        android:layout_height="match_parent"
+                        android:background="@color/dividerColor" />
+
+                    <TextView
+                        android:id="@+id/newTermReqKanjiTextBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/addRequiredKanjiLabel"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
             </LinearLayout>
+
+            <View
+                android:id="@+id/divider38"
+                android:layout_width="@dimen/dividerHeight"
+                android:layout_height="match_parent"
+                android:background="@color/dividerColor" />
 
         </LinearLayout>
 
         <View
-            android:id="@+id/divider38"
-            android:layout_width="@dimen/dividerHeight"
-            android:layout_height="match_parent"
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
             android:background="@color/dividerColor" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/similaritiesTitle"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/textSize" />
+
+        <View
+            android:id="@+id/divider22"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/dividerColor" />
     </LinearLayout>
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/similaritiesTitle"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize" />
-
-    <View
-        android:id="@+id/divider22"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dividerHeight"
-        android:background="@color/dividerColor" />
 
     <ListView
         android:id="@+id/similarTermListView"
@@ -224,6 +233,7 @@
         android:background="@color/dividerColor" />
 
     <LinearLayout
+        android:id="@+id/addButtonLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

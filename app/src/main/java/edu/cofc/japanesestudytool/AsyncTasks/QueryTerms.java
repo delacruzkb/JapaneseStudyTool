@@ -10,13 +10,13 @@ import android.os.AsyncTask;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import edu.cofc.japanesestudytool.Pages.FlashCardPage;
+import edu.cofc.japanesestudytool.Pages.Study.FlashCardPage;
 import edu.cofc.japanesestudytool.Pages.HomePage;
-import edu.cofc.japanesestudytool.Pages.KanjiWritingPage;
-import edu.cofc.japanesestudytool.Pages.StoryPage;
+import edu.cofc.japanesestudytool.Pages.Study.KanjiWritingPage;
+import edu.cofc.japanesestudytool.Pages.Study.StoryPage;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.StudyGuideDatabase;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.StudyGuideDatabase;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 public class QueryTerms extends AsyncTask<Void,Void,Void>

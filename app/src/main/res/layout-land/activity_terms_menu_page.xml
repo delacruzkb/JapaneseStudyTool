@@ -7,7 +7,7 @@
     android:background="@color/backgroundColor"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".Pages.TermsMenuPage">
+    tools:context=".Pages.Study.TermsMenuPage">
 
     <LinearLayout
         android:layout_width="match_parent"

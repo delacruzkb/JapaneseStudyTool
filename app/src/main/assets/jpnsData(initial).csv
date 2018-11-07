@@ -23,9 +23,9 @@ XはYです,X is Y,null,grammar,1,null
 がくせい,Student,学生,noun,1,null
 かんこく,Korea,null,noun,1,null
 けいざい,Economics,null,noun,1,null
-こうこう,High school,高校,noun,1,null
-こうこうせい,High school student,高校生,noun,1,null
-こくさいかんけい,International Studies,null,noun,1,null
+こうこう,High School,高校,noun,1,null
+こうこうせい,High School Student,高校生,noun,1,null
+こくさいかんけい,International Relations,null,noun,1,null
 コンピューター,Computer Science,null,noun,1,null
 しごと,Job / Work / Occupation,仕事,noun,1,null
 しゅふ,House Wife,null,noun,1,null
@@ -96,8 +96,8 @@ Tシャツ,T-Shirt,null,noun,2,null
 カーテン,Curtain,null,noun,2,null
 かさ,Umbrella,null,noun,2,null
 かばん,Bag,null,noun,2,null
-きつ,Shoes,null,noun,2,null
-きっさたん,cafe,null,noun,2,null
+くつ,Shoes,null,noun,2,null
+きっさてん,cafe,null,noun,2,null
 ぎんこう,Bank,銀行,noun,2,null
 けしゴム,Eraser,null,noun,2,null
 こくばん,Blackboard / Chalkboard,null,noun,2,null
@@ -153,9 +153,9 @@ Tシャツ,T-Shirt,null,noun,2,null
 あさ,Morning,朝,noun,3,null
 あさごはん,Breakfast,朝ご飯,noun,3,null
 あした,Tomorrow,明日,noun,3,null
-いえ,House,家,noun,3,null
+いえ,House / Home,家,noun,3,null
 いつ,When,null,noun,3,null
-うち,House / Home,家,noun,3,null
+うち,House / Home / My place,家,noun,3,null
 えいが,Movie,映画,noun,3,null
 おさけ,Sake / Alcohol,お酒,noun,3,null
 おちゃ,Green Tea,お茶,noun,3,null
@@ -227,7 +227,7 @@ Tシャツ,T-Shirt,null,noun,2,null
 しち／なな,Seven,七,noun,3,kanji
 しちじ,Seven o'clock,七時,noun,3,kanji
 じゅう,Ten,十,noun,3,kanji
-じゅうさい／しっさい,Ten years old,十歳,noun,3,kanji
+じゅうさい／じっさい,Ten years old,十歳,noun,3,kanji
 じゅうじ,Ten o'clock,十時,noun,3,kanji
 じゅうまん,One hundred thousand,十万,noun,3,kanji
 せん,Thousand,千,noun,3,kanji
@@ -265,7 +265,7 @@ Tシャツ,T-Shirt,null,noun,2,null
 ときどき,Sometimes,時々,other,3,kanji
 （に）も,Go to two places || do something on two different occasions,null,grammar,4,null
 Xがあります,There is X (object) || You own X || X is an upcoming event,null,grammar,4,null
-Xがいます,There is X (person),null,grammar,4,null
+Xがいます,There is X (person) / You have X (People: friends、 siblings、etc.),null,grammar,4,null
 XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 じゃありませんでした,Past tense of です (conservative negative),null,grammar,4,null
 たくさん,Expression of a large quantity,null,grammar,4,null
@@ -273,8 +273,8 @@ XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 ではありませんでした,Past tense of です (more likely to be seen in writing),null,grammar,4,null
 と,Connect two nouns / together with,null,grammar,4,null
 ました／ませんでした,Past tense of verbs,null,grammar,4,null
-も,Two or more people performing the same activity,null,grammar,4,null
-一時間,Duration of an activity,null,grammar,4,null
+も,Two or more people performing the same activity / One person does the same activity to different things,null,grammar,4,null
+一時間 （～じかん）,Duration of an activity (In this case、 for one hour),null,grammar,4,null
 （～の）とき,when . . . / at the time of . . .,（～の）時,noun,4,null
 ～じかん,. . . Hours,～時間,noun,4,null
 あさって,The day after tomorrow,null,noun,4,null
@@ -327,7 +327,7 @@ XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 ～と,Together with (a person),null,other,4,null
 ごめんなさい,I'm sorry,null,other,4,null
 だから,So / Therefore,null,other,4,null
-たくさｎ,Many / A lot,null,other,4,null
+たくさん,Many / A lot,null,other,4,null
 どうして,Why,null,other,4,null
 (Place)(に)(Thing)(が)　いる,(a person) is in/stays at a (place),null,ru-verb,4,null
 （～が）わかる,To understand,null,u-verb,4,null
@@ -338,7 +338,7 @@ XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 (Person)(に)(Thing)(を)　かく,To write (person) (a thing),(Person)(に)(Thing)(を)　書く,u-verb,4,null
 (Place)(に)(Thing)(が)　ある,There is a (thing) at (place),null,u-verb,4,null
 じょうず（な）,Good at,上手（な）,adjective,4,kanji
-へたな,Poor at,下手な,adjective,4,kanji
+へた (な),Poor at,下手な,adjective,4,kanji
 いちがつ,January,一月,noun,4,kanji
 いちねんじゅう,All year round,一年中,noun,4,kanji
 いつか,5th day of the month,五日,noun,4,kanji
@@ -346,7 +346,7 @@ XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 うえ,Top / Above,上,noun,4,kanji
 おかね,Money,お金,noun,4,kanji
 おかねもち,Rich person,お金持ち,noun,4,kanji
-おくじゅう,Rooftop,屋上,noun,4,kanji
+おくじょう,Rooftop,屋上,noun,4,kanji
 おととい,The day before yesterday,null,noun,4,kanji
 おととし,The year before last,null,noun,4,kanji
 かざん,Volcano,火山,noun,4,kanji
@@ -384,11 +384,11 @@ XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 ついたち,1st day of the month,一日,noun,4,kanji
 つき,Moon,月,noun,4,kanji
 つち,Soil,土,noun,4,kanji
-とうか,10th day of the month,十日,noun,4,kanji
+とおか,10th day of the month,十日,noun,4,kanji
 とち,Land,土地,noun,4,kanji
 どようび,Saturday,土曜日,noun,4,kanji
 なのか,7th day of the month,七日,noun,4,kanji
-にかげつかまえ,Two months ago,二か月前,noun,4,kanji
+にかげつまえ,Two months ago,二か月前,noun,4,kanji
 にがつ,February,二月,noun,4,kanji
 にしゅうかんまえ,Two weeks ago,二週間前,noun,4,kanji
 にちようび,Sunday,日曜日,noun,4,kanji
@@ -425,7 +425,7 @@ XはYの（Location word）です,X is (location word) of Y,null,grammar,4,null
 ください,Please give / do . . .,下さい,other,4,kanji
 ひとりで,Alone,一人で,other,4,kanji
 のぼる,To go up,上る,u-verb,4,kanji
-Good-looking (conjugates like いい),Good-looking,null,adjective,5,null
+かっこいい ,Good-looking (conjugates like いい),null,adjective,5,null
 あたらしい,New,新しい,adjective,5,null
 あつい,Hot,暑い,adjective,5,null
 いそがしい,Busy,忙しい,adjective,5,null
@@ -2598,7 +2598,7 @@ Xがほうしい,I want (x),null,grammar,14,null
 それで,then / therefore,null,other,19,null
 なぜ,why,null,other,19,null
 ほんとうは,in fact / originally,本当は,other,19,null
-まいあさ,everymorning,毎朝,other,19,null
+まいあさ,every morning,毎朝,other,19,null
 まだ,still,null,other,19,null
 ～めいさま,party of . . . people,～名様,other,19,null
 ようこそ,welcome,null,other,19,null
@@ -2669,3 +2669,175 @@ Xがほうしい,I want (x),null,grammar,14,null
 たぶん,probably,多分,other,19,kanji
 ～のおおく,many of . . .,～の多く,other,19,kanji
 たすうけつ,decision by majority,多数決,noun,19,kanji
+しかい,Master of Ceremony,司会,noun,19,null
+いかが   ,How (polite expression of どう),null,other,19,null
+たつ,(time) pass,null,u-verb,19,null
+～ちゅう,while . . .,～中,other,19,null
+たいへん,greatly,null,other,19,null
+（～に）おせわになる,to be in someone's care,（～に）お世話になる,u-verb,19,null
+しょうぎ,Japanese chess,null,noun,19,null
+おもいだす,to recall,思い出す,u-verb,19,null
+なつかしい,to miss / long for,null,adjective,19,null
+それでは,well then,null,other,19,null
+みなさま,everyone ( polite expression of みなさん),みな様,noun,19,null
+たいせつにする,to take good care of,大切にする,irr-verb,19,null
+とつぜん,suddenly,突然,other,19,null
+ゆうじん,friend,友人,noun,19,null
+～のしょうかいで,through the introduction of,～の紹介で,other,19,null
+こくさい,international,国際,noun,19,null
+でんきこうがく,electric engineering,電気工学,noun,19,null
+うける,to take (an examination),受ける,ru-verb,19,null
+～のために,for . . .,null,other,19,null
+もうしこみ,application,申し込み,noun,19,null
+もし～たら,if . . .,null,other,19,null
+しつもん,question,質問,noun,19,null
+もうしわけありません,you have me apologies.,申し訳ありません,other,19,null
+どうぞよろしくおねがいします,Thank you in advance.,どうぞよろしくお願いいたします,other,19,null
+おもい,heavy / serious (illness),重い,adjective,20,null
+かるい,light (weight),軽い,adjective,20,null
+さいあく,the worst,最悪,adjective,20,null
+あんしんな,safe,安心な,adjective,20,kanji
+いたい,painful,痛い,adjective,20,kanji
+ちゃいろ,brown,茶色,adjective,20,kanji
+ねっしんな,enthusiastic,熱心な,adjective,20,kanji
+ぶれいな,rude,無礼な,adjective,20,kanji
+むだな,wasteful,無駄な,adjective,20,kanji
+むりな,impossible,無理な,adjective,20,kanji
+(name)＋という＋(item),(item) called (name),null,grammar,20,null
+(question)＋(か／かどうか）,quetions within larger sentences (Yes/No question),null,grammar,20,null
+(question)＋か,quetions within larger sentences (question-word question),null,grammar,20,null
+(stem of masu form)＋にくい,Say something is hard to do,null,grammar,20,null
+(stem of masu form)＋やすい,Say something is easy to do,null,grammar,20,null
+(verb)＋ないで,without doing (verb),null,grammar,20,null
+いる➞おる,Extra-modest Expressions,null,grammar,20,null
+お＋(verb stem)＋する,Humble Expression,null,grammar,20,null
+がっかりする,to be disappointed,null,irr-verb,20,null
+こうかんする,to exchange,交換する,irr-verb,20,null
+する,to cost,null,irr-verb,20,null
+せいかつする,to lead a life,生活する,irr-verb,20,null
+にこにこする,to smile,null,irr-verb,20,null
+へんぴんする,to return (merchandise),返品する,irr-verb,20,null
+きぜつする,to faint,気絶する,irr-verb,20,kanji
+きんしする,to prohibit,禁止する,irr-verb,20,kanji
+しんぱいする,to worry,心配する,irr-verb,20,kanji
+そうぞくする,to inherit,相続する,irr-verb,20,kanji
+ちゅうしする,to cancel,中止する,irr-verb,20,kanji
+ばくしょうする,to burst into laughter,爆笑する,irr-verb,20,kanji
+はんたいする,to oppose,反対する,irr-verb,20,kanji
+～や,. . . shop,～屋,noun,20,null
+あちら,that way (polite),null,noun,20,null
+アニメ,animation,null,noun,20,null
+いなか,countryside,null,noun,20,null
+うちゅうじん,space alien,宇宙人,noun,20,null
+えさ,feed,null,noun,20,null
+えど,former name of tokyo,江戸,noun,20,null
+えどじだい,edo period (1603-1867),江戸時代,noun,20,null
+おと,sound,音,noun,20,null
+おにぎり,rice ball,null,noun,20,null
+かかりのもの,our person in charge,係の者,noun,20,null
+かど,corner,角,noun,20,null
+くうこう,airport,空港,noun,20,null
+こころ,mind / heart,心,noun,20,null
+じ,letter / character,字,noun,20,null
+してん,branch office,支店,noun,20,null
+しゅじん,owner,主人,noun,20,null
+しゅみ,hobby / pastime,趣味,noun,20,null
+しょうせつ,novel,小説,noun,20,null
+しんごう,traffic light,信号,noun,20,null
+スニーカー,sneakers,null,noun,20,null
+せんす,fan,扇子,noun,20,null
+つき,moon,月,noun,20,null
+でんしじしょ,electronic dictionary,電子辞書,noun,20,null
+ドイツ,Germany,null,noun,20,null
+ねだん,price,値段,noun,20,null
+ハイヒール,high heels,null,noun,20,null
+むぶり,gesture,身ぶり,noun,20,null
+らくご,comic monologue,落語,noun,20,null
+らくごか,comic storyteller,落語家,noun,20,null
+りょう,a unit of currency used in the edo period,両,noun,20,null
+いたみどめ,painkiller,痛み止め,noun,20,kanji
+いちまい,one sheet,一枚,noun,20,kanji
+いっつい,a pair,一対,noun,20,kanji
+えがお,smiling face,笑顔,noun,20,kanji
+おちゃ,japanese tea,お茶,noun,20,kanji
+おんせいがく,phonetics,音声学,noun,20,kanji
+かみざら,paper plate,紙皿,noun,20,kanji
+ぎせいご,onomatopoeia,擬声語,noun,20,kanji
+きっさてん,cafe,喫茶店,noun,20,kanji
+こうきしん,curiosity,好奇心,noun,20,kanji
+こうちゃ,black tea,紅茶,noun,20,kanji
+こえ,voice,声,noun,20,kanji
+こころ,heart / mind,心,noun,20,kanji
+さいあく,the worst,最悪,noun,20,kanji
+さいきん,recently,最近,noun,20,kanji
+さいこう,the best,最高,noun,20,kanji
+さいしん,the latest,最新,noun,20,kanji
+さら,plate / dish,皿,noun,20,kanji
+さんりょう,three ryoo,三両,noun,20,kanji
+しはらい,payment,支払い,noun,20,kanji
+ずつう,headache,頭痛,noun,20,kanji
+せいゆう,voice actor,声優,noun,20,kanji
+ぜつぼう,despair,絶望,noun,20,kanji
+ぜつめつ,extinction,絶滅,noun,20,kanji
+ちゃみせ,tea house,茶店,noun,20,kanji
+てつづき,procedure,手続き,noun,20,kanji
+にほんたいちゅうごく,japan versus china,日本対中国,noun,20,kanji
+はいざら,ashtray,灰皿,noun,20,kanji
+はらいもどし,refund,払い戻し,noun,20,kanji
+ふくつう,stomachache,腹痛,noun,20,kanji
+ぶんかつばらい,payment in installments,分割払い,noun,20,kanji
+まいすう,number of flat things,枚数,noun,20,kanji
+むりょう,free of charge,無料,noun,20,kanji
+ようつう,lower back pain,腰痛,noun,20,kanji
+りょうがえ,exchange,両替,noun,20,kanji
+りょうしん,parents,両親,noun,20,kanji
+りょうて,both hands,両手,noun,20,kanji
+りょうほう,both,両方,noun,20,kanji
+れんぞくドラマ,serial tv drama,連続ドラマ,noun,20,kanji
+～かい,...th floor,～階,other,20,null
+～みたいな　X,X such as . . .,null,other,20,null
+あんなに,so / such,null,other,20,null
+おや？,Oh?,null,other,20,null
+かしこまりました,certainly,null,other,20,null
+さあ,I am not sure . . .,null,other,20,null
+しつれいしました,I'm very sorry,失礼します,other,20,null
+しょうしょう,a few seconds,少々,other,20,null
+そうだ！,I have an idea!,null,other,20,null
+それでは,if that is the case ...,null,other,20,null
+できれば,if possible,null,other,20,null
+まことに,really (very polite),誠に,other,20,null
+また,again,null,other,20,null
+もうしわけありません,you have my apologies,申し訳ございません,other,20,null
+やった！,I did it !,null,other,20,null
+よろしかったら,if it is okay (polite),null,other,20,null
+さいごに,lastly,最後に,other,20,kanji
+ぜったいに,definitely / no matter what,絶対に,other,20,kanji
+ない,there is no . . .,無い,other,20,kanji
+もっとも,most,最も,other,20,kanji
+うれる,to be sold,売れる,ru-verb,20,null
+きこえる,to be audible,聞こえる,ru-verb,20,null
+さしあげる,Humble expression for あげる,差し上げる,ru-verb,20,null
+つたえる,to convey (a message),伝える,ru-verb,20,null
+またせる,to keep (someone) waiting,待たせる,ru-verb,20,null
+つづける,to continue,続ける,ru-verb,20,kanji
+（～に）もどる,to return / to come back,（～に）戻る,u-verb,20,null
+(Corner)(を)(Direction)(に)　まがる,To turn (right/left),(Corner)(を)(Direction)(に)　まがる曲がる,u-verb,20,null
+～ておる,Extra-modest expression for ～ている,null,u-verb,20,null
+～でござる,Extra-modest expression for です,null,u-verb,20,null
+いたす,Extra-modest expression for する,致す,u-verb,20,null
+いただく,Extra-modest expression for たべ／のむ,頂く,u-verb,20,null
+いただく,Humble expression for もらう,頂く,u-verb,20,null
+うかがう,To humbly visit / To humbly ask,伺う,u-verb,20,null
+おる,Extra-modest expression for いる,null,u-verb,20,null
+ござる,Extra-modest expression for ある,null,u-verb,20,null
+だく,to hold something in one's arm,抱く,u-verb,20,null
+だます,to decieve,null,u-verb,20,null
+ひっかく,to scratch,null,u-verb,20,null
+まいる,Extra-modest expression for いく／くる,参る,u-verb,20,null
+もうす,Extra-modest expression for いう,申す,u-verb,20,null
+わたす,to give / to hand,渡す,u-verb,20,null
+たえる,to die out,絶える,u-verb,20,kanji
+とまる,(something) stops,止まる,u-verb,20,kanji
+はらう,to pay,払う,u-verb,20,kanji
+ほほえむ,to smile,微笑む,u-verb,20,kanji
+わらう,to laugh,笑う,u-verb,20,kanji

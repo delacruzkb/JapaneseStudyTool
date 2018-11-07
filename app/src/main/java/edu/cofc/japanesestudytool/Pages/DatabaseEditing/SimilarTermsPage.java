@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.DatabaseEditing;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,10 +13,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import edu.cofc.japanesestudytool.Adapters.AddTermListAdapter;
+import edu.cofc.japanesestudytool.Adapters.EditTermListAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.InsertTerm;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 
 public class SimilarTermsPage extends AppCompatActivity
 {
@@ -49,8 +49,8 @@ public class SimilarTermsPage extends AppCompatActivity
         newTypeTextBox = findViewById(R.id.newTermTypeTextBox);
         newReqKanjiTextBox = findViewById(R.id.newTermReqKanjiTextBox);
         similarTermsList = findViewById(R.id.similarTermListView);
-        AddTermListAdapter addTermListAdapter = new AddTermListAdapter(similarTerms,this);
-        similarTermsList.setAdapter(addTermListAdapter);
+        EditTermListAdapter editTermListAdapter = new EditTermListAdapter(similarTerms,this, newTerm);
+        similarTermsList.setAdapter(editTermListAdapter);
 
         toJpns = findViewById(R.id.toJpnsNewTerm);
         toJpns.setOnClickListener(new View.OnClickListener() {

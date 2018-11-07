@@ -5,8 +5,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.StudyGuideDatabase;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.StudyGuideDatabase;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 
 public class DeleteTerm extends AsyncTask<Term,Void,Void>
 {

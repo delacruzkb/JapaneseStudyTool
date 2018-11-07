@@ -6,8 +6,8 @@ import android.os.AsyncTask;
 
 import java.util.ArrayList;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
-import edu.cofc.japanesestudytool.StudyGuideDatabase;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
+import edu.cofc.japanesestudytool.Database.StudyGuideDatabase;
 
 public class InsertTerm extends AsyncTask<Term,Void,Void>
 {

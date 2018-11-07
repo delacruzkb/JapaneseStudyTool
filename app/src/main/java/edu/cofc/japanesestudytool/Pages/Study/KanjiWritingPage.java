@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.Study;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -7,10 +7,9 @@ import android.os.Bundle;
 
 import edu.cofc.japanesestudytool.DrawingView;
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
-import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;

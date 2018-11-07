@@ -1,4 +1,4 @@
-package edu.cofc.japanesestudytool.Pages;
+package edu.cofc.japanesestudytool.Pages.Study;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import edu.cofc.japanesestudytool.R;
-import edu.cofc.japanesestudytool.Term;
+import edu.cofc.japanesestudytool.Database.Entities.Term;
 import edu.cofc.japanesestudytool.TermMenuMetrics;
 
 import android.content.Intent;
@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Collections;
+
 public class FlashCardPage extends AppCompatActivity
 {
     private ArrayList<Term> termList;
