@@ -352,28 +352,6 @@
         android:orientation="horizontal">
 
         <Switch
-            android:id="@+id/showLessonKanjiOnlySwitch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/showLessonKanjiOnlyText"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/textSize"
-            android:theme="@style/SwitchTheme" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Switch
             android:id="@+id/useKanjiOnlySwitch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -440,23 +418,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="@dimen/dividerHeight"
-            android:layout_height="match_parent"
-            android:background="@color/dividerColor" />
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:orientation="vertical">
-
-            <View
-                android:id="@+id/divider123456"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dividerHeight"
-                android:background="@color/dividerColor" />
 
             <Button
                 android:id="@+id/confirmButton"

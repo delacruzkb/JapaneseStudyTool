@@ -34,7 +34,7 @@ public class TermsMenuPage extends AppCompatActivity
     private Button confirmButton;
 
     private Switch useSpecificCountSwitch,showJpnsFirstSwitch, showKanjiFirstSwitch,
-            showLessonKanjiOnlySwitch, useKanjiOnlySwitch,useLessonKanjiOnlySwitch;
+            useKanjiOnlySwitch,useLessonKanjiOnlySwitch;
     private TermMenuMetrics metrics;
     private Spinner modeDropDown,lessonDropDown;
     private CheckBox allLessons;
@@ -83,17 +83,16 @@ public class TermsMenuPage extends AppCompatActivity
         //Instantiate switches
         showJpnsFirstSwitch = findViewById(R.id.showJpnsFirstSwitch);
         showKanjiFirstSwitch = findViewById(R.id.showKanjiFirstSwitch);
-        showLessonKanjiOnlySwitch = findViewById(R.id.showLessonKanjiOnlySwitch);
         useKanjiOnlySwitch = findViewById(R.id.useKanjiOnlySwitch);
         useLessonKanjiOnlySwitch = findViewById(R.id.useLessonKanjiOnlySwitch);
         useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
         useSpecificCountSwitch = findViewById(R.id.useSpecificCountSwitch);
         hideCounters();
 
-        //Instantiate checkboxes
+        //Instantiate checkbox
         allLessons = findViewById(R.id.allLessonsCheckBox);
 
-        //Instantiate spinners
+        //Instantiate spinner
         modeDropDown = findViewById(R.id.modeDropDown);
         final String[] items = {getResources().getString(R.string.flashCardModeText),
                             getResources().getString(R.string.kanjiStrokeModeText),
@@ -242,8 +241,6 @@ public class TermsMenuPage extends AppCompatActivity
         if(useKanjiOnlySwitch.isChecked())
         {
             useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
-            showLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
-            showLessonKanjiOnlySwitch.setChecked(savedInstanceState.getBoolean("showLessonKanjiOnlySwitch"));
         }
         else
         {
@@ -526,13 +523,10 @@ public class TermsMenuPage extends AppCompatActivity
                 {
                     useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
                     useLessonKanjiOnlySwitch.setChecked(false);
-                    showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
                 }
                 else
                 {
                     useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
-                    showLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);
-                    showLessonKanjiOnlySwitch.setChecked(false);
                 }
             }
         });
@@ -584,7 +578,6 @@ public class TermsMenuPage extends AppCompatActivity
 
                 metrics.setShowJpnsFirst(showJpnsFirstSwitch.isChecked());
                 metrics.setShowKanjiFirst(showKanjiFirstSwitch.isChecked());
-                metrics.setShowLessonKanjiOnly(showLessonKanjiOnlySwitch.isChecked());
                 metrics.setUseKanjiOnly(useKanjiOnlySwitch.isChecked());
                 metrics.setUseLessonKanjiOnly(useLessonKanjiOnlySwitch.isChecked());
                 metrics.setAllTerms(allLessons.isChecked());
@@ -678,7 +671,6 @@ public class TermsMenuPage extends AppCompatActivity
             layout.setVisibility(View.INVISIBLE);
         }
         showKanjiFirstSwitch.setVisibility(View.GONE);
-        showLessonKanjiOnlySwitch.setVisibility(View.GONE);
         useKanjiOnlySwitch.setChecked(true);
         useKanjiOnlySwitch.setVisibility(View.GONE);
         useLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
@@ -694,7 +686,6 @@ public class TermsMenuPage extends AppCompatActivity
         }
 
         showKanjiFirstSwitch.setVisibility(View.VISIBLE);
-        showLessonKanjiOnlySwitch.setVisibility(View.VISIBLE);
         useKanjiOnlySwitch.setChecked(false);
         useKanjiOnlySwitch.setVisibility(View.VISIBLE);
         useLessonKanjiOnlySwitch.setVisibility(View.INVISIBLE);

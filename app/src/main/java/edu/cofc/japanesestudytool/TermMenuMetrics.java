@@ -10,7 +10,7 @@ public class TermMenuMetrics implements Serializable
 
     private ArrayList<Term> nounList, verbList, adjectiveList, grammarList, otherList,termList;
     private boolean countAll,allTerms,showJpnsFirst, showKanjiFirst,
-            showLessonKanjiOnly, useKanjiOnly,useLessonKanjiOnly;
+            useKanjiOnly,useLessonKanjiOnly;
     private int[] lessons;
     private int nounCount, verbCount, adjectiveCount, otherCount, grammarCount;
     private String mode;
@@ -32,7 +32,6 @@ public class TermMenuMetrics implements Serializable
         allTerms = true;
         showJpnsFirst=false;
         showKanjiFirst=false;
-        showLessonKanjiOnly=false;
         useKanjiOnly=false;
         useLessonKanjiOnly = false;
         lessons=null;
@@ -122,14 +121,6 @@ public class TermMenuMetrics implements Serializable
 
     public void setShowKanjiFirst(boolean showKanjiFirst) {
         this.showKanjiFirst = showKanjiFirst;
-    }
-
-    public boolean showLessonKanjiOnly() {
-        return showLessonKanjiOnly;
-    }
-
-    public void setShowLessonKanjiOnly(boolean showLessonKanjiOnly) {
-        this.showLessonKanjiOnly = showLessonKanjiOnly;
     }
 
     public boolean useKanjiOnly() {

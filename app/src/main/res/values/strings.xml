@@ -7,10 +7,12 @@
     <string name="translationWebsite">https://translate.google.com/#ja/en</string>
 
     //Generic Strings
-    <string name="storyButtonLabel">Create a story / 話を作りましょう</string>
     <string name="toEnglishText">ENG</string>
     <string name="toJapaneseText">ひらがな</string>
     <string name="toKanjiText">漢字</string>
+
+    //Messages
+    <string name="loadDataWarning">Warning: will erase all data and load default data.</string>
     <string name="onBackPressedMessage">Are you sure you want to return?</string>
     <string name="warningTitle">Warning</string>
     <string name="errorTitle">Error</string>
@@ -29,11 +31,11 @@
     <string name="grammarLabel">Grammar point(s)</string>
 
     //HomePage
+    <string name="storyButtonLabel">Create a story / 話を作りましょう</string>
     <string name="studyButtonLabel">Study Terms</string>
     <string name="addTermsLabel">Add Terms</string>
     <string name="editTermsLabel">Edit Terms</string>
     <string name="loadDataLabel">Load Initial Data</string>
-    <string name="loadDataWarning">Warning: will erase all data and load default data.</string>
 
     //TermsMenuPage
     <string name="flashCardModeText">Flash Card Mode</string>

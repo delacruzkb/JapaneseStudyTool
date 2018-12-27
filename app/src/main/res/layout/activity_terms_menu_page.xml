@@ -293,15 +293,6 @@
         android:theme="@style/SwitchTheme" />
 
     <Switch
-        android:id="@+id/showLessonKanjiOnlySwitch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/showLessonKanjiOnlyText"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/textSize"
-        android:theme="@style/SwitchTheme" />
-
-    <Switch
         android:id="@+id/useKanjiOnlySwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
