@@ -25,7 +25,7 @@ public class FlashCardPage extends AppCompatActivity
     private TextView  typeValueLabel, reqKanjiLabel, cardCountLabel;
     private EditText lessonNumberLabel,flashCard;
     private Button flipEng, flipJpns, flipKanji, prevCard,nextCard;
-    private boolean showJapaneseFirst, showKanjiFirst, showLessonKanjiOnly;
+    private boolean showJapaneseFirst, showKanjiFirst;
     private int currentCardNumber;
     private int cardCount;
     private TermMenuMetrics metrics;
@@ -128,7 +128,7 @@ public class FlashCardPage extends AppCompatActivity
             flashCard.setText(term.getEng());
         }
         //Hide Kanji Flip if: null value, don't use kanji, not required kanji when asked
-        if(term.getKanji() == null || term.getKanji().equalsIgnoreCase("") || term.getKanji().equalsIgnoreCase("null")||(showLessonKanjiOnly &&!term.isReqKanji()))
+        if(term.getKanji() == null || term.getKanji().equalsIgnoreCase("") || term.getKanji().equalsIgnoreCase("null"))
         {
             flipKanji.setVisibility(View.INVISIBLE);
         }
@@ -220,7 +220,6 @@ public class FlashCardPage extends AppCompatActivity
         metrics = (TermMenuMetrics)intent.getSerializableExtra("metrics");
         termList= metrics.getTermList();
         showJapaneseFirst= metrics.showJpnsFirst();
-        showLessonKanjiOnly = metrics.showLessonKanjiOnly();
         showKanjiFirst = metrics.showKanjiFirst();
         cardCount=termList.size();
         currentCardNumber=0;
