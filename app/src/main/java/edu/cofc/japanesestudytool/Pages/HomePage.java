@@ -69,7 +69,7 @@ public class HomePage extends AppCompatActivity
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(loadDataButton.getContext());
                 builder.setMessage(R.string.loadDataWarning);
-                builder.setTitle(R.string.loadDataLabel);
+                builder.setTitle(R.string.loadDataButtonLabel);
                 builder.setPositiveButton(R.string.proceedLabel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

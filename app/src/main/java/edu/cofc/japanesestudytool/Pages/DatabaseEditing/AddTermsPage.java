@@ -4,7 +4,6 @@ import edu.cofc.japanesestudytool.Adapters.CheckBoxDropDownSpinnerAdapter;
 import edu.cofc.japanesestudytool.AsyncTasks.AddNewTerm;
 import edu.cofc.japanesestudytool.Database.Entities.Lessons;
 import edu.cofc.japanesestudytool.Pages.HomePage;
-import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Database.Entities.Term;
 
 import android.content.DialogInterface;
@@ -18,9 +17,10 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import edu.cofc.japanesestudytool.R;
 public class AddTermsPage extends AppCompatActivity
 {
-    private EditText jpnsTextBox,engTextBox,kanjiTextBox;
+    private EditText jpnsTextBox,engTextBox,kanjiTextBox,particleTextBox;
     private Spinner typeDropDownBar,lessonDropDown;
     private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irregular-verb","adjective","grammar","other"};
     private CheckBox reqKanjiCheckbox;
@@ -57,6 +57,7 @@ public class AddTermsPage extends AppCompatActivity
         jpnsTextBox = findViewById(R.id.addJapaneseTextBox);
         engTextBox = findViewById(R.id.addEnglishTextBox);
         kanjiTextBox = findViewById(R.id.addKanjiTextBox);
+        particleTextBox = findViewById(R.id.addParticleTextBox);
 
         typeDropDownBar = findViewById(R.id.addTypeDropDownBar);
         ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,typeSpecs);
@@ -170,6 +171,7 @@ public class AddTermsPage extends AppCompatActivity
         temp.setJpns(jpnsTextBox.getText().toString());
         temp.setKanji(kanjiTextBox.getText().toString());
         temp.setType(typeDropDownBar.getSelectedItem().toString());
+        temp.setParticle(particleTextBox.getText().toString());
         Lessons lessons = new Lessons();
         lessons.setLessons(adapter.getLessonsArrayList());
         temp.setLessons(lessons);

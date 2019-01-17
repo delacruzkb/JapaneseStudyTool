@@ -17,6 +17,7 @@ public class Term implements Serializable
     private String type;
     private Lessons lessons;
     private boolean reqKanji;
+    private String particle;
     private boolean checked;
 
     public Term()
@@ -90,6 +91,14 @@ public class Term implements Serializable
         }
     }
 
+    public String getParticle() {
+        return particle;
+    }
+
+    public void setParticle(String particle) {
+        this.particle = particle;
+    }
+
     public boolean isChecked() {
         return checked;
     }
@@ -97,18 +106,8 @@ public class Term implements Serializable
     public void setChecked(boolean checked) {
         this.checked = checked;
     }
-    public boolean equals(Object term)
-    {
-        boolean rtnval = false;
-        Term otherTerm = (Term)term;
-        if(jpns.equalsIgnoreCase(otherTerm.getJpns()) && eng.equalsIgnoreCase(otherTerm.getEng()))
-        {
-            rtnval = true;
-        }
 
-        return rtnval;
 
-    }
 
     public String getLessonString()
     {
@@ -130,4 +129,16 @@ public class Term implements Serializable
         lessons.removeLesson(lesson);
     }
 
+    public boolean equals(Object term)
+    {
+        boolean rtnval = false;
+        Term otherTerm = (Term)term;
+        if(jpns.equalsIgnoreCase(otherTerm.getJpns()) && eng.equalsIgnoreCase(otherTerm.getEng()))
+        {
+            rtnval = true;
+        }
+
+        return rtnval;
+
+    }
 }

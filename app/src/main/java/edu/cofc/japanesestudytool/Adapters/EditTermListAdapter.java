@@ -65,7 +65,14 @@ public class EditTermListAdapter extends BaseAdapter
         final Term term = (Term) getItem(position);
         EditText jpns = rowView.findViewById(R.id.searchHiraganaTextBox);
         jpns.setEnabled(false);
-        jpns.setText(term.getJpns());
+        if(term.getParticle() !=null && !term.getParticle().equalsIgnoreCase("null"))
+        {
+            jpns.setText(term.getParticle() + "　" + term.getJpns());
+        }
+        else
+        {
+            jpns.setText(term.getJpns());
+        }
         EditText eng = rowView.findViewById(R.id.searchEnglishTextBox);
         eng.setEnabled(false);
         eng.setText(term.getEng());
@@ -73,7 +80,15 @@ public class EditTermListAdapter extends BaseAdapter
         kanji.setEnabled(false);
         if(term.getKanji() != null || !term.getKanji().equalsIgnoreCase("") || !term.getKanji().equalsIgnoreCase("null"))
         {
-            kanji.setText(term.getKanji());
+            if(term.getParticle() !=null && !term.getParticle().equalsIgnoreCase("null"))
+            {
+                kanji.setText(term.getParticle() +"　"+ term.getKanji());
+            }
+            else
+            {
+                kanji.setText(term.getKanji());
+            }
+
         }
 
         TextView lesson = rowView.findViewById(R.id.searchLessonTextBox);
@@ -88,7 +103,7 @@ public class EditTermListAdapter extends BaseAdapter
         final Button editButton = rowView.findViewById(R.id.editTermButton);
         if(mergeableTerm!=null)
         {
-            editButton.setText(context.getResources().getString(R.string.mergeTermButton));
+            editButton.setText(context.getResources().getString(R.string.mergeTermButtonLabel));
             editButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)

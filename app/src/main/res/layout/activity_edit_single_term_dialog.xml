@@ -41,7 +41,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/toJapaneseText"
+                android:text="@string/hiraganaText"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
@@ -72,7 +72,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/toEnglishText"
+                android:text="@string/engText"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
@@ -103,7 +103,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/toKanjiText"
+                android:text="@string/kanjiText"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
@@ -132,10 +132,28 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/editLessonLabel"
+                android:id="@+id/editTypeLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="@string/typeLabel"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <Spinner
+                android:id="@+id/editTypeDropDownBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="@color/buttonColor"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/editLessonLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="@string/lessonLabel"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
@@ -150,6 +168,13 @@
                 android:spinnerMode="dropdown" />
         </LinearLayout>
 
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:layout_weight=".6"
+            android:background="@color/dividerColor" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -157,23 +182,33 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/editTypeLabel"
+                android:id="@+id/editParticleLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/typeLabel"
+                android:text="@string/particleLabel"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/textSize" />
 
-            <Spinner
-                android:id="@+id/editTypeDropDownBar"
+            <EditText
+                android:id="@+id/editParticleTextBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:background="@android:drawable/btn_dropdown"
-                android:backgroundTint="@color/buttonColor"
-                android:spinnerMode="dropdown" />
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:layout_weight=".6"
+            android:background="@color/dividerColor" />
+
 
         <CheckBox
             android:id="@+id/editReqKanjiCheckBox"
@@ -182,7 +217,7 @@
             android:buttonTint="@color/checkBoxColor"
             android:checked="false"
             android:duplicateParentState="false"
-            android:text="@string/addRequiredKanjiLabel"
+            android:text="@string/reqKanjiLabel"
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize" />
 
@@ -191,7 +226,6 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dividerHeight"
             android:background="@color/dividerColor" />
-
 
         <LinearLayout
             android:layout_width="match_parent"

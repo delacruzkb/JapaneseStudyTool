@@ -56,15 +56,15 @@ public class SimilarTermsPage extends AppCompatActivity
         toJpns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                writingStyleLabel.setText(getResources().getString(R.string.toJapaneseText));
-                writingStyleTextBox.setText(newTerm.getJpns());
+                writingStyleLabel.setText(getResources().getString(R.string.hiraganaText));
+                writingStyleTextBox.setText(newTerm.getParticle() +"　"+ newTerm.getJpns());
             }
         });
         toEng = findViewById(R.id.toEngNewTerm);
         toEng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                writingStyleLabel.setText(getResources().getString(R.string.toEnglishText));
+                writingStyleLabel.setText(getResources().getString(R.string.engText));
                 writingStyleTextBox.setText(newTerm.getEng());
             }
         });
@@ -72,8 +72,8 @@ public class SimilarTermsPage extends AppCompatActivity
         toKanji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                writingStyleLabel.setText(getResources().getString(R.string.toKanjiText));
-                writingStyleTextBox.setText(newTerm.getKanji());
+                writingStyleLabel.setText(getResources().getString(R.string.kanjiText));
+                writingStyleTextBox.setText(newTerm.getParticle() +"　"+ newTerm.getKanji());
             }
         });
 
@@ -134,8 +134,8 @@ public class SimilarTermsPage extends AppCompatActivity
     }
     private void loadNewTermOntoDisplay(Term term)
     {
-        writingStyleLabel.setText(getResources().getString(R.string.toJapaneseText));
-        writingStyleTextBox.setText(term.getJpns());
+        writingStyleLabel.setText(getResources().getString(R.string.hiraganaText));
+        writingStyleTextBox.setText(term.getParticle() +"　"+ term.getJpns());
         newTypeTextBox.setText(term.getType());
         newLessonTextBox.setText(term.getLessonString());
         if(!term.isReqKanji())

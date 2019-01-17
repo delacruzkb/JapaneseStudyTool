@@ -21,7 +21,7 @@ import edu.cofc.japanesestudytool.R;
 import edu.cofc.japanesestudytool.Database.Entities.Term;
 public class EditSingleTermDialogPage extends AppCompatActivity
 {
-    private EditText japaneseTextBox,englishTextBox,kanjiTextBox;
+    private EditText japaneseTextBox,englishTextBox,kanjiTextBox,particleTextBox;
     private Spinner typeDropDownBar,lessonDropDownBar;
     private CheckBox reqKanjiCheckBox;
     private Button cancelEdit,confirmEdit;
@@ -46,10 +46,12 @@ public class EditSingleTermDialogPage extends AppCompatActivity
         englishTextBox.setText(originalTerm.getEng());
         kanjiTextBox = findViewById(R.id.editKanjiTextBox);
         kanjiTextBox.setText(originalTerm.getKanji());
+        particleTextBox = findViewById(R.id.editParticleTextBox);
+        particleTextBox.setText(originalTerm.getParticle());
         typeDropDownBar = findViewById(R.id.editTypeDropDownBar);
         ArrayAdapter<String> mainAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,typeSpecs);
         typeDropDownBar.setAdapter(mainAdapter);
-        typeDropDownBar.setSelection(mainAdapter.getPosition(originalTerm.getType().toString()));
+        typeDropDownBar.setSelection(mainAdapter.getPosition(originalTerm.getType()));
 
         lessonDropDownBar = findViewById(R.id.editLessonDropDownBar);
         adapter = new CheckBoxDropDownSpinnerAdapter(this.getApplicationContext());

@@ -117,11 +117,18 @@ public class FlashCardPage extends AppCompatActivity
         typeValueLabel.setText(term.getType());
         reqKanjiLabel.setVisibility(View.INVISIBLE);
         flipKanji.setVisibility(View.VISIBLE);
-
         //Decide what to use
         if(showJapaneseFirst)
         {
-            flashCard.setText(term.getJpns());
+            if (term.getParticle() == null)
+            {
+                flashCard.setText(term.getJpns());
+            }
+            else
+            {
+                flashCard.setText(term.getParticle()+ "　" + term.getJpns());
+            }
+
         }
         else
         {
@@ -137,9 +144,18 @@ public class FlashCardPage extends AppCompatActivity
         if(showKanjiFirst && flipKanji.getVisibility()==View.VISIBLE)
         {
             flashCard.setText(term.getKanji());
+            if (term.getParticle() == null)
+            {
+                flashCard.setText(term.getKanji());
+            }
+            else
+            {
+                flashCard.setText(term.getParticle()+ "　" + term.getKanji());
+            }
         }
 
         if(term.isReqKanji())
+
         {
             reqKanjiLabel.setVisibility(View.VISIBLE);
         }

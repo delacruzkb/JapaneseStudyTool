@@ -122,7 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
-            android:text="@string/toEnglishText"
+            android:text="@string/engText"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
@@ -132,7 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
-            android:text="@string/toJapaneseText"
+            android:text="@string/hiraganaText"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 
@@ -142,7 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
-            android:text="@string/toKanjiText"
+            android:text="@string/kanjiText"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
 

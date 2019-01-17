@@ -57,22 +57,22 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/toJpnsNewTerm"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1.25"
-                        android:backgroundTint="@color/buttonColor"
-                        android:text="@string/toJapaneseText"
-                        android:textColor="@color/buttonTextColor"
-                        android:textSize="@dimen/textSize" />
-
-                    <Button
                         android:id="@+id/toEngNewTerm"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="@color/buttonColor"
-                        android:text="@string/toEnglishText"
+                        android:text="@string/engText"
+                        android:textColor="@color/buttonTextColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <Button
+                        android:id="@+id/toJpnsNewTerm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:backgroundTint="@color/buttonColor"
+                        android:text="@string/hiraganaText"
                         android:textColor="@color/buttonTextColor"
                         android:textSize="@dimen/textSize" />
 
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="@color/buttonColor"
-                        android:text="@string/toKanjiText"
+                        android:text="@string/kanjiText"
                         android:textColor="@color/buttonTextColor"
                         android:textSize="@dimen/textSize" />
                 </LinearLayout>
@@ -91,7 +91,7 @@
                     android:id="@+id/writingStyleLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/toJapaneseText"
+                    android:text="@string/hiraganaText"
                     android:textAlignment="center"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/textSize" />
@@ -182,7 +182,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="@string/addRequiredKanjiLabel"
+                        android:text="@string/reqKanjiLabel"
                         android:textAlignment="center"
                         android:textColor="@color/textColor"
                         android:textSize="@dimen/textSize" />
@@ -254,7 +254,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/buttonColor"
-            android:text="@string/addTermButton"
+            android:text="@string/addTermButtonLabel"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
     </LinearLayout>

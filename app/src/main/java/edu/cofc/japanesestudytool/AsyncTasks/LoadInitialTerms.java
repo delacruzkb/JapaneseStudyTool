@@ -55,6 +55,7 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
 
             while( (line = reader.readLine()) !=null)
             {
+                //Format: Hiragana, English, Kanji, Type, Lesson, Required Kanji, Particle / Prefix
                 String[] termData = line.split(",");
 
                 //Store data from CSV Line
@@ -64,6 +65,11 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                 String type = termData[3];
                 int lesson = Integer.parseInt(termData[4]);
                 boolean reqKanji = termData[5].equalsIgnoreCase(context.getResources().getString(R.string.requiredKanjiFlag));
+                String particle = termData[6];
+                if(particle.equalsIgnoreCase("null"))
+                {
+                    particle=null;
+                }
 
                 //Create new Term from CSV
                 Term term = new Term();
@@ -75,6 +81,7 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                 lessons.addLesson(lesson);
                 term.setLessons(lessons);
                 term.setReqKanji(reqKanji);
+                term.setParticle(particle);
 
                 //If duplicate is found, update it
                 if(listOfTerms.contains(term)) // no duplicates
@@ -87,12 +94,22 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                         duplicate.setKanji(kanji);
                     }
 
+                    if( duplicate.getType().equalsIgnoreCase(context.getResources().getString(R.string.otherFlag)))
+                    {
+                        duplicate.setType(type);
+                    }
+
                     duplicate.addLesson(lesson);
 
                     //Only update if it is to be set to required
                     if(!duplicate.isReqKanji() && reqKanji)
                     {
                         duplicate.setReqKanji(reqKanji);
+                    }
+
+                    if(duplicate.getParticle() == null && particle != null)
+                    {
+                        duplicate.setParticle(particle);
                     }
 
                     term = duplicate;
