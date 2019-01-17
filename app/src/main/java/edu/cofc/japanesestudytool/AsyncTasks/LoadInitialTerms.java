@@ -71,6 +71,11 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                     particle=null;
                 }
 
+                if(jpns.equalsIgnoreCase("あかちゃん"))
+                {
+                    System.out.println("found an whoops");
+                }
+
                 //Create new Term from CSV
                 Term term = new Term();
                 term.setJpns(jpns);
@@ -116,13 +121,19 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                 }
                 listOfTerms.add(term);
 
-                //Create LessonTerm from CSV
-                LessonTerm lessonTerm = new LessonTerm(lesson,jpns,eng);
-                if(!listOfLessonTerms.contains(lessonTerm))
+            }
+            //make lessonTerms from list of Terms
+            for(int i =0; i<listOfTerms.size(); i++)
+            {
+                Term term = listOfTerms.get(i);
+                ArrayList<Integer> lessons = term.getLessons().getLessons();
+                for(int k=0; k<lessons.size();k++)
                 {
+                    LessonTerm lessonTerm = new LessonTerm(lessons.get(k), term.getJpns(), term.getEng());
                     listOfLessonTerms.add(lessonTerm);
                 }
             }
+
         }
         catch (Exception e)
         {

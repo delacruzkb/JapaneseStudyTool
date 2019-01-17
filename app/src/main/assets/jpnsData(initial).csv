@@ -1166,7 +1166,7 @@ AのほうがBより（Property),A is more (Property) then B / Comparing 2 items
 バレンタインデー,St. Valentine's Day,null,noun,10,null,null
 ハロウィーン,Halloween,null,noun,10,null,null
 パンツ,Pants,null,noun,10,null,null
-びっくりする,To be surprised,null,noun,10,null,null
+びっくりする,To be surprised,null,irr-verb,10,null,null
 びょういん,Beauty Parlor,美容院,noun,10,null,null
 びん,Flight,便,noun,10,null,null
 ふつう,Local,普通,noun,10,null,null
@@ -2899,7 +2899,7 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 (victim) は (villian) に (Evil act) / Evil act must be in ~areru form / Ex. たべる➞たべられる,passive sentence (evil act),null,grammar,21,null,null
 (Te-form)＋ある,Characteruze a situation that has been brought about on purpose by somebody who remains unamed,null,grammar,21,null,null
 (object) が (~areru form / Ex. たべる➞たべられる),passive sentence ( Object is subject),null,grammar,21,null,null
-(object) (によって) (person) (passive sentence),"human agent of the actions、によって is similar to ""by""",null,grammar,21,null,null
+(object) (によって) (person) (passive sentence),human agent of the actions、によって is similar to -by-,null,grammar,21,null,null
 (A～ている) 間に (B),B takes place、 while A is happening,null,grammar,21,null,null
 (adjective) する,To make something (adjective),null,grammar,21,null,null
 (私は) (person) (に) (te-form) (ほしい),I want (person) to do (something),null,grammar,21,null,null
