@@ -1,4 +1,4 @@
-〜ですか／〜か,Question Sentences ,null,grammar,1,null,null
+﻿〜ですか／〜か,Question Sentences ,null,grammar,1,null,null
 ～（なん）ですか,Question Sentences,null,grammar,1,null,null
 XのY,X's Y,null,grammar,1,null,null
 XはYです,X is Y,null,grammar,1,null,null
@@ -879,8 +879,8 @@ DVD（ディーブイディー）,DVD,null,noun,7,null,null
 じろじろみる,To stare (at . . .),じろじろ見る,ru-verb,8,null,(～を)
 すてる,To throw away,捨てる,ru-verb,8,null,(～を)
 はじめる,To begin,始める,ru-verb,8,null,(～を)
-こたえる,To answer,答える,ru-verb,8,null,null
-つかれている,To be tired,疲れている,ru-verb,8,null,null
+こたえる,To answer,答える,ru-verb,0,null,null
+つかれている,To be tired,疲れている,ru-verb,0,null,null
 あらう,To wash,洗う,u-verb,8,null,(～を)
 いる,To need,null,u-verb,8,null,(～を)
 きる,To cut,切る,u-verb,8,null,(～を)
@@ -988,7 +988,7 @@ DVD（ディーブイディー）,DVD,null,noun,7,null,null
 たんご,Word / vocabulary,単語,noun,9,null,null
 とお,Ten,十,noun,9,null,null
 ななつ,Seven,七つ,noun,9,null,null
-にっき,Diary,日記,noun,9,null,null
+にっき,Diary,日記,noun,0,null,null
 ピアノ,Piano,null,noun,9,null,null
 ピザ,Pizza,null,noun,9,null,null
 ひとつ,One,一つ,noun,9,null,null
@@ -1125,7 +1125,7 @@ AのほうがBより（Property),A is more (Property) then B / Comparing 2 items
 がくわり,Student discount,学割,noun,10,null,null
 かさ,Bamboo hat,null,noun,10,null,null
 かたみち,One way (At the station),片道ｓ,noun,10,null,null
-かなし,Sad,null,noun,10,null,null
+かなしい,Sad,null,noun,10,null,null
 きせつ,Season,季節,noun,10,null,null
 きっぷうりば,Ticket vending Area,切符売り場,noun,10,null,null
 きゅうこう,Express,急行,noun,10,null,null
@@ -1156,7 +1156,7 @@ AのほうがBより（Property),A is more (Property) then B / Comparing 2 items
 でぐち,Exit (At the station),出口,noun,10,null,null
 てぶくろ,Gloves,手袋,noun,10,null,null
 てんぷら,Tempura,天ぷら,noun,10,null,null
-と,Door,戸,noun,10,null,null
+と,Door,戸,noun,0,null,null
 とっきゅう,Super Express,特急,noun,10,null,null
 ねん,Year,年,noun,10,null,null
 のりかえ,Transfer,乗り換え,noun,10,null,null
@@ -1282,7 +1282,7 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 おしょうがつ,New Year,お正月,noun,11,null,null
 おとこ,Man,男,noun,11,null,null
 おとこのこ,Boy,男の子,noun,11,null,null
-おへんじ,Reply,お返事,noun,11,null,null
+おへんじ,Reply,お返事,noun,0,null,null
 おまつり,Festival,おまつり,noun,11,null,null
 おもちゃ,Toy,null,noun,11,null,null
 おんせん,Spa / Hot spring,温泉,noun,11,null,null
@@ -1342,7 +1342,7 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 しゅっしん,Coming from,出身,other,11,null,(Place)(の)
 ～だけ,just . . . / only . . .,null,other,11,null,null
 ～てん,. . . points,～点,other,11,null,null
-～ぼしゅう,Looking for . . .,～募集,other,11,null,null
+～ぼしゅう,Looking for . . .,～募集,other,0,null,null
 おなじです,Same thing,同じです,other,11,null,null
 きょうかしょうをとじてください,Close the textbook,教科書を閉じてください,other,11,null,null
 きょうはこれでおわります,That's it for today,今日はこれで終わります,other,11,null,null
@@ -1445,7 +1445,7 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 つごうがわるい,Inconvenient / To have a scheduling conflict,都合が悪い,adjective,12,null,null
 わるい,Bad,悪い,adjective,12,null,null
 （Present tense short form)～ほうがいいです,Giving advice (negative),null,grammar,12,null,null
-（Stem of masu form)～すぎる,Too much / Too Excess,null,grammar,12,null,null
+（Stem of masu form)～すぎる,Too much,null,grammar,12,null,null
 （Ta form)～ほうがいいです,Giving advice (affirmative),null,grammar,12,null,null
 ～でしょう,Make a guess or prediction ( follows verbs and い-adjectives),null,grammar,12,null,null
 ～ないといけません,Say something is necessary to do,null,grammar,12,null,null
@@ -1489,11 +1489,11 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 ちゅうしゃ,Injection,注射,noun,12,null,null
 てん,The heavens / The sky,天,noun,12,null,null
 ないか,Physician,内科,noun,12,null,null
-ねがい,Wish,願い,noun,12,null,null
+ねがい,Wish,願い,noun,0,null,null
 のど,Throat,null,noun,12,null,null
 は,Tooth,歯,noun,12,null,null
 はじめ（な）,Serious / Sober / Diligent,null,noun,12,null,null
-はたけ,Farm,畑,noun,12,null,null
+はたけ,Farm,畑,noun,0,null,null
 はな,Flower,花,noun,12,null,null
 はれ,Sunny Weather,晴れ,noun,12,null,null
 ひふか,Dermatologist,皮膚科,noun,12,null,null
@@ -1502,8 +1502,8 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 プレセント,Present,null,noun,12,null,null
 ホームシック,Homesickness,null,noun,12,null,null
 マイナス,Minus,null,noun,12,null,null
-むこう,The other side / Over there,向こう,noun,12,null,null
-むすめ,Daughter,娘,noun,12,null,null
+むこう,The other side / Over there,向こう,noun,0,null,null
+むすめ,Daughter,娘,noun,0,null,null
 もの,Thing ( concrete object),物,noun,12,null,null
 ゆき,Snow,雪,noun,12,null,null
 ようじ,Business to take care of,用事,noun,12,null,null
@@ -1551,14 +1551,14 @@ NounA　や　NounB,Connects two nouns、suggesting that the things referred to 
 わかれる,To break up / To separate,心配する,ru-verb,12,null,null
 なくす,To lose,null,u-verb,12,null,(～を)
 あるく,To walk,歩く,u-verb,12,null,null
-おこる,To get angry,怒る,u-verb,12,null,null
+おこる,To get angry,怒る,u-verb,0,null,null
 かぜをひく,To catch a cold,風邪をひく,u-verb,12,null,null
 かなう,To be realized,null,u-verb,12,null,null
 きょうみがある,To be interested (in . . .),興味がある,u-verb,12,null,null
-なく,To cry,泣く,u-verb,12,null,null
+なく,To cry,泣く,u-verb,0,null,null
 ねつがある,To have a fever,熱がある,u-verb,12,null,null
 のどがかわく,To become thirsty,のどが渇く,u-verb,12,null,null
-はたをおる,To weave,はたを織る,u-verb,12,null,null
+はたをおる,To weave,はたを織る,u-verb,0,null,null
 いろいろ（な）,Various,色々（な）,adjective,12,kanji,null
 とくべつ（な）,Special,特別（な）,adjective,12,kanji,null
 はやい,Early,早い,adjective,12,kanji,null
@@ -1975,7 +1975,7 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 ～つき,(At the hotel) with . . .,～付,other,15,null,null
 ～はく,(At the hotel) . . . nights,～泊,other,15,null,null
 ～ばん,number . . .,～番,other,15,null,null
-～め,#NAME?,～目,other,15,null,null
+～め,-th,～目,other,15,null,null
 ～めい,(At the hotel) . . . person(s),～名,other,15,null,null
 いちにちじゅう,All day long,一日中,other,15,null,null
 いちねんじゅう,all year round,一年中,other,0,null,null
@@ -2036,7 +2036,7 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 しゃくち,rented land,借地,noun,15,kanji,null
 しゃくや,rented house,借家,noun,15,kanji,null
 しゃっきん,debt,借金,noun,15,kanji,null
-しゅみ,hobby,趣味,noun,15,kanji,null
+しゅみ,hobby,趣味,noun,0,null,null
 しょか,early summer,初夏,noun,15,kanji,null
 ぜんでら,zen temple,禅寺,noun,15,kanji,null
 たてもの,building,建物,noun,15,kanji,null
@@ -2246,7 +2246,7 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 （Noun)(の）～そうです,Express the idea that something or somebody resembles the thing or the person described by the noun,null,grammar,17,null,null
 （Short form／だFor Noun/なAdjectives)～そうです,A 'hearsay report',null,grammar,17,null,null
 （Short-Form）～みたいです,Express the idea that something or somebody resembles the thing or the person described by the noun,null,grammar,17,null,null
-（Short-FormVerb）～そうです,Express the idea tha something appears to be the case,,grammar,17,null,null
+（Short-Form Verb）～そうです,Express the idea that something appears to be the case,null,grammar,17,null,null
 （Ta-form）～ら,Conditional statement,null,grammar,17,null,null
 （Te-Form）～から,Describe an even after which another thing happens,null,grammar,17,null,null
 （Verb-Short-Form）～まえに,Describe the event before which something happens,null,grammar,17,null,null
@@ -2589,7 +2589,7 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 はれる,to become sunny,晴れる,ru-verb,19,null,null
 もてる,to be popular( in terms of romantic interest),null,ru-verb,19,null,(people)(に)
 えんりょする,to hold back for the time being / to refrain from,遠慮する,irr-verb,19,null,null
-ごちそうする,to treat/invite (someone) ot a meal,null,irr-verb,19,null,(person)(に)(meal)(を)
+ごちそうする,to treat/invite (someone) to a meal,null,irr-verb,19,null,(person)(に)(meal)(を)
 しょうたいする,to invite someone (to an event / a place),招待する,irr-verb,19,null,(person)(を)(event/place)(に)
 ちゅういする,to watch out / to give warning,注意する,irr-verb,19,null,null
 はなしをする,to have a talk,話をする,irr-verb,19,null,null
@@ -2630,7 +2630,7 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 ようす,manner,様子,noun,19,kanji,null
 ふあんな,uneasy,不安な,adjective,19,kanji,null
 ふけいき,recession,不景気,noun,19,kanji,null
-ふべん,inconvenience,不文,noun,19,kanji,null
+ふべん,inconvenience,不便,noun,19,kanji,null
 みずぶそく,lack of water,水不足,noun,19,kanji,null
 あね,older sister,姉,noun,19,kanji,null
 おねえさん,older sister,お姉さん,noun,19,kanji,null
@@ -2903,3 +2903,81 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 (A～ている) 間に (B),B takes place、 while A is happening,null,grammar,21,null,null
 (adjective) する,To make something (adjective),null,grammar,21,null,null
 (私は) (person) (に) (te-form) (ほしい),I want (person) to do (something),null,grammar,21,null,null
+しんじる,to believe,信じる,noun,21,kanji,null
+じしん,confidence,自信,noun,21,kanji,null
+しんごう,traffic signal,信号,noun,21,kanji,null
+めいしん,superstition,迷信,noun,21,kanji,null
+けいけん,experience,経験,noun,21,kanji,null
+けいざい,economy,経済,noun,21,kanji,null
+しんけいしつ,over sensitive,神経質,noun,21,kanji,null
+けいえいがく,management studies,経営学,noun,21,kanji,null
+パリけいゆ,via paris,パリ経由,other,21,kanji,null
+たいふう,typhoon,台風,noun,21,kanji,null
+にだい,two vehicles/machines/etc.,二台,other,21,kanji,null
+ぶたい,stage,舞台,noun,21,kanji,null
+だいどころ,kitchen,台所,noun,21,kanji,null
+おふろ,bath,お風呂,noun,21,kanji,null
+わふう,japanese style,和風,noun,21,kanji,null
+かぜ,wind,風,noun,21,kanji,null
+かぜをひく,to catch a cold,風邪をひく,u-verb,21,kanji,null
+いぬ,dog,犬,noun,21,kanji,null
+こいぬ,puppy,子犬,noun,21,kanji,null
+ばんけん,watch dog,番犬,noun,21,kanji,null
+もうどうけん,seeing-eye dog,盲導犬,noun,21,kanji,null
+おもい,heavy / serious (illness),重い,adjective,21,kanji,null
+かさねる,to pile up,重ねる,ru-verb,21,kanji,null
+たいじゅう,body weight,体重,noun,21,kanji,null
+きちょうひん,valuables,貴重品,noun,21,kanji,null
+はじめは,at first,初めは,other,21,kanji,null
+はじめて,first time,初めて,noun,21,kanji,null
+さいしょ,first,最初,other,21,kanji,null
+はつゆき,first snow,初雪,noun,21,kanji,null
+はつこい,first love,初恋,noun,21,kanji,null
+わかい,young,若い,adjective,21,kanji,null
+わかもの,young people,若者,noun,21,kanji,null
+わかわかしい,youthful,若々しい,adjective,21,kanji,null
+おくる,to send,送る,u-verb,21,kanji,null
+そうきん,sending money,送金,noun,21,kanji,null
+そうりょう,postage,送料,noun,21,kanji,null
+ほうそう,broadcast,放送,noun,21,kanji,null
+かいそうでんしゃ,out-of-service train,回送電車,noun,21,kanji,null
+しあわせ（な）,happy,幸せ（な）,adjective,21,kanji,null
+こうふく（な）,happy,幸福（な）,adjective,21,kanji,null
+こううん,good fortune,幸運,noun,21,kanji,null
+ふこう,misfortune,不幸,noun,21,kanji,null
+さいわい,fortunately,幸い,other,21,kanji,null
+とけい,watch / clock,時計,noun,21,kanji,null
+けいかく,plan,計画,noun,21,kanji,null
+ごうけい,sum,合計,noun,21,kanji,null
+はかる,to measure,計る,ru-verb,21,kanji,null
+おくれる,to be late,遅れる,ru-verb,21,kanji,null
+のりおくれる,to miss (transportation),乗り遅れる,ru-verb,21,kanji,null
+おそい,late,遅い,adjective,21,kanji,null
+ちこくする,to be late,遅刻する,irr-verb,21,kanji,null
+しんぱい（な）,worried about,心配（な）,adjective,21,kanji,null
+くばる,to distribute,配る,u-verb,21,kanji,null
+はいたつ,delivery,配達,noun,21,kanji,null
+たくはいびん,home delivery service,宅配便,noun,21,kanji,null
+おとうと,younger brother,弟,noun,21,kanji,null
+きょうだい,brothers,兄弟,noun,21,kanji,null
+でし,apprentice,弟子,noun,21,kanji,null
+いもうと,younger sister,妹,noun,21,kanji,null
+しまい,sisters,姉妹,noun,21,kanji,null
+しまいこう,sister school,姉妹校,noun,21,kanji,null
+おこる,to occur / to happen,起こる,u-verb,0,null,null
+おおくの～,many . . .,多くの～,other,0,null,null
+ただの～,to believe,null,ru-verb,0,null,null
+にゅういんする,nothing more than . . .,入院する,other,0,null,null
+うらない,fortune telling,占い,noun,0,null,null
+きにする,to worry,気にする,irr-verb,0,null,null
+ながいあいだ,long time,長い間,noun,0,null,null
+いっしょうけんめい,very hard,一生懸命,other,0,null,null
+ぜいたくをする,to indulge in luxury,null,irr-verb,0,null,null
+めったに～ない,seldom,null,other,0,null,null
+しょくじ,meal,食事,noun,0,null,null
+ところが,however / on the contrary,null,other,0,null,null
+たのしみ,pleasure,楽しみ,noun,0,null,null
+かよう,to commute to,通う,ru-verb,0,null,(～に)
+ふべん（な）,inconvenient,不便（な）,adjective,0,null,null
+しんぱい（な）,worried about,心配（な）,adjective,0,null,null
+おまもり,charm (against evils) / amulet,お守り,noun,0,null,null
