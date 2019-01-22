@@ -62,6 +62,10 @@ public class LoadInitialTerms extends AsyncTask<Void,Void,Void>
                 String jpns = termData[0];
                 String eng = termData[1];
                 String kanji = termData[2];
+                if(kanji.equalsIgnoreCase("null"))
+                {
+                    kanji=null;
+                }
                 String type = termData[3];
                 int lesson = Integer.parseInt(termData[4]);
                 boolean reqKanji = termData[5].equalsIgnoreCase(context.getResources().getString(R.string.requiredKanjiFlag));

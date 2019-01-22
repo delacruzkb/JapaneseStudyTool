@@ -60,14 +60,28 @@ public class FlashCardPage extends AppCompatActivity
         flipJpns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flashCard.setText(termList.get(currentCardNumber).getJpns());
+                Term term = termList.get(currentCardNumber);
+                if(term.getParticle() != null)
+                {
+                    flashCard.setText(term.getParticle() + "　" + term.getJpns());
+                }
+                else
+                {
+                    flashCard.setText(term.getJpns());
+                }
+
             }
         });
         flipKanji = findViewById(R.id.flipKanji);
         flipKanji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flashCard.setText(termList.get(currentCardNumber).getKanji());
+                Term term = termList.get(currentCardNumber);
+                if(term.getParticle()!=null)
+                {
+                    flashCard.setText(term.getParticle() + "　"+ term.getKanji());
+                }
+                flashCard.setText(term.getKanji());
             }
         });
         cardCountLabel = findViewById(R.id.cardCountLabel);
