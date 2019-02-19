@@ -46,7 +46,6 @@
 
 
     //HomePage
-    <string name="storyButtonLabel">Create a story / 話を作りましょう</string>
     <string name="studyButtonLabel">Study Terms</string>
     <string name="addTermsButtonLabel">Add Terms</string>
     <string name="editTermsButtonLabel">Edit Terms</string>
@@ -55,7 +54,6 @@
     //TermsMenuPage
     <string name="flashCardModeText">Flash Card Mode</string>
     <string name="kanjiStrokeModeText">Kanji Stroke Practice Mode</string>
-    <string name="storyModeText">Story Mode</string>
     <string name="initialCount">0</string>
     <string name="displayHintLanguage">Use Hiragana as hint</string>
 

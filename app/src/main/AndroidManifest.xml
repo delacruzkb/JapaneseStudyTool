@@ -23,9 +23,6 @@
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".Pages.DatabaseEditing.EditTermsPage" />
         <activity android:name=".Pages.Study.FlashCardPage"/>
-        <activity
-            android:name=".Pages.Study.StoryPage"
-            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".Pages.DatabaseEditing.SimilarTermsPage" />
         <activity android:name=".Pages.DatabaseEditing.EditTermsMenuPage" />
         <activity

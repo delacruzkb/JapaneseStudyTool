@@ -95,8 +95,7 @@ public class TermsMenuPage extends AppCompatActivity
         //Instantiate spinner
         modeDropDown = findViewById(R.id.modeDropDown);
         final String[] items = {getResources().getString(R.string.flashCardModeText),
-                            getResources().getString(R.string.kanjiStrokeModeText),
-                            getResources().getString(R.string.storyModeText)};
+                            getResources().getString(R.string.kanjiStrokeModeText)};
         final ArrayAdapter<String> modeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,items);
         modeDropDown.setAdapter(modeAdapter);
         modeDropDown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
