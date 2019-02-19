@@ -3040,9 +3040,9 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 (Director)(は)(Cast)(に)(Action in ～あせる form /たべる➞たべさせる/ 行く➞いかせる)(～てあげる/～てくれる),(Causative form) To let someone do something,null,grammar,22,null,null
 (Director)(は)(Cast)(を)(Action in ～あせる form /たべる➞たべさせる/ 行く➞いかせる),(Causative form) To let/make someone do something when the action is a reflex,null,grammar,22,null,null
 (Verb Stem) + なさい,A way to give a command to someone below you,null,grammar,22,null,null
-(Clause A in ～えば form/たべる➞たべれば)、(Clause B),"If clause A, then B ( normally B is a good result)",null,grammar,22,null,null
+(Clause A in ～えば form/たべる➞たべれば)、(Clause B),If clause A、 then B ( normally B is a good result),null,grammar,22,null,null
 おもしろい➞おもしろけば/しずかだ➞しずかなら or しずかであれば,ば form for adjectives,null,grammar,22,null,null
-(A)(のに)(B),"A, despite B",null,grammar,22,null,null
+(A)(のに)(B),A、despite B,null,grammar,22,null,null
 (Noun A)(のような)(Noun B),A is similar to B,null,grammar,22,null,null
 (Noun A)(のように)(B),B is done in the same way as A,null,grammar,22,null,null
 にっき,diary,日記,noun,22,kanji,null
