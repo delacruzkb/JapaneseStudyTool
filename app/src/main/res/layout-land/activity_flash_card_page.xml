@@ -102,7 +102,6 @@
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:text="6"
         android:textColor="@color/textColor"
         android:textSize="@dimen/flashCardTextSize" />
 

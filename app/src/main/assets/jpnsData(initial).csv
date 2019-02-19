@@ -1,4 +1,4 @@
-﻿〜ですか／〜か,Question Sentences ,null,grammar,1,null,null
+〜ですか／〜か,Question Sentences ,null,grammar,1,null,null
 ～（なん）ですか,Question Sentences,null,grammar,1,null,null
 XのY,X's Y,null,grammar,1,null,null
 XはYです,X is Y,null,grammar,1,null,null
@@ -1975,7 +1975,7 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 ～つき,(At the hotel) with . . .,～付,other,15,null,null
 ～はく,(At the hotel) . . . nights,～泊,other,15,null,null
 ～ばん,number . . .,～番,other,15,null,null
-～め,-th,～目,other,15,null,null
+～め,#NAME?,～目,other,15,null,null
 ～めい,(At the hotel) . . . person(s),～名,other,15,null,null
 いちにちじゅう,All day long,一日中,other,15,null,null
 いちねんじゅう,all year round,一年中,other,0,null,null
@@ -2981,3 +2981,148 @@ Xがほうしい,I want (x),null,grammar,14,null,null
 ふべん（な）,inconvenient,不便（な）,adjective,0,null,null
 しんぱい（な）,worried about,心配（な）,adjective,0,null,null
 おまもり,charm (against evils) / amulet,お守り,noun,0,null,null
+あいて,partner,相手,noun,22,null,null
+うけつけ,reception desk,受付,noun,22,null,null
+えいかいわ,englis conversation,英会話,noun,22,null,null
+おじょうさん,(someone's) daughter (polite),お嬢さん,noun,22,null,null
+かじ,household matters,家事,noun,22,null,null
+かぜ,wind,風,noun,22,null,null
+かみさま,god,神様,noun,22,null,null
+き,tree,木,noun,22,null,null
+こうはい,junior member of a group,後輩,noun,22,null,null
+さる,monkey,猿,noun,22,null,null
+じゆう,freedom,自由,noun,22,null,null
+じゅく,cram school,塾,noun,22,null,null
+しょるい,document,書類,noun,22,null,null
+せんぱい,senior member of a group,先輩,noun,22,null,null
+ひとりぐらし,living alone,一人暮らし,noun,22,null,null
+ぶか,subordinate,部下,noun,22,null,null
+ふくしゅう,review of a lesson,復習,noun,22,null,null
+プロジェクト,project,null,noun,22,null,null
+ボール,ball,null,noun,22,null,null
+むだづかい,waste(money),無駄遣い,noun,22,null,null
+めんきょ,license,免許,noun,22,null,null
+ヨーロッパ,europe,null,noun,22,null,null
+よしゅう,preparation of lessons,予習,noun,22,null,null
+うるさい,noisy / annoying,null,adjective,22,null,null
+しんぱい（な）,worried about,心配,adjective,22,null,null
+びんぼう（な）,poor,貧乏,adjective,22,null,null
+ぺらぺら（な）,fluent,null,adjective,22,null,null
+へん（な）,strange / unusual,変,adjective,22,null,null
+らく（な）,easy / comportable,楽,adjective,22,null,null
+かぜがふく,the wind blows,風が吹く,u-verb,22,null,null
+かつ,to win,勝つ,u-verb,22,null,(～に)
+コピーをとる,to make a photo copy,コピーを取る,u-verb,22,null,null
+はこぶ,to carry,運ぶ,u-verb,22,null,(～を)
+はしる,to run,走る,u-verb,22,null,null
+ひろう, to pick up (something),拾う,u-verb,22,null,(～を)
+ほ（う）っておく,to leave (someone/something) alone / to neglect,放っておく,u-verb,22,null,(～を)
+まにあう,to be in time,間に合う,u-verb,22,null,(～に)
+けいかくをたてる,to make a plan,計画を立てる,ru-verb,22,null,null
+そだてる,to raise / to bring up,育てる,ru-verb,22,null,(～を)
+たすける,to help / to rescue,助ける,ru-verb,22,null,(～を)
+まける,to lose ( a match),負ける,ru-verb,22,null,(～に)
+おねがいする,to pray for help,お願いする,irr-verb,22,null,(person)(に)(～を)
+さんせいする,to agree,賛成する,irr-verb,22,null,(～に)
+しっぱいする, to fail / to be unsuccessful,失敗する,irr-verb,22,null,null
+てつやする,to stay up all night,徹夜する,irr-verb,22,null,null
+はんたいする,to oppose / to object to,反対する,irr-verb,22,null,(～に)
+ほんやくする,to translate,翻訳する,irr-verb,22,null,(～を)
+こんなふう,like this,null,other,22,null,null
+じゆうに,freely,自由に,other,22,null,null
+ずっと,for al ong time / all the time,null,other,22,null,null
+ぜったいに,definitely,絶対に,other,22,null,null
+そんなこと（は）ない,I don't think so,null,other,22,null,null
+～とか,. . . for example,null,other,22,null,null
+なんども,many times,何度も,other,22,null,null
+もうすこし,a little more,もう少し,other,22,null,null
+(Director)(は)(Cast)(に)(Action in ～あせる form /たべる➞たべさせる/ 行く➞いかせる),(Causative form) To let/make someone do something,null,grammar,22,null,null
+(Director)(は)(Cast)(に)(Action in ～あせる form /たべる➞たべさせる/ 行く➞いかせる)(～てあげる/～てくれる),(Causative form) To let someone do something,null,grammar,22,null,null
+(Director)(は)(Cast)(を)(Action in ～あせる form /たべる➞たべさせる/ 行く➞いかせる),(Causative form) To let/make someone do something when the action is a reflex,null,grammar,22,null,null
+(Verb Stem) + なさい,A way to give a command to someone below you,null,grammar,22,null,null
+(Clause A in ～えば form/たべる➞たべれば)、(Clause B),"If clause A, then B ( normally B is a good result)",null,grammar,22,null,null
+おもしろい➞おもしろけば/しずかだ➞しずかなら or しずかであれば,ば form for adjectives,null,grammar,22,null,null
+(A)(のに)(B),"A, despite B",null,grammar,22,null,null
+(Noun A)(のような)(Noun B),A is similar to B,null,grammar,22,null,null
+(Noun A)(のように)(B),B is done in the same way as A,null,grammar,22,null,null
+にっき,diary,日記,noun,22,kanji,null
+きにゅうする,to fill in,記入する,irr-verb,22,kanji,null
+きじ,article / news,記事,noun,22,kanji,null
+あんきする,to memorize,暗記する,irr-verb,22,kanji,null
+ぎんこう,bank,銀行,noun,22,kanji,null
+ぎんメダル,silver medal,銀メダル,noun,22,kanji,null
+ぎんせかい,land covered with snow,銀世界,noun,22,kanji,null
+いっかい,one time,一回,noun,22,kanji,null
+かいそうバス,out-of-service bus,回送バス,noun,22,kanji,null
+さいしゅうかい,last inning / last episode,最終回,noun,22,kanji,null
+まわす,to turn,回す,u-verb,22,kanji,null
+ゆうがた,evening,夕方,noun,22,kanji,null
+ゆうしょく,dinner,夕食,noun,22,kanji,null
+たなばた,tanabata,七夕,noun,22,kanji,null
+ゆうひ,setting sun,夕日,noun,22,kanji,null
+ゆうかん,evening newspaper,夕刊,noun,22,kanji,null
+くろきさん,Mr. / Ms. Kuroki,黒木さん,noun,22,kanji,null
+くろい,black,黒い,adjective,22,kanji,null
+しろくろしゃしん,black and white photograph,白黒写真,noun,22,kanji,null
+こくばん,blackboard,黒板,noun,22,kanji,null
+ようじ,a thing to take care of,用事,noun,22,kanji,null
+よういする,to prepare,用意する,irr-verb,22,kanji,null
+こどもよう,for children,子供用,other,22,kanji,null
+ひよう,cost,費用,noun,22,kanji,null
+るす,absence / not at home,留守,other,22,kanji,null
+るすばんでんわ,answering machine,留守番電話,noun,22,kanji,null
+おまもり,charm (against evils) / amulet,お守り,noun,22,kanji,null
+しゅえい,security guard,守衛,noun,22,kanji,null
+しゅまつ,weekend,週末,noun,22,kanji,null
+げつまつ,end of the month,月末,noun,22,kanji,null
+ねんまつ,year-end,年末,other,22,kanji,null
+きまつしけん,final examination,期末試験,noun,22,kanji,null
+すえ,the end,末,other,22,kanji,null
+まつ,to wait,待つ,u-verb,22,kanji,null
+まちあいしつ,waiting room,待合室,noun,22,kanji,null
+きたいする,to expect,期待する,irr-verb,22,kanji,null
+しょうたい,invitation,招待,noun,22,kanji,null
+ざんぎょう,over-time work,残業,noun,22,kanji,null
+のこす,to leave,残す,u-verb,22,kanji,null
+ざんねん,regrettable,残念,other,22,kanji,null
+こころのこり,regret,心残り,noun,22,kanji,null
+ざんだか,account balance,残高,noun,22,kanji,null
+いちばん,the first,一番,other,22,kanji,null
+ばんごう,number,番号,noun,22,kanji,null
+ばんぐみ,tv program,番組,noun,22,kanji,null
+えき,station,駅,noun,22,kanji,null
+とうきょうえき,tokyo station,東京駅,noun,22,kanji,null
+えきいん,station attendant,駅員,noun,22,kanji,null
+えきまえ,vicinity / infront of the station,駅前,other,22,kanji,null
+せつめいする,to explain,説明する,irr-verb,22,kanji,null
+しょうせつ,novel,小説,noun,22,kanji,null
+しょうせつか,novelist,小説家,noun,22,kanji,null
+せっきょうする,to preach,説教する,irr-verb,22,kanji,null
+あんないする,to guide,案内する,irr-verb,22,kanji,null
+あんないじょ,information desk,案内所,noun,22,kanji,null
+あん,idea / proposal,案,noun,22,kanji,null
+ていあん,proposal,提案,noun,22,kanji,null
+かない,my wife,家内,noun,22,kanji,null
+こくない,domestic,国内,other,22,kanji,null
+ないか,internal medicine,内科,noun,22,kanji,null
+うちがわ,inside,内側,other,22,kanji,null
+わすれる,to forget,忘れる,ru-verb,22,kanji,null
+わすれもの,lost article,忘れ物,noun,22,kanji,null
+ぼうねんかい,year-end party,忘年会,noun,22,kanji,null
+うらやましがる,(somebody is) envious,null,u-verb,0,null,null
+かえってくる,to come back home,帰ってくる,irr-verb,0,null,null
+あいかわらず,as usual,相変わらず,other,0,null,null
+タイプ,type,null,noun,0,null,null
+うまく,well / successfully / skilfully,null,other,0,null,null
+うまくいく,to go well,null,u-verb,0,null,null
+まちどおしい,to wait eagerly for,待ち遠しい,other,0,null,(～が)
+でんごん,message,伝言,noun,0,null,null
+なんだか,somehow,null,other,0,null,null
+しかたがない,cannot be helped,null,other,0,null,null
+ホーム,platform,null,noun,0,null,null
+たのしそうに,joyfully,楽しそうに,other,0,null,null
+しんゆう,best friend,親友,noun,0,null,null
+ゆうき,courage,勇気,noun,0,null,null
+にげる,to run away / to escape,逃げる,ru-verb,0,null,null
+かわりに,instead,代わりに,other,0,null,null
+ふつかかん,for two days,二日間,noun,0,null,null
