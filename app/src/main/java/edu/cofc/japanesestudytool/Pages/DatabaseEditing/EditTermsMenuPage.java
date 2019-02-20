@@ -24,12 +24,10 @@ public class EditTermsMenuPage extends AppCompatActivity
     private Button searchButton;
     private Spinner dropDownBar,specificDropDownBar;
     private EditText searchEditTextBox;
-    private Switch searchExactSwitch;
-    private final String[] items = new String[]{"Japanese","English","Kanji","Type","Lesson","Req. Kanji"};
-    private final String[] typeSpecs = new String[]{"noun","u-verb","ru-verb","irr-verb","adjective","grammar","other"};
+    private Switch searchExactSwitch,beginWithSwitch;
+    private final String[] items = new String[]{"Japanese","English","Kanji","Lesson"};
     private final String[] lessonSpec = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19",
             "20","21","22","23","extra"};
-    private final String[] reqKanjiSpec = new String[]{"Required","Non-required"};
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -56,14 +54,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                     searchEditTextBox.requestFocus();
                     specificDropDownBar.setVisibility(View.INVISIBLE);
                     searchExactSwitch.setVisibility(View.VISIBLE);
-                }
-                else if(mode.equalsIgnoreCase("Type"))
-                {
-                    searchEditTextBox.setVisibility(View.INVISIBLE);
-                    specificDropDownBar.setVisibility(View.VISIBLE);
-                    ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(dropDownBar.getContext(),android.R.layout.simple_spinner_dropdown_item,typeSpecs);
-                    specificDropDownBar.setAdapter(tempAdapter);
-                    searchExactSwitch.setVisibility(View.INVISIBLE);
+                    beginWithSwitch.setVisibility(View.VISIBLE);
                 }
                 else  if(mode.equalsIgnoreCase("Lesson"))
                 {
@@ -72,14 +63,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                     ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(dropDownBar.getContext(),android.R.layout.simple_spinner_dropdown_item,lessonSpec);
                     specificDropDownBar.setAdapter(tempAdapter);
                     searchExactSwitch.setVisibility(View.INVISIBLE);
-                }
-                else if(mode.equalsIgnoreCase("Req. Kanji"))
-                {
-                    searchEditTextBox.setVisibility(View.INVISIBLE);
-                    specificDropDownBar.setVisibility(View.VISIBLE);
-                    ArrayAdapter<String> tempAdapter = new ArrayAdapter<>(dropDownBar.getContext(),android.R.layout.simple_spinner_dropdown_item,reqKanjiSpec);
-                    specificDropDownBar.setAdapter(tempAdapter);
-                    searchExactSwitch.setVisibility(View.INVISIBLE);
+                    beginWithSwitch.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -91,6 +75,27 @@ public class EditTermsMenuPage extends AppCompatActivity
         });
 
         searchExactSwitch = findViewById(R.id.searchExact);
+        searchExactSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(searchExactSwitch.isChecked())
+                {
+                    beginWithSwitch.setChecked(false);
+                }
+            }
+        });
+
+        beginWithSwitch = findViewById(R.id.beginWithSwitch);
+        beginWithSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(beginWithSwitch.isChecked())
+                {
+                    searchExactSwitch.setChecked(false);
+                }
+            }
+        });
+
         searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,9 +113,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                         isFieldEmpty = true;
                     }
                 }
-                else if(mode.equalsIgnoreCase("Type")
-                        || mode.equalsIgnoreCase("Lesson")
-                        || mode.equalsIgnoreCase("Req. Kanji"))
+                else if(mode.equalsIgnoreCase("Lesson"))
                 {
                     tempValue = specificDropDownBar.getSelectedItem().toString();
 
@@ -151,7 +154,7 @@ public class EditTermsMenuPage extends AppCompatActivity
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            LoadEditableTerms loadEditableTerms = new LoadEditableTerms(searchButton.getContext(),mode,value, searchExactSwitch.isChecked());
+                            LoadEditableTerms loadEditableTerms = new LoadEditableTerms(searchButton.getContext(),mode,value, searchExactSwitch.isChecked(), beginWithSwitch.isChecked());
                             loadEditableTerms.execute();
                         }
                     });
@@ -160,11 +163,9 @@ public class EditTermsMenuPage extends AppCompatActivity
                 }
                 else
                 {
-                    LoadEditableTerms loadEditableTerms = new LoadEditableTerms(searchButton.getContext(),mode,value, searchExactSwitch.isChecked());
+                    LoadEditableTerms loadEditableTerms = new LoadEditableTerms(searchButton.getContext(),mode,value, searchExactSwitch.isChecked(), beginWithSwitch.isChecked());
                     loadEditableTerms.execute();
                 }
-
-
             }
         });
     }

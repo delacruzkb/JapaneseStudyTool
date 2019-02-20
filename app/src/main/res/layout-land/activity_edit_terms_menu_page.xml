@@ -58,6 +58,17 @@
         android:textSize="@dimen/textSize"
         android:theme="@style/SwitchTheme" />
 
+    <Switch
+        android:id="@+id/beginWithSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:splitTrack="false"
+        android:text="@string/startWith"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        android:theme="@style/SwitchTheme" />
+
     <View
         android:id="@+id/divider30"
         android:layout_width="match_parent"

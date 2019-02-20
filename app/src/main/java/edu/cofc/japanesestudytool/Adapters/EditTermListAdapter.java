@@ -78,7 +78,7 @@ public class EditTermListAdapter extends BaseAdapter
         eng.setText(term.getEng());
         EditText kanji = rowView.findViewById(R.id.searchKanjiTextBox);
         kanji.setEnabled(false);
-        if(term.getKanji() != null || !term.getKanji().equalsIgnoreCase("") || !term.getKanji().equalsIgnoreCase("null"))
+        if(term.getKanji() != null)
         {
             if(term.getParticle() !=null && !term.getParticle().equalsIgnoreCase("null"))
             {

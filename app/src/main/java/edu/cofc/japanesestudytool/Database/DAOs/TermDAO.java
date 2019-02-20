@@ -207,6 +207,25 @@ public interface TermDAO
             "ORDER BY jpns")
     List<Term> searchLesson(int lesson);
 
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE jpns LIKE :japanese || '%' " +
+            "ORDER BY jpns")
+    List<Term> searchBeginWithJapanese(String japanese);
+
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE eng LIKE  :english || '%' " +
+            "ORDER BY eng")
+    List<Term> searchBeginWithEnglish(String english);
+
+    @Query("SELECT * " +
+            "FROM Term " +
+            "WHERE kanji LIKE :kanji || '%' " +
+            "ORDER BY jpns")
+    List<Term> searchBeginWithKanji(String kanji);
+
+
     //Delete everything
     @Query("DELETE FROM Term")
     void deleteAllTerms();

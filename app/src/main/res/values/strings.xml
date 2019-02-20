@@ -76,6 +76,7 @@
     //Edit TermPage
     <string name="deleteFromDatabaseWarning">You are about to delete this term from the database.</string>
     <string name="searchExactMatch">Search for exact match</string>
+    <string name="startWith">Search for terms starting with...</string>
     <string name="searchSpecificAttributeLabel">Search by Attribute:</string>
     <string name="searchEditableButtonText">Search</string>
     <string name="overwriteMessage">Are you sure you want to over-write this term?</string>
