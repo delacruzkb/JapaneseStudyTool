@@ -18,7 +18,7 @@ import edu.cofc.japanesestudytool.Database.Entities.Term;
 public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
 {
     private Context context;
-    private String japanese,english,kanji,mode;
+    private String input,mode;
     int lesson;
     private boolean isExact, beginWith;
     private StudyGuideDatabase studyGuideDatabase;
@@ -28,21 +28,13 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
     {
         this.context = mContext;
         mode = mMode;
-        if(mode.equalsIgnoreCase("Japanese"))
-        {
-            japanese = value;
-        }
-        else if(mode.equalsIgnoreCase("English"))
-        {
-            english=value;
-        }
-        else if(mode.equalsIgnoreCase("Kanji"))
-        {
-            kanji = value;
-        }
-        else  if(mode.equalsIgnoreCase("Lesson"))
+        if(mode.equalsIgnoreCase("Lesson"))
         {
             lesson = Integer.parseInt(value);
+        }
+        else
+        {
+            input=value;
         }
         this.isExact =isExact;
         this.beginWith = beginWith;
@@ -91,15 +83,15 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         {
             if(isExact)
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactJpns(japanese);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactJpns(input);
             }
             else if(beginWith)
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchBeginWithJapanese(japanese);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchBeginWithJapanese(input);
             }
             else
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchJpns(japanese);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchJpns(input);
             }
 
         }
@@ -107,30 +99,30 @@ public class LoadEditableTerms extends AsyncTask<Void,Void,ArrayList<Term>>
         {
             if(isExact)
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactEng(english);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactEng(input);
             }
             else if(beginWith)
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchBeginWithEnglish(english);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchBeginWithEnglish(input);
             }
             else
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchEng(english);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchEng(input);
             }
         }
         else if(mode.equalsIgnoreCase("Kanji"))
         {
             if(isExact)
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactKanji(kanji);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchExactKanji(input);
             }
             else if(beginWith)
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchBeginWithKanji(kanji);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchBeginWithKanji(input);
             }
             else
             {
-                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchKanji(kanji);
+                returnValue = (ArrayList<Term>) studyGuideDatabase.termDAO().searchKanji(input);
             }
 
         }
