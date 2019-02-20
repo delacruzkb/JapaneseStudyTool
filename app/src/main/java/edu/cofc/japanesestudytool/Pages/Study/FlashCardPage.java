@@ -81,7 +81,11 @@ public class FlashCardPage extends AppCompatActivity
                 {
                     flashCard.setText(term.getParticle() + "　"+ term.getKanji());
                 }
-                flashCard.setText(term.getKanji());
+                else
+                {
+                    flashCard.setText(term.getKanji());
+                }
+
             }
         });
         cardCountLabel = findViewById(R.id.cardCountLabel);
