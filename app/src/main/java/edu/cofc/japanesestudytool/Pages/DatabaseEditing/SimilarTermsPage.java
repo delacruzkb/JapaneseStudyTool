@@ -57,7 +57,15 @@ public class SimilarTermsPage extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 writingStyleLabel.setText(getResources().getString(R.string.hiraganaText));
-                writingStyleTextBox.setText(newTerm.getParticle() +"　"+ newTerm.getJpns());
+
+                if(newTerm.getParticle()!= null)
+                {
+                    writingStyleTextBox.setText(newTerm.getParticle() +"　"+ newTerm.getJpns());
+                }
+                else
+                {
+                    writingStyleTextBox.setText(newTerm.getJpns());
+                }
             }
         });
         toEng = findViewById(R.id.toEngNewTerm);
@@ -73,7 +81,15 @@ public class SimilarTermsPage extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 writingStyleLabel.setText(getResources().getString(R.string.kanjiText));
-                writingStyleTextBox.setText(newTerm.getParticle() +"　"+ newTerm.getKanji());
+                if(newTerm.getParticle()!= null)
+                {
+                    writingStyleTextBox.setText(newTerm.getParticle() +"　"+ newTerm.getKanji());
+                }
+                else
+                {
+                    writingStyleTextBox.setText(newTerm.getKanji());
+                }
+
             }
         });
 
