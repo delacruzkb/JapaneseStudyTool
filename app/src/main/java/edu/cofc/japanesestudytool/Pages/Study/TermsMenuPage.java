@@ -259,48 +259,43 @@ public class TermsMenuPage extends AppCompatActivity
     private void setCountButtonOnClickListeners()
     {
 
-        nounMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
+        nounMaxCountButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v)
-            {
+            public void onClick(View v) {
                 nounCountText.setText(maxCountLimit +"");
-                return false;
             }
         });
 
-        adjectiveMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
+        adjectiveMaxCountButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v)
+            public void onClick(View v)
             {
                 adjectiveCountText.setText(maxCountLimit +"");
-                return false;
             }
         });
 
-        verbMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
+        verbMaxCountButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v)
+            public void onClick(View v)
             {
                 verbCountText.setText(maxCountLimit +"");
-                return false;
             }
         });
 
-        grammarMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
+        grammarMaxCountButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v)
+            public void onClick(View v)
             {
                 grammarCountText.setText(maxCountLimit +"");
-                return false;
             }
         });
 
-        otherMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
+
+        otherMaxCountButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v)
+            public void onClick(View v)
             {
                 otherCountText.setText(maxCountLimit +"");
-                return false;
             }
         });
     }
