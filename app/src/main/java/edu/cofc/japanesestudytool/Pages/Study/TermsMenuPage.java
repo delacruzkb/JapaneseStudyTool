@@ -26,11 +26,11 @@ import edu.cofc.japanesestudytool.TermMenuMetrics;
 public class TermsMenuPage extends AppCompatActivity
 {
     private EditText nounCountText, adjectiveCountText, verbCountText, grammarCountText, otherCountText;
-    private Button nounCountDecreaseButton, nounCountIncreaseButton;
-    private Button adjectiveCountDecreaseButton, adjectiveCountIncreaseButton;
-    private Button verbCountDecreaseButton, verbCountIncreaseButton;
-    private Button grammarCountDecreaseButton, grammarCountIncreaseButton;
-    private Button otherCountDecreaseButton, otherCountIncreaseButton;
+    private Button nounMaxCountButton;
+    private Button adjectiveMaxCountButton;
+    private Button verbMaxCountButton;
+    private Button grammarMaxCountButton;
+    private Button otherMaxCountButton;
     private Button confirmButton;
 
     private Switch useSpecificCountSwitch,showJpnsFirstSwitch, showKanjiFirstSwitch,
@@ -68,16 +68,11 @@ public class TermsMenuPage extends AppCompatActivity
         otherCountText = findViewById(R.id.otherCountInput);
 
         //Instantiate buttons
-        nounCountDecreaseButton = findViewById(R.id.nounCountDecreaseButton);
-        nounCountIncreaseButton = findViewById(R.id.nounCountIncreaseButton);
-        adjectiveCountDecreaseButton = findViewById(R.id.adjectiveCountDecreaseButton);
-        adjectiveCountIncreaseButton = findViewById(R.id.adjectiveCountIncreaseButton);
-        verbCountDecreaseButton = findViewById(R.id.verbCountDecreaseButton);
-        verbCountIncreaseButton = findViewById(R.id.verbCountIncreaseButton);
-        grammarCountDecreaseButton = findViewById(R.id.grammarCountDecreaseButton);
-        grammarCountIncreaseButton = findViewById(R.id.grammarCountIncreaseButton);
-        otherCountDecreaseButton = findViewById(R.id.otherCountDecreaseButton);
-        otherCountIncreaseButton = findViewById(R.id.otherCountIncreaseButton);
+        nounMaxCountButton = findViewById(R.id.nounMaxCountButton);
+        adjectiveMaxCountButton = findViewById(R.id.adjectiveMaxCountButton);
+        verbMaxCountButton = findViewById(R.id.verbMaxCountButton);
+        grammarMaxCountButton = findViewById(R.id.grammarMaxCountButton);
+        otherMaxCountButton = findViewById(R.id.otherMaxCountButton);
         confirmButton = findViewById(R.id.confirmButton);
 
         //Instantiate switches
@@ -263,43 +258,8 @@ public class TermsMenuPage extends AppCompatActivity
 
     private void setCountButtonOnClickListeners()
     {
-        nounCountDecreaseButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                makeCountsValid();
-                int count = Integer.parseInt(nounCountText.getText().toString());
-                if(count > minCountLimit)
-                {
-                    nounCountText.setText((count-1) + "");
-                }
-            }
-        });
 
-        nounCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v)
-            {
-                nounCountText.setText(minCountLimit +"");
-                return false;
-            }
-        });
-
-        nounCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                makeCountsValid();
-                int count = Integer.parseInt(nounCountText.getText().toString());
-                if(count < maxCountLimit)
-                {
-                    nounCountText.setText((count+1) + "");
-                }
-            }
-        });
-
-        nounCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+        nounMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v)
             {
@@ -308,42 +268,7 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
-        adjectiveCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                makeCountsValid();
-                int count = Integer.parseInt(adjectiveCountText.getText().toString());
-                if(count > minCountLimit)
-                {
-                    adjectiveCountText.setText((count-1) + "");
-                }
-            }
-        });
-
-        adjectiveCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v)
-            {
-                adjectiveCountText.setText(minCountLimit +"");
-                return false;
-            }
-        });
-
-        adjectiveCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                makeCountsValid();
-                int count = Integer.parseInt(adjectiveCountText.getText().toString());
-                if(count < maxCountLimit)
-                {
-                    adjectiveCountText.setText((count+1) + "");
-                }
-            }
-        });
-
-        adjectiveCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+        adjectiveMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v)
             {
@@ -352,40 +277,7 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
-        verbCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeCountsValid();
-                int count = Integer.parseInt(verbCountText.getText().toString());
-                if(count > minCountLimit)
-                {
-                    verbCountText.setText((count-1) + "");
-                }
-            }
-        });
-
-        verbCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v)
-            {
-                verbCountText.setText(minCountLimit +"");
-                return false;
-            }
-        });
-
-        verbCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeCountsValid();
-                int count = Integer.parseInt(verbCountText.getText().toString());
-                if(count < maxCountLimit)
-                {
-                    verbCountText.setText((count+1) + "");
-                }
-            }
-        });
-
-        verbCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+        verbMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v)
             {
@@ -394,40 +286,7 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
-        grammarCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeCountsValid();
-                int count = Integer.parseInt(grammarCountText.getText().toString());
-                if(count > minCountLimit)
-                {
-                    grammarCountText.setText((count-1) + "");
-                }
-            }
-        });
-
-        grammarCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v)
-            {
-                grammarCountText.setText(minCountLimit +"");
-                return false;
-            }
-        });
-
-        grammarCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeCountsValid();
-                int count = Integer.parseInt(grammarCountText.getText().toString());
-                if(count < maxCountLimit)
-                {
-                    grammarCountText.setText((count+1) + "");
-                }
-            }
-        });
-
-        grammarCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+        grammarMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v)
             {
@@ -436,40 +295,7 @@ public class TermsMenuPage extends AppCompatActivity
             }
         });
 
-        otherCountDecreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeCountsValid();
-                int count = Integer.parseInt(otherCountText.getText().toString());
-                if(count > minCountLimit)
-                {
-                    otherCountText.setText((count-1) + "");
-                }
-            }
-        });
-
-        otherCountDecreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v)
-            {
-                otherCountText.setText(minCountLimit +"");
-                return false;
-            }
-        });
-
-        otherCountIncreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeCountsValid();
-                int count = Integer.parseInt(otherCountText.getText().toString());
-                if(count <maxCountLimit )
-                {
-                    otherCountText.setText((count+1) + "");
-                }
-            }
-        });
-
-        otherCountIncreaseButton.setOnLongClickListener(new View.OnLongClickListener() {
+        otherMaxCountButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v)
             {

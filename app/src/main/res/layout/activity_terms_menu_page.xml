@@ -43,16 +43,6 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize" />
 
-        <Button
-            android:id="@+id/nounCountDecreaseButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:backgroundTint="@color/buttonColor"
-            android:text="-"
-            android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/textSize" />
-
         <EditText
             android:id="@+id/nounCountInput"
             android:layout_width="0dp"
@@ -66,12 +56,12 @@
             android:textSize="@dimen/textSize" />
 
         <Button
-            android:id="@+id/nounCountIncreaseButton"
+            android:id="@+id/nounMaxCountButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="3"
             android:backgroundTint="@color/buttonColor"
-            android:text="+"
+            android:text="Max"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
     </LinearLayout>
@@ -92,16 +82,6 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize" />
 
-        <Button
-            android:id="@+id/adjectiveCountDecreaseButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:backgroundTint="@color/buttonColor"
-            android:text="-"
-            android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/textSize" />
-
         <EditText
             android:id="@+id/adjectiveCountInput"
             android:layout_width="0dp"
@@ -115,12 +95,12 @@
             android:textSize="@dimen/textSize" />
 
         <Button
-            android:id="@+id/adjectiveCountIncreaseButton"
+            android:id="@+id/adjectiveMaxCountButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="3"
             android:backgroundTint="@color/buttonColor"
-            android:text="+"
+            android:text="Max"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
     </LinearLayout>
@@ -141,16 +121,6 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize" />
 
-        <Button
-            android:id="@+id/verbCountDecreaseButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:backgroundTint="@color/buttonColor"
-            android:text="-"
-            android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/textSize" />
-
         <EditText
             android:id="@+id/verbCountInput"
             android:layout_width="0dp"
@@ -164,12 +134,12 @@
             android:textSize="@dimen/textSize" />
 
         <Button
-            android:id="@+id/verbCountIncreaseButton"
+            android:id="@+id/verbMaxCountButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="3"
             android:backgroundTint="@color/buttonColor"
-            android:text="+"
+            android:text="Max"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
     </LinearLayout>
@@ -190,16 +160,6 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize" />
 
-        <Button
-            android:id="@+id/grammarCountDecreaseButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:backgroundTint="@color/buttonColor"
-            android:text="-"
-            android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/textSize" />
-
         <EditText
             android:id="@+id/grammarCountInput"
             android:layout_width="0dp"
@@ -213,12 +173,12 @@
             android:textSize="@dimen/textSize" />
 
         <Button
-            android:id="@+id/grammarCountIncreaseButton"
+            android:id="@+id/grammarMaxCountButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="3"
             android:backgroundTint="@color/buttonColor"
-            android:text="+"
+            android:text="Max"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
     </LinearLayout>
@@ -239,16 +199,6 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/textSize" />
 
-        <Button
-            android:id="@+id/otherCountDecreaseButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:backgroundTint="@color/buttonColor"
-            android:text="-"
-            android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/textSize" />
-
         <EditText
             android:id="@+id/otherCountInput"
             android:layout_width="0dp"
@@ -262,12 +212,12 @@
             android:textSize="@dimen/textSize" />
 
         <Button
-            android:id="@+id/otherCountIncreaseButton"
+            android:id="@+id/otherMaxCountButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="3"
             android:backgroundTint="@color/buttonColor"
-            android:text="+"
+            android:text="Max"
             android:textColor="@color/buttonTextColor"
             android:textSize="@dimen/textSize" />
     </LinearLayout>
